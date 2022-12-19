@@ -41,6 +41,10 @@ public:
         const double latitude_deg,
         const double longitude_deg,
         const double absolute_altitude_m);
+
+    Action::Result do_winch(const uint32_t instance, const Action::Winch action, const float release_length, 
+    const float release_rate);
+
     Action::Result hold() const;
     Action::Result set_actuator(const int index, const float value);
     Action::Result transition_to_fixedwing() const;
@@ -69,6 +73,8 @@ public:
         const double longitude_deg,
         const double absolute_altitude_m,
         const Action::ResultCallback& callback);
+    void do_winch_async(const uint32_t instance, const Action::Winch action, 
+    const float release_length, const float release_rate, const Action::ResultCallback& callback);
     void hold_async(const Action::ResultCallback& callback) const;
     void
     set_actuator_async(const int index, const float value, const Action::ResultCallback& callback);

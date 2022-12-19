@@ -32,6 +32,7 @@ template class CallbackList<Telemetry::Health>;
 template class CallbackList<Telemetry::VtolState>;
 template class CallbackList<Telemetry::LandedState>;
 template class CallbackList<Telemetry::RcStatus>;
+template class CallbackList<Telemetry::WinchStatus>;
 template class CallbackList<uint64_t>;
 template class CallbackList<Telemetry::ActuatorControlTarget>;
 template class CallbackList<Telemetry::ActuatorOutputStatus>;
@@ -365,6 +366,13 @@ Telemetry::Result TelemetryImpl::set_rate_rc_status(double rate_hz)
     return Telemetry::Result::Unsupported;
 }
 
+Telemetry::Result TelemetryImpl::set_rate_winch_status(double rate_hz)
+{
+    UNUSED(rate_hz);
+    LogWarn() << "System status is usually fixed at 1 Hz";
+    return Telemetry::Result::Unsupported;
+}
+
 Telemetry::Result TelemetryImpl::set_rate_actuator_control_target(double rate_hz)
 {
     return telemetry_result_from_command_result(
@@ -589,6 +597,13 @@ void TelemetryImpl::set_rate_battery_async(double rate_hz, Telemetry::ResultCall
 }
 
 void TelemetryImpl::set_rate_rc_status_async(double rate_hz, Telemetry::ResultCallback callback)
+{
+    UNUSED(rate_hz);
+    LogWarn() << "System status is usually fixed at 1 Hz";
+    _parent->call_user_callback([callback]() { callback(Telemetry::Result::Unsupported); });
+}
+
+void TelemetryImpl::set_rate_winch_status_async(double rate_hz, Telemetry::ResultCallback callback)
 {
     UNUSED(rate_hz);
     LogWarn() << "System status is usually fixed at 1 Hz";
@@ -2008,6 +2023,12 @@ Telemetry::RcStatus TelemetryImpl::rc_status() const
     return _rc_status;
 }
 
+Telemetry::WinchStatus TelemetryImpl::winch_status() const
+{
+    std::lock_guard<std::mutex> lock(_winch_status_mutex);
+    return _winch_status;
+}
+
 uint64_t TelemetryImpl::unix_epoch_time() const
 {
     std::lock_guard<std::mutex> lock(_unix_epoch_time_mutex);
@@ -2499,10 +2520,23 @@ TelemetryImpl::subscribe_rc_status(const Telemetry::RcStatusCallback& callback)
     return _rc_status_subscriptions.subscribe(callback);
 }
 
+Telemetry::WinchStatusHandle
+TelemetryImpl::subscribe_winch_status(const Telemetry::WinchStatusCallback& callback)
+{
+    std::lock_guard<std::mutex> lock(_subscription_mutex);
+    return _winch_status_subscriptions.subscribe(callback);
+}
+
 void TelemetryImpl::unsubscribe_rc_status(Telemetry::RcStatusHandle handle)
 {
     std::lock_guard<std::mutex> lock(_subscription_mutex);
     _rc_status_subscriptions.unsubscribe(handle);
+}
+
+void TelemetryImpl::unsubscribe_winch_status(Telemetry::WinchStatusHandle handle)
+{
+    std::lock_guard<std::mutex> lock(_subscription_mutex);
+    _winch_status_subscriptions.unsubscribe(handle);
 }
 
 Telemetry::UnixEpochTimeHandle

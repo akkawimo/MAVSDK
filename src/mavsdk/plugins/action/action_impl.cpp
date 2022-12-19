@@ -182,6 +182,25 @@ Action::Result ActionImpl::do_orbit(
     return fut.get();
 }
 
+Action::Result ActionImpl::do_winch(
+    const uint32_t instance, 
+    const Action::Winch action, 
+    const float release_length, 
+    const float release_rate)
+{
+    auto prom = std::promise<Action::Result>();
+    auto fut = prom.get_future();
+
+    do_winch_async(
+        instance,
+        action,
+        release_length,
+        release_rate,
+        [&prom](Action::Result result) { prom.set_value(result); });
+
+    return fut.get();
+}
+
 Action::Result ActionImpl::hold() const
 {
     auto prom = std::promise<Action::Result>();
@@ -496,6 +515,25 @@ void ActionImpl::do_orbit_async(
     command.params.x = int32_t(std::round(latitude_deg * 1e7));
     command.params.y = int32_t(std::round(longitude_deg * 1e7));
     command.params.maybe_z = static_cast<float>(absolute_altitude_m);
+
+    _parent->send_command_async(
+        command, [this, callback](MavlinkCommandSender::Result result, float) {
+            command_result_callback(result, callback);
+        });
+}
+
+void ActionImpl::do_winch_async(const uint32_t instance, const Action::Winch action, 
+const float release_length, const float release_rate, const Action::ResultCallback& callback)
+{
+    MavlinkCommandSender::CommandLong command{};
+
+    command.command = MAV_CMD_DO_WINCH;
+    command.params.maybe_param1 = instance; // Instance
+    command.params.maybe_param2 = static_cast<float>(action); // Action
+    command.params.maybe_param3 = release_length; // Length
+    command.params.maybe_param4 = release_rate; // Rate
+
+    command.target_component_id = _parent->get_autopilot_id(); //change to compid of winch?
 
     _parent->send_command_async(
         command, [this, callback](MavlinkCommandSender::Result result, float) {
