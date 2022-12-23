@@ -533,7 +533,7 @@ const float release_length, const float release_rate, const Action::ResultCallba
     command.params.maybe_param3 = release_length; // Length
     command.params.maybe_param4 = release_rate; // Rate
 
-    command.target_component_id = _parent->get_autopilot_id(); //change to compid of winch?
+    command.target_component_id = MAV_TYPE::MAV_TYPE_WINCH;
 
     _parent->send_command_async(
         command, [this, callback](MavlinkCommandSender::Result result, float) {
