@@ -201,6 +201,28 @@ Action::Result ActionImpl::do_winch(
     return fut.get();
 }
 
+Action::Result ActionImpl::gripper_grab(
+    const uint32_t instance)
+{
+    auto prom = std::promise<Action::Result>();
+    auto fut = prom.get_future();
+
+    gripper_grab_async(instance, [&prom](Action::Result result) { prom.set_value(result); });
+
+    return fut.get();
+}
+
+Action::Result ActionImpl::gripper_release(
+    const uint32_t instance)
+{
+    auto prom = std::promise<Action::Result>();
+    auto fut = prom.get_future();
+
+    gripper_release_async(instance, [&prom](Action::Result result) { prom.set_value(result); });
+
+    return fut.get();
+}
+
 Action::Result ActionImpl::hold() const
 {
     auto prom = std::promise<Action::Result>();
@@ -539,6 +561,38 @@ const float release_length, const float release_rate, const Action::ResultCallba
         command, [this, callback](MavlinkCommandSender::Result result, float) {
             command_result_callback(result, callback);
         });
+}
+
+void ActionImpl::gripper_grab_async(const uint32_t instance, const Action::ResultCallback& callback)
+{
+//     MavlinkCommandSender::CommandLong command{};
+
+//     command.command = MAV_CMD_DO_GRIPPER;
+//     command.params.maybe_param1 = instance; // Instance
+//     command.params.maybe_param2 = static_cast<float>(Action::Gripper::GRIPPER_ACTION_GRAB);
+
+//     command.target_component_id = MAV_TYPE::MAV_TYPE_WINCH; // TODO
+
+//     _parent->send_command_async(
+//         command, [this, callback](MavlinkCommandSender::Result result, float) {
+//             command_result_callback(result, callback);
+//         });
+}
+
+void ActionImpl::gripper_release_async(const uint32_t instance, const Action::ResultCallback& callback)
+{
+//     MavlinkCommandSender::CommandLong command{};
+
+//     command.command = MAV_CMD_DO_GRIPPER;
+//     command.params.maybe_param1 = instance; // Instance
+//     command.params.maybe_param2 = static_cast<float>(Action::Gripper::GRIPPER_ACTION_RELEASE);
+
+//     command.target_component_id = MAV_TYPE::MAV_TYPE_WINCH; // TODO
+
+//     _parent->send_command_async(
+//         command, [this, callback](MavlinkCommandSender::Result result, float) {
+//             command_result_callback(result, callback);
+//         });
 }
 
 void ActionImpl::hold_async(const Action::ResultCallback& callback) const
