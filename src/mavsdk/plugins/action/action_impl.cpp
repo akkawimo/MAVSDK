@@ -183,20 +183,17 @@ Action::Result ActionImpl::do_orbit(
 }
 
 Action::Result ActionImpl::do_winch(
-    const uint32_t instance, 
-    const Action::Winch action, 
-    const float release_length, 
+    const uint32_t instance,
+    const Action::Winch action,
+    const float release_length,
     const float release_rate)
 {
     auto prom = std::promise<Action::Result>();
     auto fut = prom.get_future();
 
-    do_winch_async(
-        instance,
-        action,
-        release_length,
-        release_rate,
-        [&prom](Action::Result result) { prom.set_value(result); });
+    do_winch_async(instance, action, release_length, release_rate, [&prom](Action::Result result) {
+        prom.set_value(result);
+    });
 
     return fut.get();
 }
@@ -542,8 +539,12 @@ void ActionImpl::do_orbit_async(
         });
 }
 
-void ActionImpl::do_winch_async(const uint32_t instance, const Action::Winch action, 
-const float release_length, const float release_rate, const Action::ResultCallback& callback)
+void ActionImpl::do_winch_async(
+    const uint32_t instance,
+    const Action::Winch action,
+    const float release_length,
+    const float release_rate,
+    const Action::ResultCallback& callback)
 {
     MavlinkCommandSender::CommandLong command{};
 
