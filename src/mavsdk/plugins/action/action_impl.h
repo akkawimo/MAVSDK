@@ -42,11 +42,22 @@ public:
         const double longitude_deg,
         const double absolute_altitude_m);
 
-    Action::Result do_winch(
-        const uint32_t instance,
-        const Action::Winch action,
-        const float release_length,
-        const float release_rate);
+    // Action::Result do_winch(
+    //     const uint32_t instance,
+    //     const Action::Winch action,
+    //     const float release_length,
+    //     const float release_rate);
+
+    Action::Result winch_relax(const uint32_t instance);
+    Action::Result winch_relative_length_control(const uint32_t instance, const float length, const float rate);
+    Action::Result winch_rate_control(const uint32_t instance, const float rate);
+    Action::Result winch_lock(const uint32_t instance);
+    Action::Result winch_deliver(const uint32_t instance);
+    Action::Result winch_hold(const uint32_t instance);
+    Action::Result winch_retract(const uint32_t instance);
+    Action::Result winch_load_line(const uint32_t instance);
+    Action::Result winch_abandon_line(const uint32_t instance);
+    Action::Result winch_load_payload(const uint32_t instance);
 
     Action::Result gripper_grab(const uint32_t instance);
     Action::Result gripper_release(const uint32_t instance);
@@ -79,12 +90,23 @@ public:
         const double longitude_deg,
         const double absolute_altitude_m,
         const Action::ResultCallback& callback);
-    void do_winch_async(
-        const uint32_t instance,
-        const Action::Winch action,
-        const float release_length,
-        const float release_rate,
-        const Action::ResultCallback& callback);
+    // void do_winch_async(
+    //     const uint32_t instance,
+    //     const Action::Winch action,
+    //     const float release_length,
+    //     const float release_rate,
+    //     const Action::ResultCallback& callback);
+    void winch_relax_async(const uint32_t instance, const Action::ResultCallback& callback);
+    void winch_relative_length_control_async(const uint32_t instance, const float length, const float rate, const Action::ResultCallback& callback);
+    void winch_rate_control_async(const uint32_t instance, const float rate, const Action::ResultCallback& callback);
+    void winch_lock_async(const uint32_t instance, const Action::ResultCallback& callback);
+    void winch_deliver_async(const uint32_t instance, const Action::ResultCallback& callback);
+    void winch_hold_async(const uint32_t instance, const Action::ResultCallback& callback);
+    void winch_retract_async(const uint32_t instance, const Action::ResultCallback& callback);
+    void winch_load_line_async(const uint32_t instance, const Action::ResultCallback& callback);
+    void winch_abandon_line_async(const uint32_t instance, const Action::ResultCallback& callback);
+    void winch_load_payload_async(const uint32_t instance, const Action::ResultCallback& callback);
+
     void gripper_grab_async(const uint32_t instance, const Action::ResultCallback& callback);
     void gripper_release_async(const uint32_t instance, const Action::ResultCallback& callback);
     void hold_async(const Action::ResultCallback& callback) const;
