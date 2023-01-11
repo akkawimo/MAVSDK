@@ -22,16 +22,16 @@ Winch::~Winch() {}
 
 
 
-void Winch::winch_relax_async(uint32_t instance, const ResultCallback callback)
+void Winch::relax_async(uint32_t instance, const ResultCallback callback)
 {
-    _impl->winch_relax_async(instance, callback);
+    _impl->relax_async(instance, callback);
 }
 
 
 
-Winch::Result Winch::winch_relax(uint32_t instance) const
+Winch::Result Winch::relax(uint32_t instance) const
 {
-    return _impl->winch_relax(instance);
+    return _impl->relax(instance);
 }
 
 

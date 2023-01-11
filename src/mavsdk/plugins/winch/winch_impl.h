@@ -21,8 +21,8 @@ public:
     void enable() override;
     void disable() override;
 
-    void winch_relax_async(uint32_t instance, const Winch::ResultCallback callback);
-    Winch::Result winch_relax(uint32_t instance);
+    void relax_async(uint32_t instance, const Winch::ResultCallback callback);
+    Winch::Result relax(uint32_t instance);
 
     void relative_length_control_async(uint32_t instance, float length, float rate, const Winch::ResultCallback callback);
     Winch::Result relative_length_control(uint32_t instance, float length, float rate);

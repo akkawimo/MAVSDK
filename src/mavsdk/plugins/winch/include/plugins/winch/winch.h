@@ -129,20 +129,20 @@ public:
     /**
      * @brief Winch grab cargo.
      *
-     * This function is non-blocking. See 'winch_relax' for the blocking counterpart.
+     * This function is non-blocking. See 'relax' for the blocking counterpart.
      */
-    void winch_relax_async(uint32_t instance, const ResultCallback callback);
+    void relax_async(uint32_t instance, const ResultCallback callback);
 
 
 
     /**
      * @brief Winch grab cargo.
      *
-     * This function is blocking. See 'winch_relax_async' for the non-blocking counterpart.
+     * This function is blocking. See 'relax_async' for the non-blocking counterpart.
      *
      * @return Result of request.
      */
-    Result winch_relax(uint32_t instance) const;
+    Result relax(uint32_t instance) const;
 
 
 

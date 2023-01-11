@@ -33,24 +33,36 @@ void WinchImpl::disable() {}
 
 
 
-void WinchImpl::winch_relax_async(uint32_t instance, const Winch::ResultCallback callback)
+void WinchImpl::relax_async(uint32_t instance, const Winch::ResultCallback callback)
 {
     
-    // UNUSED(instance);
-    
-    // UNUSED(callback);
+    MavlinkCommandSender::CommandLong command{};
+
+    command.command = MAV_CMD_DO_WINCH;
+    command.params.maybe_param1 = instance;
+    command.params.maybe_param2 = static_cast<float>(Winch::WinchAction::Relaxed);
+
+    command.target_component_id = MAV_TYPE::MAV_TYPE_WINCH;
+
+    _parent->send_command_async(
+        command, [this, callback](MavlinkCommandSender::Result result, float) {
+            command_result_callback(result, callback);
+        });
 }
 
 
 
-Winch::Result WinchImpl::winch_relax(uint32_t instance)
+Winch::Result WinchImpl::relax(uint32_t instance)
 {
     
-    // UNUSED(instance);
-    
+    auto prom = std::promise<Winch::Result>();
+    auto fut = prom.get_future();
 
-    // TODO :)
-    return {};
+    relax_async(instance, [&prom](Winch::Result result) {
+        prom.set_value(result);
+    });
+
+    return fut.get();
 }
 
 
@@ -58,9 +70,20 @@ Winch::Result WinchImpl::winch_relax(uint32_t instance)
 void WinchImpl::relative_length_control_async(uint32_t instance, float length, float rate, const Winch::ResultCallback callback)
 {
     
-    // UNUSED(instance);
-    
-    // UNUSED(callback);
+    MavlinkCommandSender::CommandLong command{};
+
+    command.command = MAV_CMD_DO_WINCH;
+    command.params.maybe_param1 = instance;
+    command.params.maybe_param2 = static_cast<float>(Winch::WinchAction::RelativeLengthControl);
+    command.params.maybe_param3 = length;
+    command.params.maybe_param4 = rate;
+
+    command.target_component_id = MAV_TYPE::MAV_TYPE_WINCH;
+
+    _parent->send_command_async(
+        command, [this, callback](MavlinkCommandSender::Result result, float) {
+            command_result_callback(result, callback);
+        });
 }
 
 
@@ -68,19 +91,32 @@ void WinchImpl::relative_length_control_async(uint32_t instance, float length, f
 Winch::Result WinchImpl::relative_length_control(uint32_t instance, float length, float rate)
 {
     
-    // UNUSED(instance);
-    
+    auto prom = std::promise<Winch::Result>();
+    auto fut = prom.get_future();
 
-    // TODO :)
-    return {};
+    relative_length_control_async(instance, length, rate, [&prom](Winch::Result result) {
+        prom.set_value(result);
+    });
+
+    return fut.get();
 }
 
 void WinchImpl::rate_control_async(uint32_t instance, float rate, const Winch::ResultCallback callback)
 {
     
-    // UNUSED(instance);
-    
-    // UNUSED(callback);
+    MavlinkCommandSender::CommandLong command{};
+
+    command.command = MAV_CMD_DO_WINCH;
+    command.params.maybe_param1 = instance;
+    command.params.maybe_param2 = static_cast<float>(Winch::WinchAction::RateControl);
+    command.params.maybe_param4 = rate;
+
+    command.target_component_id = MAV_TYPE::MAV_TYPE_WINCH;
+
+    _parent->send_command_async(
+        command, [this, callback](MavlinkCommandSender::Result result, float) {
+            command_result_callback(result, callback);
+        });
 }
 
 
@@ -88,19 +124,31 @@ void WinchImpl::rate_control_async(uint32_t instance, float rate, const Winch::R
 Winch::Result WinchImpl::rate_control(uint32_t instance, float rate)
 {
     
-    // UNUSED(instance);
-    
+    auto prom = std::promise<Winch::Result>();
+    auto fut = prom.get_future();
 
-    // TODO :)
-    return {};
+    rate_control_async(instance, rate, [&prom](Winch::Result result) {
+        prom.set_value(result);
+    });
+
+    return fut.get();
 }
 
 void WinchImpl::lock_async(uint32_t instance, const Winch::ResultCallback callback)
 {
     
-    // UNUSED(instance);
-    
-    // UNUSED(callback);
+    MavlinkCommandSender::CommandLong command{};
+
+    command.command = MAV_CMD_DO_WINCH;
+    command.params.maybe_param1 = instance;
+    command.params.maybe_param2 = static_cast<float>(Winch::WinchAction::Lock);
+
+    command.target_component_id = MAV_TYPE::MAV_TYPE_WINCH;
+
+    _parent->send_command_async(
+        command, [this, callback](MavlinkCommandSender::Result result, float) {
+            command_result_callback(result, callback);
+        });
 }
 
 
@@ -108,19 +156,31 @@ void WinchImpl::lock_async(uint32_t instance, const Winch::ResultCallback callba
 Winch::Result WinchImpl::lock(uint32_t instance)
 {
     
-    // UNUSED(instance);
-    
+    auto prom = std::promise<Winch::Result>();
+    auto fut = prom.get_future();
 
-    // TODO :)
-    return {};
+    lock_async(instance, [&prom](Winch::Result result) {
+        prom.set_value(result);
+    });
+
+    return fut.get();
 }
 
 void WinchImpl::deliver_async(uint32_t instance, const Winch::ResultCallback callback)
 {
     
-    // UNUSED(instance);
-    
-    // UNUSED(callback);
+    MavlinkCommandSender::CommandLong command{};
+
+    command.command = MAV_CMD_DO_WINCH;
+    command.params.maybe_param1 = instance;
+    command.params.maybe_param2 = static_cast<float>(Winch::WinchAction::Deliver);
+
+    command.target_component_id = MAV_TYPE::MAV_TYPE_WINCH;
+
+    _parent->send_command_async(
+        command, [this, callback](MavlinkCommandSender::Result result, float) {
+            command_result_callback(result, callback);
+        });
 }
 
 
@@ -128,19 +188,31 @@ void WinchImpl::deliver_async(uint32_t instance, const Winch::ResultCallback cal
 Winch::Result WinchImpl::deliver(uint32_t instance)
 {
     
-    // UNUSED(instance);
-    
+    auto prom = std::promise<Winch::Result>();
+    auto fut = prom.get_future();
 
-    // TODO :)
-    return {};
+    deliver_async(instance, [&prom](Winch::Result result) {
+        prom.set_value(result);
+    });
+
+    return fut.get();
 }
 
 void WinchImpl::hold_async(uint32_t instance, const Winch::ResultCallback callback)
 {
     
-    // UNUSED(instance);
-    
-    // UNUSED(callback);
+    MavlinkCommandSender::CommandLong command{};
+
+    command.command = MAV_CMD_DO_WINCH;
+    command.params.maybe_param1 = instance;
+    command.params.maybe_param2 = static_cast<float>(Winch::WinchAction::Hold);
+
+    command.target_component_id = MAV_TYPE::MAV_TYPE_WINCH;
+
+    _parent->send_command_async(
+        command, [this, callback](MavlinkCommandSender::Result result, float) {
+            command_result_callback(result, callback);
+        });
 }
 
 
@@ -148,19 +220,31 @@ void WinchImpl::hold_async(uint32_t instance, const Winch::ResultCallback callba
 Winch::Result WinchImpl::hold(uint32_t instance)
 {
     
-    // UNUSED(instance);
-    
+    auto prom = std::promise<Winch::Result>();
+    auto fut = prom.get_future();
 
-    // TODO :)
-    return {};
+    hold_async(instance, [&prom](Winch::Result result) {
+        prom.set_value(result);
+    });
+
+    return fut.get();
 }
 
 void WinchImpl::retract_async(uint32_t instance, const Winch::ResultCallback callback)
 {
     
-    // UNUSED(instance);
-    
-    // UNUSED(callback);
+    MavlinkCommandSender::CommandLong command{};
+
+    command.command = MAV_CMD_DO_WINCH;
+    command.params.maybe_param1 = instance;
+    command.params.maybe_param2 = static_cast<float>(Winch::WinchAction::Retract);
+
+    command.target_component_id = MAV_TYPE::MAV_TYPE_WINCH;
+
+    _parent->send_command_async(
+        command, [this, callback](MavlinkCommandSender::Result result, float) {
+            command_result_callback(result, callback);
+        });
 }
 
 
@@ -168,19 +252,31 @@ void WinchImpl::retract_async(uint32_t instance, const Winch::ResultCallback cal
 Winch::Result WinchImpl::retract(uint32_t instance)
 {
     
-    // UNUSED(instance);
-    
+    auto prom = std::promise<Winch::Result>();
+    auto fut = prom.get_future();
 
-    // TODO :)
-    return {};
+    retract_async(instance, [&prom](Winch::Result result) {
+        prom.set_value(result);
+    });
+
+    return fut.get();
 }
 
 void WinchImpl::load_line_async(uint32_t instance, const Winch::ResultCallback callback)
 {
     
-    // UNUSED(instance);
-    
-    // UNUSED(callback);
+    MavlinkCommandSender::CommandLong command{};
+
+    command.command = MAV_CMD_DO_WINCH;
+    command.params.maybe_param1 = instance;
+    command.params.maybe_param2 = static_cast<float>(Winch::WinchAction::LoadLine);
+
+    command.target_component_id = MAV_TYPE::MAV_TYPE_WINCH;
+
+    _parent->send_command_async(
+        command, [this, callback](MavlinkCommandSender::Result result, float) {
+            command_result_callback(result, callback);
+        });
 }
 
 
@@ -188,19 +284,31 @@ void WinchImpl::load_line_async(uint32_t instance, const Winch::ResultCallback c
 Winch::Result WinchImpl::load_line(uint32_t instance)
 {
     
-    // UNUSED(instance);
-    
+    auto prom = std::promise<Winch::Result>();
+    auto fut = prom.get_future();
 
-    // TODO :)
-    return {};
+    load_line_async(instance, [&prom](Winch::Result result) {
+        prom.set_value(result);
+    });
+
+    return fut.get();
 }
 
 void WinchImpl::abandon_line_async(uint32_t instance, const Winch::ResultCallback callback)
 {
     
-    // UNUSED(instance);
-    
-    // UNUSED(callback);
+    MavlinkCommandSender::CommandLong command{};
+
+    command.command = MAV_CMD_DO_WINCH;
+    command.params.maybe_param1 = instance;
+    command.params.maybe_param2 = static_cast<float>(Winch::WinchAction::AbandonLine);
+
+    command.target_component_id = MAV_TYPE::MAV_TYPE_WINCH;
+
+    _parent->send_command_async(
+        command, [this, callback](MavlinkCommandSender::Result result, float) {
+            command_result_callback(result, callback);
+        });
 }
 
 
@@ -208,19 +316,31 @@ void WinchImpl::abandon_line_async(uint32_t instance, const Winch::ResultCallbac
 Winch::Result WinchImpl::abandon_line(uint32_t instance)
 {
     
-    // UNUSED(instance);
-    
+    auto prom = std::promise<Winch::Result>();
+    auto fut = prom.get_future();
 
-    // TODO :)
-    return {};
+    abandon_line_async(instance, [&prom](Winch::Result result) {
+        prom.set_value(result);
+    });
+
+    return fut.get();
 }
 
 void WinchImpl::load_payload_async(uint32_t instance, const Winch::ResultCallback callback)
 {
     
-    // UNUSED(instance);
-    
-    // UNUSED(callback);
+    MavlinkCommandSender::CommandLong command{};
+
+    command.command = MAV_CMD_DO_WINCH;
+    command.params.maybe_param1 = instance;
+    command.params.maybe_param2 = static_cast<float>(Winch::WinchAction::LoadPayload);
+
+    command.target_component_id = MAV_TYPE::MAV_TYPE_WINCH;
+
+    _parent->send_command_async(
+        command, [this, callback](MavlinkCommandSender::Result result, float) {
+            command_result_callback(result, callback);
+        });
 }
 
 
@@ -228,11 +348,14 @@ void WinchImpl::load_payload_async(uint32_t instance, const Winch::ResultCallbac
 Winch::Result WinchImpl::load_payload(uint32_t instance)
 {
     
-    // UNUSED(instance);
-    
+    auto prom = std::promise<Winch::Result>();
+    auto fut = prom.get_future();
 
-    // TODO :)
-    return {};
+    load_payload_async(instance, [&prom](Winch::Result result) {
+        prom.set_value(result);
+    });
+
+    return fut.get();
 }
 
 Winch::Result WinchImpl::winch_result_from_command_result(MavlinkCommandSender::Result result)
