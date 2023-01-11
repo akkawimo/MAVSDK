@@ -115,14 +115,14 @@ public:
     using ResultCallback = std::function<void(Result)>;
 
     /**
-     * @brief Winch grab cargo.
+     * @brief Allow motor to freewheel.
      *
      * This function is non-blocking. See 'relax' for the blocking counterpart.
      */
     void relax_async(uint32_t instance, const ResultCallback callback);
 
     /**
-     * @brief Winch grab cargo.
+     * @brief Allow motor to freewheel.
      *
      * This function is blocking. See 'relax_async' for the non-blocking counterpart.
      *
@@ -131,7 +131,7 @@ public:
     Result relax(uint32_t instance) const;
 
     /**
-     * @brief Winch release cargo.
+     * @brief Wind or unwind specified length of line, optionally using specified rate.
      *
      * This function is non-blocking. See 'relative_length_control' for the blocking counterpart.
      */
@@ -139,7 +139,7 @@ public:
         uint32_t instance, float length, float rate, const ResultCallback callback);
 
     /**
-     * @brief Winch release cargo.
+     * @brief Wind or unwind specified length of line, optionally using specified rate.
      *
      * This function is blocking. See 'relative_length_control_async' for the non-blocking
      * counterpart.
@@ -165,14 +165,14 @@ public:
     Result rate_control(uint32_t instance, float rate) const;
 
     /**
-     * @brief
+     * @brief Perform the locking sequence to relieve motor while in the fully retracted position.
      *
      * This function is non-blocking. See 'lock' for the blocking counterpart.
      */
     void lock_async(uint32_t instance, const ResultCallback callback);
 
     /**
-     * @brief
+     * @brief Perform the locking sequence to relieve motor while in the fully retracted position.
      *
      * This function is blocking. See 'lock_async' for the non-blocking counterpart.
      *
@@ -181,14 +181,14 @@ public:
     Result lock(uint32_t instance) const;
 
     /**
-     * @brief
+     * @brief Sequence of drop, slow down, touch down, reel up, lock.
      *
      * This function is non-blocking. See 'deliver' for the blocking counterpart.
      */
     void deliver_async(uint32_t instance, const ResultCallback callback);
 
     /**
-     * @brief
+     * @brief Sequence of drop, slow down, touch down, reel up, lock.
      *
      * This function is blocking. See 'deliver_async' for the non-blocking counterpart.
      *
@@ -197,14 +197,14 @@ public:
     Result deliver(uint32_t instance) const;
 
     /**
-     * @brief
+     * @brief Engage motor and hold current position.
      *
      * This function is non-blocking. See 'hold' for the blocking counterpart.
      */
     void hold_async(uint32_t instance, const ResultCallback callback);
 
     /**
-     * @brief
+     * @brief Engage motor and hold current position.
      *
      * This function is blocking. See 'hold_async' for the non-blocking counterpart.
      *
@@ -213,14 +213,14 @@ public:
     Result hold(uint32_t instance) const;
 
     /**
-     * @brief
+     * @brief Return the reel to the fully retracted position.
      *
      * This function is non-blocking. See 'retract' for the blocking counterpart.
      */
     void retract_async(uint32_t instance, const ResultCallback callback);
 
     /**
-     * @brief
+     * @brief Return the reel to the fully retracted position.
      *
      * This function is blocking. See 'retract_async' for the non-blocking counterpart.
      *
@@ -229,14 +229,20 @@ public:
     Result retract(uint32_t instance) const;
 
     /**
-     * @brief
+     * @brief Load the reel with line.
+     *
+     * The winch will calculate the total loaded length and stop when the tension exceeds a
+     * threshold.
      *
      * This function is non-blocking. See 'load_line' for the blocking counterpart.
      */
     void load_line_async(uint32_t instance, const ResultCallback callback);
 
     /**
-     * @brief
+     * @brief Load the reel with line.
+     *
+     * The winch will calculate the total loaded length and stop when the tension exceeds a
+     * threshold.
      *
      * This function is blocking. See 'load_line_async' for the non-blocking counterpart.
      *
@@ -245,14 +251,14 @@ public:
     Result load_line(uint32_t instance) const;
 
     /**
-     * @brief
+     * @brief Spool out the entire length of the line.
      *
      * This function is non-blocking. See 'abandon_line' for the blocking counterpart.
      */
     void abandon_line_async(uint32_t instance, const ResultCallback callback);
 
     /**
-     * @brief
+     * @brief Spool out the entire length of the line.
      *
      * This function is blocking. See 'abandon_line_async' for the non-blocking counterpart.
      *
@@ -261,14 +267,14 @@ public:
     Result abandon_line(uint32_t instance) const;
 
     /**
-     * @brief
+     * @brief Spools out just enough to present the hook to the user to load the payload.
      *
      * This function is non-blocking. See 'load_payload' for the blocking counterpart.
      */
     void load_payload_async(uint32_t instance, const ResultCallback callback);
 
     /**
-     * @brief
+     * @brief Spools out just enough to present the hook to the user to load the payload.
      *
      * This function is blocking. See 'load_payload_async' for the non-blocking counterpart.
      *

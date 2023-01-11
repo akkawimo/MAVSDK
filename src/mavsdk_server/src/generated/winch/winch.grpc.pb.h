@@ -38,7 +38,7 @@ class WinchService final {
    public:
     virtual ~StubInterface() {}
     //
-    // Winch grab cargo.
+    // Allow motor to freewheel.
     virtual ::grpc::Status Relax(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelaxRequest& request, ::mavsdk::rpc::winch::RelaxResponse* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::RelaxResponse>> AsyncRelax(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelaxRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::RelaxResponse>>(AsyncRelaxRaw(context, request, cq));
@@ -47,7 +47,7 @@ class WinchService final {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::RelaxResponse>>(PrepareAsyncRelaxRaw(context, request, cq));
     }
     //
-    // Winch release cargo.
+    // Wind or unwind specified length of line, optionally using specified rate.
     virtual ::grpc::Status RelativeLengthControl(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelativeLengthControlRequest& request, ::mavsdk::rpc::winch::RelativeLengthControlResponse* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::RelativeLengthControlResponse>> AsyncRelativeLengthControl(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelativeLengthControlRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::RelativeLengthControlResponse>>(AsyncRelativeLengthControlRaw(context, request, cq));
@@ -64,6 +64,8 @@ class WinchService final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::RateControlResponse>> PrepareAsyncRateControl(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RateControlRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::RateControlResponse>>(PrepareAsyncRateControlRaw(context, request, cq));
     }
+    //
+    // Perform the locking sequence to relieve motor while in the fully retracted position.
     virtual ::grpc::Status Lock(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::LockRequest& request, ::mavsdk::rpc::winch::LockResponse* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::LockResponse>> AsyncLock(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::LockRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::LockResponse>>(AsyncLockRaw(context, request, cq));
@@ -71,6 +73,8 @@ class WinchService final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::LockResponse>> PrepareAsyncLock(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::LockRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::LockResponse>>(PrepareAsyncLockRaw(context, request, cq));
     }
+    //
+    // Sequence of drop, slow down, touch down, reel up, lock.
     virtual ::grpc::Status Deliver(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::DeliverRequest& request, ::mavsdk::rpc::winch::DeliverResponse* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::DeliverResponse>> AsyncDeliver(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::DeliverRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::DeliverResponse>>(AsyncDeliverRaw(context, request, cq));
@@ -78,6 +82,8 @@ class WinchService final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::DeliverResponse>> PrepareAsyncDeliver(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::DeliverRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::DeliverResponse>>(PrepareAsyncDeliverRaw(context, request, cq));
     }
+    //
+    // Engage motor and hold current position.
     virtual ::grpc::Status Hold(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::HoldRequest& request, ::mavsdk::rpc::winch::HoldResponse* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::HoldResponse>> AsyncHold(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::HoldRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::HoldResponse>>(AsyncHoldRaw(context, request, cq));
@@ -85,6 +91,8 @@ class WinchService final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::HoldResponse>> PrepareAsyncHold(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::HoldRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::HoldResponse>>(PrepareAsyncHoldRaw(context, request, cq));
     }
+    //
+    // Return the reel to the fully retracted position.
     virtual ::grpc::Status Retract(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RetractRequest& request, ::mavsdk::rpc::winch::RetractResponse* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::RetractResponse>> AsyncRetract(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RetractRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::RetractResponse>>(AsyncRetractRaw(context, request, cq));
@@ -92,6 +100,10 @@ class WinchService final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::RetractResponse>> PrepareAsyncRetract(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RetractRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::RetractResponse>>(PrepareAsyncRetractRaw(context, request, cq));
     }
+    //
+    // Load the reel with line.
+    //
+    // The winch will calculate the total loaded length and stop when the tension exceeds a threshold.
     virtual ::grpc::Status LoadLine(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::LoadLineRequest& request, ::mavsdk::rpc::winch::LoadLineResponse* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::LoadLineResponse>> AsyncLoadLine(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::LoadLineRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::LoadLineResponse>>(AsyncLoadLineRaw(context, request, cq));
@@ -99,6 +111,8 @@ class WinchService final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::LoadLineResponse>> PrepareAsyncLoadLine(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::LoadLineRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::LoadLineResponse>>(PrepareAsyncLoadLineRaw(context, request, cq));
     }
+    //
+    // Spool out the entire length of the line.
     virtual ::grpc::Status AbandonLine(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::AbandonLineRequest& request, ::mavsdk::rpc::winch::AbandonLineResponse* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::AbandonLineResponse>> AsyncAbandonLine(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::AbandonLineRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::AbandonLineResponse>>(AsyncAbandonLineRaw(context, request, cq));
@@ -106,6 +120,8 @@ class WinchService final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::AbandonLineResponse>> PrepareAsyncAbandonLine(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::AbandonLineRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::AbandonLineResponse>>(PrepareAsyncAbandonLineRaw(context, request, cq));
     }
+    //
+    // Spools out just enough to present the hook to the user to load the payload.
     virtual ::grpc::Status LoadPayload(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::LoadPayloadRequest& request, ::mavsdk::rpc::winch::LoadPayloadResponse* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::LoadPayloadResponse>> AsyncLoadPayload(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::LoadPayloadRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::LoadPayloadResponse>>(AsyncLoadPayloadRaw(context, request, cq));
@@ -117,29 +133,45 @@ class WinchService final {
      public:
       virtual ~async_interface() {}
       //
-      // Winch grab cargo.
+      // Allow motor to freewheel.
       virtual void Relax(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelaxRequest* request, ::mavsdk::rpc::winch::RelaxResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void Relax(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelaxRequest* request, ::mavsdk::rpc::winch::RelaxResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       //
-      // Winch release cargo.
+      // Wind or unwind specified length of line, optionally using specified rate.
       virtual void RelativeLengthControl(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelativeLengthControlRequest* request, ::mavsdk::rpc::winch::RelativeLengthControlResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void RelativeLengthControl(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelativeLengthControlRequest* request, ::mavsdk::rpc::winch::RelativeLengthControlResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       //
       // Wind or unwind line at specified rate.
       virtual void RateControl(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RateControlRequest* request, ::mavsdk::rpc::winch::RateControlResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void RateControl(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RateControlRequest* request, ::mavsdk::rpc::winch::RateControlResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      //
+      // Perform the locking sequence to relieve motor while in the fully retracted position.
       virtual void Lock(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::LockRequest* request, ::mavsdk::rpc::winch::LockResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void Lock(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::LockRequest* request, ::mavsdk::rpc::winch::LockResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      //
+      // Sequence of drop, slow down, touch down, reel up, lock.
       virtual void Deliver(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::DeliverRequest* request, ::mavsdk::rpc::winch::DeliverResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void Deliver(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::DeliverRequest* request, ::mavsdk::rpc::winch::DeliverResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      //
+      // Engage motor and hold current position.
       virtual void Hold(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::HoldRequest* request, ::mavsdk::rpc::winch::HoldResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void Hold(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::HoldRequest* request, ::mavsdk::rpc::winch::HoldResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      //
+      // Return the reel to the fully retracted position.
       virtual void Retract(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RetractRequest* request, ::mavsdk::rpc::winch::RetractResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void Retract(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RetractRequest* request, ::mavsdk::rpc::winch::RetractResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      //
+      // Load the reel with line.
+      //
+      // The winch will calculate the total loaded length and stop when the tension exceeds a threshold.
       virtual void LoadLine(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::LoadLineRequest* request, ::mavsdk::rpc::winch::LoadLineResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void LoadLine(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::LoadLineRequest* request, ::mavsdk::rpc::winch::LoadLineResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      //
+      // Spool out the entire length of the line.
       virtual void AbandonLine(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::AbandonLineRequest* request, ::mavsdk::rpc::winch::AbandonLineResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void AbandonLine(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::AbandonLineRequest* request, ::mavsdk::rpc::winch::AbandonLineResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      //
+      // Spools out just enough to present the hook to the user to load the payload.
       virtual void LoadPayload(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::LoadPayloadRequest* request, ::mavsdk::rpc::winch::LoadPayloadResponse* response, std::function<void(::grpc::Status)>) = 0;
       virtual void LoadPayload(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::LoadPayloadRequest* request, ::mavsdk::rpc::winch::LoadPayloadResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
     };
@@ -313,20 +345,36 @@ class WinchService final {
     Service();
     virtual ~Service();
     //
-    // Winch grab cargo.
+    // Allow motor to freewheel.
     virtual ::grpc::Status Relax(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::RelaxRequest* request, ::mavsdk::rpc::winch::RelaxResponse* response);
     //
-    // Winch release cargo.
+    // Wind or unwind specified length of line, optionally using specified rate.
     virtual ::grpc::Status RelativeLengthControl(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::RelativeLengthControlRequest* request, ::mavsdk::rpc::winch::RelativeLengthControlResponse* response);
     //
     // Wind or unwind line at specified rate.
     virtual ::grpc::Status RateControl(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::RateControlRequest* request, ::mavsdk::rpc::winch::RateControlResponse* response);
+    //
+    // Perform the locking sequence to relieve motor while in the fully retracted position.
     virtual ::grpc::Status Lock(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::LockRequest* request, ::mavsdk::rpc::winch::LockResponse* response);
+    //
+    // Sequence of drop, slow down, touch down, reel up, lock.
     virtual ::grpc::Status Deliver(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::DeliverRequest* request, ::mavsdk::rpc::winch::DeliverResponse* response);
+    //
+    // Engage motor and hold current position.
     virtual ::grpc::Status Hold(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::HoldRequest* request, ::mavsdk::rpc::winch::HoldResponse* response);
+    //
+    // Return the reel to the fully retracted position.
     virtual ::grpc::Status Retract(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::RetractRequest* request, ::mavsdk::rpc::winch::RetractResponse* response);
+    //
+    // Load the reel with line.
+    //
+    // The winch will calculate the total loaded length and stop when the tension exceeds a threshold.
     virtual ::grpc::Status LoadLine(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::LoadLineRequest* request, ::mavsdk::rpc::winch::LoadLineResponse* response);
+    //
+    // Spool out the entire length of the line.
     virtual ::grpc::Status AbandonLine(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::AbandonLineRequest* request, ::mavsdk::rpc::winch::AbandonLineResponse* response);
+    //
+    // Spools out just enough to present the hook to the user to load the payload.
     virtual ::grpc::Status LoadPayload(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::LoadPayloadRequest* request, ::mavsdk::rpc::winch::LoadPayloadResponse* response);
   };
   template <class BaseClass>
