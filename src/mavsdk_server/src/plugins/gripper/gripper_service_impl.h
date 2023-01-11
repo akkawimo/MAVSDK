@@ -148,10 +148,10 @@ public:
         }
     }
 
-    grpc::Status GripperGrab(
+    grpc::Status Grab(
         grpc::ServerContext* /* context */,
-        const rpc::gripper::GripperGrabRequest* request,
-        rpc::gripper::GripperGrabResponse* response) override
+        const rpc::gripper::GrabRequest* request,
+        rpc::gripper::GrabResponse* response) override
     {
         if (_lazy_plugin.maybe_plugin() == nullptr) {
             if (response != nullptr) {
@@ -163,11 +163,11 @@ public:
         }
 
         if (request == nullptr) {
-            LogWarn() << "GripperGrab sent with a null request! Ignoring...";
+            LogWarn() << "Grab sent with a null request! Ignoring...";
             return grpc::Status::OK;
         }
 
-        auto result = _lazy_plugin.maybe_plugin()->gripper_grab(request->instance());
+        auto result = _lazy_plugin.maybe_plugin()->grab(request->instance());
 
         if (response != nullptr) {
             fillResponseWithResult(response, result);
@@ -176,10 +176,10 @@ public:
         return grpc::Status::OK;
     }
 
-    grpc::Status GripperRelease(
+    grpc::Status Release(
         grpc::ServerContext* /* context */,
-        const rpc::gripper::GripperReleaseRequest* request,
-        rpc::gripper::GripperReleaseResponse* response) override
+        const rpc::gripper::ReleaseRequest* request,
+        rpc::gripper::ReleaseResponse* response) override
     {
         if (_lazy_plugin.maybe_plugin() == nullptr) {
             if (response != nullptr) {
@@ -191,11 +191,11 @@ public:
         }
 
         if (request == nullptr) {
-            LogWarn() << "GripperRelease sent with a null request! Ignoring...";
+            LogWarn() << "Release sent with a null request! Ignoring...";
             return grpc::Status::OK;
         }
 
-        auto result = _lazy_plugin.maybe_plugin()->gripper_release(request->instance());
+        auto result = _lazy_plugin.maybe_plugin()->release(request->instance());
 
         if (response != nullptr) {
             fillResponseWithResult(response, result);

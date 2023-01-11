@@ -110,34 +110,34 @@ public:
     /**
      * @brief Gripper grab cargo.
      *
-     * This function is non-blocking. See 'gripper_grab' for the blocking counterpart.
+     * This function is non-blocking. See 'grab' for the blocking counterpart.
      */
-    void gripper_grab_async(uint32_t instance, const ResultCallback callback);
+    void grab_async(uint32_t instance, const ResultCallback callback);
 
     /**
      * @brief Gripper grab cargo.
      *
-     * This function is blocking. See 'gripper_grab_async' for the non-blocking counterpart.
+     * This function is blocking. See 'grab_async' for the non-blocking counterpart.
      *
      * @return Result of request.
      */
-    Result gripper_grab(uint32_t instance) const;
+    Result grab(uint32_t instance) const;
 
     /**
      * @brief Gripper release cargo.
      *
-     * This function is non-blocking. See 'gripper_release' for the blocking counterpart.
+     * This function is non-blocking. See 'release' for the blocking counterpart.
      */
-    void gripper_release_async(uint32_t instance, const ResultCallback callback);
+    void release_async(uint32_t instance, const ResultCallback callback);
 
     /**
      * @brief Gripper release cargo.
      *
-     * This function is blocking. See 'gripper_release_async' for the non-blocking counterpart.
+     * This function is blocking. See 'release_async' for the non-blocking counterpart.
      *
      * @return Result of request.
      */
-    Result gripper_release(uint32_t instance) const;
+    Result release(uint32_t instance) const;
 
     /**
      * @brief Copy constructor.

@@ -48,30 +48,30 @@ extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table
 namespace mavsdk {
 namespace rpc {
 namespace gripper {
-class GripperGrabRequest;
-struct GripperGrabRequestDefaultTypeInternal;
-extern GripperGrabRequestDefaultTypeInternal _GripperGrabRequest_default_instance_;
-class GripperGrabResponse;
-struct GripperGrabResponseDefaultTypeInternal;
-extern GripperGrabResponseDefaultTypeInternal _GripperGrabResponse_default_instance_;
-class GripperReleaseRequest;
-struct GripperReleaseRequestDefaultTypeInternal;
-extern GripperReleaseRequestDefaultTypeInternal _GripperReleaseRequest_default_instance_;
-class GripperReleaseResponse;
-struct GripperReleaseResponseDefaultTypeInternal;
-extern GripperReleaseResponseDefaultTypeInternal _GripperReleaseResponse_default_instance_;
+class GrabRequest;
+struct GrabRequestDefaultTypeInternal;
+extern GrabRequestDefaultTypeInternal _GrabRequest_default_instance_;
+class GrabResponse;
+struct GrabResponseDefaultTypeInternal;
+extern GrabResponseDefaultTypeInternal _GrabResponse_default_instance_;
 class GripperResult;
 struct GripperResultDefaultTypeInternal;
 extern GripperResultDefaultTypeInternal _GripperResult_default_instance_;
+class ReleaseRequest;
+struct ReleaseRequestDefaultTypeInternal;
+extern ReleaseRequestDefaultTypeInternal _ReleaseRequest_default_instance_;
+class ReleaseResponse;
+struct ReleaseResponseDefaultTypeInternal;
+extern ReleaseResponseDefaultTypeInternal _ReleaseResponse_default_instance_;
 }  // namespace gripper
 }  // namespace rpc
 }  // namespace mavsdk
 PROTOBUF_NAMESPACE_OPEN
-template<> ::mavsdk::rpc::gripper::GripperGrabRequest* Arena::CreateMaybeMessage<::mavsdk::rpc::gripper::GripperGrabRequest>(Arena*);
-template<> ::mavsdk::rpc::gripper::GripperGrabResponse* Arena::CreateMaybeMessage<::mavsdk::rpc::gripper::GripperGrabResponse>(Arena*);
-template<> ::mavsdk::rpc::gripper::GripperReleaseRequest* Arena::CreateMaybeMessage<::mavsdk::rpc::gripper::GripperReleaseRequest>(Arena*);
-template<> ::mavsdk::rpc::gripper::GripperReleaseResponse* Arena::CreateMaybeMessage<::mavsdk::rpc::gripper::GripperReleaseResponse>(Arena*);
+template<> ::mavsdk::rpc::gripper::GrabRequest* Arena::CreateMaybeMessage<::mavsdk::rpc::gripper::GrabRequest>(Arena*);
+template<> ::mavsdk::rpc::gripper::GrabResponse* Arena::CreateMaybeMessage<::mavsdk::rpc::gripper::GrabResponse>(Arena*);
 template<> ::mavsdk::rpc::gripper::GripperResult* Arena::CreateMaybeMessage<::mavsdk::rpc::gripper::GripperResult>(Arena*);
+template<> ::mavsdk::rpc::gripper::ReleaseRequest* Arena::CreateMaybeMessage<::mavsdk::rpc::gripper::ReleaseRequest>(Arena*);
+template<> ::mavsdk::rpc::gripper::ReleaseResponse* Arena::CreateMaybeMessage<::mavsdk::rpc::gripper::ReleaseResponse>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace mavsdk {
 namespace rpc {
@@ -141,24 +141,24 @@ inline bool GripperAction_Parse(
 }
 // ===================================================================
 
-class GripperGrabRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.gripper.GripperGrabRequest) */ {
+class GrabRequest final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.gripper.GrabRequest) */ {
  public:
-  inline GripperGrabRequest() : GripperGrabRequest(nullptr) {}
-  ~GripperGrabRequest() override;
-  explicit PROTOBUF_CONSTEXPR GripperGrabRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline GrabRequest() : GrabRequest(nullptr) {}
+  ~GrabRequest() override;
+  explicit PROTOBUF_CONSTEXPR GrabRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  GripperGrabRequest(const GripperGrabRequest& from);
-  GripperGrabRequest(GripperGrabRequest&& from) noexcept
-    : GripperGrabRequest() {
+  GrabRequest(const GrabRequest& from);
+  GrabRequest(GrabRequest&& from) noexcept
+    : GrabRequest() {
     *this = ::std::move(from);
   }
 
-  inline GripperGrabRequest& operator=(const GripperGrabRequest& from) {
+  inline GrabRequest& operator=(const GrabRequest& from) {
     CopyFrom(from);
     return *this;
   }
-  inline GripperGrabRequest& operator=(GripperGrabRequest&& from) noexcept {
+  inline GrabRequest& operator=(GrabRequest&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -181,20 +181,20 @@ class GripperGrabRequest final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const GripperGrabRequest& default_instance() {
+  static const GrabRequest& default_instance() {
     return *internal_default_instance();
   }
-  static inline const GripperGrabRequest* internal_default_instance() {
-    return reinterpret_cast<const GripperGrabRequest*>(
-               &_GripperGrabRequest_default_instance_);
+  static inline const GrabRequest* internal_default_instance() {
+    return reinterpret_cast<const GrabRequest*>(
+               &_GrabRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     0;
 
-  friend void swap(GripperGrabRequest& a, GripperGrabRequest& b) {
+  friend void swap(GrabRequest& a, GrabRequest& b) {
     a.Swap(&b);
   }
-  inline void Swap(GripperGrabRequest* other) {
+  inline void Swap(GrabRequest* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -207,7 +207,7 @@ class GripperGrabRequest final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(GripperGrabRequest* other) {
+  void UnsafeArenaSwap(GrabRequest* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -215,13 +215,13 @@ class GripperGrabRequest final :
 
   // implements Message ----------------------------------------------
 
-  GripperGrabRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<GripperGrabRequest>(arena);
+  GrabRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<GrabRequest>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const GripperGrabRequest& from);
+  void CopyFrom(const GrabRequest& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const GripperGrabRequest& from);
+  void MergeFrom(const GrabRequest& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -238,15 +238,15 @@ class GripperGrabRequest final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(GripperGrabRequest* other);
+  void InternalSwap(GrabRequest* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "mavsdk.rpc.gripper.GripperGrabRequest";
+    return "mavsdk.rpc.gripper.GrabRequest";
   }
   protected:
-  explicit GripperGrabRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit GrabRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -271,7 +271,7 @@ class GripperGrabRequest final :
   void _internal_set_instance(uint32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:mavsdk.rpc.gripper.GripperGrabRequest)
+  // @@protoc_insertion_point(class_scope:mavsdk.rpc.gripper.GrabRequest)
  private:
   class _Internal;
 
@@ -284,24 +284,24 @@ class GripperGrabRequest final :
 };
 // -------------------------------------------------------------------
 
-class GripperGrabResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.gripper.GripperGrabResponse) */ {
+class GrabResponse final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.gripper.GrabResponse) */ {
  public:
-  inline GripperGrabResponse() : GripperGrabResponse(nullptr) {}
-  ~GripperGrabResponse() override;
-  explicit PROTOBUF_CONSTEXPR GripperGrabResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline GrabResponse() : GrabResponse(nullptr) {}
+  ~GrabResponse() override;
+  explicit PROTOBUF_CONSTEXPR GrabResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  GripperGrabResponse(const GripperGrabResponse& from);
-  GripperGrabResponse(GripperGrabResponse&& from) noexcept
-    : GripperGrabResponse() {
+  GrabResponse(const GrabResponse& from);
+  GrabResponse(GrabResponse&& from) noexcept
+    : GrabResponse() {
     *this = ::std::move(from);
   }
 
-  inline GripperGrabResponse& operator=(const GripperGrabResponse& from) {
+  inline GrabResponse& operator=(const GrabResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline GripperGrabResponse& operator=(GripperGrabResponse&& from) noexcept {
+  inline GrabResponse& operator=(GrabResponse&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -324,20 +324,20 @@ class GripperGrabResponse final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const GripperGrabResponse& default_instance() {
+  static const GrabResponse& default_instance() {
     return *internal_default_instance();
   }
-  static inline const GripperGrabResponse* internal_default_instance() {
-    return reinterpret_cast<const GripperGrabResponse*>(
-               &_GripperGrabResponse_default_instance_);
+  static inline const GrabResponse* internal_default_instance() {
+    return reinterpret_cast<const GrabResponse*>(
+               &_GrabResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     1;
 
-  friend void swap(GripperGrabResponse& a, GripperGrabResponse& b) {
+  friend void swap(GrabResponse& a, GrabResponse& b) {
     a.Swap(&b);
   }
-  inline void Swap(GripperGrabResponse* other) {
+  inline void Swap(GrabResponse* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -350,7 +350,7 @@ class GripperGrabResponse final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(GripperGrabResponse* other) {
+  void UnsafeArenaSwap(GrabResponse* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -358,13 +358,13 @@ class GripperGrabResponse final :
 
   // implements Message ----------------------------------------------
 
-  GripperGrabResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<GripperGrabResponse>(arena);
+  GrabResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<GrabResponse>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const GripperGrabResponse& from);
+  void CopyFrom(const GrabResponse& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const GripperGrabResponse& from);
+  void MergeFrom(const GrabResponse& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -381,15 +381,15 @@ class GripperGrabResponse final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(GripperGrabResponse* other);
+  void InternalSwap(GrabResponse* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "mavsdk.rpc.gripper.GripperGrabResponse";
+    return "mavsdk.rpc.gripper.GrabResponse";
   }
   protected:
-  explicit GripperGrabResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit GrabResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -423,7 +423,7 @@ class GripperGrabResponse final :
       ::mavsdk::rpc::gripper::GripperResult* gripper_result);
   ::mavsdk::rpc::gripper::GripperResult* unsafe_arena_release_gripper_result();
 
-  // @@protoc_insertion_point(class_scope:mavsdk.rpc.gripper.GripperGrabResponse)
+  // @@protoc_insertion_point(class_scope:mavsdk.rpc.gripper.GrabResponse)
  private:
   class _Internal;
 
@@ -436,24 +436,24 @@ class GripperGrabResponse final :
 };
 // -------------------------------------------------------------------
 
-class GripperReleaseRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.gripper.GripperReleaseRequest) */ {
+class ReleaseRequest final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.gripper.ReleaseRequest) */ {
  public:
-  inline GripperReleaseRequest() : GripperReleaseRequest(nullptr) {}
-  ~GripperReleaseRequest() override;
-  explicit PROTOBUF_CONSTEXPR GripperReleaseRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline ReleaseRequest() : ReleaseRequest(nullptr) {}
+  ~ReleaseRequest() override;
+  explicit PROTOBUF_CONSTEXPR ReleaseRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  GripperReleaseRequest(const GripperReleaseRequest& from);
-  GripperReleaseRequest(GripperReleaseRequest&& from) noexcept
-    : GripperReleaseRequest() {
+  ReleaseRequest(const ReleaseRequest& from);
+  ReleaseRequest(ReleaseRequest&& from) noexcept
+    : ReleaseRequest() {
     *this = ::std::move(from);
   }
 
-  inline GripperReleaseRequest& operator=(const GripperReleaseRequest& from) {
+  inline ReleaseRequest& operator=(const ReleaseRequest& from) {
     CopyFrom(from);
     return *this;
   }
-  inline GripperReleaseRequest& operator=(GripperReleaseRequest&& from) noexcept {
+  inline ReleaseRequest& operator=(ReleaseRequest&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -476,20 +476,20 @@ class GripperReleaseRequest final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const GripperReleaseRequest& default_instance() {
+  static const ReleaseRequest& default_instance() {
     return *internal_default_instance();
   }
-  static inline const GripperReleaseRequest* internal_default_instance() {
-    return reinterpret_cast<const GripperReleaseRequest*>(
-               &_GripperReleaseRequest_default_instance_);
+  static inline const ReleaseRequest* internal_default_instance() {
+    return reinterpret_cast<const ReleaseRequest*>(
+               &_ReleaseRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     2;
 
-  friend void swap(GripperReleaseRequest& a, GripperReleaseRequest& b) {
+  friend void swap(ReleaseRequest& a, ReleaseRequest& b) {
     a.Swap(&b);
   }
-  inline void Swap(GripperReleaseRequest* other) {
+  inline void Swap(ReleaseRequest* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -502,7 +502,7 @@ class GripperReleaseRequest final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(GripperReleaseRequest* other) {
+  void UnsafeArenaSwap(ReleaseRequest* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -510,13 +510,13 @@ class GripperReleaseRequest final :
 
   // implements Message ----------------------------------------------
 
-  GripperReleaseRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<GripperReleaseRequest>(arena);
+  ReleaseRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ReleaseRequest>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const GripperReleaseRequest& from);
+  void CopyFrom(const ReleaseRequest& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const GripperReleaseRequest& from);
+  void MergeFrom(const ReleaseRequest& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -533,15 +533,15 @@ class GripperReleaseRequest final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(GripperReleaseRequest* other);
+  void InternalSwap(ReleaseRequest* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "mavsdk.rpc.gripper.GripperReleaseRequest";
+    return "mavsdk.rpc.gripper.ReleaseRequest";
   }
   protected:
-  explicit GripperReleaseRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit ReleaseRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -566,7 +566,7 @@ class GripperReleaseRequest final :
   void _internal_set_instance(uint32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:mavsdk.rpc.gripper.GripperReleaseRequest)
+  // @@protoc_insertion_point(class_scope:mavsdk.rpc.gripper.ReleaseRequest)
  private:
   class _Internal;
 
@@ -579,24 +579,24 @@ class GripperReleaseRequest final :
 };
 // -------------------------------------------------------------------
 
-class GripperReleaseResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.gripper.GripperReleaseResponse) */ {
+class ReleaseResponse final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.gripper.ReleaseResponse) */ {
  public:
-  inline GripperReleaseResponse() : GripperReleaseResponse(nullptr) {}
-  ~GripperReleaseResponse() override;
-  explicit PROTOBUF_CONSTEXPR GripperReleaseResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline ReleaseResponse() : ReleaseResponse(nullptr) {}
+  ~ReleaseResponse() override;
+  explicit PROTOBUF_CONSTEXPR ReleaseResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  GripperReleaseResponse(const GripperReleaseResponse& from);
-  GripperReleaseResponse(GripperReleaseResponse&& from) noexcept
-    : GripperReleaseResponse() {
+  ReleaseResponse(const ReleaseResponse& from);
+  ReleaseResponse(ReleaseResponse&& from) noexcept
+    : ReleaseResponse() {
     *this = ::std::move(from);
   }
 
-  inline GripperReleaseResponse& operator=(const GripperReleaseResponse& from) {
+  inline ReleaseResponse& operator=(const ReleaseResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline GripperReleaseResponse& operator=(GripperReleaseResponse&& from) noexcept {
+  inline ReleaseResponse& operator=(ReleaseResponse&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -619,20 +619,20 @@ class GripperReleaseResponse final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const GripperReleaseResponse& default_instance() {
+  static const ReleaseResponse& default_instance() {
     return *internal_default_instance();
   }
-  static inline const GripperReleaseResponse* internal_default_instance() {
-    return reinterpret_cast<const GripperReleaseResponse*>(
-               &_GripperReleaseResponse_default_instance_);
+  static inline const ReleaseResponse* internal_default_instance() {
+    return reinterpret_cast<const ReleaseResponse*>(
+               &_ReleaseResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     3;
 
-  friend void swap(GripperReleaseResponse& a, GripperReleaseResponse& b) {
+  friend void swap(ReleaseResponse& a, ReleaseResponse& b) {
     a.Swap(&b);
   }
-  inline void Swap(GripperReleaseResponse* other) {
+  inline void Swap(ReleaseResponse* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -645,7 +645,7 @@ class GripperReleaseResponse final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(GripperReleaseResponse* other) {
+  void UnsafeArenaSwap(ReleaseResponse* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -653,13 +653,13 @@ class GripperReleaseResponse final :
 
   // implements Message ----------------------------------------------
 
-  GripperReleaseResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<GripperReleaseResponse>(arena);
+  ReleaseResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<ReleaseResponse>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const GripperReleaseResponse& from);
+  void CopyFrom(const ReleaseResponse& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const GripperReleaseResponse& from);
+  void MergeFrom(const ReleaseResponse& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -676,15 +676,15 @@ class GripperReleaseResponse final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(GripperReleaseResponse* other);
+  void InternalSwap(ReleaseResponse* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "mavsdk.rpc.gripper.GripperReleaseResponse";
+    return "mavsdk.rpc.gripper.ReleaseResponse";
   }
   protected:
-  explicit GripperReleaseResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit ReleaseResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -718,7 +718,7 @@ class GripperReleaseResponse final :
       ::mavsdk::rpc::gripper::GripperResult* gripper_result);
   ::mavsdk::rpc::gripper::GripperResult* unsafe_arena_release_gripper_result();
 
-  // @@protoc_insertion_point(class_scope:mavsdk.rpc.gripper.GripperReleaseResponse)
+  // @@protoc_insertion_point(class_scope:mavsdk.rpc.gripper.ReleaseResponse)
  private:
   class _Internal;
 
@@ -951,55 +951,55 @@ class GripperResult final :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
-// GripperGrabRequest
+// GrabRequest
 
 // uint32 instance = 1;
-inline void GripperGrabRequest::clear_instance() {
+inline void GrabRequest::clear_instance() {
   instance_ = 0u;
 }
-inline uint32_t GripperGrabRequest::_internal_instance() const {
+inline uint32_t GrabRequest::_internal_instance() const {
   return instance_;
 }
-inline uint32_t GripperGrabRequest::instance() const {
-  // @@protoc_insertion_point(field_get:mavsdk.rpc.gripper.GripperGrabRequest.instance)
+inline uint32_t GrabRequest::instance() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.gripper.GrabRequest.instance)
   return _internal_instance();
 }
-inline void GripperGrabRequest::_internal_set_instance(uint32_t value) {
+inline void GrabRequest::_internal_set_instance(uint32_t value) {
   
   instance_ = value;
 }
-inline void GripperGrabRequest::set_instance(uint32_t value) {
+inline void GrabRequest::set_instance(uint32_t value) {
   _internal_set_instance(value);
-  // @@protoc_insertion_point(field_set:mavsdk.rpc.gripper.GripperGrabRequest.instance)
+  // @@protoc_insertion_point(field_set:mavsdk.rpc.gripper.GrabRequest.instance)
 }
 
 // -------------------------------------------------------------------
 
-// GripperGrabResponse
+// GrabResponse
 
 // .mavsdk.rpc.gripper.GripperResult gripper_result = 1;
-inline bool GripperGrabResponse::_internal_has_gripper_result() const {
+inline bool GrabResponse::_internal_has_gripper_result() const {
   return this != internal_default_instance() && gripper_result_ != nullptr;
 }
-inline bool GripperGrabResponse::has_gripper_result() const {
+inline bool GrabResponse::has_gripper_result() const {
   return _internal_has_gripper_result();
 }
-inline void GripperGrabResponse::clear_gripper_result() {
+inline void GrabResponse::clear_gripper_result() {
   if (GetArenaForAllocation() == nullptr && gripper_result_ != nullptr) {
     delete gripper_result_;
   }
   gripper_result_ = nullptr;
 }
-inline const ::mavsdk::rpc::gripper::GripperResult& GripperGrabResponse::_internal_gripper_result() const {
+inline const ::mavsdk::rpc::gripper::GripperResult& GrabResponse::_internal_gripper_result() const {
   const ::mavsdk::rpc::gripper::GripperResult* p = gripper_result_;
   return p != nullptr ? *p : reinterpret_cast<const ::mavsdk::rpc::gripper::GripperResult&>(
       ::mavsdk::rpc::gripper::_GripperResult_default_instance_);
 }
-inline const ::mavsdk::rpc::gripper::GripperResult& GripperGrabResponse::gripper_result() const {
-  // @@protoc_insertion_point(field_get:mavsdk.rpc.gripper.GripperGrabResponse.gripper_result)
+inline const ::mavsdk::rpc::gripper::GripperResult& GrabResponse::gripper_result() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.gripper.GrabResponse.gripper_result)
   return _internal_gripper_result();
 }
-inline void GripperGrabResponse::unsafe_arena_set_allocated_gripper_result(
+inline void GrabResponse::unsafe_arena_set_allocated_gripper_result(
     ::mavsdk::rpc::gripper::GripperResult* gripper_result) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(gripper_result_);
@@ -1010,9 +1010,9 @@ inline void GripperGrabResponse::unsafe_arena_set_allocated_gripper_result(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:mavsdk.rpc.gripper.GripperGrabResponse.gripper_result)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:mavsdk.rpc.gripper.GrabResponse.gripper_result)
 }
-inline ::mavsdk::rpc::gripper::GripperResult* GripperGrabResponse::release_gripper_result() {
+inline ::mavsdk::rpc::gripper::GripperResult* GrabResponse::release_gripper_result() {
   
   ::mavsdk::rpc::gripper::GripperResult* temp = gripper_result_;
   gripper_result_ = nullptr;
@@ -1027,14 +1027,14 @@ inline ::mavsdk::rpc::gripper::GripperResult* GripperGrabResponse::release_gripp
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::mavsdk::rpc::gripper::GripperResult* GripperGrabResponse::unsafe_arena_release_gripper_result() {
-  // @@protoc_insertion_point(field_release:mavsdk.rpc.gripper.GripperGrabResponse.gripper_result)
+inline ::mavsdk::rpc::gripper::GripperResult* GrabResponse::unsafe_arena_release_gripper_result() {
+  // @@protoc_insertion_point(field_release:mavsdk.rpc.gripper.GrabResponse.gripper_result)
   
   ::mavsdk::rpc::gripper::GripperResult* temp = gripper_result_;
   gripper_result_ = nullptr;
   return temp;
 }
-inline ::mavsdk::rpc::gripper::GripperResult* GripperGrabResponse::_internal_mutable_gripper_result() {
+inline ::mavsdk::rpc::gripper::GripperResult* GrabResponse::_internal_mutable_gripper_result() {
   
   if (gripper_result_ == nullptr) {
     auto* p = CreateMaybeMessage<::mavsdk::rpc::gripper::GripperResult>(GetArenaForAllocation());
@@ -1042,12 +1042,12 @@ inline ::mavsdk::rpc::gripper::GripperResult* GripperGrabResponse::_internal_mut
   }
   return gripper_result_;
 }
-inline ::mavsdk::rpc::gripper::GripperResult* GripperGrabResponse::mutable_gripper_result() {
+inline ::mavsdk::rpc::gripper::GripperResult* GrabResponse::mutable_gripper_result() {
   ::mavsdk::rpc::gripper::GripperResult* _msg = _internal_mutable_gripper_result();
-  // @@protoc_insertion_point(field_mutable:mavsdk.rpc.gripper.GripperGrabResponse.gripper_result)
+  // @@protoc_insertion_point(field_mutable:mavsdk.rpc.gripper.GrabResponse.gripper_result)
   return _msg;
 }
-inline void GripperGrabResponse::set_allocated_gripper_result(::mavsdk::rpc::gripper::GripperResult* gripper_result) {
+inline void GrabResponse::set_allocated_gripper_result(::mavsdk::rpc::gripper::GripperResult* gripper_result) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete gripper_result_;
@@ -1064,60 +1064,60 @@ inline void GripperGrabResponse::set_allocated_gripper_result(::mavsdk::rpc::gri
     
   }
   gripper_result_ = gripper_result;
-  // @@protoc_insertion_point(field_set_allocated:mavsdk.rpc.gripper.GripperGrabResponse.gripper_result)
+  // @@protoc_insertion_point(field_set_allocated:mavsdk.rpc.gripper.GrabResponse.gripper_result)
 }
 
 // -------------------------------------------------------------------
 
-// GripperReleaseRequest
+// ReleaseRequest
 
 // uint32 instance = 1;
-inline void GripperReleaseRequest::clear_instance() {
+inline void ReleaseRequest::clear_instance() {
   instance_ = 0u;
 }
-inline uint32_t GripperReleaseRequest::_internal_instance() const {
+inline uint32_t ReleaseRequest::_internal_instance() const {
   return instance_;
 }
-inline uint32_t GripperReleaseRequest::instance() const {
-  // @@protoc_insertion_point(field_get:mavsdk.rpc.gripper.GripperReleaseRequest.instance)
+inline uint32_t ReleaseRequest::instance() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.gripper.ReleaseRequest.instance)
   return _internal_instance();
 }
-inline void GripperReleaseRequest::_internal_set_instance(uint32_t value) {
+inline void ReleaseRequest::_internal_set_instance(uint32_t value) {
   
   instance_ = value;
 }
-inline void GripperReleaseRequest::set_instance(uint32_t value) {
+inline void ReleaseRequest::set_instance(uint32_t value) {
   _internal_set_instance(value);
-  // @@protoc_insertion_point(field_set:mavsdk.rpc.gripper.GripperReleaseRequest.instance)
+  // @@protoc_insertion_point(field_set:mavsdk.rpc.gripper.ReleaseRequest.instance)
 }
 
 // -------------------------------------------------------------------
 
-// GripperReleaseResponse
+// ReleaseResponse
 
 // .mavsdk.rpc.gripper.GripperResult gripper_result = 1;
-inline bool GripperReleaseResponse::_internal_has_gripper_result() const {
+inline bool ReleaseResponse::_internal_has_gripper_result() const {
   return this != internal_default_instance() && gripper_result_ != nullptr;
 }
-inline bool GripperReleaseResponse::has_gripper_result() const {
+inline bool ReleaseResponse::has_gripper_result() const {
   return _internal_has_gripper_result();
 }
-inline void GripperReleaseResponse::clear_gripper_result() {
+inline void ReleaseResponse::clear_gripper_result() {
   if (GetArenaForAllocation() == nullptr && gripper_result_ != nullptr) {
     delete gripper_result_;
   }
   gripper_result_ = nullptr;
 }
-inline const ::mavsdk::rpc::gripper::GripperResult& GripperReleaseResponse::_internal_gripper_result() const {
+inline const ::mavsdk::rpc::gripper::GripperResult& ReleaseResponse::_internal_gripper_result() const {
   const ::mavsdk::rpc::gripper::GripperResult* p = gripper_result_;
   return p != nullptr ? *p : reinterpret_cast<const ::mavsdk::rpc::gripper::GripperResult&>(
       ::mavsdk::rpc::gripper::_GripperResult_default_instance_);
 }
-inline const ::mavsdk::rpc::gripper::GripperResult& GripperReleaseResponse::gripper_result() const {
-  // @@protoc_insertion_point(field_get:mavsdk.rpc.gripper.GripperReleaseResponse.gripper_result)
+inline const ::mavsdk::rpc::gripper::GripperResult& ReleaseResponse::gripper_result() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.gripper.ReleaseResponse.gripper_result)
   return _internal_gripper_result();
 }
-inline void GripperReleaseResponse::unsafe_arena_set_allocated_gripper_result(
+inline void ReleaseResponse::unsafe_arena_set_allocated_gripper_result(
     ::mavsdk::rpc::gripper::GripperResult* gripper_result) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(gripper_result_);
@@ -1128,9 +1128,9 @@ inline void GripperReleaseResponse::unsafe_arena_set_allocated_gripper_result(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:mavsdk.rpc.gripper.GripperReleaseResponse.gripper_result)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:mavsdk.rpc.gripper.ReleaseResponse.gripper_result)
 }
-inline ::mavsdk::rpc::gripper::GripperResult* GripperReleaseResponse::release_gripper_result() {
+inline ::mavsdk::rpc::gripper::GripperResult* ReleaseResponse::release_gripper_result() {
   
   ::mavsdk::rpc::gripper::GripperResult* temp = gripper_result_;
   gripper_result_ = nullptr;
@@ -1145,14 +1145,14 @@ inline ::mavsdk::rpc::gripper::GripperResult* GripperReleaseResponse::release_gr
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::mavsdk::rpc::gripper::GripperResult* GripperReleaseResponse::unsafe_arena_release_gripper_result() {
-  // @@protoc_insertion_point(field_release:mavsdk.rpc.gripper.GripperReleaseResponse.gripper_result)
+inline ::mavsdk::rpc::gripper::GripperResult* ReleaseResponse::unsafe_arena_release_gripper_result() {
+  // @@protoc_insertion_point(field_release:mavsdk.rpc.gripper.ReleaseResponse.gripper_result)
   
   ::mavsdk::rpc::gripper::GripperResult* temp = gripper_result_;
   gripper_result_ = nullptr;
   return temp;
 }
-inline ::mavsdk::rpc::gripper::GripperResult* GripperReleaseResponse::_internal_mutable_gripper_result() {
+inline ::mavsdk::rpc::gripper::GripperResult* ReleaseResponse::_internal_mutable_gripper_result() {
   
   if (gripper_result_ == nullptr) {
     auto* p = CreateMaybeMessage<::mavsdk::rpc::gripper::GripperResult>(GetArenaForAllocation());
@@ -1160,12 +1160,12 @@ inline ::mavsdk::rpc::gripper::GripperResult* GripperReleaseResponse::_internal_
   }
   return gripper_result_;
 }
-inline ::mavsdk::rpc::gripper::GripperResult* GripperReleaseResponse::mutable_gripper_result() {
+inline ::mavsdk::rpc::gripper::GripperResult* ReleaseResponse::mutable_gripper_result() {
   ::mavsdk::rpc::gripper::GripperResult* _msg = _internal_mutable_gripper_result();
-  // @@protoc_insertion_point(field_mutable:mavsdk.rpc.gripper.GripperReleaseResponse.gripper_result)
+  // @@protoc_insertion_point(field_mutable:mavsdk.rpc.gripper.ReleaseResponse.gripper_result)
   return _msg;
 }
-inline void GripperReleaseResponse::set_allocated_gripper_result(::mavsdk::rpc::gripper::GripperResult* gripper_result) {
+inline void ReleaseResponse::set_allocated_gripper_result(::mavsdk::rpc::gripper::GripperResult* gripper_result) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete gripper_result_;
@@ -1182,7 +1182,7 @@ inline void GripperReleaseResponse::set_allocated_gripper_result(::mavsdk::rpc::
     
   }
   gripper_result_ = gripper_result;
-  // @@protoc_insertion_point(field_set_allocated:mavsdk.rpc.gripper.GripperReleaseResponse.gripper_result)
+  // @@protoc_insertion_point(field_set_allocated:mavsdk.rpc.gripper.ReleaseResponse.gripper_result)
 }
 
 // -------------------------------------------------------------------

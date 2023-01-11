@@ -25,7 +25,7 @@ void GripperImpl::enable() {}
 
 void GripperImpl::disable() {}
 
-void GripperImpl::gripper_grab_async(uint32_t instance, const Gripper::ResultCallback callback)
+void GripperImpl::grab_async(uint32_t instance, const Gripper::ResultCallback callback)
 {
     MavlinkCommandSender::CommandLong command{};
 
@@ -41,17 +41,17 @@ void GripperImpl::gripper_grab_async(uint32_t instance, const Gripper::ResultCal
         });
 }
 
-Gripper::Result GripperImpl::gripper_grab(uint32_t instance)
+Gripper::Result GripperImpl::grab(uint32_t instance)
 {
     auto prom = std::promise<Gripper::Result>();
     auto fut = prom.get_future();
 
-    gripper_grab_async(instance, [&prom](Gripper::Result result) { prom.set_value(result); });
+    grab_async(instance, [&prom](Gripper::Result result) { prom.set_value(result); });
 
     return fut.get();
 }
 
-void GripperImpl::gripper_release_async(uint32_t instance, const Gripper::ResultCallback callback)
+void GripperImpl::release_async(uint32_t instance, const Gripper::ResultCallback callback)
 {
     MavlinkCommandSender::CommandLong command{};
 
@@ -67,12 +67,12 @@ void GripperImpl::gripper_release_async(uint32_t instance, const Gripper::Result
         });
 }
 
-Gripper::Result GripperImpl::gripper_release(uint32_t instance)
+Gripper::Result GripperImpl::release(uint32_t instance)
 {
     auto prom = std::promise<Gripper::Result>();
     auto fut = prom.get_future();
 
-    gripper_release_async(instance, [&prom](Gripper::Result result) { prom.set_value(result); });
+    release_async(instance, [&prom](Gripper::Result result) { prom.set_value(result); });
 
     return fut.get();
 }

@@ -19,11 +19,11 @@ public:
     void enable() override;
     void disable() override;
 
-    void gripper_grab_async(uint32_t instance, const Gripper::ResultCallback callback);
-    Gripper::Result gripper_grab(uint32_t instance);
+    void grab_async(uint32_t instance, const Gripper::ResultCallback callback);
+    Gripper::Result grab(uint32_t instance);
 
-    void gripper_release_async(uint32_t instance, const Gripper::ResultCallback callback);
-    Gripper::Result gripper_release(uint32_t instance);
+    void release_async(uint32_t instance, const Gripper::ResultCallback callback);
+    Gripper::Result release(uint32_t instance);
 
 private:
     static Gripper::Result gripper_result_from_command_result(MavlinkCommandSender::Result result);

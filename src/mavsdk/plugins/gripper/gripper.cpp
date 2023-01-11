@@ -18,24 +18,24 @@ Gripper::Gripper(std::shared_ptr<System> system) :
 
 Gripper::~Gripper() {}
 
-void Gripper::gripper_grab_async(uint32_t instance, const ResultCallback callback)
+void Gripper::grab_async(uint32_t instance, const ResultCallback callback)
 {
-    _impl->gripper_grab_async(instance, callback);
+    _impl->grab_async(instance, callback);
 }
 
-Gripper::Result Gripper::gripper_grab(uint32_t instance) const
+Gripper::Result Gripper::grab(uint32_t instance) const
 {
-    return _impl->gripper_grab(instance);
+    return _impl->grab(instance);
 }
 
-void Gripper::gripper_release_async(uint32_t instance, const ResultCallback callback)
+void Gripper::release_async(uint32_t instance, const ResultCallback callback)
 {
-    _impl->gripper_release_async(instance, callback);
+    _impl->release_async(instance, callback);
 }
 
-Gripper::Result Gripper::gripper_release(uint32_t instance) const
+Gripper::Result Gripper::release(uint32_t instance) const
 {
-    return _impl->gripper_release(instance);
+    return _impl->release(instance);
 }
 
 std::ostream& operator<<(std::ostream& str, Gripper::Result const& result)
