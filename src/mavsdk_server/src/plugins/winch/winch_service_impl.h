@@ -182,10 +182,10 @@ public:
 
 
 
-    grpc::Status WinchRelax(
+    grpc::Status Relax(
         grpc::ServerContext* /* context */,
-        const rpc::winch::WinchRelaxRequest* request,
-        rpc::winch::WinchRelaxResponse* response) override
+        const rpc::winch::RelaxRequest* request,
+        rpc::winch::RelaxResponse* response) override
     {
         if (_lazy_plugin.maybe_plugin() == nullptr) {
             
@@ -198,12 +198,12 @@ public:
         }
 
         if (request == nullptr) {
-            LogWarn() << "WinchRelax sent with a null request! Ignoring...";
+            LogWarn() << "Relax sent with a null request! Ignoring...";
             return grpc::Status::OK;
         }
             
         
-        auto result = _lazy_plugin.maybe_plugin()->winch_relax(request->instance());
+        auto result = _lazy_plugin.maybe_plugin()->relax(request->instance());
         
 
         
@@ -215,10 +215,10 @@ public:
         return grpc::Status::OK;
     }
 
-    grpc::Status WinchRelativeLengthControl(
+    grpc::Status RelativeLengthControl(
         grpc::ServerContext* /* context */,
-        const rpc::winch::WinchRelativeLengthControlRequest* request,
-        rpc::winch::WinchRelativeLengthControlResponse* response) override
+        const rpc::winch::RelativeLengthControlRequest* request,
+        rpc::winch::RelativeLengthControlResponse* response) override
     {
         if (_lazy_plugin.maybe_plugin() == nullptr) {
             
@@ -231,7 +231,7 @@ public:
         }
 
         if (request == nullptr) {
-            LogWarn() << "WinchRelativeLengthControl sent with a null request! Ignoring...";
+            LogWarn() << "RelativeLengthControl sent with a null request! Ignoring...";
             return grpc::Status::OK;
         }
             
@@ -240,7 +240,7 @@ public:
         
             
         
-        auto result = _lazy_plugin.maybe_plugin()->winch_relative_length_control(request->instance(), request->length(), request->rate());
+        auto result = _lazy_plugin.maybe_plugin()->relative_length_control(request->instance(), request->length(), request->rate());
         
 
         
@@ -252,10 +252,10 @@ public:
         return grpc::Status::OK;
     }
 
-    grpc::Status WinchRateControl(
+    grpc::Status RateControl(
         grpc::ServerContext* /* context */,
-        const rpc::winch::WinchRateControlRequest* request,
-        rpc::winch::WinchRateControlResponse* response) override
+        const rpc::winch::RateControlRequest* request,
+        rpc::winch::RateControlResponse* response) override
     {
         if (_lazy_plugin.maybe_plugin() == nullptr) {
             
@@ -268,14 +268,14 @@ public:
         }
 
         if (request == nullptr) {
-            LogWarn() << "WinchRateControl sent with a null request! Ignoring...";
+            LogWarn() << "RateControl sent with a null request! Ignoring...";
             return grpc::Status::OK;
         }
             
         
             
         
-        auto result = _lazy_plugin.maybe_plugin()->winch_rate_control(request->instance(), request->rate());
+        auto result = _lazy_plugin.maybe_plugin()->rate_control(request->instance(), request->rate());
         
 
         
@@ -287,10 +287,10 @@ public:
         return grpc::Status::OK;
     }
 
-    grpc::Status WinchLock(
+    grpc::Status Lock(
         grpc::ServerContext* /* context */,
-        const rpc::winch::WinchLockRequest* request,
-        rpc::winch::WinchLockResponse* response) override
+        const rpc::winch::LockRequest* request,
+        rpc::winch::LockResponse* response) override
     {
         if (_lazy_plugin.maybe_plugin() == nullptr) {
             
@@ -303,12 +303,12 @@ public:
         }
 
         if (request == nullptr) {
-            LogWarn() << "WinchLock sent with a null request! Ignoring...";
+            LogWarn() << "Lock sent with a null request! Ignoring...";
             return grpc::Status::OK;
         }
             
         
-        auto result = _lazy_plugin.maybe_plugin()->winch_lock(request->instance());
+        auto result = _lazy_plugin.maybe_plugin()->lock(request->instance());
         
 
         
@@ -320,10 +320,10 @@ public:
         return grpc::Status::OK;
     }
 
-    grpc::Status WinchDeliver(
+    grpc::Status Deliver(
         grpc::ServerContext* /* context */,
-        const rpc::winch::WinchDeliverRequest* request,
-        rpc::winch::WinchDeliverResponse* response) override
+        const rpc::winch::DeliverRequest* request,
+        rpc::winch::DeliverResponse* response) override
     {
         if (_lazy_plugin.maybe_plugin() == nullptr) {
             
@@ -336,12 +336,12 @@ public:
         }
 
         if (request == nullptr) {
-            LogWarn() << "WinchDeliver sent with a null request! Ignoring...";
+            LogWarn() << "Deliver sent with a null request! Ignoring...";
             return grpc::Status::OK;
         }
             
         
-        auto result = _lazy_plugin.maybe_plugin()->winch_deliver(request->instance());
+        auto result = _lazy_plugin.maybe_plugin()->deliver(request->instance());
         
 
         
@@ -353,10 +353,10 @@ public:
         return grpc::Status::OK;
     }
 
-    grpc::Status WinchHold(
+    grpc::Status Hold(
         grpc::ServerContext* /* context */,
-        const rpc::winch::WinchHoldRequest* request,
-        rpc::winch::WinchHoldResponse* response) override
+        const rpc::winch::HoldRequest* request,
+        rpc::winch::HoldResponse* response) override
     {
         if (_lazy_plugin.maybe_plugin() == nullptr) {
             
@@ -369,12 +369,12 @@ public:
         }
 
         if (request == nullptr) {
-            LogWarn() << "WinchHold sent with a null request! Ignoring...";
+            LogWarn() << "Hold sent with a null request! Ignoring...";
             return grpc::Status::OK;
         }
             
         
-        auto result = _lazy_plugin.maybe_plugin()->winch_hold(request->instance());
+        auto result = _lazy_plugin.maybe_plugin()->hold(request->instance());
         
 
         
@@ -386,10 +386,10 @@ public:
         return grpc::Status::OK;
     }
 
-    grpc::Status WinchRetract(
+    grpc::Status Retract(
         grpc::ServerContext* /* context */,
-        const rpc::winch::WinchRetractRequest* request,
-        rpc::winch::WinchRetractResponse* response) override
+        const rpc::winch::RetractRequest* request,
+        rpc::winch::RetractResponse* response) override
     {
         if (_lazy_plugin.maybe_plugin() == nullptr) {
             
@@ -402,12 +402,12 @@ public:
         }
 
         if (request == nullptr) {
-            LogWarn() << "WinchRetract sent with a null request! Ignoring...";
+            LogWarn() << "Retract sent with a null request! Ignoring...";
             return grpc::Status::OK;
         }
             
         
-        auto result = _lazy_plugin.maybe_plugin()->winch_retract(request->instance());
+        auto result = _lazy_plugin.maybe_plugin()->retract(request->instance());
         
 
         
@@ -419,10 +419,10 @@ public:
         return grpc::Status::OK;
     }
 
-    grpc::Status WinchLoadLine(
+    grpc::Status LoadLine(
         grpc::ServerContext* /* context */,
-        const rpc::winch::WinchLoadLineRequest* request,
-        rpc::winch::WinchLoadLineResponse* response) override
+        const rpc::winch::LoadLineRequest* request,
+        rpc::winch::LoadLineResponse* response) override
     {
         if (_lazy_plugin.maybe_plugin() == nullptr) {
             
@@ -435,12 +435,12 @@ public:
         }
 
         if (request == nullptr) {
-            LogWarn() << "WinchLoadLine sent with a null request! Ignoring...";
+            LogWarn() << "LoadLine sent with a null request! Ignoring...";
             return grpc::Status::OK;
         }
             
         
-        auto result = _lazy_plugin.maybe_plugin()->winch_load_line(request->instance());
+        auto result = _lazy_plugin.maybe_plugin()->load_line(request->instance());
         
 
         
@@ -452,10 +452,10 @@ public:
         return grpc::Status::OK;
     }
 
-    grpc::Status WinchAbandonLine(
+    grpc::Status AbandonLine(
         grpc::ServerContext* /* context */,
-        const rpc::winch::WinchAbandonLineRequest* request,
-        rpc::winch::WinchAbandonLineResponse* response) override
+        const rpc::winch::AbandonLineRequest* request,
+        rpc::winch::AbandonLineResponse* response) override
     {
         if (_lazy_plugin.maybe_plugin() == nullptr) {
             
@@ -468,12 +468,12 @@ public:
         }
 
         if (request == nullptr) {
-            LogWarn() << "WinchAbandonLine sent with a null request! Ignoring...";
+            LogWarn() << "AbandonLine sent with a null request! Ignoring...";
             return grpc::Status::OK;
         }
             
         
-        auto result = _lazy_plugin.maybe_plugin()->winch_abandon_line(request->instance());
+        auto result = _lazy_plugin.maybe_plugin()->abandon_line(request->instance());
         
 
         
@@ -485,10 +485,10 @@ public:
         return grpc::Status::OK;
     }
 
-    grpc::Status WinchLoadPayload(
+    grpc::Status LoadPayload(
         grpc::ServerContext* /* context */,
-        const rpc::winch::WinchLoadPayloadRequest* request,
-        rpc::winch::WinchLoadPayloadResponse* response) override
+        const rpc::winch::LoadPayloadRequest* request,
+        rpc::winch::LoadPayloadResponse* response) override
     {
         if (_lazy_plugin.maybe_plugin() == nullptr) {
             
@@ -501,12 +501,12 @@ public:
         }
 
         if (request == nullptr) {
-            LogWarn() << "WinchLoadPayload sent with a null request! Ignoring...";
+            LogWarn() << "LoadPayload sent with a null request! Ignoring...";
             return grpc::Status::OK;
         }
             
         
-        auto result = _lazy_plugin.maybe_plugin()->winch_load_payload(request->instance());
+        auto result = _lazy_plugin.maybe_plugin()->load_payload(request->instance());
         
 
         
