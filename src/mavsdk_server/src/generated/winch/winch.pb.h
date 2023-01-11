@@ -48,94 +48,94 @@ extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table
 namespace mavsdk {
 namespace rpc {
 namespace winch {
-class WinchAbandonLineRequest;
-struct WinchAbandonLineRequestDefaultTypeInternal;
-extern WinchAbandonLineRequestDefaultTypeInternal _WinchAbandonLineRequest_default_instance_;
-class WinchAbandonLineResponse;
-struct WinchAbandonLineResponseDefaultTypeInternal;
-extern WinchAbandonLineResponseDefaultTypeInternal _WinchAbandonLineResponse_default_instance_;
-class WinchDeliverRequest;
-struct WinchDeliverRequestDefaultTypeInternal;
-extern WinchDeliverRequestDefaultTypeInternal _WinchDeliverRequest_default_instance_;
-class WinchDeliverResponse;
-struct WinchDeliverResponseDefaultTypeInternal;
-extern WinchDeliverResponseDefaultTypeInternal _WinchDeliverResponse_default_instance_;
-class WinchHoldRequest;
-struct WinchHoldRequestDefaultTypeInternal;
-extern WinchHoldRequestDefaultTypeInternal _WinchHoldRequest_default_instance_;
-class WinchHoldResponse;
-struct WinchHoldResponseDefaultTypeInternal;
-extern WinchHoldResponseDefaultTypeInternal _WinchHoldResponse_default_instance_;
-class WinchLoadLineRequest;
-struct WinchLoadLineRequestDefaultTypeInternal;
-extern WinchLoadLineRequestDefaultTypeInternal _WinchLoadLineRequest_default_instance_;
-class WinchLoadLineResponse;
-struct WinchLoadLineResponseDefaultTypeInternal;
-extern WinchLoadLineResponseDefaultTypeInternal _WinchLoadLineResponse_default_instance_;
-class WinchLoadPayloadRequest;
-struct WinchLoadPayloadRequestDefaultTypeInternal;
-extern WinchLoadPayloadRequestDefaultTypeInternal _WinchLoadPayloadRequest_default_instance_;
-class WinchLoadPayloadResponse;
-struct WinchLoadPayloadResponseDefaultTypeInternal;
-extern WinchLoadPayloadResponseDefaultTypeInternal _WinchLoadPayloadResponse_default_instance_;
-class WinchLockRequest;
-struct WinchLockRequestDefaultTypeInternal;
-extern WinchLockRequestDefaultTypeInternal _WinchLockRequest_default_instance_;
-class WinchLockResponse;
-struct WinchLockResponseDefaultTypeInternal;
-extern WinchLockResponseDefaultTypeInternal _WinchLockResponse_default_instance_;
-class WinchRateControlRequest;
-struct WinchRateControlRequestDefaultTypeInternal;
-extern WinchRateControlRequestDefaultTypeInternal _WinchRateControlRequest_default_instance_;
-class WinchRateControlResponse;
-struct WinchRateControlResponseDefaultTypeInternal;
-extern WinchRateControlResponseDefaultTypeInternal _WinchRateControlResponse_default_instance_;
-class WinchRelativeLengthControlRequest;
-struct WinchRelativeLengthControlRequestDefaultTypeInternal;
-extern WinchRelativeLengthControlRequestDefaultTypeInternal _WinchRelativeLengthControlRequest_default_instance_;
-class WinchRelativeLengthControlResponse;
-struct WinchRelativeLengthControlResponseDefaultTypeInternal;
-extern WinchRelativeLengthControlResponseDefaultTypeInternal _WinchRelativeLengthControlResponse_default_instance_;
-class WinchRelaxRequest;
-struct WinchRelaxRequestDefaultTypeInternal;
-extern WinchRelaxRequestDefaultTypeInternal _WinchRelaxRequest_default_instance_;
-class WinchRelaxResponse;
-struct WinchRelaxResponseDefaultTypeInternal;
-extern WinchRelaxResponseDefaultTypeInternal _WinchRelaxResponse_default_instance_;
+class AbandonLineRequest;
+struct AbandonLineRequestDefaultTypeInternal;
+extern AbandonLineRequestDefaultTypeInternal _AbandonLineRequest_default_instance_;
+class AbandonLineResponse;
+struct AbandonLineResponseDefaultTypeInternal;
+extern AbandonLineResponseDefaultTypeInternal _AbandonLineResponse_default_instance_;
+class DeliverRequest;
+struct DeliverRequestDefaultTypeInternal;
+extern DeliverRequestDefaultTypeInternal _DeliverRequest_default_instance_;
+class DeliverResponse;
+struct DeliverResponseDefaultTypeInternal;
+extern DeliverResponseDefaultTypeInternal _DeliverResponse_default_instance_;
+class HoldRequest;
+struct HoldRequestDefaultTypeInternal;
+extern HoldRequestDefaultTypeInternal _HoldRequest_default_instance_;
+class HoldResponse;
+struct HoldResponseDefaultTypeInternal;
+extern HoldResponseDefaultTypeInternal _HoldResponse_default_instance_;
+class LoadLineRequest;
+struct LoadLineRequestDefaultTypeInternal;
+extern LoadLineRequestDefaultTypeInternal _LoadLineRequest_default_instance_;
+class LoadLineResponse;
+struct LoadLineResponseDefaultTypeInternal;
+extern LoadLineResponseDefaultTypeInternal _LoadLineResponse_default_instance_;
+class LoadPayloadRequest;
+struct LoadPayloadRequestDefaultTypeInternal;
+extern LoadPayloadRequestDefaultTypeInternal _LoadPayloadRequest_default_instance_;
+class LoadPayloadResponse;
+struct LoadPayloadResponseDefaultTypeInternal;
+extern LoadPayloadResponseDefaultTypeInternal _LoadPayloadResponse_default_instance_;
+class LockRequest;
+struct LockRequestDefaultTypeInternal;
+extern LockRequestDefaultTypeInternal _LockRequest_default_instance_;
+class LockResponse;
+struct LockResponseDefaultTypeInternal;
+extern LockResponseDefaultTypeInternal _LockResponse_default_instance_;
+class RateControlRequest;
+struct RateControlRequestDefaultTypeInternal;
+extern RateControlRequestDefaultTypeInternal _RateControlRequest_default_instance_;
+class RateControlResponse;
+struct RateControlResponseDefaultTypeInternal;
+extern RateControlResponseDefaultTypeInternal _RateControlResponse_default_instance_;
+class RelativeLengthControlRequest;
+struct RelativeLengthControlRequestDefaultTypeInternal;
+extern RelativeLengthControlRequestDefaultTypeInternal _RelativeLengthControlRequest_default_instance_;
+class RelativeLengthControlResponse;
+struct RelativeLengthControlResponseDefaultTypeInternal;
+extern RelativeLengthControlResponseDefaultTypeInternal _RelativeLengthControlResponse_default_instance_;
+class RelaxRequest;
+struct RelaxRequestDefaultTypeInternal;
+extern RelaxRequestDefaultTypeInternal _RelaxRequest_default_instance_;
+class RelaxResponse;
+struct RelaxResponseDefaultTypeInternal;
+extern RelaxResponseDefaultTypeInternal _RelaxResponse_default_instance_;
+class RetractRequest;
+struct RetractRequestDefaultTypeInternal;
+extern RetractRequestDefaultTypeInternal _RetractRequest_default_instance_;
+class RetractResponse;
+struct RetractResponseDefaultTypeInternal;
+extern RetractResponseDefaultTypeInternal _RetractResponse_default_instance_;
 class WinchResult;
 struct WinchResultDefaultTypeInternal;
 extern WinchResultDefaultTypeInternal _WinchResult_default_instance_;
-class WinchRetractRequest;
-struct WinchRetractRequestDefaultTypeInternal;
-extern WinchRetractRequestDefaultTypeInternal _WinchRetractRequest_default_instance_;
-class WinchRetractResponse;
-struct WinchRetractResponseDefaultTypeInternal;
-extern WinchRetractResponseDefaultTypeInternal _WinchRetractResponse_default_instance_;
 }  // namespace winch
 }  // namespace rpc
 }  // namespace mavsdk
 PROTOBUF_NAMESPACE_OPEN
-template<> ::mavsdk::rpc::winch::WinchAbandonLineRequest* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::WinchAbandonLineRequest>(Arena*);
-template<> ::mavsdk::rpc::winch::WinchAbandonLineResponse* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::WinchAbandonLineResponse>(Arena*);
-template<> ::mavsdk::rpc::winch::WinchDeliverRequest* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::WinchDeliverRequest>(Arena*);
-template<> ::mavsdk::rpc::winch::WinchDeliverResponse* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::WinchDeliverResponse>(Arena*);
-template<> ::mavsdk::rpc::winch::WinchHoldRequest* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::WinchHoldRequest>(Arena*);
-template<> ::mavsdk::rpc::winch::WinchHoldResponse* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::WinchHoldResponse>(Arena*);
-template<> ::mavsdk::rpc::winch::WinchLoadLineRequest* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::WinchLoadLineRequest>(Arena*);
-template<> ::mavsdk::rpc::winch::WinchLoadLineResponse* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::WinchLoadLineResponse>(Arena*);
-template<> ::mavsdk::rpc::winch::WinchLoadPayloadRequest* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::WinchLoadPayloadRequest>(Arena*);
-template<> ::mavsdk::rpc::winch::WinchLoadPayloadResponse* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::WinchLoadPayloadResponse>(Arena*);
-template<> ::mavsdk::rpc::winch::WinchLockRequest* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::WinchLockRequest>(Arena*);
-template<> ::mavsdk::rpc::winch::WinchLockResponse* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::WinchLockResponse>(Arena*);
-template<> ::mavsdk::rpc::winch::WinchRateControlRequest* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::WinchRateControlRequest>(Arena*);
-template<> ::mavsdk::rpc::winch::WinchRateControlResponse* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::WinchRateControlResponse>(Arena*);
-template<> ::mavsdk::rpc::winch::WinchRelativeLengthControlRequest* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::WinchRelativeLengthControlRequest>(Arena*);
-template<> ::mavsdk::rpc::winch::WinchRelativeLengthControlResponse* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::WinchRelativeLengthControlResponse>(Arena*);
-template<> ::mavsdk::rpc::winch::WinchRelaxRequest* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::WinchRelaxRequest>(Arena*);
-template<> ::mavsdk::rpc::winch::WinchRelaxResponse* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::WinchRelaxResponse>(Arena*);
+template<> ::mavsdk::rpc::winch::AbandonLineRequest* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::AbandonLineRequest>(Arena*);
+template<> ::mavsdk::rpc::winch::AbandonLineResponse* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::AbandonLineResponse>(Arena*);
+template<> ::mavsdk::rpc::winch::DeliverRequest* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::DeliverRequest>(Arena*);
+template<> ::mavsdk::rpc::winch::DeliverResponse* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::DeliverResponse>(Arena*);
+template<> ::mavsdk::rpc::winch::HoldRequest* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::HoldRequest>(Arena*);
+template<> ::mavsdk::rpc::winch::HoldResponse* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::HoldResponse>(Arena*);
+template<> ::mavsdk::rpc::winch::LoadLineRequest* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::LoadLineRequest>(Arena*);
+template<> ::mavsdk::rpc::winch::LoadLineResponse* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::LoadLineResponse>(Arena*);
+template<> ::mavsdk::rpc::winch::LoadPayloadRequest* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::LoadPayloadRequest>(Arena*);
+template<> ::mavsdk::rpc::winch::LoadPayloadResponse* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::LoadPayloadResponse>(Arena*);
+template<> ::mavsdk::rpc::winch::LockRequest* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::LockRequest>(Arena*);
+template<> ::mavsdk::rpc::winch::LockResponse* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::LockResponse>(Arena*);
+template<> ::mavsdk::rpc::winch::RateControlRequest* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::RateControlRequest>(Arena*);
+template<> ::mavsdk::rpc::winch::RateControlResponse* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::RateControlResponse>(Arena*);
+template<> ::mavsdk::rpc::winch::RelativeLengthControlRequest* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::RelativeLengthControlRequest>(Arena*);
+template<> ::mavsdk::rpc::winch::RelativeLengthControlResponse* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::RelativeLengthControlResponse>(Arena*);
+template<> ::mavsdk::rpc::winch::RelaxRequest* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::RelaxRequest>(Arena*);
+template<> ::mavsdk::rpc::winch::RelaxResponse* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::RelaxResponse>(Arena*);
+template<> ::mavsdk::rpc::winch::RetractRequest* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::RetractRequest>(Arena*);
+template<> ::mavsdk::rpc::winch::RetractResponse* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::RetractResponse>(Arena*);
 template<> ::mavsdk::rpc::winch::WinchResult* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::WinchResult>(Arena*);
-template<> ::mavsdk::rpc::winch::WinchRetractRequest* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::WinchRetractRequest>(Arena*);
-template<> ::mavsdk::rpc::winch::WinchRetractResponse* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::WinchRetractResponse>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace mavsdk {
 namespace rpc {
@@ -213,24 +213,24 @@ inline bool WinchAction_Parse(
 }
 // ===================================================================
 
-class WinchRelaxRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.WinchRelaxRequest) */ {
+class RelaxRequest final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.RelaxRequest) */ {
  public:
-  inline WinchRelaxRequest() : WinchRelaxRequest(nullptr) {}
-  ~WinchRelaxRequest() override;
-  explicit PROTOBUF_CONSTEXPR WinchRelaxRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline RelaxRequest() : RelaxRequest(nullptr) {}
+  ~RelaxRequest() override;
+  explicit PROTOBUF_CONSTEXPR RelaxRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  WinchRelaxRequest(const WinchRelaxRequest& from);
-  WinchRelaxRequest(WinchRelaxRequest&& from) noexcept
-    : WinchRelaxRequest() {
+  RelaxRequest(const RelaxRequest& from);
+  RelaxRequest(RelaxRequest&& from) noexcept
+    : RelaxRequest() {
     *this = ::std::move(from);
   }
 
-  inline WinchRelaxRequest& operator=(const WinchRelaxRequest& from) {
+  inline RelaxRequest& operator=(const RelaxRequest& from) {
     CopyFrom(from);
     return *this;
   }
-  inline WinchRelaxRequest& operator=(WinchRelaxRequest&& from) noexcept {
+  inline RelaxRequest& operator=(RelaxRequest&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -253,20 +253,20 @@ class WinchRelaxRequest final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const WinchRelaxRequest& default_instance() {
+  static const RelaxRequest& default_instance() {
     return *internal_default_instance();
   }
-  static inline const WinchRelaxRequest* internal_default_instance() {
-    return reinterpret_cast<const WinchRelaxRequest*>(
-               &_WinchRelaxRequest_default_instance_);
+  static inline const RelaxRequest* internal_default_instance() {
+    return reinterpret_cast<const RelaxRequest*>(
+               &_RelaxRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     0;
 
-  friend void swap(WinchRelaxRequest& a, WinchRelaxRequest& b) {
+  friend void swap(RelaxRequest& a, RelaxRequest& b) {
     a.Swap(&b);
   }
-  inline void Swap(WinchRelaxRequest* other) {
+  inline void Swap(RelaxRequest* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -279,7 +279,7 @@ class WinchRelaxRequest final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(WinchRelaxRequest* other) {
+  void UnsafeArenaSwap(RelaxRequest* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -287,13 +287,13 @@ class WinchRelaxRequest final :
 
   // implements Message ----------------------------------------------
 
-  WinchRelaxRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<WinchRelaxRequest>(arena);
+  RelaxRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<RelaxRequest>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const WinchRelaxRequest& from);
+  void CopyFrom(const RelaxRequest& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const WinchRelaxRequest& from);
+  void MergeFrom(const RelaxRequest& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -310,15 +310,15 @@ class WinchRelaxRequest final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(WinchRelaxRequest* other);
+  void InternalSwap(RelaxRequest* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "mavsdk.rpc.winch.WinchRelaxRequest";
+    return "mavsdk.rpc.winch.RelaxRequest";
   }
   protected:
-  explicit WinchRelaxRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit RelaxRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -343,7 +343,7 @@ class WinchRelaxRequest final :
   void _internal_set_instance(uint32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.WinchRelaxRequest)
+  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.RelaxRequest)
  private:
   class _Internal;
 
@@ -356,24 +356,24 @@ class WinchRelaxRequest final :
 };
 // -------------------------------------------------------------------
 
-class WinchRelaxResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.WinchRelaxResponse) */ {
+class RelaxResponse final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.RelaxResponse) */ {
  public:
-  inline WinchRelaxResponse() : WinchRelaxResponse(nullptr) {}
-  ~WinchRelaxResponse() override;
-  explicit PROTOBUF_CONSTEXPR WinchRelaxResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline RelaxResponse() : RelaxResponse(nullptr) {}
+  ~RelaxResponse() override;
+  explicit PROTOBUF_CONSTEXPR RelaxResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  WinchRelaxResponse(const WinchRelaxResponse& from);
-  WinchRelaxResponse(WinchRelaxResponse&& from) noexcept
-    : WinchRelaxResponse() {
+  RelaxResponse(const RelaxResponse& from);
+  RelaxResponse(RelaxResponse&& from) noexcept
+    : RelaxResponse() {
     *this = ::std::move(from);
   }
 
-  inline WinchRelaxResponse& operator=(const WinchRelaxResponse& from) {
+  inline RelaxResponse& operator=(const RelaxResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline WinchRelaxResponse& operator=(WinchRelaxResponse&& from) noexcept {
+  inline RelaxResponse& operator=(RelaxResponse&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -396,20 +396,20 @@ class WinchRelaxResponse final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const WinchRelaxResponse& default_instance() {
+  static const RelaxResponse& default_instance() {
     return *internal_default_instance();
   }
-  static inline const WinchRelaxResponse* internal_default_instance() {
-    return reinterpret_cast<const WinchRelaxResponse*>(
-               &_WinchRelaxResponse_default_instance_);
+  static inline const RelaxResponse* internal_default_instance() {
+    return reinterpret_cast<const RelaxResponse*>(
+               &_RelaxResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     1;
 
-  friend void swap(WinchRelaxResponse& a, WinchRelaxResponse& b) {
+  friend void swap(RelaxResponse& a, RelaxResponse& b) {
     a.Swap(&b);
   }
-  inline void Swap(WinchRelaxResponse* other) {
+  inline void Swap(RelaxResponse* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -422,7 +422,7 @@ class WinchRelaxResponse final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(WinchRelaxResponse* other) {
+  void UnsafeArenaSwap(RelaxResponse* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -430,13 +430,13 @@ class WinchRelaxResponse final :
 
   // implements Message ----------------------------------------------
 
-  WinchRelaxResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<WinchRelaxResponse>(arena);
+  RelaxResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<RelaxResponse>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const WinchRelaxResponse& from);
+  void CopyFrom(const RelaxResponse& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const WinchRelaxResponse& from);
+  void MergeFrom(const RelaxResponse& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -453,15 +453,15 @@ class WinchRelaxResponse final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(WinchRelaxResponse* other);
+  void InternalSwap(RelaxResponse* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "mavsdk.rpc.winch.WinchRelaxResponse";
+    return "mavsdk.rpc.winch.RelaxResponse";
   }
   protected:
-  explicit WinchRelaxResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit RelaxResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -475,57 +475,57 @@ class WinchRelaxResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionResultFieldNumber = 1,
+    kWinchResultFieldNumber = 1,
   };
-  // .mavsdk.rpc.winch.WinchResult action_result = 1;
-  bool has_action_result() const;
+  // .mavsdk.rpc.winch.WinchResult winch_result = 1;
+  bool has_winch_result() const;
   private:
-  bool _internal_has_action_result() const;
+  bool _internal_has_winch_result() const;
   public:
-  void clear_action_result();
-  const ::mavsdk::rpc::winch::WinchResult& action_result() const;
-  PROTOBUF_NODISCARD ::mavsdk::rpc::winch::WinchResult* release_action_result();
-  ::mavsdk::rpc::winch::WinchResult* mutable_action_result();
-  void set_allocated_action_result(::mavsdk::rpc::winch::WinchResult* action_result);
+  void clear_winch_result();
+  const ::mavsdk::rpc::winch::WinchResult& winch_result() const;
+  PROTOBUF_NODISCARD ::mavsdk::rpc::winch::WinchResult* release_winch_result();
+  ::mavsdk::rpc::winch::WinchResult* mutable_winch_result();
+  void set_allocated_winch_result(::mavsdk::rpc::winch::WinchResult* winch_result);
   private:
-  const ::mavsdk::rpc::winch::WinchResult& _internal_action_result() const;
-  ::mavsdk::rpc::winch::WinchResult* _internal_mutable_action_result();
+  const ::mavsdk::rpc::winch::WinchResult& _internal_winch_result() const;
+  ::mavsdk::rpc::winch::WinchResult* _internal_mutable_winch_result();
   public:
-  void unsafe_arena_set_allocated_action_result(
-      ::mavsdk::rpc::winch::WinchResult* action_result);
-  ::mavsdk::rpc::winch::WinchResult* unsafe_arena_release_action_result();
+  void unsafe_arena_set_allocated_winch_result(
+      ::mavsdk::rpc::winch::WinchResult* winch_result);
+  ::mavsdk::rpc::winch::WinchResult* unsafe_arena_release_winch_result();
 
-  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.WinchRelaxResponse)
+  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.RelaxResponse)
  private:
   class _Internal;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::mavsdk::rpc::winch::WinchResult* action_result_;
+  ::mavsdk::rpc::winch::WinchResult* winch_result_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_winch_2fwinch_2eproto;
 };
 // -------------------------------------------------------------------
 
-class WinchRelativeLengthControlRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.WinchRelativeLengthControlRequest) */ {
+class RelativeLengthControlRequest final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.RelativeLengthControlRequest) */ {
  public:
-  inline WinchRelativeLengthControlRequest() : WinchRelativeLengthControlRequest(nullptr) {}
-  ~WinchRelativeLengthControlRequest() override;
-  explicit PROTOBUF_CONSTEXPR WinchRelativeLengthControlRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline RelativeLengthControlRequest() : RelativeLengthControlRequest(nullptr) {}
+  ~RelativeLengthControlRequest() override;
+  explicit PROTOBUF_CONSTEXPR RelativeLengthControlRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  WinchRelativeLengthControlRequest(const WinchRelativeLengthControlRequest& from);
-  WinchRelativeLengthControlRequest(WinchRelativeLengthControlRequest&& from) noexcept
-    : WinchRelativeLengthControlRequest() {
+  RelativeLengthControlRequest(const RelativeLengthControlRequest& from);
+  RelativeLengthControlRequest(RelativeLengthControlRequest&& from) noexcept
+    : RelativeLengthControlRequest() {
     *this = ::std::move(from);
   }
 
-  inline WinchRelativeLengthControlRequest& operator=(const WinchRelativeLengthControlRequest& from) {
+  inline RelativeLengthControlRequest& operator=(const RelativeLengthControlRequest& from) {
     CopyFrom(from);
     return *this;
   }
-  inline WinchRelativeLengthControlRequest& operator=(WinchRelativeLengthControlRequest&& from) noexcept {
+  inline RelativeLengthControlRequest& operator=(RelativeLengthControlRequest&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -548,20 +548,20 @@ class WinchRelativeLengthControlRequest final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const WinchRelativeLengthControlRequest& default_instance() {
+  static const RelativeLengthControlRequest& default_instance() {
     return *internal_default_instance();
   }
-  static inline const WinchRelativeLengthControlRequest* internal_default_instance() {
-    return reinterpret_cast<const WinchRelativeLengthControlRequest*>(
-               &_WinchRelativeLengthControlRequest_default_instance_);
+  static inline const RelativeLengthControlRequest* internal_default_instance() {
+    return reinterpret_cast<const RelativeLengthControlRequest*>(
+               &_RelativeLengthControlRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     2;
 
-  friend void swap(WinchRelativeLengthControlRequest& a, WinchRelativeLengthControlRequest& b) {
+  friend void swap(RelativeLengthControlRequest& a, RelativeLengthControlRequest& b) {
     a.Swap(&b);
   }
-  inline void Swap(WinchRelativeLengthControlRequest* other) {
+  inline void Swap(RelativeLengthControlRequest* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -574,7 +574,7 @@ class WinchRelativeLengthControlRequest final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(WinchRelativeLengthControlRequest* other) {
+  void UnsafeArenaSwap(RelativeLengthControlRequest* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -582,13 +582,13 @@ class WinchRelativeLengthControlRequest final :
 
   // implements Message ----------------------------------------------
 
-  WinchRelativeLengthControlRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<WinchRelativeLengthControlRequest>(arena);
+  RelativeLengthControlRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<RelativeLengthControlRequest>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const WinchRelativeLengthControlRequest& from);
+  void CopyFrom(const RelativeLengthControlRequest& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const WinchRelativeLengthControlRequest& from);
+  void MergeFrom(const RelativeLengthControlRequest& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -605,15 +605,15 @@ class WinchRelativeLengthControlRequest final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(WinchRelativeLengthControlRequest* other);
+  void InternalSwap(RelativeLengthControlRequest* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "mavsdk.rpc.winch.WinchRelativeLengthControlRequest";
+    return "mavsdk.rpc.winch.RelativeLengthControlRequest";
   }
   protected:
-  explicit WinchRelativeLengthControlRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit RelativeLengthControlRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -658,7 +658,7 @@ class WinchRelativeLengthControlRequest final :
   void _internal_set_rate(float value);
   public:
 
-  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.WinchRelativeLengthControlRequest)
+  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.RelativeLengthControlRequest)
  private:
   class _Internal;
 
@@ -673,24 +673,24 @@ class WinchRelativeLengthControlRequest final :
 };
 // -------------------------------------------------------------------
 
-class WinchRelativeLengthControlResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.WinchRelativeLengthControlResponse) */ {
+class RelativeLengthControlResponse final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.RelativeLengthControlResponse) */ {
  public:
-  inline WinchRelativeLengthControlResponse() : WinchRelativeLengthControlResponse(nullptr) {}
-  ~WinchRelativeLengthControlResponse() override;
-  explicit PROTOBUF_CONSTEXPR WinchRelativeLengthControlResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline RelativeLengthControlResponse() : RelativeLengthControlResponse(nullptr) {}
+  ~RelativeLengthControlResponse() override;
+  explicit PROTOBUF_CONSTEXPR RelativeLengthControlResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  WinchRelativeLengthControlResponse(const WinchRelativeLengthControlResponse& from);
-  WinchRelativeLengthControlResponse(WinchRelativeLengthControlResponse&& from) noexcept
-    : WinchRelativeLengthControlResponse() {
+  RelativeLengthControlResponse(const RelativeLengthControlResponse& from);
+  RelativeLengthControlResponse(RelativeLengthControlResponse&& from) noexcept
+    : RelativeLengthControlResponse() {
     *this = ::std::move(from);
   }
 
-  inline WinchRelativeLengthControlResponse& operator=(const WinchRelativeLengthControlResponse& from) {
+  inline RelativeLengthControlResponse& operator=(const RelativeLengthControlResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline WinchRelativeLengthControlResponse& operator=(WinchRelativeLengthControlResponse&& from) noexcept {
+  inline RelativeLengthControlResponse& operator=(RelativeLengthControlResponse&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -713,20 +713,20 @@ class WinchRelativeLengthControlResponse final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const WinchRelativeLengthControlResponse& default_instance() {
+  static const RelativeLengthControlResponse& default_instance() {
     return *internal_default_instance();
   }
-  static inline const WinchRelativeLengthControlResponse* internal_default_instance() {
-    return reinterpret_cast<const WinchRelativeLengthControlResponse*>(
-               &_WinchRelativeLengthControlResponse_default_instance_);
+  static inline const RelativeLengthControlResponse* internal_default_instance() {
+    return reinterpret_cast<const RelativeLengthControlResponse*>(
+               &_RelativeLengthControlResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     3;
 
-  friend void swap(WinchRelativeLengthControlResponse& a, WinchRelativeLengthControlResponse& b) {
+  friend void swap(RelativeLengthControlResponse& a, RelativeLengthControlResponse& b) {
     a.Swap(&b);
   }
-  inline void Swap(WinchRelativeLengthControlResponse* other) {
+  inline void Swap(RelativeLengthControlResponse* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -739,7 +739,7 @@ class WinchRelativeLengthControlResponse final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(WinchRelativeLengthControlResponse* other) {
+  void UnsafeArenaSwap(RelativeLengthControlResponse* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -747,13 +747,13 @@ class WinchRelativeLengthControlResponse final :
 
   // implements Message ----------------------------------------------
 
-  WinchRelativeLengthControlResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<WinchRelativeLengthControlResponse>(arena);
+  RelativeLengthControlResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<RelativeLengthControlResponse>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const WinchRelativeLengthControlResponse& from);
+  void CopyFrom(const RelativeLengthControlResponse& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const WinchRelativeLengthControlResponse& from);
+  void MergeFrom(const RelativeLengthControlResponse& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -770,15 +770,15 @@ class WinchRelativeLengthControlResponse final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(WinchRelativeLengthControlResponse* other);
+  void InternalSwap(RelativeLengthControlResponse* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "mavsdk.rpc.winch.WinchRelativeLengthControlResponse";
+    return "mavsdk.rpc.winch.RelativeLengthControlResponse";
   }
   protected:
-  explicit WinchRelativeLengthControlResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit RelativeLengthControlResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -792,57 +792,57 @@ class WinchRelativeLengthControlResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionResultFieldNumber = 1,
+    kWinchResultFieldNumber = 1,
   };
-  // .mavsdk.rpc.winch.WinchResult action_result = 1;
-  bool has_action_result() const;
+  // .mavsdk.rpc.winch.WinchResult winch_result = 1;
+  bool has_winch_result() const;
   private:
-  bool _internal_has_action_result() const;
+  bool _internal_has_winch_result() const;
   public:
-  void clear_action_result();
-  const ::mavsdk::rpc::winch::WinchResult& action_result() const;
-  PROTOBUF_NODISCARD ::mavsdk::rpc::winch::WinchResult* release_action_result();
-  ::mavsdk::rpc::winch::WinchResult* mutable_action_result();
-  void set_allocated_action_result(::mavsdk::rpc::winch::WinchResult* action_result);
+  void clear_winch_result();
+  const ::mavsdk::rpc::winch::WinchResult& winch_result() const;
+  PROTOBUF_NODISCARD ::mavsdk::rpc::winch::WinchResult* release_winch_result();
+  ::mavsdk::rpc::winch::WinchResult* mutable_winch_result();
+  void set_allocated_winch_result(::mavsdk::rpc::winch::WinchResult* winch_result);
   private:
-  const ::mavsdk::rpc::winch::WinchResult& _internal_action_result() const;
-  ::mavsdk::rpc::winch::WinchResult* _internal_mutable_action_result();
+  const ::mavsdk::rpc::winch::WinchResult& _internal_winch_result() const;
+  ::mavsdk::rpc::winch::WinchResult* _internal_mutable_winch_result();
   public:
-  void unsafe_arena_set_allocated_action_result(
-      ::mavsdk::rpc::winch::WinchResult* action_result);
-  ::mavsdk::rpc::winch::WinchResult* unsafe_arena_release_action_result();
+  void unsafe_arena_set_allocated_winch_result(
+      ::mavsdk::rpc::winch::WinchResult* winch_result);
+  ::mavsdk::rpc::winch::WinchResult* unsafe_arena_release_winch_result();
 
-  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.WinchRelativeLengthControlResponse)
+  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.RelativeLengthControlResponse)
  private:
   class _Internal;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::mavsdk::rpc::winch::WinchResult* action_result_;
+  ::mavsdk::rpc::winch::WinchResult* winch_result_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_winch_2fwinch_2eproto;
 };
 // -------------------------------------------------------------------
 
-class WinchRateControlRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.WinchRateControlRequest) */ {
+class RateControlRequest final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.RateControlRequest) */ {
  public:
-  inline WinchRateControlRequest() : WinchRateControlRequest(nullptr) {}
-  ~WinchRateControlRequest() override;
-  explicit PROTOBUF_CONSTEXPR WinchRateControlRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline RateControlRequest() : RateControlRequest(nullptr) {}
+  ~RateControlRequest() override;
+  explicit PROTOBUF_CONSTEXPR RateControlRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  WinchRateControlRequest(const WinchRateControlRequest& from);
-  WinchRateControlRequest(WinchRateControlRequest&& from) noexcept
-    : WinchRateControlRequest() {
+  RateControlRequest(const RateControlRequest& from);
+  RateControlRequest(RateControlRequest&& from) noexcept
+    : RateControlRequest() {
     *this = ::std::move(from);
   }
 
-  inline WinchRateControlRequest& operator=(const WinchRateControlRequest& from) {
+  inline RateControlRequest& operator=(const RateControlRequest& from) {
     CopyFrom(from);
     return *this;
   }
-  inline WinchRateControlRequest& operator=(WinchRateControlRequest&& from) noexcept {
+  inline RateControlRequest& operator=(RateControlRequest&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -865,20 +865,20 @@ class WinchRateControlRequest final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const WinchRateControlRequest& default_instance() {
+  static const RateControlRequest& default_instance() {
     return *internal_default_instance();
   }
-  static inline const WinchRateControlRequest* internal_default_instance() {
-    return reinterpret_cast<const WinchRateControlRequest*>(
-               &_WinchRateControlRequest_default_instance_);
+  static inline const RateControlRequest* internal_default_instance() {
+    return reinterpret_cast<const RateControlRequest*>(
+               &_RateControlRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     4;
 
-  friend void swap(WinchRateControlRequest& a, WinchRateControlRequest& b) {
+  friend void swap(RateControlRequest& a, RateControlRequest& b) {
     a.Swap(&b);
   }
-  inline void Swap(WinchRateControlRequest* other) {
+  inline void Swap(RateControlRequest* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -891,7 +891,7 @@ class WinchRateControlRequest final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(WinchRateControlRequest* other) {
+  void UnsafeArenaSwap(RateControlRequest* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -899,13 +899,13 @@ class WinchRateControlRequest final :
 
   // implements Message ----------------------------------------------
 
-  WinchRateControlRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<WinchRateControlRequest>(arena);
+  RateControlRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<RateControlRequest>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const WinchRateControlRequest& from);
+  void CopyFrom(const RateControlRequest& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const WinchRateControlRequest& from);
+  void MergeFrom(const RateControlRequest& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -922,15 +922,15 @@ class WinchRateControlRequest final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(WinchRateControlRequest* other);
+  void InternalSwap(RateControlRequest* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "mavsdk.rpc.winch.WinchRateControlRequest";
+    return "mavsdk.rpc.winch.RateControlRequest";
   }
   protected:
-  explicit WinchRateControlRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit RateControlRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -965,7 +965,7 @@ class WinchRateControlRequest final :
   void _internal_set_rate(float value);
   public:
 
-  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.WinchRateControlRequest)
+  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.RateControlRequest)
  private:
   class _Internal;
 
@@ -979,24 +979,24 @@ class WinchRateControlRequest final :
 };
 // -------------------------------------------------------------------
 
-class WinchRateControlResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.WinchRateControlResponse) */ {
+class RateControlResponse final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.RateControlResponse) */ {
  public:
-  inline WinchRateControlResponse() : WinchRateControlResponse(nullptr) {}
-  ~WinchRateControlResponse() override;
-  explicit PROTOBUF_CONSTEXPR WinchRateControlResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline RateControlResponse() : RateControlResponse(nullptr) {}
+  ~RateControlResponse() override;
+  explicit PROTOBUF_CONSTEXPR RateControlResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  WinchRateControlResponse(const WinchRateControlResponse& from);
-  WinchRateControlResponse(WinchRateControlResponse&& from) noexcept
-    : WinchRateControlResponse() {
+  RateControlResponse(const RateControlResponse& from);
+  RateControlResponse(RateControlResponse&& from) noexcept
+    : RateControlResponse() {
     *this = ::std::move(from);
   }
 
-  inline WinchRateControlResponse& operator=(const WinchRateControlResponse& from) {
+  inline RateControlResponse& operator=(const RateControlResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline WinchRateControlResponse& operator=(WinchRateControlResponse&& from) noexcept {
+  inline RateControlResponse& operator=(RateControlResponse&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1019,20 +1019,20 @@ class WinchRateControlResponse final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const WinchRateControlResponse& default_instance() {
+  static const RateControlResponse& default_instance() {
     return *internal_default_instance();
   }
-  static inline const WinchRateControlResponse* internal_default_instance() {
-    return reinterpret_cast<const WinchRateControlResponse*>(
-               &_WinchRateControlResponse_default_instance_);
+  static inline const RateControlResponse* internal_default_instance() {
+    return reinterpret_cast<const RateControlResponse*>(
+               &_RateControlResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     5;
 
-  friend void swap(WinchRateControlResponse& a, WinchRateControlResponse& b) {
+  friend void swap(RateControlResponse& a, RateControlResponse& b) {
     a.Swap(&b);
   }
-  inline void Swap(WinchRateControlResponse* other) {
+  inline void Swap(RateControlResponse* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1045,7 +1045,7 @@ class WinchRateControlResponse final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(WinchRateControlResponse* other) {
+  void UnsafeArenaSwap(RateControlResponse* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1053,13 +1053,13 @@ class WinchRateControlResponse final :
 
   // implements Message ----------------------------------------------
 
-  WinchRateControlResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<WinchRateControlResponse>(arena);
+  RateControlResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<RateControlResponse>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const WinchRateControlResponse& from);
+  void CopyFrom(const RateControlResponse& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const WinchRateControlResponse& from);
+  void MergeFrom(const RateControlResponse& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -1076,15 +1076,15 @@ class WinchRateControlResponse final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(WinchRateControlResponse* other);
+  void InternalSwap(RateControlResponse* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "mavsdk.rpc.winch.WinchRateControlResponse";
+    return "mavsdk.rpc.winch.RateControlResponse";
   }
   protected:
-  explicit WinchRateControlResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit RateControlResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -1098,57 +1098,57 @@ class WinchRateControlResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionResultFieldNumber = 1,
+    kWinchResultFieldNumber = 1,
   };
-  // .mavsdk.rpc.winch.WinchResult action_result = 1;
-  bool has_action_result() const;
+  // .mavsdk.rpc.winch.WinchResult winch_result = 1;
+  bool has_winch_result() const;
   private:
-  bool _internal_has_action_result() const;
+  bool _internal_has_winch_result() const;
   public:
-  void clear_action_result();
-  const ::mavsdk::rpc::winch::WinchResult& action_result() const;
-  PROTOBUF_NODISCARD ::mavsdk::rpc::winch::WinchResult* release_action_result();
-  ::mavsdk::rpc::winch::WinchResult* mutable_action_result();
-  void set_allocated_action_result(::mavsdk::rpc::winch::WinchResult* action_result);
+  void clear_winch_result();
+  const ::mavsdk::rpc::winch::WinchResult& winch_result() const;
+  PROTOBUF_NODISCARD ::mavsdk::rpc::winch::WinchResult* release_winch_result();
+  ::mavsdk::rpc::winch::WinchResult* mutable_winch_result();
+  void set_allocated_winch_result(::mavsdk::rpc::winch::WinchResult* winch_result);
   private:
-  const ::mavsdk::rpc::winch::WinchResult& _internal_action_result() const;
-  ::mavsdk::rpc::winch::WinchResult* _internal_mutable_action_result();
+  const ::mavsdk::rpc::winch::WinchResult& _internal_winch_result() const;
+  ::mavsdk::rpc::winch::WinchResult* _internal_mutable_winch_result();
   public:
-  void unsafe_arena_set_allocated_action_result(
-      ::mavsdk::rpc::winch::WinchResult* action_result);
-  ::mavsdk::rpc::winch::WinchResult* unsafe_arena_release_action_result();
+  void unsafe_arena_set_allocated_winch_result(
+      ::mavsdk::rpc::winch::WinchResult* winch_result);
+  ::mavsdk::rpc::winch::WinchResult* unsafe_arena_release_winch_result();
 
-  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.WinchRateControlResponse)
+  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.RateControlResponse)
  private:
   class _Internal;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::mavsdk::rpc::winch::WinchResult* action_result_;
+  ::mavsdk::rpc::winch::WinchResult* winch_result_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_winch_2fwinch_2eproto;
 };
 // -------------------------------------------------------------------
 
-class WinchLockRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.WinchLockRequest) */ {
+class LockRequest final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.LockRequest) */ {
  public:
-  inline WinchLockRequest() : WinchLockRequest(nullptr) {}
-  ~WinchLockRequest() override;
-  explicit PROTOBUF_CONSTEXPR WinchLockRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline LockRequest() : LockRequest(nullptr) {}
+  ~LockRequest() override;
+  explicit PROTOBUF_CONSTEXPR LockRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  WinchLockRequest(const WinchLockRequest& from);
-  WinchLockRequest(WinchLockRequest&& from) noexcept
-    : WinchLockRequest() {
+  LockRequest(const LockRequest& from);
+  LockRequest(LockRequest&& from) noexcept
+    : LockRequest() {
     *this = ::std::move(from);
   }
 
-  inline WinchLockRequest& operator=(const WinchLockRequest& from) {
+  inline LockRequest& operator=(const LockRequest& from) {
     CopyFrom(from);
     return *this;
   }
-  inline WinchLockRequest& operator=(WinchLockRequest&& from) noexcept {
+  inline LockRequest& operator=(LockRequest&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1171,20 +1171,20 @@ class WinchLockRequest final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const WinchLockRequest& default_instance() {
+  static const LockRequest& default_instance() {
     return *internal_default_instance();
   }
-  static inline const WinchLockRequest* internal_default_instance() {
-    return reinterpret_cast<const WinchLockRequest*>(
-               &_WinchLockRequest_default_instance_);
+  static inline const LockRequest* internal_default_instance() {
+    return reinterpret_cast<const LockRequest*>(
+               &_LockRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     6;
 
-  friend void swap(WinchLockRequest& a, WinchLockRequest& b) {
+  friend void swap(LockRequest& a, LockRequest& b) {
     a.Swap(&b);
   }
-  inline void Swap(WinchLockRequest* other) {
+  inline void Swap(LockRequest* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1197,7 +1197,7 @@ class WinchLockRequest final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(WinchLockRequest* other) {
+  void UnsafeArenaSwap(LockRequest* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1205,13 +1205,13 @@ class WinchLockRequest final :
 
   // implements Message ----------------------------------------------
 
-  WinchLockRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<WinchLockRequest>(arena);
+  LockRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<LockRequest>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const WinchLockRequest& from);
+  void CopyFrom(const LockRequest& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const WinchLockRequest& from);
+  void MergeFrom(const LockRequest& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -1228,15 +1228,15 @@ class WinchLockRequest final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(WinchLockRequest* other);
+  void InternalSwap(LockRequest* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "mavsdk.rpc.winch.WinchLockRequest";
+    return "mavsdk.rpc.winch.LockRequest";
   }
   protected:
-  explicit WinchLockRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit LockRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -1261,7 +1261,7 @@ class WinchLockRequest final :
   void _internal_set_instance(uint32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.WinchLockRequest)
+  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.LockRequest)
  private:
   class _Internal;
 
@@ -1274,24 +1274,24 @@ class WinchLockRequest final :
 };
 // -------------------------------------------------------------------
 
-class WinchLockResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.WinchLockResponse) */ {
+class LockResponse final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.LockResponse) */ {
  public:
-  inline WinchLockResponse() : WinchLockResponse(nullptr) {}
-  ~WinchLockResponse() override;
-  explicit PROTOBUF_CONSTEXPR WinchLockResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline LockResponse() : LockResponse(nullptr) {}
+  ~LockResponse() override;
+  explicit PROTOBUF_CONSTEXPR LockResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  WinchLockResponse(const WinchLockResponse& from);
-  WinchLockResponse(WinchLockResponse&& from) noexcept
-    : WinchLockResponse() {
+  LockResponse(const LockResponse& from);
+  LockResponse(LockResponse&& from) noexcept
+    : LockResponse() {
     *this = ::std::move(from);
   }
 
-  inline WinchLockResponse& operator=(const WinchLockResponse& from) {
+  inline LockResponse& operator=(const LockResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline WinchLockResponse& operator=(WinchLockResponse&& from) noexcept {
+  inline LockResponse& operator=(LockResponse&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1314,20 +1314,20 @@ class WinchLockResponse final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const WinchLockResponse& default_instance() {
+  static const LockResponse& default_instance() {
     return *internal_default_instance();
   }
-  static inline const WinchLockResponse* internal_default_instance() {
-    return reinterpret_cast<const WinchLockResponse*>(
-               &_WinchLockResponse_default_instance_);
+  static inline const LockResponse* internal_default_instance() {
+    return reinterpret_cast<const LockResponse*>(
+               &_LockResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     7;
 
-  friend void swap(WinchLockResponse& a, WinchLockResponse& b) {
+  friend void swap(LockResponse& a, LockResponse& b) {
     a.Swap(&b);
   }
-  inline void Swap(WinchLockResponse* other) {
+  inline void Swap(LockResponse* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1340,7 +1340,7 @@ class WinchLockResponse final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(WinchLockResponse* other) {
+  void UnsafeArenaSwap(LockResponse* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1348,13 +1348,13 @@ class WinchLockResponse final :
 
   // implements Message ----------------------------------------------
 
-  WinchLockResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<WinchLockResponse>(arena);
+  LockResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<LockResponse>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const WinchLockResponse& from);
+  void CopyFrom(const LockResponse& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const WinchLockResponse& from);
+  void MergeFrom(const LockResponse& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -1371,15 +1371,15 @@ class WinchLockResponse final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(WinchLockResponse* other);
+  void InternalSwap(LockResponse* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "mavsdk.rpc.winch.WinchLockResponse";
+    return "mavsdk.rpc.winch.LockResponse";
   }
   protected:
-  explicit WinchLockResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit LockResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -1393,57 +1393,57 @@ class WinchLockResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionResultFieldNumber = 1,
+    kWinchResultFieldNumber = 1,
   };
-  // .mavsdk.rpc.winch.WinchResult action_result = 1;
-  bool has_action_result() const;
+  // .mavsdk.rpc.winch.WinchResult winch_result = 1;
+  bool has_winch_result() const;
   private:
-  bool _internal_has_action_result() const;
+  bool _internal_has_winch_result() const;
   public:
-  void clear_action_result();
-  const ::mavsdk::rpc::winch::WinchResult& action_result() const;
-  PROTOBUF_NODISCARD ::mavsdk::rpc::winch::WinchResult* release_action_result();
-  ::mavsdk::rpc::winch::WinchResult* mutable_action_result();
-  void set_allocated_action_result(::mavsdk::rpc::winch::WinchResult* action_result);
+  void clear_winch_result();
+  const ::mavsdk::rpc::winch::WinchResult& winch_result() const;
+  PROTOBUF_NODISCARD ::mavsdk::rpc::winch::WinchResult* release_winch_result();
+  ::mavsdk::rpc::winch::WinchResult* mutable_winch_result();
+  void set_allocated_winch_result(::mavsdk::rpc::winch::WinchResult* winch_result);
   private:
-  const ::mavsdk::rpc::winch::WinchResult& _internal_action_result() const;
-  ::mavsdk::rpc::winch::WinchResult* _internal_mutable_action_result();
+  const ::mavsdk::rpc::winch::WinchResult& _internal_winch_result() const;
+  ::mavsdk::rpc::winch::WinchResult* _internal_mutable_winch_result();
   public:
-  void unsafe_arena_set_allocated_action_result(
-      ::mavsdk::rpc::winch::WinchResult* action_result);
-  ::mavsdk::rpc::winch::WinchResult* unsafe_arena_release_action_result();
+  void unsafe_arena_set_allocated_winch_result(
+      ::mavsdk::rpc::winch::WinchResult* winch_result);
+  ::mavsdk::rpc::winch::WinchResult* unsafe_arena_release_winch_result();
 
-  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.WinchLockResponse)
+  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.LockResponse)
  private:
   class _Internal;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::mavsdk::rpc::winch::WinchResult* action_result_;
+  ::mavsdk::rpc::winch::WinchResult* winch_result_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_winch_2fwinch_2eproto;
 };
 // -------------------------------------------------------------------
 
-class WinchDeliverRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.WinchDeliverRequest) */ {
+class DeliverRequest final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.DeliverRequest) */ {
  public:
-  inline WinchDeliverRequest() : WinchDeliverRequest(nullptr) {}
-  ~WinchDeliverRequest() override;
-  explicit PROTOBUF_CONSTEXPR WinchDeliverRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline DeliverRequest() : DeliverRequest(nullptr) {}
+  ~DeliverRequest() override;
+  explicit PROTOBUF_CONSTEXPR DeliverRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  WinchDeliverRequest(const WinchDeliverRequest& from);
-  WinchDeliverRequest(WinchDeliverRequest&& from) noexcept
-    : WinchDeliverRequest() {
+  DeliverRequest(const DeliverRequest& from);
+  DeliverRequest(DeliverRequest&& from) noexcept
+    : DeliverRequest() {
     *this = ::std::move(from);
   }
 
-  inline WinchDeliverRequest& operator=(const WinchDeliverRequest& from) {
+  inline DeliverRequest& operator=(const DeliverRequest& from) {
     CopyFrom(from);
     return *this;
   }
-  inline WinchDeliverRequest& operator=(WinchDeliverRequest&& from) noexcept {
+  inline DeliverRequest& operator=(DeliverRequest&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1466,20 +1466,20 @@ class WinchDeliverRequest final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const WinchDeliverRequest& default_instance() {
+  static const DeliverRequest& default_instance() {
     return *internal_default_instance();
   }
-  static inline const WinchDeliverRequest* internal_default_instance() {
-    return reinterpret_cast<const WinchDeliverRequest*>(
-               &_WinchDeliverRequest_default_instance_);
+  static inline const DeliverRequest* internal_default_instance() {
+    return reinterpret_cast<const DeliverRequest*>(
+               &_DeliverRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     8;
 
-  friend void swap(WinchDeliverRequest& a, WinchDeliverRequest& b) {
+  friend void swap(DeliverRequest& a, DeliverRequest& b) {
     a.Swap(&b);
   }
-  inline void Swap(WinchDeliverRequest* other) {
+  inline void Swap(DeliverRequest* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1492,7 +1492,7 @@ class WinchDeliverRequest final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(WinchDeliverRequest* other) {
+  void UnsafeArenaSwap(DeliverRequest* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1500,13 +1500,13 @@ class WinchDeliverRequest final :
 
   // implements Message ----------------------------------------------
 
-  WinchDeliverRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<WinchDeliverRequest>(arena);
+  DeliverRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<DeliverRequest>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const WinchDeliverRequest& from);
+  void CopyFrom(const DeliverRequest& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const WinchDeliverRequest& from);
+  void MergeFrom(const DeliverRequest& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -1523,15 +1523,15 @@ class WinchDeliverRequest final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(WinchDeliverRequest* other);
+  void InternalSwap(DeliverRequest* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "mavsdk.rpc.winch.WinchDeliverRequest";
+    return "mavsdk.rpc.winch.DeliverRequest";
   }
   protected:
-  explicit WinchDeliverRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit DeliverRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -1556,7 +1556,7 @@ class WinchDeliverRequest final :
   void _internal_set_instance(uint32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.WinchDeliverRequest)
+  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.DeliverRequest)
  private:
   class _Internal;
 
@@ -1569,24 +1569,24 @@ class WinchDeliverRequest final :
 };
 // -------------------------------------------------------------------
 
-class WinchDeliverResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.WinchDeliverResponse) */ {
+class DeliverResponse final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.DeliverResponse) */ {
  public:
-  inline WinchDeliverResponse() : WinchDeliverResponse(nullptr) {}
-  ~WinchDeliverResponse() override;
-  explicit PROTOBUF_CONSTEXPR WinchDeliverResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline DeliverResponse() : DeliverResponse(nullptr) {}
+  ~DeliverResponse() override;
+  explicit PROTOBUF_CONSTEXPR DeliverResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  WinchDeliverResponse(const WinchDeliverResponse& from);
-  WinchDeliverResponse(WinchDeliverResponse&& from) noexcept
-    : WinchDeliverResponse() {
+  DeliverResponse(const DeliverResponse& from);
+  DeliverResponse(DeliverResponse&& from) noexcept
+    : DeliverResponse() {
     *this = ::std::move(from);
   }
 
-  inline WinchDeliverResponse& operator=(const WinchDeliverResponse& from) {
+  inline DeliverResponse& operator=(const DeliverResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline WinchDeliverResponse& operator=(WinchDeliverResponse&& from) noexcept {
+  inline DeliverResponse& operator=(DeliverResponse&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1609,20 +1609,20 @@ class WinchDeliverResponse final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const WinchDeliverResponse& default_instance() {
+  static const DeliverResponse& default_instance() {
     return *internal_default_instance();
   }
-  static inline const WinchDeliverResponse* internal_default_instance() {
-    return reinterpret_cast<const WinchDeliverResponse*>(
-               &_WinchDeliverResponse_default_instance_);
+  static inline const DeliverResponse* internal_default_instance() {
+    return reinterpret_cast<const DeliverResponse*>(
+               &_DeliverResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     9;
 
-  friend void swap(WinchDeliverResponse& a, WinchDeliverResponse& b) {
+  friend void swap(DeliverResponse& a, DeliverResponse& b) {
     a.Swap(&b);
   }
-  inline void Swap(WinchDeliverResponse* other) {
+  inline void Swap(DeliverResponse* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1635,7 +1635,7 @@ class WinchDeliverResponse final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(WinchDeliverResponse* other) {
+  void UnsafeArenaSwap(DeliverResponse* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1643,13 +1643,13 @@ class WinchDeliverResponse final :
 
   // implements Message ----------------------------------------------
 
-  WinchDeliverResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<WinchDeliverResponse>(arena);
+  DeliverResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<DeliverResponse>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const WinchDeliverResponse& from);
+  void CopyFrom(const DeliverResponse& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const WinchDeliverResponse& from);
+  void MergeFrom(const DeliverResponse& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -1666,15 +1666,15 @@ class WinchDeliverResponse final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(WinchDeliverResponse* other);
+  void InternalSwap(DeliverResponse* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "mavsdk.rpc.winch.WinchDeliverResponse";
+    return "mavsdk.rpc.winch.DeliverResponse";
   }
   protected:
-  explicit WinchDeliverResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit DeliverResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -1688,57 +1688,57 @@ class WinchDeliverResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionResultFieldNumber = 1,
+    kWinchResultFieldNumber = 1,
   };
-  // .mavsdk.rpc.winch.WinchResult action_result = 1;
-  bool has_action_result() const;
+  // .mavsdk.rpc.winch.WinchResult winch_result = 1;
+  bool has_winch_result() const;
   private:
-  bool _internal_has_action_result() const;
+  bool _internal_has_winch_result() const;
   public:
-  void clear_action_result();
-  const ::mavsdk::rpc::winch::WinchResult& action_result() const;
-  PROTOBUF_NODISCARD ::mavsdk::rpc::winch::WinchResult* release_action_result();
-  ::mavsdk::rpc::winch::WinchResult* mutable_action_result();
-  void set_allocated_action_result(::mavsdk::rpc::winch::WinchResult* action_result);
+  void clear_winch_result();
+  const ::mavsdk::rpc::winch::WinchResult& winch_result() const;
+  PROTOBUF_NODISCARD ::mavsdk::rpc::winch::WinchResult* release_winch_result();
+  ::mavsdk::rpc::winch::WinchResult* mutable_winch_result();
+  void set_allocated_winch_result(::mavsdk::rpc::winch::WinchResult* winch_result);
   private:
-  const ::mavsdk::rpc::winch::WinchResult& _internal_action_result() const;
-  ::mavsdk::rpc::winch::WinchResult* _internal_mutable_action_result();
+  const ::mavsdk::rpc::winch::WinchResult& _internal_winch_result() const;
+  ::mavsdk::rpc::winch::WinchResult* _internal_mutable_winch_result();
   public:
-  void unsafe_arena_set_allocated_action_result(
-      ::mavsdk::rpc::winch::WinchResult* action_result);
-  ::mavsdk::rpc::winch::WinchResult* unsafe_arena_release_action_result();
+  void unsafe_arena_set_allocated_winch_result(
+      ::mavsdk::rpc::winch::WinchResult* winch_result);
+  ::mavsdk::rpc::winch::WinchResult* unsafe_arena_release_winch_result();
 
-  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.WinchDeliverResponse)
+  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.DeliverResponse)
  private:
   class _Internal;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::mavsdk::rpc::winch::WinchResult* action_result_;
+  ::mavsdk::rpc::winch::WinchResult* winch_result_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_winch_2fwinch_2eproto;
 };
 // -------------------------------------------------------------------
 
-class WinchHoldRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.WinchHoldRequest) */ {
+class HoldRequest final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.HoldRequest) */ {
  public:
-  inline WinchHoldRequest() : WinchHoldRequest(nullptr) {}
-  ~WinchHoldRequest() override;
-  explicit PROTOBUF_CONSTEXPR WinchHoldRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline HoldRequest() : HoldRequest(nullptr) {}
+  ~HoldRequest() override;
+  explicit PROTOBUF_CONSTEXPR HoldRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  WinchHoldRequest(const WinchHoldRequest& from);
-  WinchHoldRequest(WinchHoldRequest&& from) noexcept
-    : WinchHoldRequest() {
+  HoldRequest(const HoldRequest& from);
+  HoldRequest(HoldRequest&& from) noexcept
+    : HoldRequest() {
     *this = ::std::move(from);
   }
 
-  inline WinchHoldRequest& operator=(const WinchHoldRequest& from) {
+  inline HoldRequest& operator=(const HoldRequest& from) {
     CopyFrom(from);
     return *this;
   }
-  inline WinchHoldRequest& operator=(WinchHoldRequest&& from) noexcept {
+  inline HoldRequest& operator=(HoldRequest&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1761,20 +1761,20 @@ class WinchHoldRequest final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const WinchHoldRequest& default_instance() {
+  static const HoldRequest& default_instance() {
     return *internal_default_instance();
   }
-  static inline const WinchHoldRequest* internal_default_instance() {
-    return reinterpret_cast<const WinchHoldRequest*>(
-               &_WinchHoldRequest_default_instance_);
+  static inline const HoldRequest* internal_default_instance() {
+    return reinterpret_cast<const HoldRequest*>(
+               &_HoldRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     10;
 
-  friend void swap(WinchHoldRequest& a, WinchHoldRequest& b) {
+  friend void swap(HoldRequest& a, HoldRequest& b) {
     a.Swap(&b);
   }
-  inline void Swap(WinchHoldRequest* other) {
+  inline void Swap(HoldRequest* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1787,7 +1787,7 @@ class WinchHoldRequest final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(WinchHoldRequest* other) {
+  void UnsafeArenaSwap(HoldRequest* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1795,13 +1795,13 @@ class WinchHoldRequest final :
 
   // implements Message ----------------------------------------------
 
-  WinchHoldRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<WinchHoldRequest>(arena);
+  HoldRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<HoldRequest>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const WinchHoldRequest& from);
+  void CopyFrom(const HoldRequest& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const WinchHoldRequest& from);
+  void MergeFrom(const HoldRequest& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -1818,15 +1818,15 @@ class WinchHoldRequest final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(WinchHoldRequest* other);
+  void InternalSwap(HoldRequest* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "mavsdk.rpc.winch.WinchHoldRequest";
+    return "mavsdk.rpc.winch.HoldRequest";
   }
   protected:
-  explicit WinchHoldRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit HoldRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -1851,7 +1851,7 @@ class WinchHoldRequest final :
   void _internal_set_instance(uint32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.WinchHoldRequest)
+  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.HoldRequest)
  private:
   class _Internal;
 
@@ -1864,24 +1864,24 @@ class WinchHoldRequest final :
 };
 // -------------------------------------------------------------------
 
-class WinchHoldResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.WinchHoldResponse) */ {
+class HoldResponse final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.HoldResponse) */ {
  public:
-  inline WinchHoldResponse() : WinchHoldResponse(nullptr) {}
-  ~WinchHoldResponse() override;
-  explicit PROTOBUF_CONSTEXPR WinchHoldResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline HoldResponse() : HoldResponse(nullptr) {}
+  ~HoldResponse() override;
+  explicit PROTOBUF_CONSTEXPR HoldResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  WinchHoldResponse(const WinchHoldResponse& from);
-  WinchHoldResponse(WinchHoldResponse&& from) noexcept
-    : WinchHoldResponse() {
+  HoldResponse(const HoldResponse& from);
+  HoldResponse(HoldResponse&& from) noexcept
+    : HoldResponse() {
     *this = ::std::move(from);
   }
 
-  inline WinchHoldResponse& operator=(const WinchHoldResponse& from) {
+  inline HoldResponse& operator=(const HoldResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline WinchHoldResponse& operator=(WinchHoldResponse&& from) noexcept {
+  inline HoldResponse& operator=(HoldResponse&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1904,20 +1904,20 @@ class WinchHoldResponse final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const WinchHoldResponse& default_instance() {
+  static const HoldResponse& default_instance() {
     return *internal_default_instance();
   }
-  static inline const WinchHoldResponse* internal_default_instance() {
-    return reinterpret_cast<const WinchHoldResponse*>(
-               &_WinchHoldResponse_default_instance_);
+  static inline const HoldResponse* internal_default_instance() {
+    return reinterpret_cast<const HoldResponse*>(
+               &_HoldResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     11;
 
-  friend void swap(WinchHoldResponse& a, WinchHoldResponse& b) {
+  friend void swap(HoldResponse& a, HoldResponse& b) {
     a.Swap(&b);
   }
-  inline void Swap(WinchHoldResponse* other) {
+  inline void Swap(HoldResponse* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1930,7 +1930,7 @@ class WinchHoldResponse final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(WinchHoldResponse* other) {
+  void UnsafeArenaSwap(HoldResponse* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1938,13 +1938,13 @@ class WinchHoldResponse final :
 
   // implements Message ----------------------------------------------
 
-  WinchHoldResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<WinchHoldResponse>(arena);
+  HoldResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<HoldResponse>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const WinchHoldResponse& from);
+  void CopyFrom(const HoldResponse& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const WinchHoldResponse& from);
+  void MergeFrom(const HoldResponse& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -1961,15 +1961,15 @@ class WinchHoldResponse final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(WinchHoldResponse* other);
+  void InternalSwap(HoldResponse* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "mavsdk.rpc.winch.WinchHoldResponse";
+    return "mavsdk.rpc.winch.HoldResponse";
   }
   protected:
-  explicit WinchHoldResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit HoldResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -1983,57 +1983,57 @@ class WinchHoldResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionResultFieldNumber = 1,
+    kWinchResultFieldNumber = 1,
   };
-  // .mavsdk.rpc.winch.WinchResult action_result = 1;
-  bool has_action_result() const;
+  // .mavsdk.rpc.winch.WinchResult winch_result = 1;
+  bool has_winch_result() const;
   private:
-  bool _internal_has_action_result() const;
+  bool _internal_has_winch_result() const;
   public:
-  void clear_action_result();
-  const ::mavsdk::rpc::winch::WinchResult& action_result() const;
-  PROTOBUF_NODISCARD ::mavsdk::rpc::winch::WinchResult* release_action_result();
-  ::mavsdk::rpc::winch::WinchResult* mutable_action_result();
-  void set_allocated_action_result(::mavsdk::rpc::winch::WinchResult* action_result);
+  void clear_winch_result();
+  const ::mavsdk::rpc::winch::WinchResult& winch_result() const;
+  PROTOBUF_NODISCARD ::mavsdk::rpc::winch::WinchResult* release_winch_result();
+  ::mavsdk::rpc::winch::WinchResult* mutable_winch_result();
+  void set_allocated_winch_result(::mavsdk::rpc::winch::WinchResult* winch_result);
   private:
-  const ::mavsdk::rpc::winch::WinchResult& _internal_action_result() const;
-  ::mavsdk::rpc::winch::WinchResult* _internal_mutable_action_result();
+  const ::mavsdk::rpc::winch::WinchResult& _internal_winch_result() const;
+  ::mavsdk::rpc::winch::WinchResult* _internal_mutable_winch_result();
   public:
-  void unsafe_arena_set_allocated_action_result(
-      ::mavsdk::rpc::winch::WinchResult* action_result);
-  ::mavsdk::rpc::winch::WinchResult* unsafe_arena_release_action_result();
+  void unsafe_arena_set_allocated_winch_result(
+      ::mavsdk::rpc::winch::WinchResult* winch_result);
+  ::mavsdk::rpc::winch::WinchResult* unsafe_arena_release_winch_result();
 
-  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.WinchHoldResponse)
+  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.HoldResponse)
  private:
   class _Internal;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::mavsdk::rpc::winch::WinchResult* action_result_;
+  ::mavsdk::rpc::winch::WinchResult* winch_result_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_winch_2fwinch_2eproto;
 };
 // -------------------------------------------------------------------
 
-class WinchRetractRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.WinchRetractRequest) */ {
+class RetractRequest final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.RetractRequest) */ {
  public:
-  inline WinchRetractRequest() : WinchRetractRequest(nullptr) {}
-  ~WinchRetractRequest() override;
-  explicit PROTOBUF_CONSTEXPR WinchRetractRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline RetractRequest() : RetractRequest(nullptr) {}
+  ~RetractRequest() override;
+  explicit PROTOBUF_CONSTEXPR RetractRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  WinchRetractRequest(const WinchRetractRequest& from);
-  WinchRetractRequest(WinchRetractRequest&& from) noexcept
-    : WinchRetractRequest() {
+  RetractRequest(const RetractRequest& from);
+  RetractRequest(RetractRequest&& from) noexcept
+    : RetractRequest() {
     *this = ::std::move(from);
   }
 
-  inline WinchRetractRequest& operator=(const WinchRetractRequest& from) {
+  inline RetractRequest& operator=(const RetractRequest& from) {
     CopyFrom(from);
     return *this;
   }
-  inline WinchRetractRequest& operator=(WinchRetractRequest&& from) noexcept {
+  inline RetractRequest& operator=(RetractRequest&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -2056,20 +2056,20 @@ class WinchRetractRequest final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const WinchRetractRequest& default_instance() {
+  static const RetractRequest& default_instance() {
     return *internal_default_instance();
   }
-  static inline const WinchRetractRequest* internal_default_instance() {
-    return reinterpret_cast<const WinchRetractRequest*>(
-               &_WinchRetractRequest_default_instance_);
+  static inline const RetractRequest* internal_default_instance() {
+    return reinterpret_cast<const RetractRequest*>(
+               &_RetractRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     12;
 
-  friend void swap(WinchRetractRequest& a, WinchRetractRequest& b) {
+  friend void swap(RetractRequest& a, RetractRequest& b) {
     a.Swap(&b);
   }
-  inline void Swap(WinchRetractRequest* other) {
+  inline void Swap(RetractRequest* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -2082,7 +2082,7 @@ class WinchRetractRequest final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(WinchRetractRequest* other) {
+  void UnsafeArenaSwap(RetractRequest* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -2090,13 +2090,13 @@ class WinchRetractRequest final :
 
   // implements Message ----------------------------------------------
 
-  WinchRetractRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<WinchRetractRequest>(arena);
+  RetractRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<RetractRequest>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const WinchRetractRequest& from);
+  void CopyFrom(const RetractRequest& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const WinchRetractRequest& from);
+  void MergeFrom(const RetractRequest& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -2113,15 +2113,15 @@ class WinchRetractRequest final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(WinchRetractRequest* other);
+  void InternalSwap(RetractRequest* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "mavsdk.rpc.winch.WinchRetractRequest";
+    return "mavsdk.rpc.winch.RetractRequest";
   }
   protected:
-  explicit WinchRetractRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit RetractRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -2146,7 +2146,7 @@ class WinchRetractRequest final :
   void _internal_set_instance(uint32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.WinchRetractRequest)
+  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.RetractRequest)
  private:
   class _Internal;
 
@@ -2159,24 +2159,24 @@ class WinchRetractRequest final :
 };
 // -------------------------------------------------------------------
 
-class WinchRetractResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.WinchRetractResponse) */ {
+class RetractResponse final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.RetractResponse) */ {
  public:
-  inline WinchRetractResponse() : WinchRetractResponse(nullptr) {}
-  ~WinchRetractResponse() override;
-  explicit PROTOBUF_CONSTEXPR WinchRetractResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline RetractResponse() : RetractResponse(nullptr) {}
+  ~RetractResponse() override;
+  explicit PROTOBUF_CONSTEXPR RetractResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  WinchRetractResponse(const WinchRetractResponse& from);
-  WinchRetractResponse(WinchRetractResponse&& from) noexcept
-    : WinchRetractResponse() {
+  RetractResponse(const RetractResponse& from);
+  RetractResponse(RetractResponse&& from) noexcept
+    : RetractResponse() {
     *this = ::std::move(from);
   }
 
-  inline WinchRetractResponse& operator=(const WinchRetractResponse& from) {
+  inline RetractResponse& operator=(const RetractResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline WinchRetractResponse& operator=(WinchRetractResponse&& from) noexcept {
+  inline RetractResponse& operator=(RetractResponse&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -2199,20 +2199,20 @@ class WinchRetractResponse final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const WinchRetractResponse& default_instance() {
+  static const RetractResponse& default_instance() {
     return *internal_default_instance();
   }
-  static inline const WinchRetractResponse* internal_default_instance() {
-    return reinterpret_cast<const WinchRetractResponse*>(
-               &_WinchRetractResponse_default_instance_);
+  static inline const RetractResponse* internal_default_instance() {
+    return reinterpret_cast<const RetractResponse*>(
+               &_RetractResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     13;
 
-  friend void swap(WinchRetractResponse& a, WinchRetractResponse& b) {
+  friend void swap(RetractResponse& a, RetractResponse& b) {
     a.Swap(&b);
   }
-  inline void Swap(WinchRetractResponse* other) {
+  inline void Swap(RetractResponse* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -2225,7 +2225,7 @@ class WinchRetractResponse final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(WinchRetractResponse* other) {
+  void UnsafeArenaSwap(RetractResponse* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -2233,13 +2233,13 @@ class WinchRetractResponse final :
 
   // implements Message ----------------------------------------------
 
-  WinchRetractResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<WinchRetractResponse>(arena);
+  RetractResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<RetractResponse>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const WinchRetractResponse& from);
+  void CopyFrom(const RetractResponse& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const WinchRetractResponse& from);
+  void MergeFrom(const RetractResponse& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -2256,15 +2256,15 @@ class WinchRetractResponse final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(WinchRetractResponse* other);
+  void InternalSwap(RetractResponse* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "mavsdk.rpc.winch.WinchRetractResponse";
+    return "mavsdk.rpc.winch.RetractResponse";
   }
   protected:
-  explicit WinchRetractResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit RetractResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -2278,57 +2278,57 @@ class WinchRetractResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionResultFieldNumber = 1,
+    kWinchResultFieldNumber = 1,
   };
-  // .mavsdk.rpc.winch.WinchResult action_result = 1;
-  bool has_action_result() const;
+  // .mavsdk.rpc.winch.WinchResult winch_result = 1;
+  bool has_winch_result() const;
   private:
-  bool _internal_has_action_result() const;
+  bool _internal_has_winch_result() const;
   public:
-  void clear_action_result();
-  const ::mavsdk::rpc::winch::WinchResult& action_result() const;
-  PROTOBUF_NODISCARD ::mavsdk::rpc::winch::WinchResult* release_action_result();
-  ::mavsdk::rpc::winch::WinchResult* mutable_action_result();
-  void set_allocated_action_result(::mavsdk::rpc::winch::WinchResult* action_result);
+  void clear_winch_result();
+  const ::mavsdk::rpc::winch::WinchResult& winch_result() const;
+  PROTOBUF_NODISCARD ::mavsdk::rpc::winch::WinchResult* release_winch_result();
+  ::mavsdk::rpc::winch::WinchResult* mutable_winch_result();
+  void set_allocated_winch_result(::mavsdk::rpc::winch::WinchResult* winch_result);
   private:
-  const ::mavsdk::rpc::winch::WinchResult& _internal_action_result() const;
-  ::mavsdk::rpc::winch::WinchResult* _internal_mutable_action_result();
+  const ::mavsdk::rpc::winch::WinchResult& _internal_winch_result() const;
+  ::mavsdk::rpc::winch::WinchResult* _internal_mutable_winch_result();
   public:
-  void unsafe_arena_set_allocated_action_result(
-      ::mavsdk::rpc::winch::WinchResult* action_result);
-  ::mavsdk::rpc::winch::WinchResult* unsafe_arena_release_action_result();
+  void unsafe_arena_set_allocated_winch_result(
+      ::mavsdk::rpc::winch::WinchResult* winch_result);
+  ::mavsdk::rpc::winch::WinchResult* unsafe_arena_release_winch_result();
 
-  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.WinchRetractResponse)
+  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.RetractResponse)
  private:
   class _Internal;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::mavsdk::rpc::winch::WinchResult* action_result_;
+  ::mavsdk::rpc::winch::WinchResult* winch_result_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_winch_2fwinch_2eproto;
 };
 // -------------------------------------------------------------------
 
-class WinchLoadLineRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.WinchLoadLineRequest) */ {
+class LoadLineRequest final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.LoadLineRequest) */ {
  public:
-  inline WinchLoadLineRequest() : WinchLoadLineRequest(nullptr) {}
-  ~WinchLoadLineRequest() override;
-  explicit PROTOBUF_CONSTEXPR WinchLoadLineRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline LoadLineRequest() : LoadLineRequest(nullptr) {}
+  ~LoadLineRequest() override;
+  explicit PROTOBUF_CONSTEXPR LoadLineRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  WinchLoadLineRequest(const WinchLoadLineRequest& from);
-  WinchLoadLineRequest(WinchLoadLineRequest&& from) noexcept
-    : WinchLoadLineRequest() {
+  LoadLineRequest(const LoadLineRequest& from);
+  LoadLineRequest(LoadLineRequest&& from) noexcept
+    : LoadLineRequest() {
     *this = ::std::move(from);
   }
 
-  inline WinchLoadLineRequest& operator=(const WinchLoadLineRequest& from) {
+  inline LoadLineRequest& operator=(const LoadLineRequest& from) {
     CopyFrom(from);
     return *this;
   }
-  inline WinchLoadLineRequest& operator=(WinchLoadLineRequest&& from) noexcept {
+  inline LoadLineRequest& operator=(LoadLineRequest&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -2351,20 +2351,20 @@ class WinchLoadLineRequest final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const WinchLoadLineRequest& default_instance() {
+  static const LoadLineRequest& default_instance() {
     return *internal_default_instance();
   }
-  static inline const WinchLoadLineRequest* internal_default_instance() {
-    return reinterpret_cast<const WinchLoadLineRequest*>(
-               &_WinchLoadLineRequest_default_instance_);
+  static inline const LoadLineRequest* internal_default_instance() {
+    return reinterpret_cast<const LoadLineRequest*>(
+               &_LoadLineRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     14;
 
-  friend void swap(WinchLoadLineRequest& a, WinchLoadLineRequest& b) {
+  friend void swap(LoadLineRequest& a, LoadLineRequest& b) {
     a.Swap(&b);
   }
-  inline void Swap(WinchLoadLineRequest* other) {
+  inline void Swap(LoadLineRequest* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -2377,7 +2377,7 @@ class WinchLoadLineRequest final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(WinchLoadLineRequest* other) {
+  void UnsafeArenaSwap(LoadLineRequest* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -2385,13 +2385,13 @@ class WinchLoadLineRequest final :
 
   // implements Message ----------------------------------------------
 
-  WinchLoadLineRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<WinchLoadLineRequest>(arena);
+  LoadLineRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<LoadLineRequest>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const WinchLoadLineRequest& from);
+  void CopyFrom(const LoadLineRequest& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const WinchLoadLineRequest& from);
+  void MergeFrom(const LoadLineRequest& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -2408,15 +2408,15 @@ class WinchLoadLineRequest final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(WinchLoadLineRequest* other);
+  void InternalSwap(LoadLineRequest* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "mavsdk.rpc.winch.WinchLoadLineRequest";
+    return "mavsdk.rpc.winch.LoadLineRequest";
   }
   protected:
-  explicit WinchLoadLineRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit LoadLineRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -2441,7 +2441,7 @@ class WinchLoadLineRequest final :
   void _internal_set_instance(uint32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.WinchLoadLineRequest)
+  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.LoadLineRequest)
  private:
   class _Internal;
 
@@ -2454,24 +2454,24 @@ class WinchLoadLineRequest final :
 };
 // -------------------------------------------------------------------
 
-class WinchLoadLineResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.WinchLoadLineResponse) */ {
+class LoadLineResponse final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.LoadLineResponse) */ {
  public:
-  inline WinchLoadLineResponse() : WinchLoadLineResponse(nullptr) {}
-  ~WinchLoadLineResponse() override;
-  explicit PROTOBUF_CONSTEXPR WinchLoadLineResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline LoadLineResponse() : LoadLineResponse(nullptr) {}
+  ~LoadLineResponse() override;
+  explicit PROTOBUF_CONSTEXPR LoadLineResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  WinchLoadLineResponse(const WinchLoadLineResponse& from);
-  WinchLoadLineResponse(WinchLoadLineResponse&& from) noexcept
-    : WinchLoadLineResponse() {
+  LoadLineResponse(const LoadLineResponse& from);
+  LoadLineResponse(LoadLineResponse&& from) noexcept
+    : LoadLineResponse() {
     *this = ::std::move(from);
   }
 
-  inline WinchLoadLineResponse& operator=(const WinchLoadLineResponse& from) {
+  inline LoadLineResponse& operator=(const LoadLineResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline WinchLoadLineResponse& operator=(WinchLoadLineResponse&& from) noexcept {
+  inline LoadLineResponse& operator=(LoadLineResponse&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -2494,20 +2494,20 @@ class WinchLoadLineResponse final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const WinchLoadLineResponse& default_instance() {
+  static const LoadLineResponse& default_instance() {
     return *internal_default_instance();
   }
-  static inline const WinchLoadLineResponse* internal_default_instance() {
-    return reinterpret_cast<const WinchLoadLineResponse*>(
-               &_WinchLoadLineResponse_default_instance_);
+  static inline const LoadLineResponse* internal_default_instance() {
+    return reinterpret_cast<const LoadLineResponse*>(
+               &_LoadLineResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     15;
 
-  friend void swap(WinchLoadLineResponse& a, WinchLoadLineResponse& b) {
+  friend void swap(LoadLineResponse& a, LoadLineResponse& b) {
     a.Swap(&b);
   }
-  inline void Swap(WinchLoadLineResponse* other) {
+  inline void Swap(LoadLineResponse* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -2520,7 +2520,7 @@ class WinchLoadLineResponse final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(WinchLoadLineResponse* other) {
+  void UnsafeArenaSwap(LoadLineResponse* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -2528,13 +2528,13 @@ class WinchLoadLineResponse final :
 
   // implements Message ----------------------------------------------
 
-  WinchLoadLineResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<WinchLoadLineResponse>(arena);
+  LoadLineResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<LoadLineResponse>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const WinchLoadLineResponse& from);
+  void CopyFrom(const LoadLineResponse& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const WinchLoadLineResponse& from);
+  void MergeFrom(const LoadLineResponse& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -2551,15 +2551,15 @@ class WinchLoadLineResponse final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(WinchLoadLineResponse* other);
+  void InternalSwap(LoadLineResponse* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "mavsdk.rpc.winch.WinchLoadLineResponse";
+    return "mavsdk.rpc.winch.LoadLineResponse";
   }
   protected:
-  explicit WinchLoadLineResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit LoadLineResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -2573,57 +2573,57 @@ class WinchLoadLineResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionResultFieldNumber = 1,
+    kWinchResultFieldNumber = 1,
   };
-  // .mavsdk.rpc.winch.WinchResult action_result = 1;
-  bool has_action_result() const;
+  // .mavsdk.rpc.winch.WinchResult winch_result = 1;
+  bool has_winch_result() const;
   private:
-  bool _internal_has_action_result() const;
+  bool _internal_has_winch_result() const;
   public:
-  void clear_action_result();
-  const ::mavsdk::rpc::winch::WinchResult& action_result() const;
-  PROTOBUF_NODISCARD ::mavsdk::rpc::winch::WinchResult* release_action_result();
-  ::mavsdk::rpc::winch::WinchResult* mutable_action_result();
-  void set_allocated_action_result(::mavsdk::rpc::winch::WinchResult* action_result);
+  void clear_winch_result();
+  const ::mavsdk::rpc::winch::WinchResult& winch_result() const;
+  PROTOBUF_NODISCARD ::mavsdk::rpc::winch::WinchResult* release_winch_result();
+  ::mavsdk::rpc::winch::WinchResult* mutable_winch_result();
+  void set_allocated_winch_result(::mavsdk::rpc::winch::WinchResult* winch_result);
   private:
-  const ::mavsdk::rpc::winch::WinchResult& _internal_action_result() const;
-  ::mavsdk::rpc::winch::WinchResult* _internal_mutable_action_result();
+  const ::mavsdk::rpc::winch::WinchResult& _internal_winch_result() const;
+  ::mavsdk::rpc::winch::WinchResult* _internal_mutable_winch_result();
   public:
-  void unsafe_arena_set_allocated_action_result(
-      ::mavsdk::rpc::winch::WinchResult* action_result);
-  ::mavsdk::rpc::winch::WinchResult* unsafe_arena_release_action_result();
+  void unsafe_arena_set_allocated_winch_result(
+      ::mavsdk::rpc::winch::WinchResult* winch_result);
+  ::mavsdk::rpc::winch::WinchResult* unsafe_arena_release_winch_result();
 
-  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.WinchLoadLineResponse)
+  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.LoadLineResponse)
  private:
   class _Internal;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::mavsdk::rpc::winch::WinchResult* action_result_;
+  ::mavsdk::rpc::winch::WinchResult* winch_result_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_winch_2fwinch_2eproto;
 };
 // -------------------------------------------------------------------
 
-class WinchAbandonLineRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.WinchAbandonLineRequest) */ {
+class AbandonLineRequest final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.AbandonLineRequest) */ {
  public:
-  inline WinchAbandonLineRequest() : WinchAbandonLineRequest(nullptr) {}
-  ~WinchAbandonLineRequest() override;
-  explicit PROTOBUF_CONSTEXPR WinchAbandonLineRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline AbandonLineRequest() : AbandonLineRequest(nullptr) {}
+  ~AbandonLineRequest() override;
+  explicit PROTOBUF_CONSTEXPR AbandonLineRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  WinchAbandonLineRequest(const WinchAbandonLineRequest& from);
-  WinchAbandonLineRequest(WinchAbandonLineRequest&& from) noexcept
-    : WinchAbandonLineRequest() {
+  AbandonLineRequest(const AbandonLineRequest& from);
+  AbandonLineRequest(AbandonLineRequest&& from) noexcept
+    : AbandonLineRequest() {
     *this = ::std::move(from);
   }
 
-  inline WinchAbandonLineRequest& operator=(const WinchAbandonLineRequest& from) {
+  inline AbandonLineRequest& operator=(const AbandonLineRequest& from) {
     CopyFrom(from);
     return *this;
   }
-  inline WinchAbandonLineRequest& operator=(WinchAbandonLineRequest&& from) noexcept {
+  inline AbandonLineRequest& operator=(AbandonLineRequest&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -2646,20 +2646,20 @@ class WinchAbandonLineRequest final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const WinchAbandonLineRequest& default_instance() {
+  static const AbandonLineRequest& default_instance() {
     return *internal_default_instance();
   }
-  static inline const WinchAbandonLineRequest* internal_default_instance() {
-    return reinterpret_cast<const WinchAbandonLineRequest*>(
-               &_WinchAbandonLineRequest_default_instance_);
+  static inline const AbandonLineRequest* internal_default_instance() {
+    return reinterpret_cast<const AbandonLineRequest*>(
+               &_AbandonLineRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     16;
 
-  friend void swap(WinchAbandonLineRequest& a, WinchAbandonLineRequest& b) {
+  friend void swap(AbandonLineRequest& a, AbandonLineRequest& b) {
     a.Swap(&b);
   }
-  inline void Swap(WinchAbandonLineRequest* other) {
+  inline void Swap(AbandonLineRequest* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -2672,7 +2672,7 @@ class WinchAbandonLineRequest final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(WinchAbandonLineRequest* other) {
+  void UnsafeArenaSwap(AbandonLineRequest* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -2680,13 +2680,13 @@ class WinchAbandonLineRequest final :
 
   // implements Message ----------------------------------------------
 
-  WinchAbandonLineRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<WinchAbandonLineRequest>(arena);
+  AbandonLineRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<AbandonLineRequest>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const WinchAbandonLineRequest& from);
+  void CopyFrom(const AbandonLineRequest& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const WinchAbandonLineRequest& from);
+  void MergeFrom(const AbandonLineRequest& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -2703,15 +2703,15 @@ class WinchAbandonLineRequest final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(WinchAbandonLineRequest* other);
+  void InternalSwap(AbandonLineRequest* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "mavsdk.rpc.winch.WinchAbandonLineRequest";
+    return "mavsdk.rpc.winch.AbandonLineRequest";
   }
   protected:
-  explicit WinchAbandonLineRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit AbandonLineRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -2736,7 +2736,7 @@ class WinchAbandonLineRequest final :
   void _internal_set_instance(uint32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.WinchAbandonLineRequest)
+  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.AbandonLineRequest)
  private:
   class _Internal;
 
@@ -2749,24 +2749,24 @@ class WinchAbandonLineRequest final :
 };
 // -------------------------------------------------------------------
 
-class WinchAbandonLineResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.WinchAbandonLineResponse) */ {
+class AbandonLineResponse final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.AbandonLineResponse) */ {
  public:
-  inline WinchAbandonLineResponse() : WinchAbandonLineResponse(nullptr) {}
-  ~WinchAbandonLineResponse() override;
-  explicit PROTOBUF_CONSTEXPR WinchAbandonLineResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline AbandonLineResponse() : AbandonLineResponse(nullptr) {}
+  ~AbandonLineResponse() override;
+  explicit PROTOBUF_CONSTEXPR AbandonLineResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  WinchAbandonLineResponse(const WinchAbandonLineResponse& from);
-  WinchAbandonLineResponse(WinchAbandonLineResponse&& from) noexcept
-    : WinchAbandonLineResponse() {
+  AbandonLineResponse(const AbandonLineResponse& from);
+  AbandonLineResponse(AbandonLineResponse&& from) noexcept
+    : AbandonLineResponse() {
     *this = ::std::move(from);
   }
 
-  inline WinchAbandonLineResponse& operator=(const WinchAbandonLineResponse& from) {
+  inline AbandonLineResponse& operator=(const AbandonLineResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline WinchAbandonLineResponse& operator=(WinchAbandonLineResponse&& from) noexcept {
+  inline AbandonLineResponse& operator=(AbandonLineResponse&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -2789,20 +2789,20 @@ class WinchAbandonLineResponse final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const WinchAbandonLineResponse& default_instance() {
+  static const AbandonLineResponse& default_instance() {
     return *internal_default_instance();
   }
-  static inline const WinchAbandonLineResponse* internal_default_instance() {
-    return reinterpret_cast<const WinchAbandonLineResponse*>(
-               &_WinchAbandonLineResponse_default_instance_);
+  static inline const AbandonLineResponse* internal_default_instance() {
+    return reinterpret_cast<const AbandonLineResponse*>(
+               &_AbandonLineResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     17;
 
-  friend void swap(WinchAbandonLineResponse& a, WinchAbandonLineResponse& b) {
+  friend void swap(AbandonLineResponse& a, AbandonLineResponse& b) {
     a.Swap(&b);
   }
-  inline void Swap(WinchAbandonLineResponse* other) {
+  inline void Swap(AbandonLineResponse* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -2815,7 +2815,7 @@ class WinchAbandonLineResponse final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(WinchAbandonLineResponse* other) {
+  void UnsafeArenaSwap(AbandonLineResponse* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -2823,13 +2823,13 @@ class WinchAbandonLineResponse final :
 
   // implements Message ----------------------------------------------
 
-  WinchAbandonLineResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<WinchAbandonLineResponse>(arena);
+  AbandonLineResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<AbandonLineResponse>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const WinchAbandonLineResponse& from);
+  void CopyFrom(const AbandonLineResponse& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const WinchAbandonLineResponse& from);
+  void MergeFrom(const AbandonLineResponse& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -2846,15 +2846,15 @@ class WinchAbandonLineResponse final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(WinchAbandonLineResponse* other);
+  void InternalSwap(AbandonLineResponse* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "mavsdk.rpc.winch.WinchAbandonLineResponse";
+    return "mavsdk.rpc.winch.AbandonLineResponse";
   }
   protected:
-  explicit WinchAbandonLineResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit AbandonLineResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -2868,57 +2868,57 @@ class WinchAbandonLineResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionResultFieldNumber = 1,
+    kWinchResultFieldNumber = 1,
   };
-  // .mavsdk.rpc.winch.WinchResult action_result = 1;
-  bool has_action_result() const;
+  // .mavsdk.rpc.winch.WinchResult winch_result = 1;
+  bool has_winch_result() const;
   private:
-  bool _internal_has_action_result() const;
+  bool _internal_has_winch_result() const;
   public:
-  void clear_action_result();
-  const ::mavsdk::rpc::winch::WinchResult& action_result() const;
-  PROTOBUF_NODISCARD ::mavsdk::rpc::winch::WinchResult* release_action_result();
-  ::mavsdk::rpc::winch::WinchResult* mutable_action_result();
-  void set_allocated_action_result(::mavsdk::rpc::winch::WinchResult* action_result);
+  void clear_winch_result();
+  const ::mavsdk::rpc::winch::WinchResult& winch_result() const;
+  PROTOBUF_NODISCARD ::mavsdk::rpc::winch::WinchResult* release_winch_result();
+  ::mavsdk::rpc::winch::WinchResult* mutable_winch_result();
+  void set_allocated_winch_result(::mavsdk::rpc::winch::WinchResult* winch_result);
   private:
-  const ::mavsdk::rpc::winch::WinchResult& _internal_action_result() const;
-  ::mavsdk::rpc::winch::WinchResult* _internal_mutable_action_result();
+  const ::mavsdk::rpc::winch::WinchResult& _internal_winch_result() const;
+  ::mavsdk::rpc::winch::WinchResult* _internal_mutable_winch_result();
   public:
-  void unsafe_arena_set_allocated_action_result(
-      ::mavsdk::rpc::winch::WinchResult* action_result);
-  ::mavsdk::rpc::winch::WinchResult* unsafe_arena_release_action_result();
+  void unsafe_arena_set_allocated_winch_result(
+      ::mavsdk::rpc::winch::WinchResult* winch_result);
+  ::mavsdk::rpc::winch::WinchResult* unsafe_arena_release_winch_result();
 
-  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.WinchAbandonLineResponse)
+  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.AbandonLineResponse)
  private:
   class _Internal;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::mavsdk::rpc::winch::WinchResult* action_result_;
+  ::mavsdk::rpc::winch::WinchResult* winch_result_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_winch_2fwinch_2eproto;
 };
 // -------------------------------------------------------------------
 
-class WinchLoadPayloadRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.WinchLoadPayloadRequest) */ {
+class LoadPayloadRequest final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.LoadPayloadRequest) */ {
  public:
-  inline WinchLoadPayloadRequest() : WinchLoadPayloadRequest(nullptr) {}
-  ~WinchLoadPayloadRequest() override;
-  explicit PROTOBUF_CONSTEXPR WinchLoadPayloadRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline LoadPayloadRequest() : LoadPayloadRequest(nullptr) {}
+  ~LoadPayloadRequest() override;
+  explicit PROTOBUF_CONSTEXPR LoadPayloadRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  WinchLoadPayloadRequest(const WinchLoadPayloadRequest& from);
-  WinchLoadPayloadRequest(WinchLoadPayloadRequest&& from) noexcept
-    : WinchLoadPayloadRequest() {
+  LoadPayloadRequest(const LoadPayloadRequest& from);
+  LoadPayloadRequest(LoadPayloadRequest&& from) noexcept
+    : LoadPayloadRequest() {
     *this = ::std::move(from);
   }
 
-  inline WinchLoadPayloadRequest& operator=(const WinchLoadPayloadRequest& from) {
+  inline LoadPayloadRequest& operator=(const LoadPayloadRequest& from) {
     CopyFrom(from);
     return *this;
   }
-  inline WinchLoadPayloadRequest& operator=(WinchLoadPayloadRequest&& from) noexcept {
+  inline LoadPayloadRequest& operator=(LoadPayloadRequest&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -2941,20 +2941,20 @@ class WinchLoadPayloadRequest final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const WinchLoadPayloadRequest& default_instance() {
+  static const LoadPayloadRequest& default_instance() {
     return *internal_default_instance();
   }
-  static inline const WinchLoadPayloadRequest* internal_default_instance() {
-    return reinterpret_cast<const WinchLoadPayloadRequest*>(
-               &_WinchLoadPayloadRequest_default_instance_);
+  static inline const LoadPayloadRequest* internal_default_instance() {
+    return reinterpret_cast<const LoadPayloadRequest*>(
+               &_LoadPayloadRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     18;
 
-  friend void swap(WinchLoadPayloadRequest& a, WinchLoadPayloadRequest& b) {
+  friend void swap(LoadPayloadRequest& a, LoadPayloadRequest& b) {
     a.Swap(&b);
   }
-  inline void Swap(WinchLoadPayloadRequest* other) {
+  inline void Swap(LoadPayloadRequest* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -2967,7 +2967,7 @@ class WinchLoadPayloadRequest final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(WinchLoadPayloadRequest* other) {
+  void UnsafeArenaSwap(LoadPayloadRequest* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -2975,13 +2975,13 @@ class WinchLoadPayloadRequest final :
 
   // implements Message ----------------------------------------------
 
-  WinchLoadPayloadRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<WinchLoadPayloadRequest>(arena);
+  LoadPayloadRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<LoadPayloadRequest>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const WinchLoadPayloadRequest& from);
+  void CopyFrom(const LoadPayloadRequest& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const WinchLoadPayloadRequest& from);
+  void MergeFrom(const LoadPayloadRequest& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -2998,15 +2998,15 @@ class WinchLoadPayloadRequest final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(WinchLoadPayloadRequest* other);
+  void InternalSwap(LoadPayloadRequest* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "mavsdk.rpc.winch.WinchLoadPayloadRequest";
+    return "mavsdk.rpc.winch.LoadPayloadRequest";
   }
   protected:
-  explicit WinchLoadPayloadRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit LoadPayloadRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -3031,7 +3031,7 @@ class WinchLoadPayloadRequest final :
   void _internal_set_instance(uint32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.WinchLoadPayloadRequest)
+  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.LoadPayloadRequest)
  private:
   class _Internal;
 
@@ -3044,24 +3044,24 @@ class WinchLoadPayloadRequest final :
 };
 // -------------------------------------------------------------------
 
-class WinchLoadPayloadResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.WinchLoadPayloadResponse) */ {
+class LoadPayloadResponse final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.LoadPayloadResponse) */ {
  public:
-  inline WinchLoadPayloadResponse() : WinchLoadPayloadResponse(nullptr) {}
-  ~WinchLoadPayloadResponse() override;
-  explicit PROTOBUF_CONSTEXPR WinchLoadPayloadResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline LoadPayloadResponse() : LoadPayloadResponse(nullptr) {}
+  ~LoadPayloadResponse() override;
+  explicit PROTOBUF_CONSTEXPR LoadPayloadResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  WinchLoadPayloadResponse(const WinchLoadPayloadResponse& from);
-  WinchLoadPayloadResponse(WinchLoadPayloadResponse&& from) noexcept
-    : WinchLoadPayloadResponse() {
+  LoadPayloadResponse(const LoadPayloadResponse& from);
+  LoadPayloadResponse(LoadPayloadResponse&& from) noexcept
+    : LoadPayloadResponse() {
     *this = ::std::move(from);
   }
 
-  inline WinchLoadPayloadResponse& operator=(const WinchLoadPayloadResponse& from) {
+  inline LoadPayloadResponse& operator=(const LoadPayloadResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline WinchLoadPayloadResponse& operator=(WinchLoadPayloadResponse&& from) noexcept {
+  inline LoadPayloadResponse& operator=(LoadPayloadResponse&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -3084,20 +3084,20 @@ class WinchLoadPayloadResponse final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const WinchLoadPayloadResponse& default_instance() {
+  static const LoadPayloadResponse& default_instance() {
     return *internal_default_instance();
   }
-  static inline const WinchLoadPayloadResponse* internal_default_instance() {
-    return reinterpret_cast<const WinchLoadPayloadResponse*>(
-               &_WinchLoadPayloadResponse_default_instance_);
+  static inline const LoadPayloadResponse* internal_default_instance() {
+    return reinterpret_cast<const LoadPayloadResponse*>(
+               &_LoadPayloadResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     19;
 
-  friend void swap(WinchLoadPayloadResponse& a, WinchLoadPayloadResponse& b) {
+  friend void swap(LoadPayloadResponse& a, LoadPayloadResponse& b) {
     a.Swap(&b);
   }
-  inline void Swap(WinchLoadPayloadResponse* other) {
+  inline void Swap(LoadPayloadResponse* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -3110,7 +3110,7 @@ class WinchLoadPayloadResponse final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(WinchLoadPayloadResponse* other) {
+  void UnsafeArenaSwap(LoadPayloadResponse* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -3118,13 +3118,13 @@ class WinchLoadPayloadResponse final :
 
   // implements Message ----------------------------------------------
 
-  WinchLoadPayloadResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<WinchLoadPayloadResponse>(arena);
+  LoadPayloadResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<LoadPayloadResponse>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const WinchLoadPayloadResponse& from);
+  void CopyFrom(const LoadPayloadResponse& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const WinchLoadPayloadResponse& from);
+  void MergeFrom(const LoadPayloadResponse& from);
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
   public:
@@ -3141,15 +3141,15 @@ class WinchLoadPayloadResponse final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(WinchLoadPayloadResponse* other);
+  void InternalSwap(LoadPayloadResponse* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "mavsdk.rpc.winch.WinchLoadPayloadResponse";
+    return "mavsdk.rpc.winch.LoadPayloadResponse";
   }
   protected:
-  explicit WinchLoadPayloadResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit LoadPayloadResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -3163,34 +3163,34 @@ class WinchLoadPayloadResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionResultFieldNumber = 1,
+    kWinchResultFieldNumber = 1,
   };
-  // .mavsdk.rpc.winch.WinchResult action_result = 1;
-  bool has_action_result() const;
+  // .mavsdk.rpc.winch.WinchResult winch_result = 1;
+  bool has_winch_result() const;
   private:
-  bool _internal_has_action_result() const;
+  bool _internal_has_winch_result() const;
   public:
-  void clear_action_result();
-  const ::mavsdk::rpc::winch::WinchResult& action_result() const;
-  PROTOBUF_NODISCARD ::mavsdk::rpc::winch::WinchResult* release_action_result();
-  ::mavsdk::rpc::winch::WinchResult* mutable_action_result();
-  void set_allocated_action_result(::mavsdk::rpc::winch::WinchResult* action_result);
+  void clear_winch_result();
+  const ::mavsdk::rpc::winch::WinchResult& winch_result() const;
+  PROTOBUF_NODISCARD ::mavsdk::rpc::winch::WinchResult* release_winch_result();
+  ::mavsdk::rpc::winch::WinchResult* mutable_winch_result();
+  void set_allocated_winch_result(::mavsdk::rpc::winch::WinchResult* winch_result);
   private:
-  const ::mavsdk::rpc::winch::WinchResult& _internal_action_result() const;
-  ::mavsdk::rpc::winch::WinchResult* _internal_mutable_action_result();
+  const ::mavsdk::rpc::winch::WinchResult& _internal_winch_result() const;
+  ::mavsdk::rpc::winch::WinchResult* _internal_mutable_winch_result();
   public:
-  void unsafe_arena_set_allocated_action_result(
-      ::mavsdk::rpc::winch::WinchResult* action_result);
-  ::mavsdk::rpc::winch::WinchResult* unsafe_arena_release_action_result();
+  void unsafe_arena_set_allocated_winch_result(
+      ::mavsdk::rpc::winch::WinchResult* winch_result);
+  ::mavsdk::rpc::winch::WinchResult* unsafe_arena_release_winch_result();
 
-  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.WinchLoadPayloadResponse)
+  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.LoadPayloadResponse)
  private:
   class _Internal;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::mavsdk::rpc::winch::WinchResult* action_result_;
+  ::mavsdk::rpc::winch::WinchResult* winch_result_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_winch_2fwinch_2eproto;
 };
@@ -3416,71 +3416,71 @@ class WinchResult final :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
-// WinchRelaxRequest
+// RelaxRequest
 
 // uint32 instance = 1;
-inline void WinchRelaxRequest::clear_instance() {
+inline void RelaxRequest::clear_instance() {
   instance_ = 0u;
 }
-inline uint32_t WinchRelaxRequest::_internal_instance() const {
+inline uint32_t RelaxRequest::_internal_instance() const {
   return instance_;
 }
-inline uint32_t WinchRelaxRequest::instance() const {
-  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.WinchRelaxRequest.instance)
+inline uint32_t RelaxRequest::instance() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.RelaxRequest.instance)
   return _internal_instance();
 }
-inline void WinchRelaxRequest::_internal_set_instance(uint32_t value) {
+inline void RelaxRequest::_internal_set_instance(uint32_t value) {
   
   instance_ = value;
 }
-inline void WinchRelaxRequest::set_instance(uint32_t value) {
+inline void RelaxRequest::set_instance(uint32_t value) {
   _internal_set_instance(value);
-  // @@protoc_insertion_point(field_set:mavsdk.rpc.winch.WinchRelaxRequest.instance)
+  // @@protoc_insertion_point(field_set:mavsdk.rpc.winch.RelaxRequest.instance)
 }
 
 // -------------------------------------------------------------------
 
-// WinchRelaxResponse
+// RelaxResponse
 
-// .mavsdk.rpc.winch.WinchResult action_result = 1;
-inline bool WinchRelaxResponse::_internal_has_action_result() const {
-  return this != internal_default_instance() && action_result_ != nullptr;
+// .mavsdk.rpc.winch.WinchResult winch_result = 1;
+inline bool RelaxResponse::_internal_has_winch_result() const {
+  return this != internal_default_instance() && winch_result_ != nullptr;
 }
-inline bool WinchRelaxResponse::has_action_result() const {
-  return _internal_has_action_result();
+inline bool RelaxResponse::has_winch_result() const {
+  return _internal_has_winch_result();
 }
-inline void WinchRelaxResponse::clear_action_result() {
-  if (GetArenaForAllocation() == nullptr && action_result_ != nullptr) {
-    delete action_result_;
+inline void RelaxResponse::clear_winch_result() {
+  if (GetArenaForAllocation() == nullptr && winch_result_ != nullptr) {
+    delete winch_result_;
   }
-  action_result_ = nullptr;
+  winch_result_ = nullptr;
 }
-inline const ::mavsdk::rpc::winch::WinchResult& WinchRelaxResponse::_internal_action_result() const {
-  const ::mavsdk::rpc::winch::WinchResult* p = action_result_;
+inline const ::mavsdk::rpc::winch::WinchResult& RelaxResponse::_internal_winch_result() const {
+  const ::mavsdk::rpc::winch::WinchResult* p = winch_result_;
   return p != nullptr ? *p : reinterpret_cast<const ::mavsdk::rpc::winch::WinchResult&>(
       ::mavsdk::rpc::winch::_WinchResult_default_instance_);
 }
-inline const ::mavsdk::rpc::winch::WinchResult& WinchRelaxResponse::action_result() const {
-  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.WinchRelaxResponse.action_result)
-  return _internal_action_result();
+inline const ::mavsdk::rpc::winch::WinchResult& RelaxResponse::winch_result() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.RelaxResponse.winch_result)
+  return _internal_winch_result();
 }
-inline void WinchRelaxResponse::unsafe_arena_set_allocated_action_result(
-    ::mavsdk::rpc::winch::WinchResult* action_result) {
+inline void RelaxResponse::unsafe_arena_set_allocated_winch_result(
+    ::mavsdk::rpc::winch::WinchResult* winch_result) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(action_result_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(winch_result_);
   }
-  action_result_ = action_result;
-  if (action_result) {
+  winch_result_ = winch_result;
+  if (winch_result) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:mavsdk.rpc.winch.WinchRelaxResponse.action_result)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:mavsdk.rpc.winch.RelaxResponse.winch_result)
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchRelaxResponse::release_action_result() {
+inline ::mavsdk::rpc::winch::WinchResult* RelaxResponse::release_winch_result() {
   
-  ::mavsdk::rpc::winch::WinchResult* temp = action_result_;
-  action_result_ = nullptr;
+  ::mavsdk::rpc::winch::WinchResult* temp = winch_result_;
+  winch_result_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -3492,153 +3492,153 @@ inline ::mavsdk::rpc::winch::WinchResult* WinchRelaxResponse::release_action_res
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchRelaxResponse::unsafe_arena_release_action_result() {
-  // @@protoc_insertion_point(field_release:mavsdk.rpc.winch.WinchRelaxResponse.action_result)
+inline ::mavsdk::rpc::winch::WinchResult* RelaxResponse::unsafe_arena_release_winch_result() {
+  // @@protoc_insertion_point(field_release:mavsdk.rpc.winch.RelaxResponse.winch_result)
   
-  ::mavsdk::rpc::winch::WinchResult* temp = action_result_;
-  action_result_ = nullptr;
+  ::mavsdk::rpc::winch::WinchResult* temp = winch_result_;
+  winch_result_ = nullptr;
   return temp;
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchRelaxResponse::_internal_mutable_action_result() {
+inline ::mavsdk::rpc::winch::WinchResult* RelaxResponse::_internal_mutable_winch_result() {
   
-  if (action_result_ == nullptr) {
+  if (winch_result_ == nullptr) {
     auto* p = CreateMaybeMessage<::mavsdk::rpc::winch::WinchResult>(GetArenaForAllocation());
-    action_result_ = p;
+    winch_result_ = p;
   }
-  return action_result_;
+  return winch_result_;
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchRelaxResponse::mutable_action_result() {
-  ::mavsdk::rpc::winch::WinchResult* _msg = _internal_mutable_action_result();
-  // @@protoc_insertion_point(field_mutable:mavsdk.rpc.winch.WinchRelaxResponse.action_result)
+inline ::mavsdk::rpc::winch::WinchResult* RelaxResponse::mutable_winch_result() {
+  ::mavsdk::rpc::winch::WinchResult* _msg = _internal_mutable_winch_result();
+  // @@protoc_insertion_point(field_mutable:mavsdk.rpc.winch.RelaxResponse.winch_result)
   return _msg;
 }
-inline void WinchRelaxResponse::set_allocated_action_result(::mavsdk::rpc::winch::WinchResult* action_result) {
+inline void RelaxResponse::set_allocated_winch_result(::mavsdk::rpc::winch::WinchResult* winch_result) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete action_result_;
+    delete winch_result_;
   }
-  if (action_result) {
+  if (winch_result) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(action_result);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(winch_result);
     if (message_arena != submessage_arena) {
-      action_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, action_result, submessage_arena);
+      winch_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, winch_result, submessage_arena);
     }
     
   } else {
     
   }
-  action_result_ = action_result;
-  // @@protoc_insertion_point(field_set_allocated:mavsdk.rpc.winch.WinchRelaxResponse.action_result)
+  winch_result_ = winch_result;
+  // @@protoc_insertion_point(field_set_allocated:mavsdk.rpc.winch.RelaxResponse.winch_result)
 }
 
 // -------------------------------------------------------------------
 
-// WinchRelativeLengthControlRequest
+// RelativeLengthControlRequest
 
 // uint32 instance = 1;
-inline void WinchRelativeLengthControlRequest::clear_instance() {
+inline void RelativeLengthControlRequest::clear_instance() {
   instance_ = 0u;
 }
-inline uint32_t WinchRelativeLengthControlRequest::_internal_instance() const {
+inline uint32_t RelativeLengthControlRequest::_internal_instance() const {
   return instance_;
 }
-inline uint32_t WinchRelativeLengthControlRequest::instance() const {
-  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.WinchRelativeLengthControlRequest.instance)
+inline uint32_t RelativeLengthControlRequest::instance() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.RelativeLengthControlRequest.instance)
   return _internal_instance();
 }
-inline void WinchRelativeLengthControlRequest::_internal_set_instance(uint32_t value) {
+inline void RelativeLengthControlRequest::_internal_set_instance(uint32_t value) {
   
   instance_ = value;
 }
-inline void WinchRelativeLengthControlRequest::set_instance(uint32_t value) {
+inline void RelativeLengthControlRequest::set_instance(uint32_t value) {
   _internal_set_instance(value);
-  // @@protoc_insertion_point(field_set:mavsdk.rpc.winch.WinchRelativeLengthControlRequest.instance)
+  // @@protoc_insertion_point(field_set:mavsdk.rpc.winch.RelativeLengthControlRequest.instance)
 }
 
 // float length = 2;
-inline void WinchRelativeLengthControlRequest::clear_length() {
+inline void RelativeLengthControlRequest::clear_length() {
   length_ = 0;
 }
-inline float WinchRelativeLengthControlRequest::_internal_length() const {
+inline float RelativeLengthControlRequest::_internal_length() const {
   return length_;
 }
-inline float WinchRelativeLengthControlRequest::length() const {
-  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.WinchRelativeLengthControlRequest.length)
+inline float RelativeLengthControlRequest::length() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.RelativeLengthControlRequest.length)
   return _internal_length();
 }
-inline void WinchRelativeLengthControlRequest::_internal_set_length(float value) {
+inline void RelativeLengthControlRequest::_internal_set_length(float value) {
   
   length_ = value;
 }
-inline void WinchRelativeLengthControlRequest::set_length(float value) {
+inline void RelativeLengthControlRequest::set_length(float value) {
   _internal_set_length(value);
-  // @@protoc_insertion_point(field_set:mavsdk.rpc.winch.WinchRelativeLengthControlRequest.length)
+  // @@protoc_insertion_point(field_set:mavsdk.rpc.winch.RelativeLengthControlRequest.length)
 }
 
 // float rate = 3;
-inline void WinchRelativeLengthControlRequest::clear_rate() {
+inline void RelativeLengthControlRequest::clear_rate() {
   rate_ = 0;
 }
-inline float WinchRelativeLengthControlRequest::_internal_rate() const {
+inline float RelativeLengthControlRequest::_internal_rate() const {
   return rate_;
 }
-inline float WinchRelativeLengthControlRequest::rate() const {
-  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.WinchRelativeLengthControlRequest.rate)
+inline float RelativeLengthControlRequest::rate() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.RelativeLengthControlRequest.rate)
   return _internal_rate();
 }
-inline void WinchRelativeLengthControlRequest::_internal_set_rate(float value) {
+inline void RelativeLengthControlRequest::_internal_set_rate(float value) {
   
   rate_ = value;
 }
-inline void WinchRelativeLengthControlRequest::set_rate(float value) {
+inline void RelativeLengthControlRequest::set_rate(float value) {
   _internal_set_rate(value);
-  // @@protoc_insertion_point(field_set:mavsdk.rpc.winch.WinchRelativeLengthControlRequest.rate)
+  // @@protoc_insertion_point(field_set:mavsdk.rpc.winch.RelativeLengthControlRequest.rate)
 }
 
 // -------------------------------------------------------------------
 
-// WinchRelativeLengthControlResponse
+// RelativeLengthControlResponse
 
-// .mavsdk.rpc.winch.WinchResult action_result = 1;
-inline bool WinchRelativeLengthControlResponse::_internal_has_action_result() const {
-  return this != internal_default_instance() && action_result_ != nullptr;
+// .mavsdk.rpc.winch.WinchResult winch_result = 1;
+inline bool RelativeLengthControlResponse::_internal_has_winch_result() const {
+  return this != internal_default_instance() && winch_result_ != nullptr;
 }
-inline bool WinchRelativeLengthControlResponse::has_action_result() const {
-  return _internal_has_action_result();
+inline bool RelativeLengthControlResponse::has_winch_result() const {
+  return _internal_has_winch_result();
 }
-inline void WinchRelativeLengthControlResponse::clear_action_result() {
-  if (GetArenaForAllocation() == nullptr && action_result_ != nullptr) {
-    delete action_result_;
+inline void RelativeLengthControlResponse::clear_winch_result() {
+  if (GetArenaForAllocation() == nullptr && winch_result_ != nullptr) {
+    delete winch_result_;
   }
-  action_result_ = nullptr;
+  winch_result_ = nullptr;
 }
-inline const ::mavsdk::rpc::winch::WinchResult& WinchRelativeLengthControlResponse::_internal_action_result() const {
-  const ::mavsdk::rpc::winch::WinchResult* p = action_result_;
+inline const ::mavsdk::rpc::winch::WinchResult& RelativeLengthControlResponse::_internal_winch_result() const {
+  const ::mavsdk::rpc::winch::WinchResult* p = winch_result_;
   return p != nullptr ? *p : reinterpret_cast<const ::mavsdk::rpc::winch::WinchResult&>(
       ::mavsdk::rpc::winch::_WinchResult_default_instance_);
 }
-inline const ::mavsdk::rpc::winch::WinchResult& WinchRelativeLengthControlResponse::action_result() const {
-  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.WinchRelativeLengthControlResponse.action_result)
-  return _internal_action_result();
+inline const ::mavsdk::rpc::winch::WinchResult& RelativeLengthControlResponse::winch_result() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.RelativeLengthControlResponse.winch_result)
+  return _internal_winch_result();
 }
-inline void WinchRelativeLengthControlResponse::unsafe_arena_set_allocated_action_result(
-    ::mavsdk::rpc::winch::WinchResult* action_result) {
+inline void RelativeLengthControlResponse::unsafe_arena_set_allocated_winch_result(
+    ::mavsdk::rpc::winch::WinchResult* winch_result) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(action_result_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(winch_result_);
   }
-  action_result_ = action_result;
-  if (action_result) {
+  winch_result_ = winch_result;
+  if (winch_result) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:mavsdk.rpc.winch.WinchRelativeLengthControlResponse.action_result)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:mavsdk.rpc.winch.RelativeLengthControlResponse.winch_result)
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchRelativeLengthControlResponse::release_action_result() {
+inline ::mavsdk::rpc::winch::WinchResult* RelativeLengthControlResponse::release_winch_result() {
   
-  ::mavsdk::rpc::winch::WinchResult* temp = action_result_;
-  action_result_ = nullptr;
+  ::mavsdk::rpc::winch::WinchResult* temp = winch_result_;
+  winch_result_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -3650,133 +3650,133 @@ inline ::mavsdk::rpc::winch::WinchResult* WinchRelativeLengthControlResponse::re
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchRelativeLengthControlResponse::unsafe_arena_release_action_result() {
-  // @@protoc_insertion_point(field_release:mavsdk.rpc.winch.WinchRelativeLengthControlResponse.action_result)
+inline ::mavsdk::rpc::winch::WinchResult* RelativeLengthControlResponse::unsafe_arena_release_winch_result() {
+  // @@protoc_insertion_point(field_release:mavsdk.rpc.winch.RelativeLengthControlResponse.winch_result)
   
-  ::mavsdk::rpc::winch::WinchResult* temp = action_result_;
-  action_result_ = nullptr;
+  ::mavsdk::rpc::winch::WinchResult* temp = winch_result_;
+  winch_result_ = nullptr;
   return temp;
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchRelativeLengthControlResponse::_internal_mutable_action_result() {
+inline ::mavsdk::rpc::winch::WinchResult* RelativeLengthControlResponse::_internal_mutable_winch_result() {
   
-  if (action_result_ == nullptr) {
+  if (winch_result_ == nullptr) {
     auto* p = CreateMaybeMessage<::mavsdk::rpc::winch::WinchResult>(GetArenaForAllocation());
-    action_result_ = p;
+    winch_result_ = p;
   }
-  return action_result_;
+  return winch_result_;
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchRelativeLengthControlResponse::mutable_action_result() {
-  ::mavsdk::rpc::winch::WinchResult* _msg = _internal_mutable_action_result();
-  // @@protoc_insertion_point(field_mutable:mavsdk.rpc.winch.WinchRelativeLengthControlResponse.action_result)
+inline ::mavsdk::rpc::winch::WinchResult* RelativeLengthControlResponse::mutable_winch_result() {
+  ::mavsdk::rpc::winch::WinchResult* _msg = _internal_mutable_winch_result();
+  // @@protoc_insertion_point(field_mutable:mavsdk.rpc.winch.RelativeLengthControlResponse.winch_result)
   return _msg;
 }
-inline void WinchRelativeLengthControlResponse::set_allocated_action_result(::mavsdk::rpc::winch::WinchResult* action_result) {
+inline void RelativeLengthControlResponse::set_allocated_winch_result(::mavsdk::rpc::winch::WinchResult* winch_result) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete action_result_;
+    delete winch_result_;
   }
-  if (action_result) {
+  if (winch_result) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(action_result);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(winch_result);
     if (message_arena != submessage_arena) {
-      action_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, action_result, submessage_arena);
+      winch_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, winch_result, submessage_arena);
     }
     
   } else {
     
   }
-  action_result_ = action_result;
-  // @@protoc_insertion_point(field_set_allocated:mavsdk.rpc.winch.WinchRelativeLengthControlResponse.action_result)
+  winch_result_ = winch_result;
+  // @@protoc_insertion_point(field_set_allocated:mavsdk.rpc.winch.RelativeLengthControlResponse.winch_result)
 }
 
 // -------------------------------------------------------------------
 
-// WinchRateControlRequest
+// RateControlRequest
 
 // uint32 instance = 1;
-inline void WinchRateControlRequest::clear_instance() {
+inline void RateControlRequest::clear_instance() {
   instance_ = 0u;
 }
-inline uint32_t WinchRateControlRequest::_internal_instance() const {
+inline uint32_t RateControlRequest::_internal_instance() const {
   return instance_;
 }
-inline uint32_t WinchRateControlRequest::instance() const {
-  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.WinchRateControlRequest.instance)
+inline uint32_t RateControlRequest::instance() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.RateControlRequest.instance)
   return _internal_instance();
 }
-inline void WinchRateControlRequest::_internal_set_instance(uint32_t value) {
+inline void RateControlRequest::_internal_set_instance(uint32_t value) {
   
   instance_ = value;
 }
-inline void WinchRateControlRequest::set_instance(uint32_t value) {
+inline void RateControlRequest::set_instance(uint32_t value) {
   _internal_set_instance(value);
-  // @@protoc_insertion_point(field_set:mavsdk.rpc.winch.WinchRateControlRequest.instance)
+  // @@protoc_insertion_point(field_set:mavsdk.rpc.winch.RateControlRequest.instance)
 }
 
 // float rate = 2;
-inline void WinchRateControlRequest::clear_rate() {
+inline void RateControlRequest::clear_rate() {
   rate_ = 0;
 }
-inline float WinchRateControlRequest::_internal_rate() const {
+inline float RateControlRequest::_internal_rate() const {
   return rate_;
 }
-inline float WinchRateControlRequest::rate() const {
-  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.WinchRateControlRequest.rate)
+inline float RateControlRequest::rate() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.RateControlRequest.rate)
   return _internal_rate();
 }
-inline void WinchRateControlRequest::_internal_set_rate(float value) {
+inline void RateControlRequest::_internal_set_rate(float value) {
   
   rate_ = value;
 }
-inline void WinchRateControlRequest::set_rate(float value) {
+inline void RateControlRequest::set_rate(float value) {
   _internal_set_rate(value);
-  // @@protoc_insertion_point(field_set:mavsdk.rpc.winch.WinchRateControlRequest.rate)
+  // @@protoc_insertion_point(field_set:mavsdk.rpc.winch.RateControlRequest.rate)
 }
 
 // -------------------------------------------------------------------
 
-// WinchRateControlResponse
+// RateControlResponse
 
-// .mavsdk.rpc.winch.WinchResult action_result = 1;
-inline bool WinchRateControlResponse::_internal_has_action_result() const {
-  return this != internal_default_instance() && action_result_ != nullptr;
+// .mavsdk.rpc.winch.WinchResult winch_result = 1;
+inline bool RateControlResponse::_internal_has_winch_result() const {
+  return this != internal_default_instance() && winch_result_ != nullptr;
 }
-inline bool WinchRateControlResponse::has_action_result() const {
-  return _internal_has_action_result();
+inline bool RateControlResponse::has_winch_result() const {
+  return _internal_has_winch_result();
 }
-inline void WinchRateControlResponse::clear_action_result() {
-  if (GetArenaForAllocation() == nullptr && action_result_ != nullptr) {
-    delete action_result_;
+inline void RateControlResponse::clear_winch_result() {
+  if (GetArenaForAllocation() == nullptr && winch_result_ != nullptr) {
+    delete winch_result_;
   }
-  action_result_ = nullptr;
+  winch_result_ = nullptr;
 }
-inline const ::mavsdk::rpc::winch::WinchResult& WinchRateControlResponse::_internal_action_result() const {
-  const ::mavsdk::rpc::winch::WinchResult* p = action_result_;
+inline const ::mavsdk::rpc::winch::WinchResult& RateControlResponse::_internal_winch_result() const {
+  const ::mavsdk::rpc::winch::WinchResult* p = winch_result_;
   return p != nullptr ? *p : reinterpret_cast<const ::mavsdk::rpc::winch::WinchResult&>(
       ::mavsdk::rpc::winch::_WinchResult_default_instance_);
 }
-inline const ::mavsdk::rpc::winch::WinchResult& WinchRateControlResponse::action_result() const {
-  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.WinchRateControlResponse.action_result)
-  return _internal_action_result();
+inline const ::mavsdk::rpc::winch::WinchResult& RateControlResponse::winch_result() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.RateControlResponse.winch_result)
+  return _internal_winch_result();
 }
-inline void WinchRateControlResponse::unsafe_arena_set_allocated_action_result(
-    ::mavsdk::rpc::winch::WinchResult* action_result) {
+inline void RateControlResponse::unsafe_arena_set_allocated_winch_result(
+    ::mavsdk::rpc::winch::WinchResult* winch_result) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(action_result_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(winch_result_);
   }
-  action_result_ = action_result;
-  if (action_result) {
+  winch_result_ = winch_result;
+  if (winch_result) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:mavsdk.rpc.winch.WinchRateControlResponse.action_result)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:mavsdk.rpc.winch.RateControlResponse.winch_result)
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchRateControlResponse::release_action_result() {
+inline ::mavsdk::rpc::winch::WinchResult* RateControlResponse::release_winch_result() {
   
-  ::mavsdk::rpc::winch::WinchResult* temp = action_result_;
-  action_result_ = nullptr;
+  ::mavsdk::rpc::winch::WinchResult* temp = winch_result_;
+  winch_result_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -3788,113 +3788,113 @@ inline ::mavsdk::rpc::winch::WinchResult* WinchRateControlResponse::release_acti
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchRateControlResponse::unsafe_arena_release_action_result() {
-  // @@protoc_insertion_point(field_release:mavsdk.rpc.winch.WinchRateControlResponse.action_result)
+inline ::mavsdk::rpc::winch::WinchResult* RateControlResponse::unsafe_arena_release_winch_result() {
+  // @@protoc_insertion_point(field_release:mavsdk.rpc.winch.RateControlResponse.winch_result)
   
-  ::mavsdk::rpc::winch::WinchResult* temp = action_result_;
-  action_result_ = nullptr;
+  ::mavsdk::rpc::winch::WinchResult* temp = winch_result_;
+  winch_result_ = nullptr;
   return temp;
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchRateControlResponse::_internal_mutable_action_result() {
+inline ::mavsdk::rpc::winch::WinchResult* RateControlResponse::_internal_mutable_winch_result() {
   
-  if (action_result_ == nullptr) {
+  if (winch_result_ == nullptr) {
     auto* p = CreateMaybeMessage<::mavsdk::rpc::winch::WinchResult>(GetArenaForAllocation());
-    action_result_ = p;
+    winch_result_ = p;
   }
-  return action_result_;
+  return winch_result_;
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchRateControlResponse::mutable_action_result() {
-  ::mavsdk::rpc::winch::WinchResult* _msg = _internal_mutable_action_result();
-  // @@protoc_insertion_point(field_mutable:mavsdk.rpc.winch.WinchRateControlResponse.action_result)
+inline ::mavsdk::rpc::winch::WinchResult* RateControlResponse::mutable_winch_result() {
+  ::mavsdk::rpc::winch::WinchResult* _msg = _internal_mutable_winch_result();
+  // @@protoc_insertion_point(field_mutable:mavsdk.rpc.winch.RateControlResponse.winch_result)
   return _msg;
 }
-inline void WinchRateControlResponse::set_allocated_action_result(::mavsdk::rpc::winch::WinchResult* action_result) {
+inline void RateControlResponse::set_allocated_winch_result(::mavsdk::rpc::winch::WinchResult* winch_result) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete action_result_;
+    delete winch_result_;
   }
-  if (action_result) {
+  if (winch_result) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(action_result);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(winch_result);
     if (message_arena != submessage_arena) {
-      action_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, action_result, submessage_arena);
+      winch_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, winch_result, submessage_arena);
     }
     
   } else {
     
   }
-  action_result_ = action_result;
-  // @@protoc_insertion_point(field_set_allocated:mavsdk.rpc.winch.WinchRateControlResponse.action_result)
+  winch_result_ = winch_result;
+  // @@protoc_insertion_point(field_set_allocated:mavsdk.rpc.winch.RateControlResponse.winch_result)
 }
 
 // -------------------------------------------------------------------
 
-// WinchLockRequest
+// LockRequest
 
 // uint32 instance = 1;
-inline void WinchLockRequest::clear_instance() {
+inline void LockRequest::clear_instance() {
   instance_ = 0u;
 }
-inline uint32_t WinchLockRequest::_internal_instance() const {
+inline uint32_t LockRequest::_internal_instance() const {
   return instance_;
 }
-inline uint32_t WinchLockRequest::instance() const {
-  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.WinchLockRequest.instance)
+inline uint32_t LockRequest::instance() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.LockRequest.instance)
   return _internal_instance();
 }
-inline void WinchLockRequest::_internal_set_instance(uint32_t value) {
+inline void LockRequest::_internal_set_instance(uint32_t value) {
   
   instance_ = value;
 }
-inline void WinchLockRequest::set_instance(uint32_t value) {
+inline void LockRequest::set_instance(uint32_t value) {
   _internal_set_instance(value);
-  // @@protoc_insertion_point(field_set:mavsdk.rpc.winch.WinchLockRequest.instance)
+  // @@protoc_insertion_point(field_set:mavsdk.rpc.winch.LockRequest.instance)
 }
 
 // -------------------------------------------------------------------
 
-// WinchLockResponse
+// LockResponse
 
-// .mavsdk.rpc.winch.WinchResult action_result = 1;
-inline bool WinchLockResponse::_internal_has_action_result() const {
-  return this != internal_default_instance() && action_result_ != nullptr;
+// .mavsdk.rpc.winch.WinchResult winch_result = 1;
+inline bool LockResponse::_internal_has_winch_result() const {
+  return this != internal_default_instance() && winch_result_ != nullptr;
 }
-inline bool WinchLockResponse::has_action_result() const {
-  return _internal_has_action_result();
+inline bool LockResponse::has_winch_result() const {
+  return _internal_has_winch_result();
 }
-inline void WinchLockResponse::clear_action_result() {
-  if (GetArenaForAllocation() == nullptr && action_result_ != nullptr) {
-    delete action_result_;
+inline void LockResponse::clear_winch_result() {
+  if (GetArenaForAllocation() == nullptr && winch_result_ != nullptr) {
+    delete winch_result_;
   }
-  action_result_ = nullptr;
+  winch_result_ = nullptr;
 }
-inline const ::mavsdk::rpc::winch::WinchResult& WinchLockResponse::_internal_action_result() const {
-  const ::mavsdk::rpc::winch::WinchResult* p = action_result_;
+inline const ::mavsdk::rpc::winch::WinchResult& LockResponse::_internal_winch_result() const {
+  const ::mavsdk::rpc::winch::WinchResult* p = winch_result_;
   return p != nullptr ? *p : reinterpret_cast<const ::mavsdk::rpc::winch::WinchResult&>(
       ::mavsdk::rpc::winch::_WinchResult_default_instance_);
 }
-inline const ::mavsdk::rpc::winch::WinchResult& WinchLockResponse::action_result() const {
-  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.WinchLockResponse.action_result)
-  return _internal_action_result();
+inline const ::mavsdk::rpc::winch::WinchResult& LockResponse::winch_result() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.LockResponse.winch_result)
+  return _internal_winch_result();
 }
-inline void WinchLockResponse::unsafe_arena_set_allocated_action_result(
-    ::mavsdk::rpc::winch::WinchResult* action_result) {
+inline void LockResponse::unsafe_arena_set_allocated_winch_result(
+    ::mavsdk::rpc::winch::WinchResult* winch_result) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(action_result_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(winch_result_);
   }
-  action_result_ = action_result;
-  if (action_result) {
+  winch_result_ = winch_result;
+  if (winch_result) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:mavsdk.rpc.winch.WinchLockResponse.action_result)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:mavsdk.rpc.winch.LockResponse.winch_result)
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchLockResponse::release_action_result() {
+inline ::mavsdk::rpc::winch::WinchResult* LockResponse::release_winch_result() {
   
-  ::mavsdk::rpc::winch::WinchResult* temp = action_result_;
-  action_result_ = nullptr;
+  ::mavsdk::rpc::winch::WinchResult* temp = winch_result_;
+  winch_result_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -3906,113 +3906,113 @@ inline ::mavsdk::rpc::winch::WinchResult* WinchLockResponse::release_action_resu
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchLockResponse::unsafe_arena_release_action_result() {
-  // @@protoc_insertion_point(field_release:mavsdk.rpc.winch.WinchLockResponse.action_result)
+inline ::mavsdk::rpc::winch::WinchResult* LockResponse::unsafe_arena_release_winch_result() {
+  // @@protoc_insertion_point(field_release:mavsdk.rpc.winch.LockResponse.winch_result)
   
-  ::mavsdk::rpc::winch::WinchResult* temp = action_result_;
-  action_result_ = nullptr;
+  ::mavsdk::rpc::winch::WinchResult* temp = winch_result_;
+  winch_result_ = nullptr;
   return temp;
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchLockResponse::_internal_mutable_action_result() {
+inline ::mavsdk::rpc::winch::WinchResult* LockResponse::_internal_mutable_winch_result() {
   
-  if (action_result_ == nullptr) {
+  if (winch_result_ == nullptr) {
     auto* p = CreateMaybeMessage<::mavsdk::rpc::winch::WinchResult>(GetArenaForAllocation());
-    action_result_ = p;
+    winch_result_ = p;
   }
-  return action_result_;
+  return winch_result_;
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchLockResponse::mutable_action_result() {
-  ::mavsdk::rpc::winch::WinchResult* _msg = _internal_mutable_action_result();
-  // @@protoc_insertion_point(field_mutable:mavsdk.rpc.winch.WinchLockResponse.action_result)
+inline ::mavsdk::rpc::winch::WinchResult* LockResponse::mutable_winch_result() {
+  ::mavsdk::rpc::winch::WinchResult* _msg = _internal_mutable_winch_result();
+  // @@protoc_insertion_point(field_mutable:mavsdk.rpc.winch.LockResponse.winch_result)
   return _msg;
 }
-inline void WinchLockResponse::set_allocated_action_result(::mavsdk::rpc::winch::WinchResult* action_result) {
+inline void LockResponse::set_allocated_winch_result(::mavsdk::rpc::winch::WinchResult* winch_result) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete action_result_;
+    delete winch_result_;
   }
-  if (action_result) {
+  if (winch_result) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(action_result);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(winch_result);
     if (message_arena != submessage_arena) {
-      action_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, action_result, submessage_arena);
+      winch_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, winch_result, submessage_arena);
     }
     
   } else {
     
   }
-  action_result_ = action_result;
-  // @@protoc_insertion_point(field_set_allocated:mavsdk.rpc.winch.WinchLockResponse.action_result)
+  winch_result_ = winch_result;
+  // @@protoc_insertion_point(field_set_allocated:mavsdk.rpc.winch.LockResponse.winch_result)
 }
 
 // -------------------------------------------------------------------
 
-// WinchDeliverRequest
+// DeliverRequest
 
 // uint32 instance = 1;
-inline void WinchDeliverRequest::clear_instance() {
+inline void DeliverRequest::clear_instance() {
   instance_ = 0u;
 }
-inline uint32_t WinchDeliverRequest::_internal_instance() const {
+inline uint32_t DeliverRequest::_internal_instance() const {
   return instance_;
 }
-inline uint32_t WinchDeliverRequest::instance() const {
-  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.WinchDeliverRequest.instance)
+inline uint32_t DeliverRequest::instance() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.DeliverRequest.instance)
   return _internal_instance();
 }
-inline void WinchDeliverRequest::_internal_set_instance(uint32_t value) {
+inline void DeliverRequest::_internal_set_instance(uint32_t value) {
   
   instance_ = value;
 }
-inline void WinchDeliverRequest::set_instance(uint32_t value) {
+inline void DeliverRequest::set_instance(uint32_t value) {
   _internal_set_instance(value);
-  // @@protoc_insertion_point(field_set:mavsdk.rpc.winch.WinchDeliverRequest.instance)
+  // @@protoc_insertion_point(field_set:mavsdk.rpc.winch.DeliverRequest.instance)
 }
 
 // -------------------------------------------------------------------
 
-// WinchDeliverResponse
+// DeliverResponse
 
-// .mavsdk.rpc.winch.WinchResult action_result = 1;
-inline bool WinchDeliverResponse::_internal_has_action_result() const {
-  return this != internal_default_instance() && action_result_ != nullptr;
+// .mavsdk.rpc.winch.WinchResult winch_result = 1;
+inline bool DeliverResponse::_internal_has_winch_result() const {
+  return this != internal_default_instance() && winch_result_ != nullptr;
 }
-inline bool WinchDeliverResponse::has_action_result() const {
-  return _internal_has_action_result();
+inline bool DeliverResponse::has_winch_result() const {
+  return _internal_has_winch_result();
 }
-inline void WinchDeliverResponse::clear_action_result() {
-  if (GetArenaForAllocation() == nullptr && action_result_ != nullptr) {
-    delete action_result_;
+inline void DeliverResponse::clear_winch_result() {
+  if (GetArenaForAllocation() == nullptr && winch_result_ != nullptr) {
+    delete winch_result_;
   }
-  action_result_ = nullptr;
+  winch_result_ = nullptr;
 }
-inline const ::mavsdk::rpc::winch::WinchResult& WinchDeliverResponse::_internal_action_result() const {
-  const ::mavsdk::rpc::winch::WinchResult* p = action_result_;
+inline const ::mavsdk::rpc::winch::WinchResult& DeliverResponse::_internal_winch_result() const {
+  const ::mavsdk::rpc::winch::WinchResult* p = winch_result_;
   return p != nullptr ? *p : reinterpret_cast<const ::mavsdk::rpc::winch::WinchResult&>(
       ::mavsdk::rpc::winch::_WinchResult_default_instance_);
 }
-inline const ::mavsdk::rpc::winch::WinchResult& WinchDeliverResponse::action_result() const {
-  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.WinchDeliverResponse.action_result)
-  return _internal_action_result();
+inline const ::mavsdk::rpc::winch::WinchResult& DeliverResponse::winch_result() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.DeliverResponse.winch_result)
+  return _internal_winch_result();
 }
-inline void WinchDeliverResponse::unsafe_arena_set_allocated_action_result(
-    ::mavsdk::rpc::winch::WinchResult* action_result) {
+inline void DeliverResponse::unsafe_arena_set_allocated_winch_result(
+    ::mavsdk::rpc::winch::WinchResult* winch_result) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(action_result_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(winch_result_);
   }
-  action_result_ = action_result;
-  if (action_result) {
+  winch_result_ = winch_result;
+  if (winch_result) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:mavsdk.rpc.winch.WinchDeliverResponse.action_result)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:mavsdk.rpc.winch.DeliverResponse.winch_result)
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchDeliverResponse::release_action_result() {
+inline ::mavsdk::rpc::winch::WinchResult* DeliverResponse::release_winch_result() {
   
-  ::mavsdk::rpc::winch::WinchResult* temp = action_result_;
-  action_result_ = nullptr;
+  ::mavsdk::rpc::winch::WinchResult* temp = winch_result_;
+  winch_result_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -4024,113 +4024,113 @@ inline ::mavsdk::rpc::winch::WinchResult* WinchDeliverResponse::release_action_r
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchDeliverResponse::unsafe_arena_release_action_result() {
-  // @@protoc_insertion_point(field_release:mavsdk.rpc.winch.WinchDeliverResponse.action_result)
+inline ::mavsdk::rpc::winch::WinchResult* DeliverResponse::unsafe_arena_release_winch_result() {
+  // @@protoc_insertion_point(field_release:mavsdk.rpc.winch.DeliverResponse.winch_result)
   
-  ::mavsdk::rpc::winch::WinchResult* temp = action_result_;
-  action_result_ = nullptr;
+  ::mavsdk::rpc::winch::WinchResult* temp = winch_result_;
+  winch_result_ = nullptr;
   return temp;
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchDeliverResponse::_internal_mutable_action_result() {
+inline ::mavsdk::rpc::winch::WinchResult* DeliverResponse::_internal_mutable_winch_result() {
   
-  if (action_result_ == nullptr) {
+  if (winch_result_ == nullptr) {
     auto* p = CreateMaybeMessage<::mavsdk::rpc::winch::WinchResult>(GetArenaForAllocation());
-    action_result_ = p;
+    winch_result_ = p;
   }
-  return action_result_;
+  return winch_result_;
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchDeliverResponse::mutable_action_result() {
-  ::mavsdk::rpc::winch::WinchResult* _msg = _internal_mutable_action_result();
-  // @@protoc_insertion_point(field_mutable:mavsdk.rpc.winch.WinchDeliverResponse.action_result)
+inline ::mavsdk::rpc::winch::WinchResult* DeliverResponse::mutable_winch_result() {
+  ::mavsdk::rpc::winch::WinchResult* _msg = _internal_mutable_winch_result();
+  // @@protoc_insertion_point(field_mutable:mavsdk.rpc.winch.DeliverResponse.winch_result)
   return _msg;
 }
-inline void WinchDeliverResponse::set_allocated_action_result(::mavsdk::rpc::winch::WinchResult* action_result) {
+inline void DeliverResponse::set_allocated_winch_result(::mavsdk::rpc::winch::WinchResult* winch_result) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete action_result_;
+    delete winch_result_;
   }
-  if (action_result) {
+  if (winch_result) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(action_result);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(winch_result);
     if (message_arena != submessage_arena) {
-      action_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, action_result, submessage_arena);
+      winch_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, winch_result, submessage_arena);
     }
     
   } else {
     
   }
-  action_result_ = action_result;
-  // @@protoc_insertion_point(field_set_allocated:mavsdk.rpc.winch.WinchDeliverResponse.action_result)
+  winch_result_ = winch_result;
+  // @@protoc_insertion_point(field_set_allocated:mavsdk.rpc.winch.DeliverResponse.winch_result)
 }
 
 // -------------------------------------------------------------------
 
-// WinchHoldRequest
+// HoldRequest
 
 // uint32 instance = 1;
-inline void WinchHoldRequest::clear_instance() {
+inline void HoldRequest::clear_instance() {
   instance_ = 0u;
 }
-inline uint32_t WinchHoldRequest::_internal_instance() const {
+inline uint32_t HoldRequest::_internal_instance() const {
   return instance_;
 }
-inline uint32_t WinchHoldRequest::instance() const {
-  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.WinchHoldRequest.instance)
+inline uint32_t HoldRequest::instance() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.HoldRequest.instance)
   return _internal_instance();
 }
-inline void WinchHoldRequest::_internal_set_instance(uint32_t value) {
+inline void HoldRequest::_internal_set_instance(uint32_t value) {
   
   instance_ = value;
 }
-inline void WinchHoldRequest::set_instance(uint32_t value) {
+inline void HoldRequest::set_instance(uint32_t value) {
   _internal_set_instance(value);
-  // @@protoc_insertion_point(field_set:mavsdk.rpc.winch.WinchHoldRequest.instance)
+  // @@protoc_insertion_point(field_set:mavsdk.rpc.winch.HoldRequest.instance)
 }
 
 // -------------------------------------------------------------------
 
-// WinchHoldResponse
+// HoldResponse
 
-// .mavsdk.rpc.winch.WinchResult action_result = 1;
-inline bool WinchHoldResponse::_internal_has_action_result() const {
-  return this != internal_default_instance() && action_result_ != nullptr;
+// .mavsdk.rpc.winch.WinchResult winch_result = 1;
+inline bool HoldResponse::_internal_has_winch_result() const {
+  return this != internal_default_instance() && winch_result_ != nullptr;
 }
-inline bool WinchHoldResponse::has_action_result() const {
-  return _internal_has_action_result();
+inline bool HoldResponse::has_winch_result() const {
+  return _internal_has_winch_result();
 }
-inline void WinchHoldResponse::clear_action_result() {
-  if (GetArenaForAllocation() == nullptr && action_result_ != nullptr) {
-    delete action_result_;
+inline void HoldResponse::clear_winch_result() {
+  if (GetArenaForAllocation() == nullptr && winch_result_ != nullptr) {
+    delete winch_result_;
   }
-  action_result_ = nullptr;
+  winch_result_ = nullptr;
 }
-inline const ::mavsdk::rpc::winch::WinchResult& WinchHoldResponse::_internal_action_result() const {
-  const ::mavsdk::rpc::winch::WinchResult* p = action_result_;
+inline const ::mavsdk::rpc::winch::WinchResult& HoldResponse::_internal_winch_result() const {
+  const ::mavsdk::rpc::winch::WinchResult* p = winch_result_;
   return p != nullptr ? *p : reinterpret_cast<const ::mavsdk::rpc::winch::WinchResult&>(
       ::mavsdk::rpc::winch::_WinchResult_default_instance_);
 }
-inline const ::mavsdk::rpc::winch::WinchResult& WinchHoldResponse::action_result() const {
-  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.WinchHoldResponse.action_result)
-  return _internal_action_result();
+inline const ::mavsdk::rpc::winch::WinchResult& HoldResponse::winch_result() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.HoldResponse.winch_result)
+  return _internal_winch_result();
 }
-inline void WinchHoldResponse::unsafe_arena_set_allocated_action_result(
-    ::mavsdk::rpc::winch::WinchResult* action_result) {
+inline void HoldResponse::unsafe_arena_set_allocated_winch_result(
+    ::mavsdk::rpc::winch::WinchResult* winch_result) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(action_result_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(winch_result_);
   }
-  action_result_ = action_result;
-  if (action_result) {
+  winch_result_ = winch_result;
+  if (winch_result) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:mavsdk.rpc.winch.WinchHoldResponse.action_result)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:mavsdk.rpc.winch.HoldResponse.winch_result)
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchHoldResponse::release_action_result() {
+inline ::mavsdk::rpc::winch::WinchResult* HoldResponse::release_winch_result() {
   
-  ::mavsdk::rpc::winch::WinchResult* temp = action_result_;
-  action_result_ = nullptr;
+  ::mavsdk::rpc::winch::WinchResult* temp = winch_result_;
+  winch_result_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -4142,113 +4142,113 @@ inline ::mavsdk::rpc::winch::WinchResult* WinchHoldResponse::release_action_resu
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchHoldResponse::unsafe_arena_release_action_result() {
-  // @@protoc_insertion_point(field_release:mavsdk.rpc.winch.WinchHoldResponse.action_result)
+inline ::mavsdk::rpc::winch::WinchResult* HoldResponse::unsafe_arena_release_winch_result() {
+  // @@protoc_insertion_point(field_release:mavsdk.rpc.winch.HoldResponse.winch_result)
   
-  ::mavsdk::rpc::winch::WinchResult* temp = action_result_;
-  action_result_ = nullptr;
+  ::mavsdk::rpc::winch::WinchResult* temp = winch_result_;
+  winch_result_ = nullptr;
   return temp;
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchHoldResponse::_internal_mutable_action_result() {
+inline ::mavsdk::rpc::winch::WinchResult* HoldResponse::_internal_mutable_winch_result() {
   
-  if (action_result_ == nullptr) {
+  if (winch_result_ == nullptr) {
     auto* p = CreateMaybeMessage<::mavsdk::rpc::winch::WinchResult>(GetArenaForAllocation());
-    action_result_ = p;
+    winch_result_ = p;
   }
-  return action_result_;
+  return winch_result_;
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchHoldResponse::mutable_action_result() {
-  ::mavsdk::rpc::winch::WinchResult* _msg = _internal_mutable_action_result();
-  // @@protoc_insertion_point(field_mutable:mavsdk.rpc.winch.WinchHoldResponse.action_result)
+inline ::mavsdk::rpc::winch::WinchResult* HoldResponse::mutable_winch_result() {
+  ::mavsdk::rpc::winch::WinchResult* _msg = _internal_mutable_winch_result();
+  // @@protoc_insertion_point(field_mutable:mavsdk.rpc.winch.HoldResponse.winch_result)
   return _msg;
 }
-inline void WinchHoldResponse::set_allocated_action_result(::mavsdk::rpc::winch::WinchResult* action_result) {
+inline void HoldResponse::set_allocated_winch_result(::mavsdk::rpc::winch::WinchResult* winch_result) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete action_result_;
+    delete winch_result_;
   }
-  if (action_result) {
+  if (winch_result) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(action_result);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(winch_result);
     if (message_arena != submessage_arena) {
-      action_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, action_result, submessage_arena);
+      winch_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, winch_result, submessage_arena);
     }
     
   } else {
     
   }
-  action_result_ = action_result;
-  // @@protoc_insertion_point(field_set_allocated:mavsdk.rpc.winch.WinchHoldResponse.action_result)
+  winch_result_ = winch_result;
+  // @@protoc_insertion_point(field_set_allocated:mavsdk.rpc.winch.HoldResponse.winch_result)
 }
 
 // -------------------------------------------------------------------
 
-// WinchRetractRequest
+// RetractRequest
 
 // uint32 instance = 1;
-inline void WinchRetractRequest::clear_instance() {
+inline void RetractRequest::clear_instance() {
   instance_ = 0u;
 }
-inline uint32_t WinchRetractRequest::_internal_instance() const {
+inline uint32_t RetractRequest::_internal_instance() const {
   return instance_;
 }
-inline uint32_t WinchRetractRequest::instance() const {
-  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.WinchRetractRequest.instance)
+inline uint32_t RetractRequest::instance() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.RetractRequest.instance)
   return _internal_instance();
 }
-inline void WinchRetractRequest::_internal_set_instance(uint32_t value) {
+inline void RetractRequest::_internal_set_instance(uint32_t value) {
   
   instance_ = value;
 }
-inline void WinchRetractRequest::set_instance(uint32_t value) {
+inline void RetractRequest::set_instance(uint32_t value) {
   _internal_set_instance(value);
-  // @@protoc_insertion_point(field_set:mavsdk.rpc.winch.WinchRetractRequest.instance)
+  // @@protoc_insertion_point(field_set:mavsdk.rpc.winch.RetractRequest.instance)
 }
 
 // -------------------------------------------------------------------
 
-// WinchRetractResponse
+// RetractResponse
 
-// .mavsdk.rpc.winch.WinchResult action_result = 1;
-inline bool WinchRetractResponse::_internal_has_action_result() const {
-  return this != internal_default_instance() && action_result_ != nullptr;
+// .mavsdk.rpc.winch.WinchResult winch_result = 1;
+inline bool RetractResponse::_internal_has_winch_result() const {
+  return this != internal_default_instance() && winch_result_ != nullptr;
 }
-inline bool WinchRetractResponse::has_action_result() const {
-  return _internal_has_action_result();
+inline bool RetractResponse::has_winch_result() const {
+  return _internal_has_winch_result();
 }
-inline void WinchRetractResponse::clear_action_result() {
-  if (GetArenaForAllocation() == nullptr && action_result_ != nullptr) {
-    delete action_result_;
+inline void RetractResponse::clear_winch_result() {
+  if (GetArenaForAllocation() == nullptr && winch_result_ != nullptr) {
+    delete winch_result_;
   }
-  action_result_ = nullptr;
+  winch_result_ = nullptr;
 }
-inline const ::mavsdk::rpc::winch::WinchResult& WinchRetractResponse::_internal_action_result() const {
-  const ::mavsdk::rpc::winch::WinchResult* p = action_result_;
+inline const ::mavsdk::rpc::winch::WinchResult& RetractResponse::_internal_winch_result() const {
+  const ::mavsdk::rpc::winch::WinchResult* p = winch_result_;
   return p != nullptr ? *p : reinterpret_cast<const ::mavsdk::rpc::winch::WinchResult&>(
       ::mavsdk::rpc::winch::_WinchResult_default_instance_);
 }
-inline const ::mavsdk::rpc::winch::WinchResult& WinchRetractResponse::action_result() const {
-  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.WinchRetractResponse.action_result)
-  return _internal_action_result();
+inline const ::mavsdk::rpc::winch::WinchResult& RetractResponse::winch_result() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.RetractResponse.winch_result)
+  return _internal_winch_result();
 }
-inline void WinchRetractResponse::unsafe_arena_set_allocated_action_result(
-    ::mavsdk::rpc::winch::WinchResult* action_result) {
+inline void RetractResponse::unsafe_arena_set_allocated_winch_result(
+    ::mavsdk::rpc::winch::WinchResult* winch_result) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(action_result_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(winch_result_);
   }
-  action_result_ = action_result;
-  if (action_result) {
+  winch_result_ = winch_result;
+  if (winch_result) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:mavsdk.rpc.winch.WinchRetractResponse.action_result)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:mavsdk.rpc.winch.RetractResponse.winch_result)
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchRetractResponse::release_action_result() {
+inline ::mavsdk::rpc::winch::WinchResult* RetractResponse::release_winch_result() {
   
-  ::mavsdk::rpc::winch::WinchResult* temp = action_result_;
-  action_result_ = nullptr;
+  ::mavsdk::rpc::winch::WinchResult* temp = winch_result_;
+  winch_result_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -4260,113 +4260,113 @@ inline ::mavsdk::rpc::winch::WinchResult* WinchRetractResponse::release_action_r
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchRetractResponse::unsafe_arena_release_action_result() {
-  // @@protoc_insertion_point(field_release:mavsdk.rpc.winch.WinchRetractResponse.action_result)
+inline ::mavsdk::rpc::winch::WinchResult* RetractResponse::unsafe_arena_release_winch_result() {
+  // @@protoc_insertion_point(field_release:mavsdk.rpc.winch.RetractResponse.winch_result)
   
-  ::mavsdk::rpc::winch::WinchResult* temp = action_result_;
-  action_result_ = nullptr;
+  ::mavsdk::rpc::winch::WinchResult* temp = winch_result_;
+  winch_result_ = nullptr;
   return temp;
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchRetractResponse::_internal_mutable_action_result() {
+inline ::mavsdk::rpc::winch::WinchResult* RetractResponse::_internal_mutable_winch_result() {
   
-  if (action_result_ == nullptr) {
+  if (winch_result_ == nullptr) {
     auto* p = CreateMaybeMessage<::mavsdk::rpc::winch::WinchResult>(GetArenaForAllocation());
-    action_result_ = p;
+    winch_result_ = p;
   }
-  return action_result_;
+  return winch_result_;
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchRetractResponse::mutable_action_result() {
-  ::mavsdk::rpc::winch::WinchResult* _msg = _internal_mutable_action_result();
-  // @@protoc_insertion_point(field_mutable:mavsdk.rpc.winch.WinchRetractResponse.action_result)
+inline ::mavsdk::rpc::winch::WinchResult* RetractResponse::mutable_winch_result() {
+  ::mavsdk::rpc::winch::WinchResult* _msg = _internal_mutable_winch_result();
+  // @@protoc_insertion_point(field_mutable:mavsdk.rpc.winch.RetractResponse.winch_result)
   return _msg;
 }
-inline void WinchRetractResponse::set_allocated_action_result(::mavsdk::rpc::winch::WinchResult* action_result) {
+inline void RetractResponse::set_allocated_winch_result(::mavsdk::rpc::winch::WinchResult* winch_result) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete action_result_;
+    delete winch_result_;
   }
-  if (action_result) {
+  if (winch_result) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(action_result);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(winch_result);
     if (message_arena != submessage_arena) {
-      action_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, action_result, submessage_arena);
+      winch_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, winch_result, submessage_arena);
     }
     
   } else {
     
   }
-  action_result_ = action_result;
-  // @@protoc_insertion_point(field_set_allocated:mavsdk.rpc.winch.WinchRetractResponse.action_result)
+  winch_result_ = winch_result;
+  // @@protoc_insertion_point(field_set_allocated:mavsdk.rpc.winch.RetractResponse.winch_result)
 }
 
 // -------------------------------------------------------------------
 
-// WinchLoadLineRequest
+// LoadLineRequest
 
 // uint32 instance = 1;
-inline void WinchLoadLineRequest::clear_instance() {
+inline void LoadLineRequest::clear_instance() {
   instance_ = 0u;
 }
-inline uint32_t WinchLoadLineRequest::_internal_instance() const {
+inline uint32_t LoadLineRequest::_internal_instance() const {
   return instance_;
 }
-inline uint32_t WinchLoadLineRequest::instance() const {
-  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.WinchLoadLineRequest.instance)
+inline uint32_t LoadLineRequest::instance() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.LoadLineRequest.instance)
   return _internal_instance();
 }
-inline void WinchLoadLineRequest::_internal_set_instance(uint32_t value) {
+inline void LoadLineRequest::_internal_set_instance(uint32_t value) {
   
   instance_ = value;
 }
-inline void WinchLoadLineRequest::set_instance(uint32_t value) {
+inline void LoadLineRequest::set_instance(uint32_t value) {
   _internal_set_instance(value);
-  // @@protoc_insertion_point(field_set:mavsdk.rpc.winch.WinchLoadLineRequest.instance)
+  // @@protoc_insertion_point(field_set:mavsdk.rpc.winch.LoadLineRequest.instance)
 }
 
 // -------------------------------------------------------------------
 
-// WinchLoadLineResponse
+// LoadLineResponse
 
-// .mavsdk.rpc.winch.WinchResult action_result = 1;
-inline bool WinchLoadLineResponse::_internal_has_action_result() const {
-  return this != internal_default_instance() && action_result_ != nullptr;
+// .mavsdk.rpc.winch.WinchResult winch_result = 1;
+inline bool LoadLineResponse::_internal_has_winch_result() const {
+  return this != internal_default_instance() && winch_result_ != nullptr;
 }
-inline bool WinchLoadLineResponse::has_action_result() const {
-  return _internal_has_action_result();
+inline bool LoadLineResponse::has_winch_result() const {
+  return _internal_has_winch_result();
 }
-inline void WinchLoadLineResponse::clear_action_result() {
-  if (GetArenaForAllocation() == nullptr && action_result_ != nullptr) {
-    delete action_result_;
+inline void LoadLineResponse::clear_winch_result() {
+  if (GetArenaForAllocation() == nullptr && winch_result_ != nullptr) {
+    delete winch_result_;
   }
-  action_result_ = nullptr;
+  winch_result_ = nullptr;
 }
-inline const ::mavsdk::rpc::winch::WinchResult& WinchLoadLineResponse::_internal_action_result() const {
-  const ::mavsdk::rpc::winch::WinchResult* p = action_result_;
+inline const ::mavsdk::rpc::winch::WinchResult& LoadLineResponse::_internal_winch_result() const {
+  const ::mavsdk::rpc::winch::WinchResult* p = winch_result_;
   return p != nullptr ? *p : reinterpret_cast<const ::mavsdk::rpc::winch::WinchResult&>(
       ::mavsdk::rpc::winch::_WinchResult_default_instance_);
 }
-inline const ::mavsdk::rpc::winch::WinchResult& WinchLoadLineResponse::action_result() const {
-  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.WinchLoadLineResponse.action_result)
-  return _internal_action_result();
+inline const ::mavsdk::rpc::winch::WinchResult& LoadLineResponse::winch_result() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.LoadLineResponse.winch_result)
+  return _internal_winch_result();
 }
-inline void WinchLoadLineResponse::unsafe_arena_set_allocated_action_result(
-    ::mavsdk::rpc::winch::WinchResult* action_result) {
+inline void LoadLineResponse::unsafe_arena_set_allocated_winch_result(
+    ::mavsdk::rpc::winch::WinchResult* winch_result) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(action_result_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(winch_result_);
   }
-  action_result_ = action_result;
-  if (action_result) {
+  winch_result_ = winch_result;
+  if (winch_result) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:mavsdk.rpc.winch.WinchLoadLineResponse.action_result)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:mavsdk.rpc.winch.LoadLineResponse.winch_result)
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchLoadLineResponse::release_action_result() {
+inline ::mavsdk::rpc::winch::WinchResult* LoadLineResponse::release_winch_result() {
   
-  ::mavsdk::rpc::winch::WinchResult* temp = action_result_;
-  action_result_ = nullptr;
+  ::mavsdk::rpc::winch::WinchResult* temp = winch_result_;
+  winch_result_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -4378,113 +4378,113 @@ inline ::mavsdk::rpc::winch::WinchResult* WinchLoadLineResponse::release_action_
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchLoadLineResponse::unsafe_arena_release_action_result() {
-  // @@protoc_insertion_point(field_release:mavsdk.rpc.winch.WinchLoadLineResponse.action_result)
+inline ::mavsdk::rpc::winch::WinchResult* LoadLineResponse::unsafe_arena_release_winch_result() {
+  // @@protoc_insertion_point(field_release:mavsdk.rpc.winch.LoadLineResponse.winch_result)
   
-  ::mavsdk::rpc::winch::WinchResult* temp = action_result_;
-  action_result_ = nullptr;
+  ::mavsdk::rpc::winch::WinchResult* temp = winch_result_;
+  winch_result_ = nullptr;
   return temp;
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchLoadLineResponse::_internal_mutable_action_result() {
+inline ::mavsdk::rpc::winch::WinchResult* LoadLineResponse::_internal_mutable_winch_result() {
   
-  if (action_result_ == nullptr) {
+  if (winch_result_ == nullptr) {
     auto* p = CreateMaybeMessage<::mavsdk::rpc::winch::WinchResult>(GetArenaForAllocation());
-    action_result_ = p;
+    winch_result_ = p;
   }
-  return action_result_;
+  return winch_result_;
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchLoadLineResponse::mutable_action_result() {
-  ::mavsdk::rpc::winch::WinchResult* _msg = _internal_mutable_action_result();
-  // @@protoc_insertion_point(field_mutable:mavsdk.rpc.winch.WinchLoadLineResponse.action_result)
+inline ::mavsdk::rpc::winch::WinchResult* LoadLineResponse::mutable_winch_result() {
+  ::mavsdk::rpc::winch::WinchResult* _msg = _internal_mutable_winch_result();
+  // @@protoc_insertion_point(field_mutable:mavsdk.rpc.winch.LoadLineResponse.winch_result)
   return _msg;
 }
-inline void WinchLoadLineResponse::set_allocated_action_result(::mavsdk::rpc::winch::WinchResult* action_result) {
+inline void LoadLineResponse::set_allocated_winch_result(::mavsdk::rpc::winch::WinchResult* winch_result) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete action_result_;
+    delete winch_result_;
   }
-  if (action_result) {
+  if (winch_result) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(action_result);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(winch_result);
     if (message_arena != submessage_arena) {
-      action_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, action_result, submessage_arena);
+      winch_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, winch_result, submessage_arena);
     }
     
   } else {
     
   }
-  action_result_ = action_result;
-  // @@protoc_insertion_point(field_set_allocated:mavsdk.rpc.winch.WinchLoadLineResponse.action_result)
+  winch_result_ = winch_result;
+  // @@protoc_insertion_point(field_set_allocated:mavsdk.rpc.winch.LoadLineResponse.winch_result)
 }
 
 // -------------------------------------------------------------------
 
-// WinchAbandonLineRequest
+// AbandonLineRequest
 
 // uint32 instance = 1;
-inline void WinchAbandonLineRequest::clear_instance() {
+inline void AbandonLineRequest::clear_instance() {
   instance_ = 0u;
 }
-inline uint32_t WinchAbandonLineRequest::_internal_instance() const {
+inline uint32_t AbandonLineRequest::_internal_instance() const {
   return instance_;
 }
-inline uint32_t WinchAbandonLineRequest::instance() const {
-  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.WinchAbandonLineRequest.instance)
+inline uint32_t AbandonLineRequest::instance() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.AbandonLineRequest.instance)
   return _internal_instance();
 }
-inline void WinchAbandonLineRequest::_internal_set_instance(uint32_t value) {
+inline void AbandonLineRequest::_internal_set_instance(uint32_t value) {
   
   instance_ = value;
 }
-inline void WinchAbandonLineRequest::set_instance(uint32_t value) {
+inline void AbandonLineRequest::set_instance(uint32_t value) {
   _internal_set_instance(value);
-  // @@protoc_insertion_point(field_set:mavsdk.rpc.winch.WinchAbandonLineRequest.instance)
+  // @@protoc_insertion_point(field_set:mavsdk.rpc.winch.AbandonLineRequest.instance)
 }
 
 // -------------------------------------------------------------------
 
-// WinchAbandonLineResponse
+// AbandonLineResponse
 
-// .mavsdk.rpc.winch.WinchResult action_result = 1;
-inline bool WinchAbandonLineResponse::_internal_has_action_result() const {
-  return this != internal_default_instance() && action_result_ != nullptr;
+// .mavsdk.rpc.winch.WinchResult winch_result = 1;
+inline bool AbandonLineResponse::_internal_has_winch_result() const {
+  return this != internal_default_instance() && winch_result_ != nullptr;
 }
-inline bool WinchAbandonLineResponse::has_action_result() const {
-  return _internal_has_action_result();
+inline bool AbandonLineResponse::has_winch_result() const {
+  return _internal_has_winch_result();
 }
-inline void WinchAbandonLineResponse::clear_action_result() {
-  if (GetArenaForAllocation() == nullptr && action_result_ != nullptr) {
-    delete action_result_;
+inline void AbandonLineResponse::clear_winch_result() {
+  if (GetArenaForAllocation() == nullptr && winch_result_ != nullptr) {
+    delete winch_result_;
   }
-  action_result_ = nullptr;
+  winch_result_ = nullptr;
 }
-inline const ::mavsdk::rpc::winch::WinchResult& WinchAbandonLineResponse::_internal_action_result() const {
-  const ::mavsdk::rpc::winch::WinchResult* p = action_result_;
+inline const ::mavsdk::rpc::winch::WinchResult& AbandonLineResponse::_internal_winch_result() const {
+  const ::mavsdk::rpc::winch::WinchResult* p = winch_result_;
   return p != nullptr ? *p : reinterpret_cast<const ::mavsdk::rpc::winch::WinchResult&>(
       ::mavsdk::rpc::winch::_WinchResult_default_instance_);
 }
-inline const ::mavsdk::rpc::winch::WinchResult& WinchAbandonLineResponse::action_result() const {
-  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.WinchAbandonLineResponse.action_result)
-  return _internal_action_result();
+inline const ::mavsdk::rpc::winch::WinchResult& AbandonLineResponse::winch_result() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.AbandonLineResponse.winch_result)
+  return _internal_winch_result();
 }
-inline void WinchAbandonLineResponse::unsafe_arena_set_allocated_action_result(
-    ::mavsdk::rpc::winch::WinchResult* action_result) {
+inline void AbandonLineResponse::unsafe_arena_set_allocated_winch_result(
+    ::mavsdk::rpc::winch::WinchResult* winch_result) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(action_result_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(winch_result_);
   }
-  action_result_ = action_result;
-  if (action_result) {
+  winch_result_ = winch_result;
+  if (winch_result) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:mavsdk.rpc.winch.WinchAbandonLineResponse.action_result)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:mavsdk.rpc.winch.AbandonLineResponse.winch_result)
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchAbandonLineResponse::release_action_result() {
+inline ::mavsdk::rpc::winch::WinchResult* AbandonLineResponse::release_winch_result() {
   
-  ::mavsdk::rpc::winch::WinchResult* temp = action_result_;
-  action_result_ = nullptr;
+  ::mavsdk::rpc::winch::WinchResult* temp = winch_result_;
+  winch_result_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -4496,113 +4496,113 @@ inline ::mavsdk::rpc::winch::WinchResult* WinchAbandonLineResponse::release_acti
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchAbandonLineResponse::unsafe_arena_release_action_result() {
-  // @@protoc_insertion_point(field_release:mavsdk.rpc.winch.WinchAbandonLineResponse.action_result)
+inline ::mavsdk::rpc::winch::WinchResult* AbandonLineResponse::unsafe_arena_release_winch_result() {
+  // @@protoc_insertion_point(field_release:mavsdk.rpc.winch.AbandonLineResponse.winch_result)
   
-  ::mavsdk::rpc::winch::WinchResult* temp = action_result_;
-  action_result_ = nullptr;
+  ::mavsdk::rpc::winch::WinchResult* temp = winch_result_;
+  winch_result_ = nullptr;
   return temp;
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchAbandonLineResponse::_internal_mutable_action_result() {
+inline ::mavsdk::rpc::winch::WinchResult* AbandonLineResponse::_internal_mutable_winch_result() {
   
-  if (action_result_ == nullptr) {
+  if (winch_result_ == nullptr) {
     auto* p = CreateMaybeMessage<::mavsdk::rpc::winch::WinchResult>(GetArenaForAllocation());
-    action_result_ = p;
+    winch_result_ = p;
   }
-  return action_result_;
+  return winch_result_;
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchAbandonLineResponse::mutable_action_result() {
-  ::mavsdk::rpc::winch::WinchResult* _msg = _internal_mutable_action_result();
-  // @@protoc_insertion_point(field_mutable:mavsdk.rpc.winch.WinchAbandonLineResponse.action_result)
+inline ::mavsdk::rpc::winch::WinchResult* AbandonLineResponse::mutable_winch_result() {
+  ::mavsdk::rpc::winch::WinchResult* _msg = _internal_mutable_winch_result();
+  // @@protoc_insertion_point(field_mutable:mavsdk.rpc.winch.AbandonLineResponse.winch_result)
   return _msg;
 }
-inline void WinchAbandonLineResponse::set_allocated_action_result(::mavsdk::rpc::winch::WinchResult* action_result) {
+inline void AbandonLineResponse::set_allocated_winch_result(::mavsdk::rpc::winch::WinchResult* winch_result) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete action_result_;
+    delete winch_result_;
   }
-  if (action_result) {
+  if (winch_result) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(action_result);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(winch_result);
     if (message_arena != submessage_arena) {
-      action_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, action_result, submessage_arena);
+      winch_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, winch_result, submessage_arena);
     }
     
   } else {
     
   }
-  action_result_ = action_result;
-  // @@protoc_insertion_point(field_set_allocated:mavsdk.rpc.winch.WinchAbandonLineResponse.action_result)
+  winch_result_ = winch_result;
+  // @@protoc_insertion_point(field_set_allocated:mavsdk.rpc.winch.AbandonLineResponse.winch_result)
 }
 
 // -------------------------------------------------------------------
 
-// WinchLoadPayloadRequest
+// LoadPayloadRequest
 
 // uint32 instance = 1;
-inline void WinchLoadPayloadRequest::clear_instance() {
+inline void LoadPayloadRequest::clear_instance() {
   instance_ = 0u;
 }
-inline uint32_t WinchLoadPayloadRequest::_internal_instance() const {
+inline uint32_t LoadPayloadRequest::_internal_instance() const {
   return instance_;
 }
-inline uint32_t WinchLoadPayloadRequest::instance() const {
-  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.WinchLoadPayloadRequest.instance)
+inline uint32_t LoadPayloadRequest::instance() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.LoadPayloadRequest.instance)
   return _internal_instance();
 }
-inline void WinchLoadPayloadRequest::_internal_set_instance(uint32_t value) {
+inline void LoadPayloadRequest::_internal_set_instance(uint32_t value) {
   
   instance_ = value;
 }
-inline void WinchLoadPayloadRequest::set_instance(uint32_t value) {
+inline void LoadPayloadRequest::set_instance(uint32_t value) {
   _internal_set_instance(value);
-  // @@protoc_insertion_point(field_set:mavsdk.rpc.winch.WinchLoadPayloadRequest.instance)
+  // @@protoc_insertion_point(field_set:mavsdk.rpc.winch.LoadPayloadRequest.instance)
 }
 
 // -------------------------------------------------------------------
 
-// WinchLoadPayloadResponse
+// LoadPayloadResponse
 
-// .mavsdk.rpc.winch.WinchResult action_result = 1;
-inline bool WinchLoadPayloadResponse::_internal_has_action_result() const {
-  return this != internal_default_instance() && action_result_ != nullptr;
+// .mavsdk.rpc.winch.WinchResult winch_result = 1;
+inline bool LoadPayloadResponse::_internal_has_winch_result() const {
+  return this != internal_default_instance() && winch_result_ != nullptr;
 }
-inline bool WinchLoadPayloadResponse::has_action_result() const {
-  return _internal_has_action_result();
+inline bool LoadPayloadResponse::has_winch_result() const {
+  return _internal_has_winch_result();
 }
-inline void WinchLoadPayloadResponse::clear_action_result() {
-  if (GetArenaForAllocation() == nullptr && action_result_ != nullptr) {
-    delete action_result_;
+inline void LoadPayloadResponse::clear_winch_result() {
+  if (GetArenaForAllocation() == nullptr && winch_result_ != nullptr) {
+    delete winch_result_;
   }
-  action_result_ = nullptr;
+  winch_result_ = nullptr;
 }
-inline const ::mavsdk::rpc::winch::WinchResult& WinchLoadPayloadResponse::_internal_action_result() const {
-  const ::mavsdk::rpc::winch::WinchResult* p = action_result_;
+inline const ::mavsdk::rpc::winch::WinchResult& LoadPayloadResponse::_internal_winch_result() const {
+  const ::mavsdk::rpc::winch::WinchResult* p = winch_result_;
   return p != nullptr ? *p : reinterpret_cast<const ::mavsdk::rpc::winch::WinchResult&>(
       ::mavsdk::rpc::winch::_WinchResult_default_instance_);
 }
-inline const ::mavsdk::rpc::winch::WinchResult& WinchLoadPayloadResponse::action_result() const {
-  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.WinchLoadPayloadResponse.action_result)
-  return _internal_action_result();
+inline const ::mavsdk::rpc::winch::WinchResult& LoadPayloadResponse::winch_result() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.LoadPayloadResponse.winch_result)
+  return _internal_winch_result();
 }
-inline void WinchLoadPayloadResponse::unsafe_arena_set_allocated_action_result(
-    ::mavsdk::rpc::winch::WinchResult* action_result) {
+inline void LoadPayloadResponse::unsafe_arena_set_allocated_winch_result(
+    ::mavsdk::rpc::winch::WinchResult* winch_result) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(action_result_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(winch_result_);
   }
-  action_result_ = action_result;
-  if (action_result) {
+  winch_result_ = winch_result;
+  if (winch_result) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:mavsdk.rpc.winch.WinchLoadPayloadResponse.action_result)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:mavsdk.rpc.winch.LoadPayloadResponse.winch_result)
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchLoadPayloadResponse::release_action_result() {
+inline ::mavsdk::rpc::winch::WinchResult* LoadPayloadResponse::release_winch_result() {
   
-  ::mavsdk::rpc::winch::WinchResult* temp = action_result_;
-  action_result_ = nullptr;
+  ::mavsdk::rpc::winch::WinchResult* temp = winch_result_;
+  winch_result_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -4614,44 +4614,44 @@ inline ::mavsdk::rpc::winch::WinchResult* WinchLoadPayloadResponse::release_acti
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchLoadPayloadResponse::unsafe_arena_release_action_result() {
-  // @@protoc_insertion_point(field_release:mavsdk.rpc.winch.WinchLoadPayloadResponse.action_result)
+inline ::mavsdk::rpc::winch::WinchResult* LoadPayloadResponse::unsafe_arena_release_winch_result() {
+  // @@protoc_insertion_point(field_release:mavsdk.rpc.winch.LoadPayloadResponse.winch_result)
   
-  ::mavsdk::rpc::winch::WinchResult* temp = action_result_;
-  action_result_ = nullptr;
+  ::mavsdk::rpc::winch::WinchResult* temp = winch_result_;
+  winch_result_ = nullptr;
   return temp;
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchLoadPayloadResponse::_internal_mutable_action_result() {
+inline ::mavsdk::rpc::winch::WinchResult* LoadPayloadResponse::_internal_mutable_winch_result() {
   
-  if (action_result_ == nullptr) {
+  if (winch_result_ == nullptr) {
     auto* p = CreateMaybeMessage<::mavsdk::rpc::winch::WinchResult>(GetArenaForAllocation());
-    action_result_ = p;
+    winch_result_ = p;
   }
-  return action_result_;
+  return winch_result_;
 }
-inline ::mavsdk::rpc::winch::WinchResult* WinchLoadPayloadResponse::mutable_action_result() {
-  ::mavsdk::rpc::winch::WinchResult* _msg = _internal_mutable_action_result();
-  // @@protoc_insertion_point(field_mutable:mavsdk.rpc.winch.WinchLoadPayloadResponse.action_result)
+inline ::mavsdk::rpc::winch::WinchResult* LoadPayloadResponse::mutable_winch_result() {
+  ::mavsdk::rpc::winch::WinchResult* _msg = _internal_mutable_winch_result();
+  // @@protoc_insertion_point(field_mutable:mavsdk.rpc.winch.LoadPayloadResponse.winch_result)
   return _msg;
 }
-inline void WinchLoadPayloadResponse::set_allocated_action_result(::mavsdk::rpc::winch::WinchResult* action_result) {
+inline void LoadPayloadResponse::set_allocated_winch_result(::mavsdk::rpc::winch::WinchResult* winch_result) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete action_result_;
+    delete winch_result_;
   }
-  if (action_result) {
+  if (winch_result) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(action_result);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(winch_result);
     if (message_arena != submessage_arena) {
-      action_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, action_result, submessage_arena);
+      winch_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, winch_result, submessage_arena);
     }
     
   } else {
     
   }
-  action_result_ = action_result;
-  // @@protoc_insertion_point(field_set_allocated:mavsdk.rpc.winch.WinchLoadPayloadResponse.action_result)
+  winch_result_ = winch_result;
+  // @@protoc_insertion_point(field_set_allocated:mavsdk.rpc.winch.LoadPayloadResponse.winch_result)
 }
 
 // -------------------------------------------------------------------

@@ -403,25 +403,25 @@ class GripperGrabResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionResultFieldNumber = 1,
+    kGripperResultFieldNumber = 1,
   };
-  // .mavsdk.rpc.gripper.GripperResult action_result = 1;
-  bool has_action_result() const;
+  // .mavsdk.rpc.gripper.GripperResult gripper_result = 1;
+  bool has_gripper_result() const;
   private:
-  bool _internal_has_action_result() const;
+  bool _internal_has_gripper_result() const;
   public:
-  void clear_action_result();
-  const ::mavsdk::rpc::gripper::GripperResult& action_result() const;
-  PROTOBUF_NODISCARD ::mavsdk::rpc::gripper::GripperResult* release_action_result();
-  ::mavsdk::rpc::gripper::GripperResult* mutable_action_result();
-  void set_allocated_action_result(::mavsdk::rpc::gripper::GripperResult* action_result);
+  void clear_gripper_result();
+  const ::mavsdk::rpc::gripper::GripperResult& gripper_result() const;
+  PROTOBUF_NODISCARD ::mavsdk::rpc::gripper::GripperResult* release_gripper_result();
+  ::mavsdk::rpc::gripper::GripperResult* mutable_gripper_result();
+  void set_allocated_gripper_result(::mavsdk::rpc::gripper::GripperResult* gripper_result);
   private:
-  const ::mavsdk::rpc::gripper::GripperResult& _internal_action_result() const;
-  ::mavsdk::rpc::gripper::GripperResult* _internal_mutable_action_result();
+  const ::mavsdk::rpc::gripper::GripperResult& _internal_gripper_result() const;
+  ::mavsdk::rpc::gripper::GripperResult* _internal_mutable_gripper_result();
   public:
-  void unsafe_arena_set_allocated_action_result(
-      ::mavsdk::rpc::gripper::GripperResult* action_result);
-  ::mavsdk::rpc::gripper::GripperResult* unsafe_arena_release_action_result();
+  void unsafe_arena_set_allocated_gripper_result(
+      ::mavsdk::rpc::gripper::GripperResult* gripper_result);
+  ::mavsdk::rpc::gripper::GripperResult* unsafe_arena_release_gripper_result();
 
   // @@protoc_insertion_point(class_scope:mavsdk.rpc.gripper.GripperGrabResponse)
  private:
@@ -430,7 +430,7 @@ class GripperGrabResponse final :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::mavsdk::rpc::gripper::GripperResult* action_result_;
+  ::mavsdk::rpc::gripper::GripperResult* gripper_result_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_gripper_2fgripper_2eproto;
 };
@@ -698,25 +698,25 @@ class GripperReleaseResponse final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionResultFieldNumber = 1,
+    kGripperResultFieldNumber = 1,
   };
-  // .mavsdk.rpc.gripper.GripperResult action_result = 1;
-  bool has_action_result() const;
+  // .mavsdk.rpc.gripper.GripperResult gripper_result = 1;
+  bool has_gripper_result() const;
   private:
-  bool _internal_has_action_result() const;
+  bool _internal_has_gripper_result() const;
   public:
-  void clear_action_result();
-  const ::mavsdk::rpc::gripper::GripperResult& action_result() const;
-  PROTOBUF_NODISCARD ::mavsdk::rpc::gripper::GripperResult* release_action_result();
-  ::mavsdk::rpc::gripper::GripperResult* mutable_action_result();
-  void set_allocated_action_result(::mavsdk::rpc::gripper::GripperResult* action_result);
+  void clear_gripper_result();
+  const ::mavsdk::rpc::gripper::GripperResult& gripper_result() const;
+  PROTOBUF_NODISCARD ::mavsdk::rpc::gripper::GripperResult* release_gripper_result();
+  ::mavsdk::rpc::gripper::GripperResult* mutable_gripper_result();
+  void set_allocated_gripper_result(::mavsdk::rpc::gripper::GripperResult* gripper_result);
   private:
-  const ::mavsdk::rpc::gripper::GripperResult& _internal_action_result() const;
-  ::mavsdk::rpc::gripper::GripperResult* _internal_mutable_action_result();
+  const ::mavsdk::rpc::gripper::GripperResult& _internal_gripper_result() const;
+  ::mavsdk::rpc::gripper::GripperResult* _internal_mutable_gripper_result();
   public:
-  void unsafe_arena_set_allocated_action_result(
-      ::mavsdk::rpc::gripper::GripperResult* action_result);
-  ::mavsdk::rpc::gripper::GripperResult* unsafe_arena_release_action_result();
+  void unsafe_arena_set_allocated_gripper_result(
+      ::mavsdk::rpc::gripper::GripperResult* gripper_result);
+  ::mavsdk::rpc::gripper::GripperResult* unsafe_arena_release_gripper_result();
 
   // @@protoc_insertion_point(class_scope:mavsdk.rpc.gripper.GripperReleaseResponse)
  private:
@@ -725,7 +725,7 @@ class GripperReleaseResponse final :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::mavsdk::rpc::gripper::GripperResult* action_result_;
+  ::mavsdk::rpc::gripper::GripperResult* gripper_result_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_gripper_2fgripper_2eproto;
 };
@@ -977,45 +977,45 @@ inline void GripperGrabRequest::set_instance(uint32_t value) {
 
 // GripperGrabResponse
 
-// .mavsdk.rpc.gripper.GripperResult action_result = 1;
-inline bool GripperGrabResponse::_internal_has_action_result() const {
-  return this != internal_default_instance() && action_result_ != nullptr;
+// .mavsdk.rpc.gripper.GripperResult gripper_result = 1;
+inline bool GripperGrabResponse::_internal_has_gripper_result() const {
+  return this != internal_default_instance() && gripper_result_ != nullptr;
 }
-inline bool GripperGrabResponse::has_action_result() const {
-  return _internal_has_action_result();
+inline bool GripperGrabResponse::has_gripper_result() const {
+  return _internal_has_gripper_result();
 }
-inline void GripperGrabResponse::clear_action_result() {
-  if (GetArenaForAllocation() == nullptr && action_result_ != nullptr) {
-    delete action_result_;
+inline void GripperGrabResponse::clear_gripper_result() {
+  if (GetArenaForAllocation() == nullptr && gripper_result_ != nullptr) {
+    delete gripper_result_;
   }
-  action_result_ = nullptr;
+  gripper_result_ = nullptr;
 }
-inline const ::mavsdk::rpc::gripper::GripperResult& GripperGrabResponse::_internal_action_result() const {
-  const ::mavsdk::rpc::gripper::GripperResult* p = action_result_;
+inline const ::mavsdk::rpc::gripper::GripperResult& GripperGrabResponse::_internal_gripper_result() const {
+  const ::mavsdk::rpc::gripper::GripperResult* p = gripper_result_;
   return p != nullptr ? *p : reinterpret_cast<const ::mavsdk::rpc::gripper::GripperResult&>(
       ::mavsdk::rpc::gripper::_GripperResult_default_instance_);
 }
-inline const ::mavsdk::rpc::gripper::GripperResult& GripperGrabResponse::action_result() const {
-  // @@protoc_insertion_point(field_get:mavsdk.rpc.gripper.GripperGrabResponse.action_result)
-  return _internal_action_result();
+inline const ::mavsdk::rpc::gripper::GripperResult& GripperGrabResponse::gripper_result() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.gripper.GripperGrabResponse.gripper_result)
+  return _internal_gripper_result();
 }
-inline void GripperGrabResponse::unsafe_arena_set_allocated_action_result(
-    ::mavsdk::rpc::gripper::GripperResult* action_result) {
+inline void GripperGrabResponse::unsafe_arena_set_allocated_gripper_result(
+    ::mavsdk::rpc::gripper::GripperResult* gripper_result) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(action_result_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(gripper_result_);
   }
-  action_result_ = action_result;
-  if (action_result) {
+  gripper_result_ = gripper_result;
+  if (gripper_result) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:mavsdk.rpc.gripper.GripperGrabResponse.action_result)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:mavsdk.rpc.gripper.GripperGrabResponse.gripper_result)
 }
-inline ::mavsdk::rpc::gripper::GripperResult* GripperGrabResponse::release_action_result() {
+inline ::mavsdk::rpc::gripper::GripperResult* GripperGrabResponse::release_gripper_result() {
   
-  ::mavsdk::rpc::gripper::GripperResult* temp = action_result_;
-  action_result_ = nullptr;
+  ::mavsdk::rpc::gripper::GripperResult* temp = gripper_result_;
+  gripper_result_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -1027,44 +1027,44 @@ inline ::mavsdk::rpc::gripper::GripperResult* GripperGrabResponse::release_actio
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::mavsdk::rpc::gripper::GripperResult* GripperGrabResponse::unsafe_arena_release_action_result() {
-  // @@protoc_insertion_point(field_release:mavsdk.rpc.gripper.GripperGrabResponse.action_result)
+inline ::mavsdk::rpc::gripper::GripperResult* GripperGrabResponse::unsafe_arena_release_gripper_result() {
+  // @@protoc_insertion_point(field_release:mavsdk.rpc.gripper.GripperGrabResponse.gripper_result)
   
-  ::mavsdk::rpc::gripper::GripperResult* temp = action_result_;
-  action_result_ = nullptr;
+  ::mavsdk::rpc::gripper::GripperResult* temp = gripper_result_;
+  gripper_result_ = nullptr;
   return temp;
 }
-inline ::mavsdk::rpc::gripper::GripperResult* GripperGrabResponse::_internal_mutable_action_result() {
+inline ::mavsdk::rpc::gripper::GripperResult* GripperGrabResponse::_internal_mutable_gripper_result() {
   
-  if (action_result_ == nullptr) {
+  if (gripper_result_ == nullptr) {
     auto* p = CreateMaybeMessage<::mavsdk::rpc::gripper::GripperResult>(GetArenaForAllocation());
-    action_result_ = p;
+    gripper_result_ = p;
   }
-  return action_result_;
+  return gripper_result_;
 }
-inline ::mavsdk::rpc::gripper::GripperResult* GripperGrabResponse::mutable_action_result() {
-  ::mavsdk::rpc::gripper::GripperResult* _msg = _internal_mutable_action_result();
-  // @@protoc_insertion_point(field_mutable:mavsdk.rpc.gripper.GripperGrabResponse.action_result)
+inline ::mavsdk::rpc::gripper::GripperResult* GripperGrabResponse::mutable_gripper_result() {
+  ::mavsdk::rpc::gripper::GripperResult* _msg = _internal_mutable_gripper_result();
+  // @@protoc_insertion_point(field_mutable:mavsdk.rpc.gripper.GripperGrabResponse.gripper_result)
   return _msg;
 }
-inline void GripperGrabResponse::set_allocated_action_result(::mavsdk::rpc::gripper::GripperResult* action_result) {
+inline void GripperGrabResponse::set_allocated_gripper_result(::mavsdk::rpc::gripper::GripperResult* gripper_result) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete action_result_;
+    delete gripper_result_;
   }
-  if (action_result) {
+  if (gripper_result) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(action_result);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(gripper_result);
     if (message_arena != submessage_arena) {
-      action_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, action_result, submessage_arena);
+      gripper_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, gripper_result, submessage_arena);
     }
     
   } else {
     
   }
-  action_result_ = action_result;
-  // @@protoc_insertion_point(field_set_allocated:mavsdk.rpc.gripper.GripperGrabResponse.action_result)
+  gripper_result_ = gripper_result;
+  // @@protoc_insertion_point(field_set_allocated:mavsdk.rpc.gripper.GripperGrabResponse.gripper_result)
 }
 
 // -------------------------------------------------------------------
@@ -1095,45 +1095,45 @@ inline void GripperReleaseRequest::set_instance(uint32_t value) {
 
 // GripperReleaseResponse
 
-// .mavsdk.rpc.gripper.GripperResult action_result = 1;
-inline bool GripperReleaseResponse::_internal_has_action_result() const {
-  return this != internal_default_instance() && action_result_ != nullptr;
+// .mavsdk.rpc.gripper.GripperResult gripper_result = 1;
+inline bool GripperReleaseResponse::_internal_has_gripper_result() const {
+  return this != internal_default_instance() && gripper_result_ != nullptr;
 }
-inline bool GripperReleaseResponse::has_action_result() const {
-  return _internal_has_action_result();
+inline bool GripperReleaseResponse::has_gripper_result() const {
+  return _internal_has_gripper_result();
 }
-inline void GripperReleaseResponse::clear_action_result() {
-  if (GetArenaForAllocation() == nullptr && action_result_ != nullptr) {
-    delete action_result_;
+inline void GripperReleaseResponse::clear_gripper_result() {
+  if (GetArenaForAllocation() == nullptr && gripper_result_ != nullptr) {
+    delete gripper_result_;
   }
-  action_result_ = nullptr;
+  gripper_result_ = nullptr;
 }
-inline const ::mavsdk::rpc::gripper::GripperResult& GripperReleaseResponse::_internal_action_result() const {
-  const ::mavsdk::rpc::gripper::GripperResult* p = action_result_;
+inline const ::mavsdk::rpc::gripper::GripperResult& GripperReleaseResponse::_internal_gripper_result() const {
+  const ::mavsdk::rpc::gripper::GripperResult* p = gripper_result_;
   return p != nullptr ? *p : reinterpret_cast<const ::mavsdk::rpc::gripper::GripperResult&>(
       ::mavsdk::rpc::gripper::_GripperResult_default_instance_);
 }
-inline const ::mavsdk::rpc::gripper::GripperResult& GripperReleaseResponse::action_result() const {
-  // @@protoc_insertion_point(field_get:mavsdk.rpc.gripper.GripperReleaseResponse.action_result)
-  return _internal_action_result();
+inline const ::mavsdk::rpc::gripper::GripperResult& GripperReleaseResponse::gripper_result() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.gripper.GripperReleaseResponse.gripper_result)
+  return _internal_gripper_result();
 }
-inline void GripperReleaseResponse::unsafe_arena_set_allocated_action_result(
-    ::mavsdk::rpc::gripper::GripperResult* action_result) {
+inline void GripperReleaseResponse::unsafe_arena_set_allocated_gripper_result(
+    ::mavsdk::rpc::gripper::GripperResult* gripper_result) {
   if (GetArenaForAllocation() == nullptr) {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(action_result_);
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(gripper_result_);
   }
-  action_result_ = action_result;
-  if (action_result) {
+  gripper_result_ = gripper_result;
+  if (gripper_result) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:mavsdk.rpc.gripper.GripperReleaseResponse.action_result)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:mavsdk.rpc.gripper.GripperReleaseResponse.gripper_result)
 }
-inline ::mavsdk::rpc::gripper::GripperResult* GripperReleaseResponse::release_action_result() {
+inline ::mavsdk::rpc::gripper::GripperResult* GripperReleaseResponse::release_gripper_result() {
   
-  ::mavsdk::rpc::gripper::GripperResult* temp = action_result_;
-  action_result_ = nullptr;
+  ::mavsdk::rpc::gripper::GripperResult* temp = gripper_result_;
+  gripper_result_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
@@ -1145,44 +1145,44 @@ inline ::mavsdk::rpc::gripper::GripperResult* GripperReleaseResponse::release_ac
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::mavsdk::rpc::gripper::GripperResult* GripperReleaseResponse::unsafe_arena_release_action_result() {
-  // @@protoc_insertion_point(field_release:mavsdk.rpc.gripper.GripperReleaseResponse.action_result)
+inline ::mavsdk::rpc::gripper::GripperResult* GripperReleaseResponse::unsafe_arena_release_gripper_result() {
+  // @@protoc_insertion_point(field_release:mavsdk.rpc.gripper.GripperReleaseResponse.gripper_result)
   
-  ::mavsdk::rpc::gripper::GripperResult* temp = action_result_;
-  action_result_ = nullptr;
+  ::mavsdk::rpc::gripper::GripperResult* temp = gripper_result_;
+  gripper_result_ = nullptr;
   return temp;
 }
-inline ::mavsdk::rpc::gripper::GripperResult* GripperReleaseResponse::_internal_mutable_action_result() {
+inline ::mavsdk::rpc::gripper::GripperResult* GripperReleaseResponse::_internal_mutable_gripper_result() {
   
-  if (action_result_ == nullptr) {
+  if (gripper_result_ == nullptr) {
     auto* p = CreateMaybeMessage<::mavsdk::rpc::gripper::GripperResult>(GetArenaForAllocation());
-    action_result_ = p;
+    gripper_result_ = p;
   }
-  return action_result_;
+  return gripper_result_;
 }
-inline ::mavsdk::rpc::gripper::GripperResult* GripperReleaseResponse::mutable_action_result() {
-  ::mavsdk::rpc::gripper::GripperResult* _msg = _internal_mutable_action_result();
-  // @@protoc_insertion_point(field_mutable:mavsdk.rpc.gripper.GripperReleaseResponse.action_result)
+inline ::mavsdk::rpc::gripper::GripperResult* GripperReleaseResponse::mutable_gripper_result() {
+  ::mavsdk::rpc::gripper::GripperResult* _msg = _internal_mutable_gripper_result();
+  // @@protoc_insertion_point(field_mutable:mavsdk.rpc.gripper.GripperReleaseResponse.gripper_result)
   return _msg;
 }
-inline void GripperReleaseResponse::set_allocated_action_result(::mavsdk::rpc::gripper::GripperResult* action_result) {
+inline void GripperReleaseResponse::set_allocated_gripper_result(::mavsdk::rpc::gripper::GripperResult* gripper_result) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
-    delete action_result_;
+    delete gripper_result_;
   }
-  if (action_result) {
+  if (gripper_result) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(action_result);
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(gripper_result);
     if (message_arena != submessage_arena) {
-      action_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, action_result, submessage_arena);
+      gripper_result = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, gripper_result, submessage_arena);
     }
     
   } else {
     
   }
-  action_result_ = action_result;
-  // @@protoc_insertion_point(field_set_allocated:mavsdk.rpc.gripper.GripperReleaseResponse.action_result)
+  gripper_result_ = gripper_result;
+  // @@protoc_insertion_point(field_set_allocated:mavsdk.rpc.gripper.GripperReleaseResponse.gripper_result)
 }
 
 // -------------------------------------------------------------------

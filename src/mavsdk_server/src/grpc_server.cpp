@@ -70,6 +70,10 @@ int GrpcServer::run()
     builder.RegisterService(&_gimbal_service);
 #endif
 
+#ifdef GRIPPER_ENABLED
+    builder.RegisterService(&_gripper_service);
+#endif
+
 #ifdef INFO_ENABLED
     builder.RegisterService(&_info_service);
 #endif
@@ -141,6 +145,11 @@ int GrpcServer::run()
 #ifdef TUNE_ENABLED
     builder.RegisterService(&_tune_service);
 #endif
+
+#ifdef WINCH_ENABLED
+    builder.RegisterService(&_winch_service);
+#endif
+
 
 #ifdef ENABLE_PROTO_REFLECTION
     grpc::reflection::InitProtoReflectionServerBuilderPlugin();
@@ -221,6 +230,10 @@ void GrpcServer::stop()
         _gimbal_service.stop();
 #endif
 
+#ifdef GRIPPER_ENABLED
+        _gripper_service.stop();
+#endif
+
 #ifdef INFO_ENABLED
         _info_service.stop();
 #endif
@@ -291,6 +304,10 @@ void GrpcServer::stop()
 
 #ifdef TUNE_ENABLED
         _tune_service.stop();
+#endif
+
+#ifdef WINCH_ENABLED
+        _winch_service.stop();
 #endif
 
         _server->Shutdown();

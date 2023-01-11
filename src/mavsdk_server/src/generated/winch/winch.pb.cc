@@ -23,249 +23,249 @@ namespace _pbi = _pb::internal;
 namespace mavsdk {
 namespace rpc {
 namespace winch {
-PROTOBUF_CONSTEXPR WinchRelaxRequest::WinchRelaxRequest(
+PROTOBUF_CONSTEXPR RelaxRequest::RelaxRequest(
     ::_pbi::ConstantInitialized)
   : instance_(0u){}
-struct WinchRelaxRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR WinchRelaxRequestDefaultTypeInternal()
+struct RelaxRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR RelaxRequestDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~WinchRelaxRequestDefaultTypeInternal() {}
+  ~RelaxRequestDefaultTypeInternal() {}
   union {
-    WinchRelaxRequest _instance;
+    RelaxRequest _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WinchRelaxRequestDefaultTypeInternal _WinchRelaxRequest_default_instance_;
-PROTOBUF_CONSTEXPR WinchRelaxResponse::WinchRelaxResponse(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RelaxRequestDefaultTypeInternal _RelaxRequest_default_instance_;
+PROTOBUF_CONSTEXPR RelaxResponse::RelaxResponse(
     ::_pbi::ConstantInitialized)
-  : action_result_(nullptr){}
-struct WinchRelaxResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR WinchRelaxResponseDefaultTypeInternal()
+  : winch_result_(nullptr){}
+struct RelaxResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR RelaxResponseDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~WinchRelaxResponseDefaultTypeInternal() {}
+  ~RelaxResponseDefaultTypeInternal() {}
   union {
-    WinchRelaxResponse _instance;
+    RelaxResponse _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WinchRelaxResponseDefaultTypeInternal _WinchRelaxResponse_default_instance_;
-PROTOBUF_CONSTEXPR WinchRelativeLengthControlRequest::WinchRelativeLengthControlRequest(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RelaxResponseDefaultTypeInternal _RelaxResponse_default_instance_;
+PROTOBUF_CONSTEXPR RelativeLengthControlRequest::RelativeLengthControlRequest(
     ::_pbi::ConstantInitialized)
   : instance_(0u)
   , length_(0)
   , rate_(0){}
-struct WinchRelativeLengthControlRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR WinchRelativeLengthControlRequestDefaultTypeInternal()
+struct RelativeLengthControlRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR RelativeLengthControlRequestDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~WinchRelativeLengthControlRequestDefaultTypeInternal() {}
+  ~RelativeLengthControlRequestDefaultTypeInternal() {}
   union {
-    WinchRelativeLengthControlRequest _instance;
+    RelativeLengthControlRequest _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WinchRelativeLengthControlRequestDefaultTypeInternal _WinchRelativeLengthControlRequest_default_instance_;
-PROTOBUF_CONSTEXPR WinchRelativeLengthControlResponse::WinchRelativeLengthControlResponse(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RelativeLengthControlRequestDefaultTypeInternal _RelativeLengthControlRequest_default_instance_;
+PROTOBUF_CONSTEXPR RelativeLengthControlResponse::RelativeLengthControlResponse(
     ::_pbi::ConstantInitialized)
-  : action_result_(nullptr){}
-struct WinchRelativeLengthControlResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR WinchRelativeLengthControlResponseDefaultTypeInternal()
+  : winch_result_(nullptr){}
+struct RelativeLengthControlResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR RelativeLengthControlResponseDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~WinchRelativeLengthControlResponseDefaultTypeInternal() {}
+  ~RelativeLengthControlResponseDefaultTypeInternal() {}
   union {
-    WinchRelativeLengthControlResponse _instance;
+    RelativeLengthControlResponse _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WinchRelativeLengthControlResponseDefaultTypeInternal _WinchRelativeLengthControlResponse_default_instance_;
-PROTOBUF_CONSTEXPR WinchRateControlRequest::WinchRateControlRequest(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RelativeLengthControlResponseDefaultTypeInternal _RelativeLengthControlResponse_default_instance_;
+PROTOBUF_CONSTEXPR RateControlRequest::RateControlRequest(
     ::_pbi::ConstantInitialized)
   : instance_(0u)
   , rate_(0){}
-struct WinchRateControlRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR WinchRateControlRequestDefaultTypeInternal()
+struct RateControlRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR RateControlRequestDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~WinchRateControlRequestDefaultTypeInternal() {}
+  ~RateControlRequestDefaultTypeInternal() {}
   union {
-    WinchRateControlRequest _instance;
+    RateControlRequest _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WinchRateControlRequestDefaultTypeInternal _WinchRateControlRequest_default_instance_;
-PROTOBUF_CONSTEXPR WinchRateControlResponse::WinchRateControlResponse(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RateControlRequestDefaultTypeInternal _RateControlRequest_default_instance_;
+PROTOBUF_CONSTEXPR RateControlResponse::RateControlResponse(
     ::_pbi::ConstantInitialized)
-  : action_result_(nullptr){}
-struct WinchRateControlResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR WinchRateControlResponseDefaultTypeInternal()
+  : winch_result_(nullptr){}
+struct RateControlResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR RateControlResponseDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~WinchRateControlResponseDefaultTypeInternal() {}
+  ~RateControlResponseDefaultTypeInternal() {}
   union {
-    WinchRateControlResponse _instance;
+    RateControlResponse _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WinchRateControlResponseDefaultTypeInternal _WinchRateControlResponse_default_instance_;
-PROTOBUF_CONSTEXPR WinchLockRequest::WinchLockRequest(
-    ::_pbi::ConstantInitialized)
-  : instance_(0u){}
-struct WinchLockRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR WinchLockRequestDefaultTypeInternal()
-      : _instance(::_pbi::ConstantInitialized{}) {}
-  ~WinchLockRequestDefaultTypeInternal() {}
-  union {
-    WinchLockRequest _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WinchLockRequestDefaultTypeInternal _WinchLockRequest_default_instance_;
-PROTOBUF_CONSTEXPR WinchLockResponse::WinchLockResponse(
-    ::_pbi::ConstantInitialized)
-  : action_result_(nullptr){}
-struct WinchLockResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR WinchLockResponseDefaultTypeInternal()
-      : _instance(::_pbi::ConstantInitialized{}) {}
-  ~WinchLockResponseDefaultTypeInternal() {}
-  union {
-    WinchLockResponse _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WinchLockResponseDefaultTypeInternal _WinchLockResponse_default_instance_;
-PROTOBUF_CONSTEXPR WinchDeliverRequest::WinchDeliverRequest(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RateControlResponseDefaultTypeInternal _RateControlResponse_default_instance_;
+PROTOBUF_CONSTEXPR LockRequest::LockRequest(
     ::_pbi::ConstantInitialized)
   : instance_(0u){}
-struct WinchDeliverRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR WinchDeliverRequestDefaultTypeInternal()
+struct LockRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR LockRequestDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~WinchDeliverRequestDefaultTypeInternal() {}
+  ~LockRequestDefaultTypeInternal() {}
   union {
-    WinchDeliverRequest _instance;
+    LockRequest _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WinchDeliverRequestDefaultTypeInternal _WinchDeliverRequest_default_instance_;
-PROTOBUF_CONSTEXPR WinchDeliverResponse::WinchDeliverResponse(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LockRequestDefaultTypeInternal _LockRequest_default_instance_;
+PROTOBUF_CONSTEXPR LockResponse::LockResponse(
     ::_pbi::ConstantInitialized)
-  : action_result_(nullptr){}
-struct WinchDeliverResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR WinchDeliverResponseDefaultTypeInternal()
+  : winch_result_(nullptr){}
+struct LockResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR LockResponseDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~WinchDeliverResponseDefaultTypeInternal() {}
+  ~LockResponseDefaultTypeInternal() {}
   union {
-    WinchDeliverResponse _instance;
+    LockResponse _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WinchDeliverResponseDefaultTypeInternal _WinchDeliverResponse_default_instance_;
-PROTOBUF_CONSTEXPR WinchHoldRequest::WinchHoldRequest(
-    ::_pbi::ConstantInitialized)
-  : instance_(0u){}
-struct WinchHoldRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR WinchHoldRequestDefaultTypeInternal()
-      : _instance(::_pbi::ConstantInitialized{}) {}
-  ~WinchHoldRequestDefaultTypeInternal() {}
-  union {
-    WinchHoldRequest _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WinchHoldRequestDefaultTypeInternal _WinchHoldRequest_default_instance_;
-PROTOBUF_CONSTEXPR WinchHoldResponse::WinchHoldResponse(
-    ::_pbi::ConstantInitialized)
-  : action_result_(nullptr){}
-struct WinchHoldResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR WinchHoldResponseDefaultTypeInternal()
-      : _instance(::_pbi::ConstantInitialized{}) {}
-  ~WinchHoldResponseDefaultTypeInternal() {}
-  union {
-    WinchHoldResponse _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WinchHoldResponseDefaultTypeInternal _WinchHoldResponse_default_instance_;
-PROTOBUF_CONSTEXPR WinchRetractRequest::WinchRetractRequest(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LockResponseDefaultTypeInternal _LockResponse_default_instance_;
+PROTOBUF_CONSTEXPR DeliverRequest::DeliverRequest(
     ::_pbi::ConstantInitialized)
   : instance_(0u){}
-struct WinchRetractRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR WinchRetractRequestDefaultTypeInternal()
+struct DeliverRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR DeliverRequestDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~WinchRetractRequestDefaultTypeInternal() {}
+  ~DeliverRequestDefaultTypeInternal() {}
   union {
-    WinchRetractRequest _instance;
+    DeliverRequest _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WinchRetractRequestDefaultTypeInternal _WinchRetractRequest_default_instance_;
-PROTOBUF_CONSTEXPR WinchRetractResponse::WinchRetractResponse(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DeliverRequestDefaultTypeInternal _DeliverRequest_default_instance_;
+PROTOBUF_CONSTEXPR DeliverResponse::DeliverResponse(
     ::_pbi::ConstantInitialized)
-  : action_result_(nullptr){}
-struct WinchRetractResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR WinchRetractResponseDefaultTypeInternal()
+  : winch_result_(nullptr){}
+struct DeliverResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR DeliverResponseDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~WinchRetractResponseDefaultTypeInternal() {}
+  ~DeliverResponseDefaultTypeInternal() {}
   union {
-    WinchRetractResponse _instance;
+    DeliverResponse _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WinchRetractResponseDefaultTypeInternal _WinchRetractResponse_default_instance_;
-PROTOBUF_CONSTEXPR WinchLoadLineRequest::WinchLoadLineRequest(
-    ::_pbi::ConstantInitialized)
-  : instance_(0u){}
-struct WinchLoadLineRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR WinchLoadLineRequestDefaultTypeInternal()
-      : _instance(::_pbi::ConstantInitialized{}) {}
-  ~WinchLoadLineRequestDefaultTypeInternal() {}
-  union {
-    WinchLoadLineRequest _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WinchLoadLineRequestDefaultTypeInternal _WinchLoadLineRequest_default_instance_;
-PROTOBUF_CONSTEXPR WinchLoadLineResponse::WinchLoadLineResponse(
-    ::_pbi::ConstantInitialized)
-  : action_result_(nullptr){}
-struct WinchLoadLineResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR WinchLoadLineResponseDefaultTypeInternal()
-      : _instance(::_pbi::ConstantInitialized{}) {}
-  ~WinchLoadLineResponseDefaultTypeInternal() {}
-  union {
-    WinchLoadLineResponse _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WinchLoadLineResponseDefaultTypeInternal _WinchLoadLineResponse_default_instance_;
-PROTOBUF_CONSTEXPR WinchAbandonLineRequest::WinchAbandonLineRequest(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DeliverResponseDefaultTypeInternal _DeliverResponse_default_instance_;
+PROTOBUF_CONSTEXPR HoldRequest::HoldRequest(
     ::_pbi::ConstantInitialized)
   : instance_(0u){}
-struct WinchAbandonLineRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR WinchAbandonLineRequestDefaultTypeInternal()
+struct HoldRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR HoldRequestDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~WinchAbandonLineRequestDefaultTypeInternal() {}
+  ~HoldRequestDefaultTypeInternal() {}
   union {
-    WinchAbandonLineRequest _instance;
+    HoldRequest _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WinchAbandonLineRequestDefaultTypeInternal _WinchAbandonLineRequest_default_instance_;
-PROTOBUF_CONSTEXPR WinchAbandonLineResponse::WinchAbandonLineResponse(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 HoldRequestDefaultTypeInternal _HoldRequest_default_instance_;
+PROTOBUF_CONSTEXPR HoldResponse::HoldResponse(
     ::_pbi::ConstantInitialized)
-  : action_result_(nullptr){}
-struct WinchAbandonLineResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR WinchAbandonLineResponseDefaultTypeInternal()
+  : winch_result_(nullptr){}
+struct HoldResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR HoldResponseDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~WinchAbandonLineResponseDefaultTypeInternal() {}
+  ~HoldResponseDefaultTypeInternal() {}
   union {
-    WinchAbandonLineResponse _instance;
+    HoldResponse _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WinchAbandonLineResponseDefaultTypeInternal _WinchAbandonLineResponse_default_instance_;
-PROTOBUF_CONSTEXPR WinchLoadPayloadRequest::WinchLoadPayloadRequest(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 HoldResponseDefaultTypeInternal _HoldResponse_default_instance_;
+PROTOBUF_CONSTEXPR RetractRequest::RetractRequest(
     ::_pbi::ConstantInitialized)
   : instance_(0u){}
-struct WinchLoadPayloadRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR WinchLoadPayloadRequestDefaultTypeInternal()
+struct RetractRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR RetractRequestDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~WinchLoadPayloadRequestDefaultTypeInternal() {}
+  ~RetractRequestDefaultTypeInternal() {}
   union {
-    WinchLoadPayloadRequest _instance;
+    RetractRequest _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WinchLoadPayloadRequestDefaultTypeInternal _WinchLoadPayloadRequest_default_instance_;
-PROTOBUF_CONSTEXPR WinchLoadPayloadResponse::WinchLoadPayloadResponse(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RetractRequestDefaultTypeInternal _RetractRequest_default_instance_;
+PROTOBUF_CONSTEXPR RetractResponse::RetractResponse(
     ::_pbi::ConstantInitialized)
-  : action_result_(nullptr){}
-struct WinchLoadPayloadResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR WinchLoadPayloadResponseDefaultTypeInternal()
+  : winch_result_(nullptr){}
+struct RetractResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR RetractResponseDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~WinchLoadPayloadResponseDefaultTypeInternal() {}
+  ~RetractResponseDefaultTypeInternal() {}
   union {
-    WinchLoadPayloadResponse _instance;
+    RetractResponse _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WinchLoadPayloadResponseDefaultTypeInternal _WinchLoadPayloadResponse_default_instance_;
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RetractResponseDefaultTypeInternal _RetractResponse_default_instance_;
+PROTOBUF_CONSTEXPR LoadLineRequest::LoadLineRequest(
+    ::_pbi::ConstantInitialized)
+  : instance_(0u){}
+struct LoadLineRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR LoadLineRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~LoadLineRequestDefaultTypeInternal() {}
+  union {
+    LoadLineRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LoadLineRequestDefaultTypeInternal _LoadLineRequest_default_instance_;
+PROTOBUF_CONSTEXPR LoadLineResponse::LoadLineResponse(
+    ::_pbi::ConstantInitialized)
+  : winch_result_(nullptr){}
+struct LoadLineResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR LoadLineResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~LoadLineResponseDefaultTypeInternal() {}
+  union {
+    LoadLineResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LoadLineResponseDefaultTypeInternal _LoadLineResponse_default_instance_;
+PROTOBUF_CONSTEXPR AbandonLineRequest::AbandonLineRequest(
+    ::_pbi::ConstantInitialized)
+  : instance_(0u){}
+struct AbandonLineRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR AbandonLineRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~AbandonLineRequestDefaultTypeInternal() {}
+  union {
+    AbandonLineRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 AbandonLineRequestDefaultTypeInternal _AbandonLineRequest_default_instance_;
+PROTOBUF_CONSTEXPR AbandonLineResponse::AbandonLineResponse(
+    ::_pbi::ConstantInitialized)
+  : winch_result_(nullptr){}
+struct AbandonLineResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR AbandonLineResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~AbandonLineResponseDefaultTypeInternal() {}
+  union {
+    AbandonLineResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 AbandonLineResponseDefaultTypeInternal _AbandonLineResponse_default_instance_;
+PROTOBUF_CONSTEXPR LoadPayloadRequest::LoadPayloadRequest(
+    ::_pbi::ConstantInitialized)
+  : instance_(0u){}
+struct LoadPayloadRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR LoadPayloadRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~LoadPayloadRequestDefaultTypeInternal() {}
+  union {
+    LoadPayloadRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LoadPayloadRequestDefaultTypeInternal _LoadPayloadRequest_default_instance_;
+PROTOBUF_CONSTEXPR LoadPayloadResponse::LoadPayloadResponse(
+    ::_pbi::ConstantInitialized)
+  : winch_result_(nullptr){}
+struct LoadPayloadResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR LoadPayloadResponseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~LoadPayloadResponseDefaultTypeInternal() {}
+  union {
+    LoadPayloadResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LoadPayloadResponseDefaultTypeInternal _LoadPayloadResponse_default_instance_;
 PROTOBUF_CONSTEXPR WinchResult::WinchResult(
     ::_pbi::ConstantInitialized)
   : result_str_(&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{})
@@ -289,148 +289,148 @@ static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors
 
 const uint32_t TableStruct_winch_2fwinch_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchRelaxRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::RelaxRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchRelaxRequest, instance_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::RelaxRequest, instance_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchRelaxResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::RelaxResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchRelaxResponse, action_result_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::RelaxResponse, winch_result_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchRelativeLengthControlRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::RelativeLengthControlRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchRelativeLengthControlRequest, instance_),
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchRelativeLengthControlRequest, length_),
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchRelativeLengthControlRequest, rate_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::RelativeLengthControlRequest, instance_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::RelativeLengthControlRequest, length_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::RelativeLengthControlRequest, rate_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchRelativeLengthControlResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::RelativeLengthControlResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchRelativeLengthControlResponse, action_result_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::RelativeLengthControlResponse, winch_result_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchRateControlRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::RateControlRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchRateControlRequest, instance_),
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchRateControlRequest, rate_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::RateControlRequest, instance_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::RateControlRequest, rate_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchRateControlResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::RateControlResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchRateControlResponse, action_result_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::RateControlResponse, winch_result_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchLockRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::LockRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchLockRequest, instance_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::LockRequest, instance_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchLockResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::LockResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchLockResponse, action_result_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::LockResponse, winch_result_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchDeliverRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::DeliverRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchDeliverRequest, instance_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::DeliverRequest, instance_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchDeliverResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::DeliverResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchDeliverResponse, action_result_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::DeliverResponse, winch_result_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchHoldRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::HoldRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchHoldRequest, instance_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::HoldRequest, instance_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchHoldResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::HoldResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchHoldResponse, action_result_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::HoldResponse, winch_result_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchRetractRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::RetractRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchRetractRequest, instance_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::RetractRequest, instance_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchRetractResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::RetractResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchRetractResponse, action_result_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::RetractResponse, winch_result_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchLoadLineRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::LoadLineRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchLoadLineRequest, instance_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::LoadLineRequest, instance_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchLoadLineResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::LoadLineResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchLoadLineResponse, action_result_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::LoadLineResponse, winch_result_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchAbandonLineRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::AbandonLineRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchAbandonLineRequest, instance_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::AbandonLineRequest, instance_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchAbandonLineResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::AbandonLineResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchAbandonLineResponse, action_result_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::AbandonLineResponse, winch_result_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchLoadPayloadRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::LoadPayloadRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchLoadPayloadRequest, instance_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::LoadPayloadRequest, instance_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchLoadPayloadResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::LoadPayloadResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchLoadPayloadResponse, action_result_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::LoadPayloadResponse, winch_result_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchResult, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -441,138 +441,132 @@ const uint32_t TableStruct_winch_2fwinch_2eproto::offsets[] PROTOBUF_SECTION_VAR
   PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchResult, result_str_),
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::mavsdk::rpc::winch::WinchRelaxRequest)},
-  { 7, -1, -1, sizeof(::mavsdk::rpc::winch::WinchRelaxResponse)},
-  { 14, -1, -1, sizeof(::mavsdk::rpc::winch::WinchRelativeLengthControlRequest)},
-  { 23, -1, -1, sizeof(::mavsdk::rpc::winch::WinchRelativeLengthControlResponse)},
-  { 30, -1, -1, sizeof(::mavsdk::rpc::winch::WinchRateControlRequest)},
-  { 38, -1, -1, sizeof(::mavsdk::rpc::winch::WinchRateControlResponse)},
-  { 45, -1, -1, sizeof(::mavsdk::rpc::winch::WinchLockRequest)},
-  { 52, -1, -1, sizeof(::mavsdk::rpc::winch::WinchLockResponse)},
-  { 59, -1, -1, sizeof(::mavsdk::rpc::winch::WinchDeliverRequest)},
-  { 66, -1, -1, sizeof(::mavsdk::rpc::winch::WinchDeliverResponse)},
-  { 73, -1, -1, sizeof(::mavsdk::rpc::winch::WinchHoldRequest)},
-  { 80, -1, -1, sizeof(::mavsdk::rpc::winch::WinchHoldResponse)},
-  { 87, -1, -1, sizeof(::mavsdk::rpc::winch::WinchRetractRequest)},
-  { 94, -1, -1, sizeof(::mavsdk::rpc::winch::WinchRetractResponse)},
-  { 101, -1, -1, sizeof(::mavsdk::rpc::winch::WinchLoadLineRequest)},
-  { 108, -1, -1, sizeof(::mavsdk::rpc::winch::WinchLoadLineResponse)},
-  { 115, -1, -1, sizeof(::mavsdk::rpc::winch::WinchAbandonLineRequest)},
-  { 122, -1, -1, sizeof(::mavsdk::rpc::winch::WinchAbandonLineResponse)},
-  { 129, -1, -1, sizeof(::mavsdk::rpc::winch::WinchLoadPayloadRequest)},
-  { 136, -1, -1, sizeof(::mavsdk::rpc::winch::WinchLoadPayloadResponse)},
+  { 0, -1, -1, sizeof(::mavsdk::rpc::winch::RelaxRequest)},
+  { 7, -1, -1, sizeof(::mavsdk::rpc::winch::RelaxResponse)},
+  { 14, -1, -1, sizeof(::mavsdk::rpc::winch::RelativeLengthControlRequest)},
+  { 23, -1, -1, sizeof(::mavsdk::rpc::winch::RelativeLengthControlResponse)},
+  { 30, -1, -1, sizeof(::mavsdk::rpc::winch::RateControlRequest)},
+  { 38, -1, -1, sizeof(::mavsdk::rpc::winch::RateControlResponse)},
+  { 45, -1, -1, sizeof(::mavsdk::rpc::winch::LockRequest)},
+  { 52, -1, -1, sizeof(::mavsdk::rpc::winch::LockResponse)},
+  { 59, -1, -1, sizeof(::mavsdk::rpc::winch::DeliverRequest)},
+  { 66, -1, -1, sizeof(::mavsdk::rpc::winch::DeliverResponse)},
+  { 73, -1, -1, sizeof(::mavsdk::rpc::winch::HoldRequest)},
+  { 80, -1, -1, sizeof(::mavsdk::rpc::winch::HoldResponse)},
+  { 87, -1, -1, sizeof(::mavsdk::rpc::winch::RetractRequest)},
+  { 94, -1, -1, sizeof(::mavsdk::rpc::winch::RetractResponse)},
+  { 101, -1, -1, sizeof(::mavsdk::rpc::winch::LoadLineRequest)},
+  { 108, -1, -1, sizeof(::mavsdk::rpc::winch::LoadLineResponse)},
+  { 115, -1, -1, sizeof(::mavsdk::rpc::winch::AbandonLineRequest)},
+  { 122, -1, -1, sizeof(::mavsdk::rpc::winch::AbandonLineResponse)},
+  { 129, -1, -1, sizeof(::mavsdk::rpc::winch::LoadPayloadRequest)},
+  { 136, -1, -1, sizeof(::mavsdk::rpc::winch::LoadPayloadResponse)},
   { 143, -1, -1, sizeof(::mavsdk::rpc::winch::WinchResult)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
-  &::mavsdk::rpc::winch::_WinchRelaxRequest_default_instance_._instance,
-  &::mavsdk::rpc::winch::_WinchRelaxResponse_default_instance_._instance,
-  &::mavsdk::rpc::winch::_WinchRelativeLengthControlRequest_default_instance_._instance,
-  &::mavsdk::rpc::winch::_WinchRelativeLengthControlResponse_default_instance_._instance,
-  &::mavsdk::rpc::winch::_WinchRateControlRequest_default_instance_._instance,
-  &::mavsdk::rpc::winch::_WinchRateControlResponse_default_instance_._instance,
-  &::mavsdk::rpc::winch::_WinchLockRequest_default_instance_._instance,
-  &::mavsdk::rpc::winch::_WinchLockResponse_default_instance_._instance,
-  &::mavsdk::rpc::winch::_WinchDeliverRequest_default_instance_._instance,
-  &::mavsdk::rpc::winch::_WinchDeliverResponse_default_instance_._instance,
-  &::mavsdk::rpc::winch::_WinchHoldRequest_default_instance_._instance,
-  &::mavsdk::rpc::winch::_WinchHoldResponse_default_instance_._instance,
-  &::mavsdk::rpc::winch::_WinchRetractRequest_default_instance_._instance,
-  &::mavsdk::rpc::winch::_WinchRetractResponse_default_instance_._instance,
-  &::mavsdk::rpc::winch::_WinchLoadLineRequest_default_instance_._instance,
-  &::mavsdk::rpc::winch::_WinchLoadLineResponse_default_instance_._instance,
-  &::mavsdk::rpc::winch::_WinchAbandonLineRequest_default_instance_._instance,
-  &::mavsdk::rpc::winch::_WinchAbandonLineResponse_default_instance_._instance,
-  &::mavsdk::rpc::winch::_WinchLoadPayloadRequest_default_instance_._instance,
-  &::mavsdk::rpc::winch::_WinchLoadPayloadResponse_default_instance_._instance,
+  &::mavsdk::rpc::winch::_RelaxRequest_default_instance_._instance,
+  &::mavsdk::rpc::winch::_RelaxResponse_default_instance_._instance,
+  &::mavsdk::rpc::winch::_RelativeLengthControlRequest_default_instance_._instance,
+  &::mavsdk::rpc::winch::_RelativeLengthControlResponse_default_instance_._instance,
+  &::mavsdk::rpc::winch::_RateControlRequest_default_instance_._instance,
+  &::mavsdk::rpc::winch::_RateControlResponse_default_instance_._instance,
+  &::mavsdk::rpc::winch::_LockRequest_default_instance_._instance,
+  &::mavsdk::rpc::winch::_LockResponse_default_instance_._instance,
+  &::mavsdk::rpc::winch::_DeliverRequest_default_instance_._instance,
+  &::mavsdk::rpc::winch::_DeliverResponse_default_instance_._instance,
+  &::mavsdk::rpc::winch::_HoldRequest_default_instance_._instance,
+  &::mavsdk::rpc::winch::_HoldResponse_default_instance_._instance,
+  &::mavsdk::rpc::winch::_RetractRequest_default_instance_._instance,
+  &::mavsdk::rpc::winch::_RetractResponse_default_instance_._instance,
+  &::mavsdk::rpc::winch::_LoadLineRequest_default_instance_._instance,
+  &::mavsdk::rpc::winch::_LoadLineResponse_default_instance_._instance,
+  &::mavsdk::rpc::winch::_AbandonLineRequest_default_instance_._instance,
+  &::mavsdk::rpc::winch::_AbandonLineResponse_default_instance_._instance,
+  &::mavsdk::rpc::winch::_LoadPayloadRequest_default_instance_._instance,
+  &::mavsdk::rpc::winch::_LoadPayloadResponse_default_instance_._instance,
   &::mavsdk::rpc::winch::_WinchResult_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_winch_2fwinch_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\021winch/winch.proto\022\020mavsdk.rpc.winch\"%\n"
-  "\021WinchRelaxRequest\022\020\n\010instance\030\001 \001(\r\"J\n\022"
-  "WinchRelaxResponse\0224\n\raction_result\030\001 \001("
-  "\0132\035.mavsdk.rpc.winch.WinchResult\"S\n!Winc"
-  "hRelativeLengthControlRequest\022\020\n\010instanc"
-  "e\030\001 \001(\r\022\016\n\006length\030\002 \001(\002\022\014\n\004rate\030\003 \001(\002\"Z\n"
-  "\"WinchRelativeLengthControlResponse\0224\n\ra"
-  "ction_result\030\001 \001(\0132\035.mavsdk.rpc.winch.Wi"
-  "nchResult\"9\n\027WinchRateControlRequest\022\020\n\010"
-  "instance\030\001 \001(\r\022\014\n\004rate\030\002 \001(\002\"P\n\030WinchRat"
-  "eControlResponse\0224\n\raction_result\030\001 \001(\0132"
-  "\035.mavsdk.rpc.winch.WinchResult\"$\n\020WinchL"
-  "ockRequest\022\020\n\010instance\030\001 \001(\r\"I\n\021WinchLoc"
-  "kResponse\0224\n\raction_result\030\001 \001(\0132\035.mavsd"
-  "k.rpc.winch.WinchResult\"\'\n\023WinchDeliverR"
-  "equest\022\020\n\010instance\030\001 \001(\r\"L\n\024WinchDeliver"
-  "Response\0224\n\raction_result\030\001 \001(\0132\035.mavsdk"
-  ".rpc.winch.WinchResult\"$\n\020WinchHoldReque"
-  "st\022\020\n\010instance\030\001 \001(\r\"I\n\021WinchHoldRespons"
-  "e\0224\n\raction_result\030\001 \001(\0132\035.mavsdk.rpc.wi"
-  "nch.WinchResult\"\'\n\023WinchRetractRequest\022\020"
-  "\n\010instance\030\001 \001(\r\"L\n\024WinchRetractResponse"
-  "\0224\n\raction_result\030\001 \001(\0132\035.mavsdk.rpc.win"
-  "ch.WinchResult\"(\n\024WinchLoadLineRequest\022\020"
-  "\n\010instance\030\001 \001(\r\"M\n\025WinchLoadLineRespons"
-  "e\0224\n\raction_result\030\001 \001(\0132\035.mavsdk.rpc.wi"
-  "nch.WinchResult\"+\n\027WinchAbandonLineReque"
-  "st\022\020\n\010instance\030\001 \001(\r\"P\n\030WinchAbandonLine"
-  "Response\0224\n\raction_result\030\001 \001(\0132\035.mavsdk"
-  ".rpc.winch.WinchResult\"+\n\027WinchLoadPaylo"
-  "adRequest\022\020\n\010instance\030\001 \001(\r\"P\n\030WinchLoad"
-  "PayloadResponse\0224\n\raction_result\030\001 \001(\0132\035"
-  ".mavsdk.rpc.winch.WinchResult\"\355\003\n\013WinchR"
-  "esult\0224\n\006result\030\001 \001(\0162$.mavsdk.rpc.winch"
-  ".WinchResult.Result\022\022\n\nresult_str\030\002 \001(\t\""
-  "\223\003\n\006Result\022\022\n\016RESULT_UNKNOWN\020\000\022\022\n\016RESULT"
-  "_SUCCESS\020\001\022\024\n\020RESULT_NO_SYSTEM\020\002\022\033\n\027RESU"
-  "LT_CONNECTION_ERROR\020\003\022\017\n\013RESULT_BUSY\020\004\022\031"
-  "\n\025RESULT_COMMAND_DENIED\020\005\022.\n*RESULT_COMM"
-  "AND_DENIED_LANDED_STATE_UNKNOWN\020\006\022$\n RES"
-  "ULT_COMMAND_DENIED_NOT_LANDED\020\007\022\022\n\016RESUL"
-  "T_TIMEOUT\020\010\022*\n&RESULT_VTOL_TRANSITION_SU"
-  "PPORT_UNKNOWN\020\t\022%\n!RESULT_NO_VTOL_TRANSI"
-  "TION_SUPPORT\020\n\022\032\n\026RESULT_PARAMETER_ERROR"
-  "\020\013\022\026\n\022RESULT_UNSUPPORTED\020\014\022\021\n\rRESULT_FAI"
-  "LED\020\r*\254\002\n\013WinchAction\022\030\n\024WINCH_ACTION_RE"
-  "LAXED\020\000\022(\n$WINCH_ACTION_RELATIVE_LENGTH_"
-  "CONTROL\020\001\022\035\n\031WINCH_ACTION_RATE_CONTROL\020\002"
-  "\022\025\n\021WINCH_ACTION_LOCK\020\003\022\030\n\024WINCH_ACTION_"
-  "DELIVER\020\004\022\025\n\021WINCH_ACTION_HOLD\020\005\022\030\n\024WINC"
-  "H_ACTION_RETRACT\020\006\022\032\n\026WINCH_ACTION_LOAD_"
-  "LINE\020\007\022\035\n\031WINCH_ACTION_ABANDON_LINE\020\010\022\035\n"
-  "\031WINCH_ACTION_LOAD_PAYLOAD\020\t2\222\010\n\014WinchSe"
-  "rvice\022Y\n\nWinchRelax\022#.mavsdk.rpc.winch.W"
-  "inchRelaxRequest\032$.mavsdk.rpc.winch.Winc"
-  "hRelaxResponse\"\000\022\211\001\n\032WinchRelativeLength"
-  "Control\0223.mavsdk.rpc.winch.WinchRelative"
-  "LengthControlRequest\0324.mavsdk.rpc.winch."
-  "WinchRelativeLengthControlResponse\"\000\022k\n\020"
-  "WinchRateControl\022).mavsdk.rpc.winch.Winc"
-  "hRateControlRequest\032*.mavsdk.rpc.winch.W"
-  "inchRateControlResponse\"\000\022V\n\tWinchLock\022\""
-  ".mavsdk.rpc.winch.WinchLockRequest\032#.mav"
-  "sdk.rpc.winch.WinchLockResponse\"\000\022_\n\014Win"
-  "chDeliver\022%.mavsdk.rpc.winch.WinchDelive"
-  "rRequest\032&.mavsdk.rpc.winch.WinchDeliver"
-  "Response\"\000\022V\n\tWinchHold\022\".mavsdk.rpc.win"
-  "ch.WinchHoldRequest\032#.mavsdk.rpc.winch.W"
-  "inchHoldResponse\"\000\022_\n\014WinchRetract\022%.mav"
-  "sdk.rpc.winch.WinchRetractRequest\032&.mavs"
-  "dk.rpc.winch.WinchRetractResponse\"\000\022b\n\rW"
-  "inchLoadLine\022&.mavsdk.rpc.winch.WinchLoa"
-  "dLineRequest\032\'.mavsdk.rpc.winch.WinchLoa"
-  "dLineResponse\"\000\022k\n\020WinchAbandonLine\022).ma"
-  "vsdk.rpc.winch.WinchAbandonLineRequest\032*"
-  ".mavsdk.rpc.winch.WinchAbandonLineRespon"
-  "se\"\000\022k\n\020WinchLoadPayload\022).mavsdk.rpc.wi"
-  "nch.WinchLoadPayloadRequest\032*.mavsdk.rpc"
-  ".winch.WinchLoadPayloadResponse\"\000B\035\n\017io."
-  "mavsdk.winchB\nWinchProtob\006proto3"
+  "\n\021winch/winch.proto\022\020mavsdk.rpc.winch\" \n"
+  "\014RelaxRequest\022\020\n\010instance\030\001 \001(\r\"D\n\rRelax"
+  "Response\0223\n\014winch_result\030\001 \001(\0132\035.mavsdk."
+  "rpc.winch.WinchResult\"N\n\034RelativeLengthC"
+  "ontrolRequest\022\020\n\010instance\030\001 \001(\r\022\016\n\006lengt"
+  "h\030\002 \001(\002\022\014\n\004rate\030\003 \001(\002\"T\n\035RelativeLengthC"
+  "ontrolResponse\0223\n\014winch_result\030\001 \001(\0132\035.m"
+  "avsdk.rpc.winch.WinchResult\"4\n\022RateContr"
+  "olRequest\022\020\n\010instance\030\001 \001(\r\022\014\n\004rate\030\002 \001("
+  "\002\"J\n\023RateControlResponse\0223\n\014winch_result"
+  "\030\001 \001(\0132\035.mavsdk.rpc.winch.WinchResult\"\037\n"
+  "\013LockRequest\022\020\n\010instance\030\001 \001(\r\"C\n\014LockRe"
+  "sponse\0223\n\014winch_result\030\001 \001(\0132\035.mavsdk.rp"
+  "c.winch.WinchResult\"\"\n\016DeliverRequest\022\020\n"
+  "\010instance\030\001 \001(\r\"F\n\017DeliverResponse\0223\n\014wi"
+  "nch_result\030\001 \001(\0132\035.mavsdk.rpc.winch.Winc"
+  "hResult\"\037\n\013HoldRequest\022\020\n\010instance\030\001 \001(\r"
+  "\"C\n\014HoldResponse\0223\n\014winch_result\030\001 \001(\0132\035"
+  ".mavsdk.rpc.winch.WinchResult\"\"\n\016Retract"
+  "Request\022\020\n\010instance\030\001 \001(\r\"F\n\017RetractResp"
+  "onse\0223\n\014winch_result\030\001 \001(\0132\035.mavsdk.rpc."
+  "winch.WinchResult\"#\n\017LoadLineRequest\022\020\n\010"
+  "instance\030\001 \001(\r\"G\n\020LoadLineResponse\0223\n\014wi"
+  "nch_result\030\001 \001(\0132\035.mavsdk.rpc.winch.Winc"
+  "hResult\"&\n\022AbandonLineRequest\022\020\n\010instanc"
+  "e\030\001 \001(\r\"J\n\023AbandonLineResponse\0223\n\014winch_"
+  "result\030\001 \001(\0132\035.mavsdk.rpc.winch.WinchRes"
+  "ult\"&\n\022LoadPayloadRequest\022\020\n\010instance\030\001 "
+  "\001(\r\"J\n\023LoadPayloadResponse\0223\n\014winch_resu"
+  "lt\030\001 \001(\0132\035.mavsdk.rpc.winch.WinchResult\""
+  "\355\003\n\013WinchResult\0224\n\006result\030\001 \001(\0162$.mavsdk"
+  ".rpc.winch.WinchResult.Result\022\022\n\nresult_"
+  "str\030\002 \001(\t\"\223\003\n\006Result\022\022\n\016RESULT_UNKNOWN\020\000"
+  "\022\022\n\016RESULT_SUCCESS\020\001\022\024\n\020RESULT_NO_SYSTEM"
+  "\020\002\022\033\n\027RESULT_CONNECTION_ERROR\020\003\022\017\n\013RESUL"
+  "T_BUSY\020\004\022\031\n\025RESULT_COMMAND_DENIED\020\005\022.\n*R"
+  "ESULT_COMMAND_DENIED_LANDED_STATE_UNKNOW"
+  "N\020\006\022$\n RESULT_COMMAND_DENIED_NOT_LANDED\020"
+  "\007\022\022\n\016RESULT_TIMEOUT\020\010\022*\n&RESULT_VTOL_TRA"
+  "NSITION_SUPPORT_UNKNOWN\020\t\022%\n!RESULT_NO_V"
+  "TOL_TRANSITION_SUPPORT\020\n\022\032\n\026RESULT_PARAM"
+  "ETER_ERROR\020\013\022\026\n\022RESULT_UNSUPPORTED\020\014\022\021\n\r"
+  "RESULT_FAILED\020\r*\254\002\n\013WinchAction\022\030\n\024WINCH"
+  "_ACTION_RELAXED\020\000\022(\n$WINCH_ACTION_RELATI"
+  "VE_LENGTH_CONTROL\020\001\022\035\n\031WINCH_ACTION_RATE"
+  "_CONTROL\020\002\022\025\n\021WINCH_ACTION_LOCK\020\003\022\030\n\024WIN"
+  "CH_ACTION_DELIVER\020\004\022\025\n\021WINCH_ACTION_HOLD"
+  "\020\005\022\030\n\024WINCH_ACTION_RETRACT\020\006\022\032\n\026WINCH_AC"
+  "TION_LOAD_LINE\020\007\022\035\n\031WINCH_ACTION_ABANDON"
+  "_LINE\020\010\022\035\n\031WINCH_ACTION_LOAD_PAYLOAD\020\t2\373"
+  "\006\n\014WinchService\022J\n\005Relax\022\036.mavsdk.rpc.wi"
+  "nch.RelaxRequest\032\037.mavsdk.rpc.winch.Rela"
+  "xResponse\"\000\022z\n\025RelativeLengthControl\022..m"
+  "avsdk.rpc.winch.RelativeLengthControlReq"
+  "uest\032/.mavsdk.rpc.winch.RelativeLengthCo"
+  "ntrolResponse\"\000\022\\\n\013RateControl\022$.mavsdk."
+  "rpc.winch.RateControlRequest\032%.mavsdk.rp"
+  "c.winch.RateControlResponse\"\000\022G\n\004Lock\022\035."
+  "mavsdk.rpc.winch.LockRequest\032\036.mavsdk.rp"
+  "c.winch.LockResponse\"\000\022P\n\007Deliver\022 .mavs"
+  "dk.rpc.winch.DeliverRequest\032!.mavsdk.rpc"
+  ".winch.DeliverResponse\"\000\022G\n\004Hold\022\035.mavsd"
+  "k.rpc.winch.HoldRequest\032\036.mavsdk.rpc.win"
+  "ch.HoldResponse\"\000\022P\n\007Retract\022 .mavsdk.rp"
+  "c.winch.RetractRequest\032!.mavsdk.rpc.winc"
+  "h.RetractResponse\"\000\022S\n\010LoadLine\022!.mavsdk"
+  ".rpc.winch.LoadLineRequest\032\".mavsdk.rpc."
+  "winch.LoadLineResponse\"\000\022\\\n\013AbandonLine\022"
+  "$.mavsdk.rpc.winch.AbandonLineRequest\032%."
+  "mavsdk.rpc.winch.AbandonLineResponse\"\000\022\\"
+  "\n\013LoadPayload\022$.mavsdk.rpc.winch.LoadPay"
+  "loadRequest\032%.mavsdk.rpc.winch.LoadPaylo"
+  "adResponse\"\000B\035\n\017io.mavsdk.winchB\nWinchPr"
+  "otob\006proto3"
   ;
 static ::_pbi::once_flag descriptor_table_winch_2fwinch_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_winch_2fwinch_2eproto = {
-    false, false, 3192, descriptor_table_protodef_winch_2fwinch_2eproto,
+    false, false, 2931, descriptor_table_protodef_winch_2fwinch_2eproto,
     "winch/winch.proto",
     &descriptor_table_winch_2fwinch_2eproto_once, nullptr, 0, 21,
     schemas, file_default_instances, TableStruct_winch_2fwinch_2eproto::offsets,
@@ -658,29 +652,29 @@ bool WinchAction_IsValid(int value) {
 
 // ===================================================================
 
-class WinchRelaxRequest::_Internal {
+class RelaxRequest::_Internal {
  public:
 };
 
-WinchRelaxRequest::WinchRelaxRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+RelaxRequest::RelaxRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.WinchRelaxRequest)
+  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.RelaxRequest)
 }
-WinchRelaxRequest::WinchRelaxRequest(const WinchRelaxRequest& from)
+RelaxRequest::RelaxRequest(const RelaxRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   instance_ = from.instance_;
-  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.WinchRelaxRequest)
+  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.RelaxRequest)
 }
 
-inline void WinchRelaxRequest::SharedCtor() {
+inline void RelaxRequest::SharedCtor() {
 instance_ = 0u;
 }
 
-WinchRelaxRequest::~WinchRelaxRequest() {
-  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.WinchRelaxRequest)
+RelaxRequest::~RelaxRequest() {
+  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.RelaxRequest)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -688,16 +682,16 @@ WinchRelaxRequest::~WinchRelaxRequest() {
   SharedDtor();
 }
 
-inline void WinchRelaxRequest::SharedDtor() {
+inline void RelaxRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void WinchRelaxRequest::SetCachedSize(int size) const {
+void RelaxRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void WinchRelaxRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.WinchRelaxRequest)
+void RelaxRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.RelaxRequest)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -706,7 +700,7 @@ void WinchRelaxRequest::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* WinchRelaxRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* RelaxRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
@@ -743,9 +737,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* WinchRelaxRequest::_InternalSerialize(
+uint8_t* RelaxRequest::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.WinchRelaxRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.RelaxRequest)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -759,12 +753,12 @@ uint8_t* WinchRelaxRequest::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.WinchRelaxRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.RelaxRequest)
   return target;
 }
 
-size_t WinchRelaxRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.WinchRelaxRequest)
+size_t RelaxRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.RelaxRequest)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -779,21 +773,21 @@ size_t WinchRelaxRequest::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WinchRelaxRequest::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RelaxRequest::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    WinchRelaxRequest::MergeImpl
+    RelaxRequest::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WinchRelaxRequest::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RelaxRequest::GetClassData() const { return &_class_data_; }
 
-void WinchRelaxRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void RelaxRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<WinchRelaxRequest *>(to)->MergeFrom(
-      static_cast<const WinchRelaxRequest &>(from));
+  static_cast<RelaxRequest *>(to)->MergeFrom(
+      static_cast<const RelaxRequest &>(from));
 }
 
 
-void WinchRelaxRequest::MergeFrom(const WinchRelaxRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.WinchRelaxRequest)
+void RelaxRequest::MergeFrom(const RelaxRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.RelaxRequest)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -804,24 +798,24 @@ void WinchRelaxRequest::MergeFrom(const WinchRelaxRequest& from) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void WinchRelaxRequest::CopyFrom(const WinchRelaxRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.WinchRelaxRequest)
+void RelaxRequest::CopyFrom(const RelaxRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.RelaxRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool WinchRelaxRequest::IsInitialized() const {
+bool RelaxRequest::IsInitialized() const {
   return true;
 }
 
-void WinchRelaxRequest::InternalSwap(WinchRelaxRequest* other) {
+void RelaxRequest::InternalSwap(RelaxRequest* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(instance_, other->instance_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WinchRelaxRequest::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata RelaxRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
       file_level_metadata_winch_2fwinch_2eproto[0]);
@@ -829,38 +823,38 @@ void WinchRelaxRequest::InternalSwap(WinchRelaxRequest* other) {
 
 // ===================================================================
 
-class WinchRelaxResponse::_Internal {
+class RelaxResponse::_Internal {
  public:
-  static const ::mavsdk::rpc::winch::WinchResult& action_result(const WinchRelaxResponse* msg);
+  static const ::mavsdk::rpc::winch::WinchResult& winch_result(const RelaxResponse* msg);
 };
 
 const ::mavsdk::rpc::winch::WinchResult&
-WinchRelaxResponse::_Internal::action_result(const WinchRelaxResponse* msg) {
-  return *msg->action_result_;
+RelaxResponse::_Internal::winch_result(const RelaxResponse* msg) {
+  return *msg->winch_result_;
 }
-WinchRelaxResponse::WinchRelaxResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+RelaxResponse::RelaxResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.WinchRelaxResponse)
+  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.RelaxResponse)
 }
-WinchRelaxResponse::WinchRelaxResponse(const WinchRelaxResponse& from)
+RelaxResponse::RelaxResponse(const RelaxResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_action_result()) {
-    action_result_ = new ::mavsdk::rpc::winch::WinchResult(*from.action_result_);
+  if (from._internal_has_winch_result()) {
+    winch_result_ = new ::mavsdk::rpc::winch::WinchResult(*from.winch_result_);
   } else {
-    action_result_ = nullptr;
+    winch_result_ = nullptr;
   }
-  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.WinchRelaxResponse)
+  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.RelaxResponse)
 }
 
-inline void WinchRelaxResponse::SharedCtor() {
-action_result_ = nullptr;
+inline void RelaxResponse::SharedCtor() {
+winch_result_ = nullptr;
 }
 
-WinchRelaxResponse::~WinchRelaxResponse() {
-  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.WinchRelaxResponse)
+RelaxResponse::~RelaxResponse() {
+  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.RelaxResponse)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -868,38 +862,38 @@ WinchRelaxResponse::~WinchRelaxResponse() {
   SharedDtor();
 }
 
-inline void WinchRelaxResponse::SharedDtor() {
+inline void RelaxResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete action_result_;
+  if (this != internal_default_instance()) delete winch_result_;
 }
 
-void WinchRelaxResponse::SetCachedSize(int size) const {
+void RelaxResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void WinchRelaxResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.WinchRelaxResponse)
+void RelaxResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.RelaxResponse)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaForAllocation() == nullptr && action_result_ != nullptr) {
-    delete action_result_;
+  if (GetArenaForAllocation() == nullptr && winch_result_ != nullptr) {
+    delete winch_result_;
   }
-  action_result_ = nullptr;
+  winch_result_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* WinchRelaxResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* RelaxResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .mavsdk.rpc.winch.WinchResult action_result = 1;
+      // .mavsdk.rpc.winch.WinchResult winch_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_action_result(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_winch_result(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -927,88 +921,88 @@ failure:
 #undef CHK_
 }
 
-uint8_t* WinchRelaxResponse::_InternalSerialize(
+uint8_t* RelaxResponse::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.WinchRelaxResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.RelaxResponse)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .mavsdk.rpc.winch.WinchResult action_result = 1;
-  if (this->_internal_has_action_result()) {
+  // .mavsdk.rpc.winch.WinchResult winch_result = 1;
+  if (this->_internal_has_winch_result()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::action_result(this),
-        _Internal::action_result(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::winch_result(this),
+        _Internal::winch_result(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.WinchRelaxResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.RelaxResponse)
   return target;
 }
 
-size_t WinchRelaxResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.WinchRelaxResponse)
+size_t RelaxResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.RelaxResponse)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .mavsdk.rpc.winch.WinchResult action_result = 1;
-  if (this->_internal_has_action_result()) {
+  // .mavsdk.rpc.winch.WinchResult winch_result = 1;
+  if (this->_internal_has_winch_result()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *action_result_);
+        *winch_result_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WinchRelaxResponse::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RelaxResponse::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    WinchRelaxResponse::MergeImpl
+    RelaxResponse::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WinchRelaxResponse::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RelaxResponse::GetClassData() const { return &_class_data_; }
 
-void WinchRelaxResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void RelaxResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<WinchRelaxResponse *>(to)->MergeFrom(
-      static_cast<const WinchRelaxResponse &>(from));
+  static_cast<RelaxResponse *>(to)->MergeFrom(
+      static_cast<const RelaxResponse &>(from));
 }
 
 
-void WinchRelaxResponse::MergeFrom(const WinchRelaxResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.WinchRelaxResponse)
+void RelaxResponse::MergeFrom(const RelaxResponse& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.RelaxResponse)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_action_result()) {
-    _internal_mutable_action_result()->::mavsdk::rpc::winch::WinchResult::MergeFrom(from._internal_action_result());
+  if (from._internal_has_winch_result()) {
+    _internal_mutable_winch_result()->::mavsdk::rpc::winch::WinchResult::MergeFrom(from._internal_winch_result());
   }
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void WinchRelaxResponse::CopyFrom(const WinchRelaxResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.WinchRelaxResponse)
+void RelaxResponse::CopyFrom(const RelaxResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.RelaxResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool WinchRelaxResponse::IsInitialized() const {
+bool RelaxResponse::IsInitialized() const {
   return true;
 }
 
-void WinchRelaxResponse::InternalSwap(WinchRelaxResponse* other) {
+void RelaxResponse::InternalSwap(RelaxResponse* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(action_result_, other->action_result_);
+  swap(winch_result_, other->winch_result_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WinchRelaxResponse::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata RelaxResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
       file_level_metadata_winch_2fwinch_2eproto[1]);
@@ -1016,34 +1010,34 @@ void WinchRelaxResponse::InternalSwap(WinchRelaxResponse* other) {
 
 // ===================================================================
 
-class WinchRelativeLengthControlRequest::_Internal {
+class RelativeLengthControlRequest::_Internal {
  public:
 };
 
-WinchRelativeLengthControlRequest::WinchRelativeLengthControlRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+RelativeLengthControlRequest::RelativeLengthControlRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.WinchRelativeLengthControlRequest)
+  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.RelativeLengthControlRequest)
 }
-WinchRelativeLengthControlRequest::WinchRelativeLengthControlRequest(const WinchRelativeLengthControlRequest& from)
+RelativeLengthControlRequest::RelativeLengthControlRequest(const RelativeLengthControlRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::memcpy(&instance_, &from.instance_,
     static_cast<size_t>(reinterpret_cast<char*>(&rate_) -
     reinterpret_cast<char*>(&instance_)) + sizeof(rate_));
-  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.WinchRelativeLengthControlRequest)
+  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.RelativeLengthControlRequest)
 }
 
-inline void WinchRelativeLengthControlRequest::SharedCtor() {
+inline void RelativeLengthControlRequest::SharedCtor() {
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
     reinterpret_cast<char*>(&instance_) - reinterpret_cast<char*>(this)),
     0, static_cast<size_t>(reinterpret_cast<char*>(&rate_) -
     reinterpret_cast<char*>(&instance_)) + sizeof(rate_));
 }
 
-WinchRelativeLengthControlRequest::~WinchRelativeLengthControlRequest() {
-  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.WinchRelativeLengthControlRequest)
+RelativeLengthControlRequest::~RelativeLengthControlRequest() {
+  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.RelativeLengthControlRequest)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -1051,16 +1045,16 @@ WinchRelativeLengthControlRequest::~WinchRelativeLengthControlRequest() {
   SharedDtor();
 }
 
-inline void WinchRelativeLengthControlRequest::SharedDtor() {
+inline void RelativeLengthControlRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void WinchRelativeLengthControlRequest::SetCachedSize(int size) const {
+void RelativeLengthControlRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void WinchRelativeLengthControlRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.WinchRelativeLengthControlRequest)
+void RelativeLengthControlRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.RelativeLengthControlRequest)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1071,7 +1065,7 @@ void WinchRelativeLengthControlRequest::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* WinchRelativeLengthControlRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* RelativeLengthControlRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
@@ -1124,9 +1118,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* WinchRelativeLengthControlRequest::_InternalSerialize(
+uint8_t* RelativeLengthControlRequest::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.WinchRelativeLengthControlRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.RelativeLengthControlRequest)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1160,12 +1154,12 @@ uint8_t* WinchRelativeLengthControlRequest::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.WinchRelativeLengthControlRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.RelativeLengthControlRequest)
   return target;
 }
 
-size_t WinchRelativeLengthControlRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.WinchRelativeLengthControlRequest)
+size_t RelativeLengthControlRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.RelativeLengthControlRequest)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -1198,21 +1192,21 @@ size_t WinchRelativeLengthControlRequest::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WinchRelativeLengthControlRequest::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RelativeLengthControlRequest::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    WinchRelativeLengthControlRequest::MergeImpl
+    RelativeLengthControlRequest::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WinchRelativeLengthControlRequest::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RelativeLengthControlRequest::GetClassData() const { return &_class_data_; }
 
-void WinchRelativeLengthControlRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void RelativeLengthControlRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<WinchRelativeLengthControlRequest *>(to)->MergeFrom(
-      static_cast<const WinchRelativeLengthControlRequest &>(from));
+  static_cast<RelativeLengthControlRequest *>(to)->MergeFrom(
+      static_cast<const RelativeLengthControlRequest &>(from));
 }
 
 
-void WinchRelativeLengthControlRequest::MergeFrom(const WinchRelativeLengthControlRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.WinchRelativeLengthControlRequest)
+void RelativeLengthControlRequest::MergeFrom(const RelativeLengthControlRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.RelativeLengthControlRequest)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1237,29 +1231,29 @@ void WinchRelativeLengthControlRequest::MergeFrom(const WinchRelativeLengthContr
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void WinchRelativeLengthControlRequest::CopyFrom(const WinchRelativeLengthControlRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.WinchRelativeLengthControlRequest)
+void RelativeLengthControlRequest::CopyFrom(const RelativeLengthControlRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.RelativeLengthControlRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool WinchRelativeLengthControlRequest::IsInitialized() const {
+bool RelativeLengthControlRequest::IsInitialized() const {
   return true;
 }
 
-void WinchRelativeLengthControlRequest::InternalSwap(WinchRelativeLengthControlRequest* other) {
+void RelativeLengthControlRequest::InternalSwap(RelativeLengthControlRequest* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(WinchRelativeLengthControlRequest, rate_)
-      + sizeof(WinchRelativeLengthControlRequest::rate_)
-      - PROTOBUF_FIELD_OFFSET(WinchRelativeLengthControlRequest, instance_)>(
+      PROTOBUF_FIELD_OFFSET(RelativeLengthControlRequest, rate_)
+      + sizeof(RelativeLengthControlRequest::rate_)
+      - PROTOBUF_FIELD_OFFSET(RelativeLengthControlRequest, instance_)>(
           reinterpret_cast<char*>(&instance_),
           reinterpret_cast<char*>(&other->instance_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WinchRelativeLengthControlRequest::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata RelativeLengthControlRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
       file_level_metadata_winch_2fwinch_2eproto[2]);
@@ -1267,38 +1261,38 @@ void WinchRelativeLengthControlRequest::InternalSwap(WinchRelativeLengthControlR
 
 // ===================================================================
 
-class WinchRelativeLengthControlResponse::_Internal {
+class RelativeLengthControlResponse::_Internal {
  public:
-  static const ::mavsdk::rpc::winch::WinchResult& action_result(const WinchRelativeLengthControlResponse* msg);
+  static const ::mavsdk::rpc::winch::WinchResult& winch_result(const RelativeLengthControlResponse* msg);
 };
 
 const ::mavsdk::rpc::winch::WinchResult&
-WinchRelativeLengthControlResponse::_Internal::action_result(const WinchRelativeLengthControlResponse* msg) {
-  return *msg->action_result_;
+RelativeLengthControlResponse::_Internal::winch_result(const RelativeLengthControlResponse* msg) {
+  return *msg->winch_result_;
 }
-WinchRelativeLengthControlResponse::WinchRelativeLengthControlResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+RelativeLengthControlResponse::RelativeLengthControlResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.WinchRelativeLengthControlResponse)
+  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.RelativeLengthControlResponse)
 }
-WinchRelativeLengthControlResponse::WinchRelativeLengthControlResponse(const WinchRelativeLengthControlResponse& from)
+RelativeLengthControlResponse::RelativeLengthControlResponse(const RelativeLengthControlResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_action_result()) {
-    action_result_ = new ::mavsdk::rpc::winch::WinchResult(*from.action_result_);
+  if (from._internal_has_winch_result()) {
+    winch_result_ = new ::mavsdk::rpc::winch::WinchResult(*from.winch_result_);
   } else {
-    action_result_ = nullptr;
+    winch_result_ = nullptr;
   }
-  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.WinchRelativeLengthControlResponse)
+  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.RelativeLengthControlResponse)
 }
 
-inline void WinchRelativeLengthControlResponse::SharedCtor() {
-action_result_ = nullptr;
+inline void RelativeLengthControlResponse::SharedCtor() {
+winch_result_ = nullptr;
 }
 
-WinchRelativeLengthControlResponse::~WinchRelativeLengthControlResponse() {
-  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.WinchRelativeLengthControlResponse)
+RelativeLengthControlResponse::~RelativeLengthControlResponse() {
+  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.RelativeLengthControlResponse)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -1306,38 +1300,38 @@ WinchRelativeLengthControlResponse::~WinchRelativeLengthControlResponse() {
   SharedDtor();
 }
 
-inline void WinchRelativeLengthControlResponse::SharedDtor() {
+inline void RelativeLengthControlResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete action_result_;
+  if (this != internal_default_instance()) delete winch_result_;
 }
 
-void WinchRelativeLengthControlResponse::SetCachedSize(int size) const {
+void RelativeLengthControlResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void WinchRelativeLengthControlResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.WinchRelativeLengthControlResponse)
+void RelativeLengthControlResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.RelativeLengthControlResponse)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaForAllocation() == nullptr && action_result_ != nullptr) {
-    delete action_result_;
+  if (GetArenaForAllocation() == nullptr && winch_result_ != nullptr) {
+    delete winch_result_;
   }
-  action_result_ = nullptr;
+  winch_result_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* WinchRelativeLengthControlResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* RelativeLengthControlResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .mavsdk.rpc.winch.WinchResult action_result = 1;
+      // .mavsdk.rpc.winch.WinchResult winch_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_action_result(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_winch_result(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1365,88 +1359,88 @@ failure:
 #undef CHK_
 }
 
-uint8_t* WinchRelativeLengthControlResponse::_InternalSerialize(
+uint8_t* RelativeLengthControlResponse::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.WinchRelativeLengthControlResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.RelativeLengthControlResponse)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .mavsdk.rpc.winch.WinchResult action_result = 1;
-  if (this->_internal_has_action_result()) {
+  // .mavsdk.rpc.winch.WinchResult winch_result = 1;
+  if (this->_internal_has_winch_result()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::action_result(this),
-        _Internal::action_result(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::winch_result(this),
+        _Internal::winch_result(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.WinchRelativeLengthControlResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.RelativeLengthControlResponse)
   return target;
 }
 
-size_t WinchRelativeLengthControlResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.WinchRelativeLengthControlResponse)
+size_t RelativeLengthControlResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.RelativeLengthControlResponse)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .mavsdk.rpc.winch.WinchResult action_result = 1;
-  if (this->_internal_has_action_result()) {
+  // .mavsdk.rpc.winch.WinchResult winch_result = 1;
+  if (this->_internal_has_winch_result()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *action_result_);
+        *winch_result_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WinchRelativeLengthControlResponse::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RelativeLengthControlResponse::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    WinchRelativeLengthControlResponse::MergeImpl
+    RelativeLengthControlResponse::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WinchRelativeLengthControlResponse::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RelativeLengthControlResponse::GetClassData() const { return &_class_data_; }
 
-void WinchRelativeLengthControlResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void RelativeLengthControlResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<WinchRelativeLengthControlResponse *>(to)->MergeFrom(
-      static_cast<const WinchRelativeLengthControlResponse &>(from));
+  static_cast<RelativeLengthControlResponse *>(to)->MergeFrom(
+      static_cast<const RelativeLengthControlResponse &>(from));
 }
 
 
-void WinchRelativeLengthControlResponse::MergeFrom(const WinchRelativeLengthControlResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.WinchRelativeLengthControlResponse)
+void RelativeLengthControlResponse::MergeFrom(const RelativeLengthControlResponse& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.RelativeLengthControlResponse)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_action_result()) {
-    _internal_mutable_action_result()->::mavsdk::rpc::winch::WinchResult::MergeFrom(from._internal_action_result());
+  if (from._internal_has_winch_result()) {
+    _internal_mutable_winch_result()->::mavsdk::rpc::winch::WinchResult::MergeFrom(from._internal_winch_result());
   }
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void WinchRelativeLengthControlResponse::CopyFrom(const WinchRelativeLengthControlResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.WinchRelativeLengthControlResponse)
+void RelativeLengthControlResponse::CopyFrom(const RelativeLengthControlResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.RelativeLengthControlResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool WinchRelativeLengthControlResponse::IsInitialized() const {
+bool RelativeLengthControlResponse::IsInitialized() const {
   return true;
 }
 
-void WinchRelativeLengthControlResponse::InternalSwap(WinchRelativeLengthControlResponse* other) {
+void RelativeLengthControlResponse::InternalSwap(RelativeLengthControlResponse* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(action_result_, other->action_result_);
+  swap(winch_result_, other->winch_result_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WinchRelativeLengthControlResponse::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata RelativeLengthControlResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
       file_level_metadata_winch_2fwinch_2eproto[3]);
@@ -1454,34 +1448,34 @@ void WinchRelativeLengthControlResponse::InternalSwap(WinchRelativeLengthControl
 
 // ===================================================================
 
-class WinchRateControlRequest::_Internal {
+class RateControlRequest::_Internal {
  public:
 };
 
-WinchRateControlRequest::WinchRateControlRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+RateControlRequest::RateControlRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.WinchRateControlRequest)
+  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.RateControlRequest)
 }
-WinchRateControlRequest::WinchRateControlRequest(const WinchRateControlRequest& from)
+RateControlRequest::RateControlRequest(const RateControlRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::memcpy(&instance_, &from.instance_,
     static_cast<size_t>(reinterpret_cast<char*>(&rate_) -
     reinterpret_cast<char*>(&instance_)) + sizeof(rate_));
-  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.WinchRateControlRequest)
+  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.RateControlRequest)
 }
 
-inline void WinchRateControlRequest::SharedCtor() {
+inline void RateControlRequest::SharedCtor() {
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
     reinterpret_cast<char*>(&instance_) - reinterpret_cast<char*>(this)),
     0, static_cast<size_t>(reinterpret_cast<char*>(&rate_) -
     reinterpret_cast<char*>(&instance_)) + sizeof(rate_));
 }
 
-WinchRateControlRequest::~WinchRateControlRequest() {
-  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.WinchRateControlRequest)
+RateControlRequest::~RateControlRequest() {
+  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.RateControlRequest)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -1489,16 +1483,16 @@ WinchRateControlRequest::~WinchRateControlRequest() {
   SharedDtor();
 }
 
-inline void WinchRateControlRequest::SharedDtor() {
+inline void RateControlRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void WinchRateControlRequest::SetCachedSize(int size) const {
+void RateControlRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void WinchRateControlRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.WinchRateControlRequest)
+void RateControlRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.RateControlRequest)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1509,7 +1503,7 @@ void WinchRateControlRequest::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* WinchRateControlRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* RateControlRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
@@ -1554,9 +1548,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* WinchRateControlRequest::_InternalSerialize(
+uint8_t* RateControlRequest::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.WinchRateControlRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.RateControlRequest)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1580,12 +1574,12 @@ uint8_t* WinchRateControlRequest::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.WinchRateControlRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.RateControlRequest)
   return target;
 }
 
-size_t WinchRateControlRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.WinchRateControlRequest)
+size_t RateControlRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.RateControlRequest)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -1609,21 +1603,21 @@ size_t WinchRateControlRequest::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WinchRateControlRequest::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RateControlRequest::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    WinchRateControlRequest::MergeImpl
+    RateControlRequest::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WinchRateControlRequest::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RateControlRequest::GetClassData() const { return &_class_data_; }
 
-void WinchRateControlRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void RateControlRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<WinchRateControlRequest *>(to)->MergeFrom(
-      static_cast<const WinchRateControlRequest &>(from));
+  static_cast<RateControlRequest *>(to)->MergeFrom(
+      static_cast<const RateControlRequest &>(from));
 }
 
 
-void WinchRateControlRequest::MergeFrom(const WinchRateControlRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.WinchRateControlRequest)
+void RateControlRequest::MergeFrom(const RateControlRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.RateControlRequest)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1641,29 +1635,29 @@ void WinchRateControlRequest::MergeFrom(const WinchRateControlRequest& from) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void WinchRateControlRequest::CopyFrom(const WinchRateControlRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.WinchRateControlRequest)
+void RateControlRequest::CopyFrom(const RateControlRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.RateControlRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool WinchRateControlRequest::IsInitialized() const {
+bool RateControlRequest::IsInitialized() const {
   return true;
 }
 
-void WinchRateControlRequest::InternalSwap(WinchRateControlRequest* other) {
+void RateControlRequest::InternalSwap(RateControlRequest* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(WinchRateControlRequest, rate_)
-      + sizeof(WinchRateControlRequest::rate_)
-      - PROTOBUF_FIELD_OFFSET(WinchRateControlRequest, instance_)>(
+      PROTOBUF_FIELD_OFFSET(RateControlRequest, rate_)
+      + sizeof(RateControlRequest::rate_)
+      - PROTOBUF_FIELD_OFFSET(RateControlRequest, instance_)>(
           reinterpret_cast<char*>(&instance_),
           reinterpret_cast<char*>(&other->instance_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WinchRateControlRequest::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata RateControlRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
       file_level_metadata_winch_2fwinch_2eproto[4]);
@@ -1671,38 +1665,38 @@ void WinchRateControlRequest::InternalSwap(WinchRateControlRequest* other) {
 
 // ===================================================================
 
-class WinchRateControlResponse::_Internal {
+class RateControlResponse::_Internal {
  public:
-  static const ::mavsdk::rpc::winch::WinchResult& action_result(const WinchRateControlResponse* msg);
+  static const ::mavsdk::rpc::winch::WinchResult& winch_result(const RateControlResponse* msg);
 };
 
 const ::mavsdk::rpc::winch::WinchResult&
-WinchRateControlResponse::_Internal::action_result(const WinchRateControlResponse* msg) {
-  return *msg->action_result_;
+RateControlResponse::_Internal::winch_result(const RateControlResponse* msg) {
+  return *msg->winch_result_;
 }
-WinchRateControlResponse::WinchRateControlResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+RateControlResponse::RateControlResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.WinchRateControlResponse)
+  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.RateControlResponse)
 }
-WinchRateControlResponse::WinchRateControlResponse(const WinchRateControlResponse& from)
+RateControlResponse::RateControlResponse(const RateControlResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_action_result()) {
-    action_result_ = new ::mavsdk::rpc::winch::WinchResult(*from.action_result_);
+  if (from._internal_has_winch_result()) {
+    winch_result_ = new ::mavsdk::rpc::winch::WinchResult(*from.winch_result_);
   } else {
-    action_result_ = nullptr;
+    winch_result_ = nullptr;
   }
-  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.WinchRateControlResponse)
+  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.RateControlResponse)
 }
 
-inline void WinchRateControlResponse::SharedCtor() {
-action_result_ = nullptr;
+inline void RateControlResponse::SharedCtor() {
+winch_result_ = nullptr;
 }
 
-WinchRateControlResponse::~WinchRateControlResponse() {
-  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.WinchRateControlResponse)
+RateControlResponse::~RateControlResponse() {
+  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.RateControlResponse)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -1710,38 +1704,38 @@ WinchRateControlResponse::~WinchRateControlResponse() {
   SharedDtor();
 }
 
-inline void WinchRateControlResponse::SharedDtor() {
+inline void RateControlResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete action_result_;
+  if (this != internal_default_instance()) delete winch_result_;
 }
 
-void WinchRateControlResponse::SetCachedSize(int size) const {
+void RateControlResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void WinchRateControlResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.WinchRateControlResponse)
+void RateControlResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.RateControlResponse)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaForAllocation() == nullptr && action_result_ != nullptr) {
-    delete action_result_;
+  if (GetArenaForAllocation() == nullptr && winch_result_ != nullptr) {
+    delete winch_result_;
   }
-  action_result_ = nullptr;
+  winch_result_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* WinchRateControlResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* RateControlResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .mavsdk.rpc.winch.WinchResult action_result = 1;
+      // .mavsdk.rpc.winch.WinchResult winch_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_action_result(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_winch_result(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1769,88 +1763,88 @@ failure:
 #undef CHK_
 }
 
-uint8_t* WinchRateControlResponse::_InternalSerialize(
+uint8_t* RateControlResponse::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.WinchRateControlResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.RateControlResponse)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .mavsdk.rpc.winch.WinchResult action_result = 1;
-  if (this->_internal_has_action_result()) {
+  // .mavsdk.rpc.winch.WinchResult winch_result = 1;
+  if (this->_internal_has_winch_result()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::action_result(this),
-        _Internal::action_result(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::winch_result(this),
+        _Internal::winch_result(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.WinchRateControlResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.RateControlResponse)
   return target;
 }
 
-size_t WinchRateControlResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.WinchRateControlResponse)
+size_t RateControlResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.RateControlResponse)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .mavsdk.rpc.winch.WinchResult action_result = 1;
-  if (this->_internal_has_action_result()) {
+  // .mavsdk.rpc.winch.WinchResult winch_result = 1;
+  if (this->_internal_has_winch_result()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *action_result_);
+        *winch_result_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WinchRateControlResponse::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RateControlResponse::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    WinchRateControlResponse::MergeImpl
+    RateControlResponse::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WinchRateControlResponse::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RateControlResponse::GetClassData() const { return &_class_data_; }
 
-void WinchRateControlResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void RateControlResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<WinchRateControlResponse *>(to)->MergeFrom(
-      static_cast<const WinchRateControlResponse &>(from));
+  static_cast<RateControlResponse *>(to)->MergeFrom(
+      static_cast<const RateControlResponse &>(from));
 }
 
 
-void WinchRateControlResponse::MergeFrom(const WinchRateControlResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.WinchRateControlResponse)
+void RateControlResponse::MergeFrom(const RateControlResponse& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.RateControlResponse)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_action_result()) {
-    _internal_mutable_action_result()->::mavsdk::rpc::winch::WinchResult::MergeFrom(from._internal_action_result());
+  if (from._internal_has_winch_result()) {
+    _internal_mutable_winch_result()->::mavsdk::rpc::winch::WinchResult::MergeFrom(from._internal_winch_result());
   }
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void WinchRateControlResponse::CopyFrom(const WinchRateControlResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.WinchRateControlResponse)
+void RateControlResponse::CopyFrom(const RateControlResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.RateControlResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool WinchRateControlResponse::IsInitialized() const {
+bool RateControlResponse::IsInitialized() const {
   return true;
 }
 
-void WinchRateControlResponse::InternalSwap(WinchRateControlResponse* other) {
+void RateControlResponse::InternalSwap(RateControlResponse* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(action_result_, other->action_result_);
+  swap(winch_result_, other->winch_result_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WinchRateControlResponse::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata RateControlResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
       file_level_metadata_winch_2fwinch_2eproto[5]);
@@ -1858,29 +1852,29 @@ void WinchRateControlResponse::InternalSwap(WinchRateControlResponse* other) {
 
 // ===================================================================
 
-class WinchLockRequest::_Internal {
+class LockRequest::_Internal {
  public:
 };
 
-WinchLockRequest::WinchLockRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+LockRequest::LockRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.WinchLockRequest)
+  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.LockRequest)
 }
-WinchLockRequest::WinchLockRequest(const WinchLockRequest& from)
+LockRequest::LockRequest(const LockRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   instance_ = from.instance_;
-  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.WinchLockRequest)
+  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.LockRequest)
 }
 
-inline void WinchLockRequest::SharedCtor() {
+inline void LockRequest::SharedCtor() {
 instance_ = 0u;
 }
 
-WinchLockRequest::~WinchLockRequest() {
-  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.WinchLockRequest)
+LockRequest::~LockRequest() {
+  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.LockRequest)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -1888,16 +1882,16 @@ WinchLockRequest::~WinchLockRequest() {
   SharedDtor();
 }
 
-inline void WinchLockRequest::SharedDtor() {
+inline void LockRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void WinchLockRequest::SetCachedSize(int size) const {
+void LockRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void WinchLockRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.WinchLockRequest)
+void LockRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.LockRequest)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1906,7 +1900,7 @@ void WinchLockRequest::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* WinchLockRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* LockRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
@@ -1943,9 +1937,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* WinchLockRequest::_InternalSerialize(
+uint8_t* LockRequest::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.WinchLockRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.LockRequest)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1959,12 +1953,12 @@ uint8_t* WinchLockRequest::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.WinchLockRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.LockRequest)
   return target;
 }
 
-size_t WinchLockRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.WinchLockRequest)
+size_t LockRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.LockRequest)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -1979,21 +1973,21 @@ size_t WinchLockRequest::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WinchLockRequest::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LockRequest::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    WinchLockRequest::MergeImpl
+    LockRequest::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WinchLockRequest::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LockRequest::GetClassData() const { return &_class_data_; }
 
-void WinchLockRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void LockRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<WinchLockRequest *>(to)->MergeFrom(
-      static_cast<const WinchLockRequest &>(from));
+  static_cast<LockRequest *>(to)->MergeFrom(
+      static_cast<const LockRequest &>(from));
 }
 
 
-void WinchLockRequest::MergeFrom(const WinchLockRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.WinchLockRequest)
+void LockRequest::MergeFrom(const LockRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.LockRequest)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2004,24 +1998,24 @@ void WinchLockRequest::MergeFrom(const WinchLockRequest& from) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void WinchLockRequest::CopyFrom(const WinchLockRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.WinchLockRequest)
+void LockRequest::CopyFrom(const LockRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.LockRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool WinchLockRequest::IsInitialized() const {
+bool LockRequest::IsInitialized() const {
   return true;
 }
 
-void WinchLockRequest::InternalSwap(WinchLockRequest* other) {
+void LockRequest::InternalSwap(LockRequest* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(instance_, other->instance_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WinchLockRequest::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata LockRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
       file_level_metadata_winch_2fwinch_2eproto[6]);
@@ -2029,38 +2023,38 @@ void WinchLockRequest::InternalSwap(WinchLockRequest* other) {
 
 // ===================================================================
 
-class WinchLockResponse::_Internal {
+class LockResponse::_Internal {
  public:
-  static const ::mavsdk::rpc::winch::WinchResult& action_result(const WinchLockResponse* msg);
+  static const ::mavsdk::rpc::winch::WinchResult& winch_result(const LockResponse* msg);
 };
 
 const ::mavsdk::rpc::winch::WinchResult&
-WinchLockResponse::_Internal::action_result(const WinchLockResponse* msg) {
-  return *msg->action_result_;
+LockResponse::_Internal::winch_result(const LockResponse* msg) {
+  return *msg->winch_result_;
 }
-WinchLockResponse::WinchLockResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+LockResponse::LockResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.WinchLockResponse)
+  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.LockResponse)
 }
-WinchLockResponse::WinchLockResponse(const WinchLockResponse& from)
+LockResponse::LockResponse(const LockResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_action_result()) {
-    action_result_ = new ::mavsdk::rpc::winch::WinchResult(*from.action_result_);
+  if (from._internal_has_winch_result()) {
+    winch_result_ = new ::mavsdk::rpc::winch::WinchResult(*from.winch_result_);
   } else {
-    action_result_ = nullptr;
+    winch_result_ = nullptr;
   }
-  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.WinchLockResponse)
+  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.LockResponse)
 }
 
-inline void WinchLockResponse::SharedCtor() {
-action_result_ = nullptr;
+inline void LockResponse::SharedCtor() {
+winch_result_ = nullptr;
 }
 
-WinchLockResponse::~WinchLockResponse() {
-  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.WinchLockResponse)
+LockResponse::~LockResponse() {
+  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.LockResponse)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -2068,38 +2062,38 @@ WinchLockResponse::~WinchLockResponse() {
   SharedDtor();
 }
 
-inline void WinchLockResponse::SharedDtor() {
+inline void LockResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete action_result_;
+  if (this != internal_default_instance()) delete winch_result_;
 }
 
-void WinchLockResponse::SetCachedSize(int size) const {
+void LockResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void WinchLockResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.WinchLockResponse)
+void LockResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.LockResponse)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaForAllocation() == nullptr && action_result_ != nullptr) {
-    delete action_result_;
+  if (GetArenaForAllocation() == nullptr && winch_result_ != nullptr) {
+    delete winch_result_;
   }
-  action_result_ = nullptr;
+  winch_result_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* WinchLockResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* LockResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .mavsdk.rpc.winch.WinchResult action_result = 1;
+      // .mavsdk.rpc.winch.WinchResult winch_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_action_result(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_winch_result(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2127,88 +2121,88 @@ failure:
 #undef CHK_
 }
 
-uint8_t* WinchLockResponse::_InternalSerialize(
+uint8_t* LockResponse::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.WinchLockResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.LockResponse)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .mavsdk.rpc.winch.WinchResult action_result = 1;
-  if (this->_internal_has_action_result()) {
+  // .mavsdk.rpc.winch.WinchResult winch_result = 1;
+  if (this->_internal_has_winch_result()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::action_result(this),
-        _Internal::action_result(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::winch_result(this),
+        _Internal::winch_result(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.WinchLockResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.LockResponse)
   return target;
 }
 
-size_t WinchLockResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.WinchLockResponse)
+size_t LockResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.LockResponse)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .mavsdk.rpc.winch.WinchResult action_result = 1;
-  if (this->_internal_has_action_result()) {
+  // .mavsdk.rpc.winch.WinchResult winch_result = 1;
+  if (this->_internal_has_winch_result()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *action_result_);
+        *winch_result_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WinchLockResponse::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LockResponse::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    WinchLockResponse::MergeImpl
+    LockResponse::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WinchLockResponse::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LockResponse::GetClassData() const { return &_class_data_; }
 
-void WinchLockResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void LockResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<WinchLockResponse *>(to)->MergeFrom(
-      static_cast<const WinchLockResponse &>(from));
+  static_cast<LockResponse *>(to)->MergeFrom(
+      static_cast<const LockResponse &>(from));
 }
 
 
-void WinchLockResponse::MergeFrom(const WinchLockResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.WinchLockResponse)
+void LockResponse::MergeFrom(const LockResponse& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.LockResponse)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_action_result()) {
-    _internal_mutable_action_result()->::mavsdk::rpc::winch::WinchResult::MergeFrom(from._internal_action_result());
+  if (from._internal_has_winch_result()) {
+    _internal_mutable_winch_result()->::mavsdk::rpc::winch::WinchResult::MergeFrom(from._internal_winch_result());
   }
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void WinchLockResponse::CopyFrom(const WinchLockResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.WinchLockResponse)
+void LockResponse::CopyFrom(const LockResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.LockResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool WinchLockResponse::IsInitialized() const {
+bool LockResponse::IsInitialized() const {
   return true;
 }
 
-void WinchLockResponse::InternalSwap(WinchLockResponse* other) {
+void LockResponse::InternalSwap(LockResponse* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(action_result_, other->action_result_);
+  swap(winch_result_, other->winch_result_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WinchLockResponse::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata LockResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
       file_level_metadata_winch_2fwinch_2eproto[7]);
@@ -2216,29 +2210,29 @@ void WinchLockResponse::InternalSwap(WinchLockResponse* other) {
 
 // ===================================================================
 
-class WinchDeliverRequest::_Internal {
+class DeliverRequest::_Internal {
  public:
 };
 
-WinchDeliverRequest::WinchDeliverRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+DeliverRequest::DeliverRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.WinchDeliverRequest)
+  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.DeliverRequest)
 }
-WinchDeliverRequest::WinchDeliverRequest(const WinchDeliverRequest& from)
+DeliverRequest::DeliverRequest(const DeliverRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   instance_ = from.instance_;
-  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.WinchDeliverRequest)
+  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.DeliverRequest)
 }
 
-inline void WinchDeliverRequest::SharedCtor() {
+inline void DeliverRequest::SharedCtor() {
 instance_ = 0u;
 }
 
-WinchDeliverRequest::~WinchDeliverRequest() {
-  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.WinchDeliverRequest)
+DeliverRequest::~DeliverRequest() {
+  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.DeliverRequest)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -2246,16 +2240,16 @@ WinchDeliverRequest::~WinchDeliverRequest() {
   SharedDtor();
 }
 
-inline void WinchDeliverRequest::SharedDtor() {
+inline void DeliverRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void WinchDeliverRequest::SetCachedSize(int size) const {
+void DeliverRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void WinchDeliverRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.WinchDeliverRequest)
+void DeliverRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.DeliverRequest)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2264,7 +2258,7 @@ void WinchDeliverRequest::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* WinchDeliverRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* DeliverRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
@@ -2301,9 +2295,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* WinchDeliverRequest::_InternalSerialize(
+uint8_t* DeliverRequest::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.WinchDeliverRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.DeliverRequest)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2317,12 +2311,12 @@ uint8_t* WinchDeliverRequest::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.WinchDeliverRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.DeliverRequest)
   return target;
 }
 
-size_t WinchDeliverRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.WinchDeliverRequest)
+size_t DeliverRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.DeliverRequest)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -2337,21 +2331,21 @@ size_t WinchDeliverRequest::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WinchDeliverRequest::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData DeliverRequest::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    WinchDeliverRequest::MergeImpl
+    DeliverRequest::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WinchDeliverRequest::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*DeliverRequest::GetClassData() const { return &_class_data_; }
 
-void WinchDeliverRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void DeliverRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<WinchDeliverRequest *>(to)->MergeFrom(
-      static_cast<const WinchDeliverRequest &>(from));
+  static_cast<DeliverRequest *>(to)->MergeFrom(
+      static_cast<const DeliverRequest &>(from));
 }
 
 
-void WinchDeliverRequest::MergeFrom(const WinchDeliverRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.WinchDeliverRequest)
+void DeliverRequest::MergeFrom(const DeliverRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.DeliverRequest)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2362,24 +2356,24 @@ void WinchDeliverRequest::MergeFrom(const WinchDeliverRequest& from) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void WinchDeliverRequest::CopyFrom(const WinchDeliverRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.WinchDeliverRequest)
+void DeliverRequest::CopyFrom(const DeliverRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.DeliverRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool WinchDeliverRequest::IsInitialized() const {
+bool DeliverRequest::IsInitialized() const {
   return true;
 }
 
-void WinchDeliverRequest::InternalSwap(WinchDeliverRequest* other) {
+void DeliverRequest::InternalSwap(DeliverRequest* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(instance_, other->instance_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WinchDeliverRequest::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata DeliverRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
       file_level_metadata_winch_2fwinch_2eproto[8]);
@@ -2387,38 +2381,38 @@ void WinchDeliverRequest::InternalSwap(WinchDeliverRequest* other) {
 
 // ===================================================================
 
-class WinchDeliverResponse::_Internal {
+class DeliverResponse::_Internal {
  public:
-  static const ::mavsdk::rpc::winch::WinchResult& action_result(const WinchDeliverResponse* msg);
+  static const ::mavsdk::rpc::winch::WinchResult& winch_result(const DeliverResponse* msg);
 };
 
 const ::mavsdk::rpc::winch::WinchResult&
-WinchDeliverResponse::_Internal::action_result(const WinchDeliverResponse* msg) {
-  return *msg->action_result_;
+DeliverResponse::_Internal::winch_result(const DeliverResponse* msg) {
+  return *msg->winch_result_;
 }
-WinchDeliverResponse::WinchDeliverResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+DeliverResponse::DeliverResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.WinchDeliverResponse)
+  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.DeliverResponse)
 }
-WinchDeliverResponse::WinchDeliverResponse(const WinchDeliverResponse& from)
+DeliverResponse::DeliverResponse(const DeliverResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_action_result()) {
-    action_result_ = new ::mavsdk::rpc::winch::WinchResult(*from.action_result_);
+  if (from._internal_has_winch_result()) {
+    winch_result_ = new ::mavsdk::rpc::winch::WinchResult(*from.winch_result_);
   } else {
-    action_result_ = nullptr;
+    winch_result_ = nullptr;
   }
-  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.WinchDeliverResponse)
+  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.DeliverResponse)
 }
 
-inline void WinchDeliverResponse::SharedCtor() {
-action_result_ = nullptr;
+inline void DeliverResponse::SharedCtor() {
+winch_result_ = nullptr;
 }
 
-WinchDeliverResponse::~WinchDeliverResponse() {
-  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.WinchDeliverResponse)
+DeliverResponse::~DeliverResponse() {
+  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.DeliverResponse)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -2426,38 +2420,38 @@ WinchDeliverResponse::~WinchDeliverResponse() {
   SharedDtor();
 }
 
-inline void WinchDeliverResponse::SharedDtor() {
+inline void DeliverResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete action_result_;
+  if (this != internal_default_instance()) delete winch_result_;
 }
 
-void WinchDeliverResponse::SetCachedSize(int size) const {
+void DeliverResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void WinchDeliverResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.WinchDeliverResponse)
+void DeliverResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.DeliverResponse)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaForAllocation() == nullptr && action_result_ != nullptr) {
-    delete action_result_;
+  if (GetArenaForAllocation() == nullptr && winch_result_ != nullptr) {
+    delete winch_result_;
   }
-  action_result_ = nullptr;
+  winch_result_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* WinchDeliverResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* DeliverResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .mavsdk.rpc.winch.WinchResult action_result = 1;
+      // .mavsdk.rpc.winch.WinchResult winch_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_action_result(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_winch_result(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2485,88 +2479,88 @@ failure:
 #undef CHK_
 }
 
-uint8_t* WinchDeliverResponse::_InternalSerialize(
+uint8_t* DeliverResponse::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.WinchDeliverResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.DeliverResponse)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .mavsdk.rpc.winch.WinchResult action_result = 1;
-  if (this->_internal_has_action_result()) {
+  // .mavsdk.rpc.winch.WinchResult winch_result = 1;
+  if (this->_internal_has_winch_result()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::action_result(this),
-        _Internal::action_result(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::winch_result(this),
+        _Internal::winch_result(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.WinchDeliverResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.DeliverResponse)
   return target;
 }
 
-size_t WinchDeliverResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.WinchDeliverResponse)
+size_t DeliverResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.DeliverResponse)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .mavsdk.rpc.winch.WinchResult action_result = 1;
-  if (this->_internal_has_action_result()) {
+  // .mavsdk.rpc.winch.WinchResult winch_result = 1;
+  if (this->_internal_has_winch_result()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *action_result_);
+        *winch_result_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WinchDeliverResponse::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData DeliverResponse::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    WinchDeliverResponse::MergeImpl
+    DeliverResponse::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WinchDeliverResponse::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*DeliverResponse::GetClassData() const { return &_class_data_; }
 
-void WinchDeliverResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void DeliverResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<WinchDeliverResponse *>(to)->MergeFrom(
-      static_cast<const WinchDeliverResponse &>(from));
+  static_cast<DeliverResponse *>(to)->MergeFrom(
+      static_cast<const DeliverResponse &>(from));
 }
 
 
-void WinchDeliverResponse::MergeFrom(const WinchDeliverResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.WinchDeliverResponse)
+void DeliverResponse::MergeFrom(const DeliverResponse& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.DeliverResponse)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_action_result()) {
-    _internal_mutable_action_result()->::mavsdk::rpc::winch::WinchResult::MergeFrom(from._internal_action_result());
+  if (from._internal_has_winch_result()) {
+    _internal_mutable_winch_result()->::mavsdk::rpc::winch::WinchResult::MergeFrom(from._internal_winch_result());
   }
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void WinchDeliverResponse::CopyFrom(const WinchDeliverResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.WinchDeliverResponse)
+void DeliverResponse::CopyFrom(const DeliverResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.DeliverResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool WinchDeliverResponse::IsInitialized() const {
+bool DeliverResponse::IsInitialized() const {
   return true;
 }
 
-void WinchDeliverResponse::InternalSwap(WinchDeliverResponse* other) {
+void DeliverResponse::InternalSwap(DeliverResponse* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(action_result_, other->action_result_);
+  swap(winch_result_, other->winch_result_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WinchDeliverResponse::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata DeliverResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
       file_level_metadata_winch_2fwinch_2eproto[9]);
@@ -2574,29 +2568,29 @@ void WinchDeliverResponse::InternalSwap(WinchDeliverResponse* other) {
 
 // ===================================================================
 
-class WinchHoldRequest::_Internal {
+class HoldRequest::_Internal {
  public:
 };
 
-WinchHoldRequest::WinchHoldRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+HoldRequest::HoldRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.WinchHoldRequest)
+  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.HoldRequest)
 }
-WinchHoldRequest::WinchHoldRequest(const WinchHoldRequest& from)
+HoldRequest::HoldRequest(const HoldRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   instance_ = from.instance_;
-  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.WinchHoldRequest)
+  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.HoldRequest)
 }
 
-inline void WinchHoldRequest::SharedCtor() {
+inline void HoldRequest::SharedCtor() {
 instance_ = 0u;
 }
 
-WinchHoldRequest::~WinchHoldRequest() {
-  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.WinchHoldRequest)
+HoldRequest::~HoldRequest() {
+  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.HoldRequest)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -2604,16 +2598,16 @@ WinchHoldRequest::~WinchHoldRequest() {
   SharedDtor();
 }
 
-inline void WinchHoldRequest::SharedDtor() {
+inline void HoldRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void WinchHoldRequest::SetCachedSize(int size) const {
+void HoldRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void WinchHoldRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.WinchHoldRequest)
+void HoldRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.HoldRequest)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2622,7 +2616,7 @@ void WinchHoldRequest::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* WinchHoldRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* HoldRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
@@ -2659,9 +2653,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* WinchHoldRequest::_InternalSerialize(
+uint8_t* HoldRequest::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.WinchHoldRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.HoldRequest)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2675,12 +2669,12 @@ uint8_t* WinchHoldRequest::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.WinchHoldRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.HoldRequest)
   return target;
 }
 
-size_t WinchHoldRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.WinchHoldRequest)
+size_t HoldRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.HoldRequest)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -2695,21 +2689,21 @@ size_t WinchHoldRequest::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WinchHoldRequest::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData HoldRequest::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    WinchHoldRequest::MergeImpl
+    HoldRequest::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WinchHoldRequest::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*HoldRequest::GetClassData() const { return &_class_data_; }
 
-void WinchHoldRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void HoldRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<WinchHoldRequest *>(to)->MergeFrom(
-      static_cast<const WinchHoldRequest &>(from));
+  static_cast<HoldRequest *>(to)->MergeFrom(
+      static_cast<const HoldRequest &>(from));
 }
 
 
-void WinchHoldRequest::MergeFrom(const WinchHoldRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.WinchHoldRequest)
+void HoldRequest::MergeFrom(const HoldRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.HoldRequest)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2720,24 +2714,24 @@ void WinchHoldRequest::MergeFrom(const WinchHoldRequest& from) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void WinchHoldRequest::CopyFrom(const WinchHoldRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.WinchHoldRequest)
+void HoldRequest::CopyFrom(const HoldRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.HoldRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool WinchHoldRequest::IsInitialized() const {
+bool HoldRequest::IsInitialized() const {
   return true;
 }
 
-void WinchHoldRequest::InternalSwap(WinchHoldRequest* other) {
+void HoldRequest::InternalSwap(HoldRequest* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(instance_, other->instance_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WinchHoldRequest::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata HoldRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
       file_level_metadata_winch_2fwinch_2eproto[10]);
@@ -2745,38 +2739,38 @@ void WinchHoldRequest::InternalSwap(WinchHoldRequest* other) {
 
 // ===================================================================
 
-class WinchHoldResponse::_Internal {
+class HoldResponse::_Internal {
  public:
-  static const ::mavsdk::rpc::winch::WinchResult& action_result(const WinchHoldResponse* msg);
+  static const ::mavsdk::rpc::winch::WinchResult& winch_result(const HoldResponse* msg);
 };
 
 const ::mavsdk::rpc::winch::WinchResult&
-WinchHoldResponse::_Internal::action_result(const WinchHoldResponse* msg) {
-  return *msg->action_result_;
+HoldResponse::_Internal::winch_result(const HoldResponse* msg) {
+  return *msg->winch_result_;
 }
-WinchHoldResponse::WinchHoldResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+HoldResponse::HoldResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.WinchHoldResponse)
+  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.HoldResponse)
 }
-WinchHoldResponse::WinchHoldResponse(const WinchHoldResponse& from)
+HoldResponse::HoldResponse(const HoldResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_action_result()) {
-    action_result_ = new ::mavsdk::rpc::winch::WinchResult(*from.action_result_);
+  if (from._internal_has_winch_result()) {
+    winch_result_ = new ::mavsdk::rpc::winch::WinchResult(*from.winch_result_);
   } else {
-    action_result_ = nullptr;
+    winch_result_ = nullptr;
   }
-  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.WinchHoldResponse)
+  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.HoldResponse)
 }
 
-inline void WinchHoldResponse::SharedCtor() {
-action_result_ = nullptr;
+inline void HoldResponse::SharedCtor() {
+winch_result_ = nullptr;
 }
 
-WinchHoldResponse::~WinchHoldResponse() {
-  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.WinchHoldResponse)
+HoldResponse::~HoldResponse() {
+  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.HoldResponse)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -2784,38 +2778,38 @@ WinchHoldResponse::~WinchHoldResponse() {
   SharedDtor();
 }
 
-inline void WinchHoldResponse::SharedDtor() {
+inline void HoldResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete action_result_;
+  if (this != internal_default_instance()) delete winch_result_;
 }
 
-void WinchHoldResponse::SetCachedSize(int size) const {
+void HoldResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void WinchHoldResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.WinchHoldResponse)
+void HoldResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.HoldResponse)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaForAllocation() == nullptr && action_result_ != nullptr) {
-    delete action_result_;
+  if (GetArenaForAllocation() == nullptr && winch_result_ != nullptr) {
+    delete winch_result_;
   }
-  action_result_ = nullptr;
+  winch_result_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* WinchHoldResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* HoldResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .mavsdk.rpc.winch.WinchResult action_result = 1;
+      // .mavsdk.rpc.winch.WinchResult winch_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_action_result(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_winch_result(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -2843,88 +2837,88 @@ failure:
 #undef CHK_
 }
 
-uint8_t* WinchHoldResponse::_InternalSerialize(
+uint8_t* HoldResponse::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.WinchHoldResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.HoldResponse)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .mavsdk.rpc.winch.WinchResult action_result = 1;
-  if (this->_internal_has_action_result()) {
+  // .mavsdk.rpc.winch.WinchResult winch_result = 1;
+  if (this->_internal_has_winch_result()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::action_result(this),
-        _Internal::action_result(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::winch_result(this),
+        _Internal::winch_result(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.WinchHoldResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.HoldResponse)
   return target;
 }
 
-size_t WinchHoldResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.WinchHoldResponse)
+size_t HoldResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.HoldResponse)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .mavsdk.rpc.winch.WinchResult action_result = 1;
-  if (this->_internal_has_action_result()) {
+  // .mavsdk.rpc.winch.WinchResult winch_result = 1;
+  if (this->_internal_has_winch_result()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *action_result_);
+        *winch_result_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WinchHoldResponse::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData HoldResponse::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    WinchHoldResponse::MergeImpl
+    HoldResponse::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WinchHoldResponse::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*HoldResponse::GetClassData() const { return &_class_data_; }
 
-void WinchHoldResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void HoldResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<WinchHoldResponse *>(to)->MergeFrom(
-      static_cast<const WinchHoldResponse &>(from));
+  static_cast<HoldResponse *>(to)->MergeFrom(
+      static_cast<const HoldResponse &>(from));
 }
 
 
-void WinchHoldResponse::MergeFrom(const WinchHoldResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.WinchHoldResponse)
+void HoldResponse::MergeFrom(const HoldResponse& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.HoldResponse)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_action_result()) {
-    _internal_mutable_action_result()->::mavsdk::rpc::winch::WinchResult::MergeFrom(from._internal_action_result());
+  if (from._internal_has_winch_result()) {
+    _internal_mutable_winch_result()->::mavsdk::rpc::winch::WinchResult::MergeFrom(from._internal_winch_result());
   }
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void WinchHoldResponse::CopyFrom(const WinchHoldResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.WinchHoldResponse)
+void HoldResponse::CopyFrom(const HoldResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.HoldResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool WinchHoldResponse::IsInitialized() const {
+bool HoldResponse::IsInitialized() const {
   return true;
 }
 
-void WinchHoldResponse::InternalSwap(WinchHoldResponse* other) {
+void HoldResponse::InternalSwap(HoldResponse* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(action_result_, other->action_result_);
+  swap(winch_result_, other->winch_result_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WinchHoldResponse::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata HoldResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
       file_level_metadata_winch_2fwinch_2eproto[11]);
@@ -2932,29 +2926,29 @@ void WinchHoldResponse::InternalSwap(WinchHoldResponse* other) {
 
 // ===================================================================
 
-class WinchRetractRequest::_Internal {
+class RetractRequest::_Internal {
  public:
 };
 
-WinchRetractRequest::WinchRetractRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+RetractRequest::RetractRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.WinchRetractRequest)
+  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.RetractRequest)
 }
-WinchRetractRequest::WinchRetractRequest(const WinchRetractRequest& from)
+RetractRequest::RetractRequest(const RetractRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   instance_ = from.instance_;
-  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.WinchRetractRequest)
+  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.RetractRequest)
 }
 
-inline void WinchRetractRequest::SharedCtor() {
+inline void RetractRequest::SharedCtor() {
 instance_ = 0u;
 }
 
-WinchRetractRequest::~WinchRetractRequest() {
-  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.WinchRetractRequest)
+RetractRequest::~RetractRequest() {
+  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.RetractRequest)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -2962,16 +2956,16 @@ WinchRetractRequest::~WinchRetractRequest() {
   SharedDtor();
 }
 
-inline void WinchRetractRequest::SharedDtor() {
+inline void RetractRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void WinchRetractRequest::SetCachedSize(int size) const {
+void RetractRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void WinchRetractRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.WinchRetractRequest)
+void RetractRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.RetractRequest)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2980,7 +2974,7 @@ void WinchRetractRequest::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* WinchRetractRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* RetractRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
@@ -3017,9 +3011,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* WinchRetractRequest::_InternalSerialize(
+uint8_t* RetractRequest::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.WinchRetractRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.RetractRequest)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -3033,12 +3027,12 @@ uint8_t* WinchRetractRequest::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.WinchRetractRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.RetractRequest)
   return target;
 }
 
-size_t WinchRetractRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.WinchRetractRequest)
+size_t RetractRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.RetractRequest)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -3053,21 +3047,21 @@ size_t WinchRetractRequest::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WinchRetractRequest::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RetractRequest::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    WinchRetractRequest::MergeImpl
+    RetractRequest::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WinchRetractRequest::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RetractRequest::GetClassData() const { return &_class_data_; }
 
-void WinchRetractRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void RetractRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<WinchRetractRequest *>(to)->MergeFrom(
-      static_cast<const WinchRetractRequest &>(from));
+  static_cast<RetractRequest *>(to)->MergeFrom(
+      static_cast<const RetractRequest &>(from));
 }
 
 
-void WinchRetractRequest::MergeFrom(const WinchRetractRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.WinchRetractRequest)
+void RetractRequest::MergeFrom(const RetractRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.RetractRequest)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -3078,24 +3072,24 @@ void WinchRetractRequest::MergeFrom(const WinchRetractRequest& from) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void WinchRetractRequest::CopyFrom(const WinchRetractRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.WinchRetractRequest)
+void RetractRequest::CopyFrom(const RetractRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.RetractRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool WinchRetractRequest::IsInitialized() const {
+bool RetractRequest::IsInitialized() const {
   return true;
 }
 
-void WinchRetractRequest::InternalSwap(WinchRetractRequest* other) {
+void RetractRequest::InternalSwap(RetractRequest* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(instance_, other->instance_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WinchRetractRequest::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata RetractRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
       file_level_metadata_winch_2fwinch_2eproto[12]);
@@ -3103,38 +3097,38 @@ void WinchRetractRequest::InternalSwap(WinchRetractRequest* other) {
 
 // ===================================================================
 
-class WinchRetractResponse::_Internal {
+class RetractResponse::_Internal {
  public:
-  static const ::mavsdk::rpc::winch::WinchResult& action_result(const WinchRetractResponse* msg);
+  static const ::mavsdk::rpc::winch::WinchResult& winch_result(const RetractResponse* msg);
 };
 
 const ::mavsdk::rpc::winch::WinchResult&
-WinchRetractResponse::_Internal::action_result(const WinchRetractResponse* msg) {
-  return *msg->action_result_;
+RetractResponse::_Internal::winch_result(const RetractResponse* msg) {
+  return *msg->winch_result_;
 }
-WinchRetractResponse::WinchRetractResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+RetractResponse::RetractResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.WinchRetractResponse)
+  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.RetractResponse)
 }
-WinchRetractResponse::WinchRetractResponse(const WinchRetractResponse& from)
+RetractResponse::RetractResponse(const RetractResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_action_result()) {
-    action_result_ = new ::mavsdk::rpc::winch::WinchResult(*from.action_result_);
+  if (from._internal_has_winch_result()) {
+    winch_result_ = new ::mavsdk::rpc::winch::WinchResult(*from.winch_result_);
   } else {
-    action_result_ = nullptr;
+    winch_result_ = nullptr;
   }
-  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.WinchRetractResponse)
+  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.RetractResponse)
 }
 
-inline void WinchRetractResponse::SharedCtor() {
-action_result_ = nullptr;
+inline void RetractResponse::SharedCtor() {
+winch_result_ = nullptr;
 }
 
-WinchRetractResponse::~WinchRetractResponse() {
-  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.WinchRetractResponse)
+RetractResponse::~RetractResponse() {
+  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.RetractResponse)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -3142,38 +3136,38 @@ WinchRetractResponse::~WinchRetractResponse() {
   SharedDtor();
 }
 
-inline void WinchRetractResponse::SharedDtor() {
+inline void RetractResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete action_result_;
+  if (this != internal_default_instance()) delete winch_result_;
 }
 
-void WinchRetractResponse::SetCachedSize(int size) const {
+void RetractResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void WinchRetractResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.WinchRetractResponse)
+void RetractResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.RetractResponse)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaForAllocation() == nullptr && action_result_ != nullptr) {
-    delete action_result_;
+  if (GetArenaForAllocation() == nullptr && winch_result_ != nullptr) {
+    delete winch_result_;
   }
-  action_result_ = nullptr;
+  winch_result_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* WinchRetractResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* RetractResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .mavsdk.rpc.winch.WinchResult action_result = 1;
+      // .mavsdk.rpc.winch.WinchResult winch_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_action_result(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_winch_result(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -3201,88 +3195,88 @@ failure:
 #undef CHK_
 }
 
-uint8_t* WinchRetractResponse::_InternalSerialize(
+uint8_t* RetractResponse::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.WinchRetractResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.RetractResponse)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .mavsdk.rpc.winch.WinchResult action_result = 1;
-  if (this->_internal_has_action_result()) {
+  // .mavsdk.rpc.winch.WinchResult winch_result = 1;
+  if (this->_internal_has_winch_result()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::action_result(this),
-        _Internal::action_result(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::winch_result(this),
+        _Internal::winch_result(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.WinchRetractResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.RetractResponse)
   return target;
 }
 
-size_t WinchRetractResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.WinchRetractResponse)
+size_t RetractResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.RetractResponse)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .mavsdk.rpc.winch.WinchResult action_result = 1;
-  if (this->_internal_has_action_result()) {
+  // .mavsdk.rpc.winch.WinchResult winch_result = 1;
+  if (this->_internal_has_winch_result()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *action_result_);
+        *winch_result_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WinchRetractResponse::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RetractResponse::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    WinchRetractResponse::MergeImpl
+    RetractResponse::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WinchRetractResponse::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RetractResponse::GetClassData() const { return &_class_data_; }
 
-void WinchRetractResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void RetractResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<WinchRetractResponse *>(to)->MergeFrom(
-      static_cast<const WinchRetractResponse &>(from));
+  static_cast<RetractResponse *>(to)->MergeFrom(
+      static_cast<const RetractResponse &>(from));
 }
 
 
-void WinchRetractResponse::MergeFrom(const WinchRetractResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.WinchRetractResponse)
+void RetractResponse::MergeFrom(const RetractResponse& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.RetractResponse)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_action_result()) {
-    _internal_mutable_action_result()->::mavsdk::rpc::winch::WinchResult::MergeFrom(from._internal_action_result());
+  if (from._internal_has_winch_result()) {
+    _internal_mutable_winch_result()->::mavsdk::rpc::winch::WinchResult::MergeFrom(from._internal_winch_result());
   }
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void WinchRetractResponse::CopyFrom(const WinchRetractResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.WinchRetractResponse)
+void RetractResponse::CopyFrom(const RetractResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.RetractResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool WinchRetractResponse::IsInitialized() const {
+bool RetractResponse::IsInitialized() const {
   return true;
 }
 
-void WinchRetractResponse::InternalSwap(WinchRetractResponse* other) {
+void RetractResponse::InternalSwap(RetractResponse* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(action_result_, other->action_result_);
+  swap(winch_result_, other->winch_result_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WinchRetractResponse::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata RetractResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
       file_level_metadata_winch_2fwinch_2eproto[13]);
@@ -3290,29 +3284,29 @@ void WinchRetractResponse::InternalSwap(WinchRetractResponse* other) {
 
 // ===================================================================
 
-class WinchLoadLineRequest::_Internal {
+class LoadLineRequest::_Internal {
  public:
 };
 
-WinchLoadLineRequest::WinchLoadLineRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+LoadLineRequest::LoadLineRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.WinchLoadLineRequest)
+  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.LoadLineRequest)
 }
-WinchLoadLineRequest::WinchLoadLineRequest(const WinchLoadLineRequest& from)
+LoadLineRequest::LoadLineRequest(const LoadLineRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   instance_ = from.instance_;
-  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.WinchLoadLineRequest)
+  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.LoadLineRequest)
 }
 
-inline void WinchLoadLineRequest::SharedCtor() {
+inline void LoadLineRequest::SharedCtor() {
 instance_ = 0u;
 }
 
-WinchLoadLineRequest::~WinchLoadLineRequest() {
-  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.WinchLoadLineRequest)
+LoadLineRequest::~LoadLineRequest() {
+  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.LoadLineRequest)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -3320,16 +3314,16 @@ WinchLoadLineRequest::~WinchLoadLineRequest() {
   SharedDtor();
 }
 
-inline void WinchLoadLineRequest::SharedDtor() {
+inline void LoadLineRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void WinchLoadLineRequest::SetCachedSize(int size) const {
+void LoadLineRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void WinchLoadLineRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.WinchLoadLineRequest)
+void LoadLineRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.LoadLineRequest)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3338,7 +3332,7 @@ void WinchLoadLineRequest::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* WinchLoadLineRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* LoadLineRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
@@ -3375,9 +3369,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* WinchLoadLineRequest::_InternalSerialize(
+uint8_t* LoadLineRequest::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.WinchLoadLineRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.LoadLineRequest)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -3391,12 +3385,12 @@ uint8_t* WinchLoadLineRequest::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.WinchLoadLineRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.LoadLineRequest)
   return target;
 }
 
-size_t WinchLoadLineRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.WinchLoadLineRequest)
+size_t LoadLineRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.LoadLineRequest)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -3411,21 +3405,21 @@ size_t WinchLoadLineRequest::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WinchLoadLineRequest::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LoadLineRequest::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    WinchLoadLineRequest::MergeImpl
+    LoadLineRequest::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WinchLoadLineRequest::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LoadLineRequest::GetClassData() const { return &_class_data_; }
 
-void WinchLoadLineRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void LoadLineRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<WinchLoadLineRequest *>(to)->MergeFrom(
-      static_cast<const WinchLoadLineRequest &>(from));
+  static_cast<LoadLineRequest *>(to)->MergeFrom(
+      static_cast<const LoadLineRequest &>(from));
 }
 
 
-void WinchLoadLineRequest::MergeFrom(const WinchLoadLineRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.WinchLoadLineRequest)
+void LoadLineRequest::MergeFrom(const LoadLineRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.LoadLineRequest)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -3436,24 +3430,24 @@ void WinchLoadLineRequest::MergeFrom(const WinchLoadLineRequest& from) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void WinchLoadLineRequest::CopyFrom(const WinchLoadLineRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.WinchLoadLineRequest)
+void LoadLineRequest::CopyFrom(const LoadLineRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.LoadLineRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool WinchLoadLineRequest::IsInitialized() const {
+bool LoadLineRequest::IsInitialized() const {
   return true;
 }
 
-void WinchLoadLineRequest::InternalSwap(WinchLoadLineRequest* other) {
+void LoadLineRequest::InternalSwap(LoadLineRequest* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(instance_, other->instance_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WinchLoadLineRequest::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata LoadLineRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
       file_level_metadata_winch_2fwinch_2eproto[14]);
@@ -3461,38 +3455,38 @@ void WinchLoadLineRequest::InternalSwap(WinchLoadLineRequest* other) {
 
 // ===================================================================
 
-class WinchLoadLineResponse::_Internal {
+class LoadLineResponse::_Internal {
  public:
-  static const ::mavsdk::rpc::winch::WinchResult& action_result(const WinchLoadLineResponse* msg);
+  static const ::mavsdk::rpc::winch::WinchResult& winch_result(const LoadLineResponse* msg);
 };
 
 const ::mavsdk::rpc::winch::WinchResult&
-WinchLoadLineResponse::_Internal::action_result(const WinchLoadLineResponse* msg) {
-  return *msg->action_result_;
+LoadLineResponse::_Internal::winch_result(const LoadLineResponse* msg) {
+  return *msg->winch_result_;
 }
-WinchLoadLineResponse::WinchLoadLineResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+LoadLineResponse::LoadLineResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.WinchLoadLineResponse)
+  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.LoadLineResponse)
 }
-WinchLoadLineResponse::WinchLoadLineResponse(const WinchLoadLineResponse& from)
+LoadLineResponse::LoadLineResponse(const LoadLineResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_action_result()) {
-    action_result_ = new ::mavsdk::rpc::winch::WinchResult(*from.action_result_);
+  if (from._internal_has_winch_result()) {
+    winch_result_ = new ::mavsdk::rpc::winch::WinchResult(*from.winch_result_);
   } else {
-    action_result_ = nullptr;
+    winch_result_ = nullptr;
   }
-  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.WinchLoadLineResponse)
+  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.LoadLineResponse)
 }
 
-inline void WinchLoadLineResponse::SharedCtor() {
-action_result_ = nullptr;
+inline void LoadLineResponse::SharedCtor() {
+winch_result_ = nullptr;
 }
 
-WinchLoadLineResponse::~WinchLoadLineResponse() {
-  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.WinchLoadLineResponse)
+LoadLineResponse::~LoadLineResponse() {
+  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.LoadLineResponse)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -3500,38 +3494,38 @@ WinchLoadLineResponse::~WinchLoadLineResponse() {
   SharedDtor();
 }
 
-inline void WinchLoadLineResponse::SharedDtor() {
+inline void LoadLineResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete action_result_;
+  if (this != internal_default_instance()) delete winch_result_;
 }
 
-void WinchLoadLineResponse::SetCachedSize(int size) const {
+void LoadLineResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void WinchLoadLineResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.WinchLoadLineResponse)
+void LoadLineResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.LoadLineResponse)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaForAllocation() == nullptr && action_result_ != nullptr) {
-    delete action_result_;
+  if (GetArenaForAllocation() == nullptr && winch_result_ != nullptr) {
+    delete winch_result_;
   }
-  action_result_ = nullptr;
+  winch_result_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* WinchLoadLineResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* LoadLineResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .mavsdk.rpc.winch.WinchResult action_result = 1;
+      // .mavsdk.rpc.winch.WinchResult winch_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_action_result(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_winch_result(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -3559,88 +3553,88 @@ failure:
 #undef CHK_
 }
 
-uint8_t* WinchLoadLineResponse::_InternalSerialize(
+uint8_t* LoadLineResponse::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.WinchLoadLineResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.LoadLineResponse)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .mavsdk.rpc.winch.WinchResult action_result = 1;
-  if (this->_internal_has_action_result()) {
+  // .mavsdk.rpc.winch.WinchResult winch_result = 1;
+  if (this->_internal_has_winch_result()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::action_result(this),
-        _Internal::action_result(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::winch_result(this),
+        _Internal::winch_result(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.WinchLoadLineResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.LoadLineResponse)
   return target;
 }
 
-size_t WinchLoadLineResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.WinchLoadLineResponse)
+size_t LoadLineResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.LoadLineResponse)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .mavsdk.rpc.winch.WinchResult action_result = 1;
-  if (this->_internal_has_action_result()) {
+  // .mavsdk.rpc.winch.WinchResult winch_result = 1;
+  if (this->_internal_has_winch_result()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *action_result_);
+        *winch_result_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WinchLoadLineResponse::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LoadLineResponse::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    WinchLoadLineResponse::MergeImpl
+    LoadLineResponse::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WinchLoadLineResponse::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LoadLineResponse::GetClassData() const { return &_class_data_; }
 
-void WinchLoadLineResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void LoadLineResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<WinchLoadLineResponse *>(to)->MergeFrom(
-      static_cast<const WinchLoadLineResponse &>(from));
+  static_cast<LoadLineResponse *>(to)->MergeFrom(
+      static_cast<const LoadLineResponse &>(from));
 }
 
 
-void WinchLoadLineResponse::MergeFrom(const WinchLoadLineResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.WinchLoadLineResponse)
+void LoadLineResponse::MergeFrom(const LoadLineResponse& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.LoadLineResponse)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_action_result()) {
-    _internal_mutable_action_result()->::mavsdk::rpc::winch::WinchResult::MergeFrom(from._internal_action_result());
+  if (from._internal_has_winch_result()) {
+    _internal_mutable_winch_result()->::mavsdk::rpc::winch::WinchResult::MergeFrom(from._internal_winch_result());
   }
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void WinchLoadLineResponse::CopyFrom(const WinchLoadLineResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.WinchLoadLineResponse)
+void LoadLineResponse::CopyFrom(const LoadLineResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.LoadLineResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool WinchLoadLineResponse::IsInitialized() const {
+bool LoadLineResponse::IsInitialized() const {
   return true;
 }
 
-void WinchLoadLineResponse::InternalSwap(WinchLoadLineResponse* other) {
+void LoadLineResponse::InternalSwap(LoadLineResponse* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(action_result_, other->action_result_);
+  swap(winch_result_, other->winch_result_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WinchLoadLineResponse::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata LoadLineResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
       file_level_metadata_winch_2fwinch_2eproto[15]);
@@ -3648,29 +3642,29 @@ void WinchLoadLineResponse::InternalSwap(WinchLoadLineResponse* other) {
 
 // ===================================================================
 
-class WinchAbandonLineRequest::_Internal {
+class AbandonLineRequest::_Internal {
  public:
 };
 
-WinchAbandonLineRequest::WinchAbandonLineRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+AbandonLineRequest::AbandonLineRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.WinchAbandonLineRequest)
+  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.AbandonLineRequest)
 }
-WinchAbandonLineRequest::WinchAbandonLineRequest(const WinchAbandonLineRequest& from)
+AbandonLineRequest::AbandonLineRequest(const AbandonLineRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   instance_ = from.instance_;
-  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.WinchAbandonLineRequest)
+  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.AbandonLineRequest)
 }
 
-inline void WinchAbandonLineRequest::SharedCtor() {
+inline void AbandonLineRequest::SharedCtor() {
 instance_ = 0u;
 }
 
-WinchAbandonLineRequest::~WinchAbandonLineRequest() {
-  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.WinchAbandonLineRequest)
+AbandonLineRequest::~AbandonLineRequest() {
+  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.AbandonLineRequest)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -3678,16 +3672,16 @@ WinchAbandonLineRequest::~WinchAbandonLineRequest() {
   SharedDtor();
 }
 
-inline void WinchAbandonLineRequest::SharedDtor() {
+inline void AbandonLineRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void WinchAbandonLineRequest::SetCachedSize(int size) const {
+void AbandonLineRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void WinchAbandonLineRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.WinchAbandonLineRequest)
+void AbandonLineRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.AbandonLineRequest)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3696,7 +3690,7 @@ void WinchAbandonLineRequest::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* WinchAbandonLineRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* AbandonLineRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
@@ -3733,9 +3727,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* WinchAbandonLineRequest::_InternalSerialize(
+uint8_t* AbandonLineRequest::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.WinchAbandonLineRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.AbandonLineRequest)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -3749,12 +3743,12 @@ uint8_t* WinchAbandonLineRequest::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.WinchAbandonLineRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.AbandonLineRequest)
   return target;
 }
 
-size_t WinchAbandonLineRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.WinchAbandonLineRequest)
+size_t AbandonLineRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.AbandonLineRequest)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -3769,21 +3763,21 @@ size_t WinchAbandonLineRequest::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WinchAbandonLineRequest::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData AbandonLineRequest::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    WinchAbandonLineRequest::MergeImpl
+    AbandonLineRequest::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WinchAbandonLineRequest::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*AbandonLineRequest::GetClassData() const { return &_class_data_; }
 
-void WinchAbandonLineRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void AbandonLineRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<WinchAbandonLineRequest *>(to)->MergeFrom(
-      static_cast<const WinchAbandonLineRequest &>(from));
+  static_cast<AbandonLineRequest *>(to)->MergeFrom(
+      static_cast<const AbandonLineRequest &>(from));
 }
 
 
-void WinchAbandonLineRequest::MergeFrom(const WinchAbandonLineRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.WinchAbandonLineRequest)
+void AbandonLineRequest::MergeFrom(const AbandonLineRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.AbandonLineRequest)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -3794,24 +3788,24 @@ void WinchAbandonLineRequest::MergeFrom(const WinchAbandonLineRequest& from) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void WinchAbandonLineRequest::CopyFrom(const WinchAbandonLineRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.WinchAbandonLineRequest)
+void AbandonLineRequest::CopyFrom(const AbandonLineRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.AbandonLineRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool WinchAbandonLineRequest::IsInitialized() const {
+bool AbandonLineRequest::IsInitialized() const {
   return true;
 }
 
-void WinchAbandonLineRequest::InternalSwap(WinchAbandonLineRequest* other) {
+void AbandonLineRequest::InternalSwap(AbandonLineRequest* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(instance_, other->instance_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WinchAbandonLineRequest::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata AbandonLineRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
       file_level_metadata_winch_2fwinch_2eproto[16]);
@@ -3819,38 +3813,38 @@ void WinchAbandonLineRequest::InternalSwap(WinchAbandonLineRequest* other) {
 
 // ===================================================================
 
-class WinchAbandonLineResponse::_Internal {
+class AbandonLineResponse::_Internal {
  public:
-  static const ::mavsdk::rpc::winch::WinchResult& action_result(const WinchAbandonLineResponse* msg);
+  static const ::mavsdk::rpc::winch::WinchResult& winch_result(const AbandonLineResponse* msg);
 };
 
 const ::mavsdk::rpc::winch::WinchResult&
-WinchAbandonLineResponse::_Internal::action_result(const WinchAbandonLineResponse* msg) {
-  return *msg->action_result_;
+AbandonLineResponse::_Internal::winch_result(const AbandonLineResponse* msg) {
+  return *msg->winch_result_;
 }
-WinchAbandonLineResponse::WinchAbandonLineResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+AbandonLineResponse::AbandonLineResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.WinchAbandonLineResponse)
+  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.AbandonLineResponse)
 }
-WinchAbandonLineResponse::WinchAbandonLineResponse(const WinchAbandonLineResponse& from)
+AbandonLineResponse::AbandonLineResponse(const AbandonLineResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_action_result()) {
-    action_result_ = new ::mavsdk::rpc::winch::WinchResult(*from.action_result_);
+  if (from._internal_has_winch_result()) {
+    winch_result_ = new ::mavsdk::rpc::winch::WinchResult(*from.winch_result_);
   } else {
-    action_result_ = nullptr;
+    winch_result_ = nullptr;
   }
-  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.WinchAbandonLineResponse)
+  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.AbandonLineResponse)
 }
 
-inline void WinchAbandonLineResponse::SharedCtor() {
-action_result_ = nullptr;
+inline void AbandonLineResponse::SharedCtor() {
+winch_result_ = nullptr;
 }
 
-WinchAbandonLineResponse::~WinchAbandonLineResponse() {
-  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.WinchAbandonLineResponse)
+AbandonLineResponse::~AbandonLineResponse() {
+  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.AbandonLineResponse)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -3858,38 +3852,38 @@ WinchAbandonLineResponse::~WinchAbandonLineResponse() {
   SharedDtor();
 }
 
-inline void WinchAbandonLineResponse::SharedDtor() {
+inline void AbandonLineResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete action_result_;
+  if (this != internal_default_instance()) delete winch_result_;
 }
 
-void WinchAbandonLineResponse::SetCachedSize(int size) const {
+void AbandonLineResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void WinchAbandonLineResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.WinchAbandonLineResponse)
+void AbandonLineResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.AbandonLineResponse)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaForAllocation() == nullptr && action_result_ != nullptr) {
-    delete action_result_;
+  if (GetArenaForAllocation() == nullptr && winch_result_ != nullptr) {
+    delete winch_result_;
   }
-  action_result_ = nullptr;
+  winch_result_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* WinchAbandonLineResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* AbandonLineResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .mavsdk.rpc.winch.WinchResult action_result = 1;
+      // .mavsdk.rpc.winch.WinchResult winch_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_action_result(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_winch_result(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -3917,88 +3911,88 @@ failure:
 #undef CHK_
 }
 
-uint8_t* WinchAbandonLineResponse::_InternalSerialize(
+uint8_t* AbandonLineResponse::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.WinchAbandonLineResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.AbandonLineResponse)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .mavsdk.rpc.winch.WinchResult action_result = 1;
-  if (this->_internal_has_action_result()) {
+  // .mavsdk.rpc.winch.WinchResult winch_result = 1;
+  if (this->_internal_has_winch_result()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::action_result(this),
-        _Internal::action_result(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::winch_result(this),
+        _Internal::winch_result(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.WinchAbandonLineResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.AbandonLineResponse)
   return target;
 }
 
-size_t WinchAbandonLineResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.WinchAbandonLineResponse)
+size_t AbandonLineResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.AbandonLineResponse)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .mavsdk.rpc.winch.WinchResult action_result = 1;
-  if (this->_internal_has_action_result()) {
+  // .mavsdk.rpc.winch.WinchResult winch_result = 1;
+  if (this->_internal_has_winch_result()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *action_result_);
+        *winch_result_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WinchAbandonLineResponse::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData AbandonLineResponse::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    WinchAbandonLineResponse::MergeImpl
+    AbandonLineResponse::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WinchAbandonLineResponse::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*AbandonLineResponse::GetClassData() const { return &_class_data_; }
 
-void WinchAbandonLineResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void AbandonLineResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<WinchAbandonLineResponse *>(to)->MergeFrom(
-      static_cast<const WinchAbandonLineResponse &>(from));
+  static_cast<AbandonLineResponse *>(to)->MergeFrom(
+      static_cast<const AbandonLineResponse &>(from));
 }
 
 
-void WinchAbandonLineResponse::MergeFrom(const WinchAbandonLineResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.WinchAbandonLineResponse)
+void AbandonLineResponse::MergeFrom(const AbandonLineResponse& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.AbandonLineResponse)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_action_result()) {
-    _internal_mutable_action_result()->::mavsdk::rpc::winch::WinchResult::MergeFrom(from._internal_action_result());
+  if (from._internal_has_winch_result()) {
+    _internal_mutable_winch_result()->::mavsdk::rpc::winch::WinchResult::MergeFrom(from._internal_winch_result());
   }
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void WinchAbandonLineResponse::CopyFrom(const WinchAbandonLineResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.WinchAbandonLineResponse)
+void AbandonLineResponse::CopyFrom(const AbandonLineResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.AbandonLineResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool WinchAbandonLineResponse::IsInitialized() const {
+bool AbandonLineResponse::IsInitialized() const {
   return true;
 }
 
-void WinchAbandonLineResponse::InternalSwap(WinchAbandonLineResponse* other) {
+void AbandonLineResponse::InternalSwap(AbandonLineResponse* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(action_result_, other->action_result_);
+  swap(winch_result_, other->winch_result_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WinchAbandonLineResponse::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata AbandonLineResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
       file_level_metadata_winch_2fwinch_2eproto[17]);
@@ -4006,29 +4000,29 @@ void WinchAbandonLineResponse::InternalSwap(WinchAbandonLineResponse* other) {
 
 // ===================================================================
 
-class WinchLoadPayloadRequest::_Internal {
+class LoadPayloadRequest::_Internal {
  public:
 };
 
-WinchLoadPayloadRequest::WinchLoadPayloadRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+LoadPayloadRequest::LoadPayloadRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.WinchLoadPayloadRequest)
+  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.LoadPayloadRequest)
 }
-WinchLoadPayloadRequest::WinchLoadPayloadRequest(const WinchLoadPayloadRequest& from)
+LoadPayloadRequest::LoadPayloadRequest(const LoadPayloadRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   instance_ = from.instance_;
-  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.WinchLoadPayloadRequest)
+  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.LoadPayloadRequest)
 }
 
-inline void WinchLoadPayloadRequest::SharedCtor() {
+inline void LoadPayloadRequest::SharedCtor() {
 instance_ = 0u;
 }
 
-WinchLoadPayloadRequest::~WinchLoadPayloadRequest() {
-  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.WinchLoadPayloadRequest)
+LoadPayloadRequest::~LoadPayloadRequest() {
+  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.LoadPayloadRequest)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -4036,16 +4030,16 @@ WinchLoadPayloadRequest::~WinchLoadPayloadRequest() {
   SharedDtor();
 }
 
-inline void WinchLoadPayloadRequest::SharedDtor() {
+inline void LoadPayloadRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void WinchLoadPayloadRequest::SetCachedSize(int size) const {
+void LoadPayloadRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void WinchLoadPayloadRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.WinchLoadPayloadRequest)
+void LoadPayloadRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.LoadPayloadRequest)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -4054,7 +4048,7 @@ void WinchLoadPayloadRequest::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* WinchLoadPayloadRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* LoadPayloadRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
@@ -4091,9 +4085,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* WinchLoadPayloadRequest::_InternalSerialize(
+uint8_t* LoadPayloadRequest::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.WinchLoadPayloadRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.LoadPayloadRequest)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -4107,12 +4101,12 @@ uint8_t* WinchLoadPayloadRequest::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.WinchLoadPayloadRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.LoadPayloadRequest)
   return target;
 }
 
-size_t WinchLoadPayloadRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.WinchLoadPayloadRequest)
+size_t LoadPayloadRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.LoadPayloadRequest)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -4127,21 +4121,21 @@ size_t WinchLoadPayloadRequest::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WinchLoadPayloadRequest::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LoadPayloadRequest::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    WinchLoadPayloadRequest::MergeImpl
+    LoadPayloadRequest::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WinchLoadPayloadRequest::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LoadPayloadRequest::GetClassData() const { return &_class_data_; }
 
-void WinchLoadPayloadRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void LoadPayloadRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<WinchLoadPayloadRequest *>(to)->MergeFrom(
-      static_cast<const WinchLoadPayloadRequest &>(from));
+  static_cast<LoadPayloadRequest *>(to)->MergeFrom(
+      static_cast<const LoadPayloadRequest &>(from));
 }
 
 
-void WinchLoadPayloadRequest::MergeFrom(const WinchLoadPayloadRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.WinchLoadPayloadRequest)
+void LoadPayloadRequest::MergeFrom(const LoadPayloadRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.LoadPayloadRequest)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -4152,24 +4146,24 @@ void WinchLoadPayloadRequest::MergeFrom(const WinchLoadPayloadRequest& from) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void WinchLoadPayloadRequest::CopyFrom(const WinchLoadPayloadRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.WinchLoadPayloadRequest)
+void LoadPayloadRequest::CopyFrom(const LoadPayloadRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.LoadPayloadRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool WinchLoadPayloadRequest::IsInitialized() const {
+bool LoadPayloadRequest::IsInitialized() const {
   return true;
 }
 
-void WinchLoadPayloadRequest::InternalSwap(WinchLoadPayloadRequest* other) {
+void LoadPayloadRequest::InternalSwap(LoadPayloadRequest* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(instance_, other->instance_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WinchLoadPayloadRequest::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata LoadPayloadRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
       file_level_metadata_winch_2fwinch_2eproto[18]);
@@ -4177,38 +4171,38 @@ void WinchLoadPayloadRequest::InternalSwap(WinchLoadPayloadRequest* other) {
 
 // ===================================================================
 
-class WinchLoadPayloadResponse::_Internal {
+class LoadPayloadResponse::_Internal {
  public:
-  static const ::mavsdk::rpc::winch::WinchResult& action_result(const WinchLoadPayloadResponse* msg);
+  static const ::mavsdk::rpc::winch::WinchResult& winch_result(const LoadPayloadResponse* msg);
 };
 
 const ::mavsdk::rpc::winch::WinchResult&
-WinchLoadPayloadResponse::_Internal::action_result(const WinchLoadPayloadResponse* msg) {
-  return *msg->action_result_;
+LoadPayloadResponse::_Internal::winch_result(const LoadPayloadResponse* msg) {
+  return *msg->winch_result_;
 }
-WinchLoadPayloadResponse::WinchLoadPayloadResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+LoadPayloadResponse::LoadPayloadResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.WinchLoadPayloadResponse)
+  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.LoadPayloadResponse)
 }
-WinchLoadPayloadResponse::WinchLoadPayloadResponse(const WinchLoadPayloadResponse& from)
+LoadPayloadResponse::LoadPayloadResponse(const LoadPayloadResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_action_result()) {
-    action_result_ = new ::mavsdk::rpc::winch::WinchResult(*from.action_result_);
+  if (from._internal_has_winch_result()) {
+    winch_result_ = new ::mavsdk::rpc::winch::WinchResult(*from.winch_result_);
   } else {
-    action_result_ = nullptr;
+    winch_result_ = nullptr;
   }
-  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.WinchLoadPayloadResponse)
+  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.LoadPayloadResponse)
 }
 
-inline void WinchLoadPayloadResponse::SharedCtor() {
-action_result_ = nullptr;
+inline void LoadPayloadResponse::SharedCtor() {
+winch_result_ = nullptr;
 }
 
-WinchLoadPayloadResponse::~WinchLoadPayloadResponse() {
-  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.WinchLoadPayloadResponse)
+LoadPayloadResponse::~LoadPayloadResponse() {
+  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.LoadPayloadResponse)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -4216,38 +4210,38 @@ WinchLoadPayloadResponse::~WinchLoadPayloadResponse() {
   SharedDtor();
 }
 
-inline void WinchLoadPayloadResponse::SharedDtor() {
+inline void LoadPayloadResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete action_result_;
+  if (this != internal_default_instance()) delete winch_result_;
 }
 
-void WinchLoadPayloadResponse::SetCachedSize(int size) const {
+void LoadPayloadResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void WinchLoadPayloadResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.WinchLoadPayloadResponse)
+void LoadPayloadResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.LoadPayloadResponse)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaForAllocation() == nullptr && action_result_ != nullptr) {
-    delete action_result_;
+  if (GetArenaForAllocation() == nullptr && winch_result_ != nullptr) {
+    delete winch_result_;
   }
-  action_result_ = nullptr;
+  winch_result_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* WinchLoadPayloadResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* LoadPayloadResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .mavsdk.rpc.winch.WinchResult action_result = 1;
+      // .mavsdk.rpc.winch.WinchResult winch_result = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_action_result(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_winch_result(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -4275,88 +4269,88 @@ failure:
 #undef CHK_
 }
 
-uint8_t* WinchLoadPayloadResponse::_InternalSerialize(
+uint8_t* LoadPayloadResponse::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.WinchLoadPayloadResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.LoadPayloadResponse)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .mavsdk.rpc.winch.WinchResult action_result = 1;
-  if (this->_internal_has_action_result()) {
+  // .mavsdk.rpc.winch.WinchResult winch_result = 1;
+  if (this->_internal_has_winch_result()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::action_result(this),
-        _Internal::action_result(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::winch_result(this),
+        _Internal::winch_result(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.WinchLoadPayloadResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.LoadPayloadResponse)
   return target;
 }
 
-size_t WinchLoadPayloadResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.WinchLoadPayloadResponse)
+size_t LoadPayloadResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.LoadPayloadResponse)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .mavsdk.rpc.winch.WinchResult action_result = 1;
-  if (this->_internal_has_action_result()) {
+  // .mavsdk.rpc.winch.WinchResult winch_result = 1;
+  if (this->_internal_has_winch_result()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *action_result_);
+        *winch_result_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WinchLoadPayloadResponse::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LoadPayloadResponse::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    WinchLoadPayloadResponse::MergeImpl
+    LoadPayloadResponse::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WinchLoadPayloadResponse::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LoadPayloadResponse::GetClassData() const { return &_class_data_; }
 
-void WinchLoadPayloadResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void LoadPayloadResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<WinchLoadPayloadResponse *>(to)->MergeFrom(
-      static_cast<const WinchLoadPayloadResponse &>(from));
+  static_cast<LoadPayloadResponse *>(to)->MergeFrom(
+      static_cast<const LoadPayloadResponse &>(from));
 }
 
 
-void WinchLoadPayloadResponse::MergeFrom(const WinchLoadPayloadResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.WinchLoadPayloadResponse)
+void LoadPayloadResponse::MergeFrom(const LoadPayloadResponse& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.LoadPayloadResponse)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_action_result()) {
-    _internal_mutable_action_result()->::mavsdk::rpc::winch::WinchResult::MergeFrom(from._internal_action_result());
+  if (from._internal_has_winch_result()) {
+    _internal_mutable_winch_result()->::mavsdk::rpc::winch::WinchResult::MergeFrom(from._internal_winch_result());
   }
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void WinchLoadPayloadResponse::CopyFrom(const WinchLoadPayloadResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.WinchLoadPayloadResponse)
+void LoadPayloadResponse::CopyFrom(const LoadPayloadResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.LoadPayloadResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool WinchLoadPayloadResponse::IsInitialized() const {
+bool LoadPayloadResponse::IsInitialized() const {
   return true;
 }
 
-void WinchLoadPayloadResponse::InternalSwap(WinchLoadPayloadResponse* other) {
+void LoadPayloadResponse::InternalSwap(LoadPayloadResponse* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(action_result_, other->action_result_);
+  swap(winch_result_, other->winch_result_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WinchLoadPayloadResponse::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata LoadPayloadResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
       file_level_metadata_winch_2fwinch_2eproto[19]);
@@ -4591,85 +4585,85 @@ void WinchResult::InternalSwap(WinchResult* other) {
 }  // namespace rpc
 }  // namespace mavsdk
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::WinchRelaxRequest*
-Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::WinchRelaxRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::WinchRelaxRequest >(arena);
+template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::RelaxRequest*
+Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::RelaxRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::RelaxRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::WinchRelaxResponse*
-Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::WinchRelaxResponse >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::WinchRelaxResponse >(arena);
+template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::RelaxResponse*
+Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::RelaxResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::RelaxResponse >(arena);
 }
-template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::WinchRelativeLengthControlRequest*
-Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::WinchRelativeLengthControlRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::WinchRelativeLengthControlRequest >(arena);
+template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::RelativeLengthControlRequest*
+Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::RelativeLengthControlRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::RelativeLengthControlRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::WinchRelativeLengthControlResponse*
-Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::WinchRelativeLengthControlResponse >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::WinchRelativeLengthControlResponse >(arena);
+template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::RelativeLengthControlResponse*
+Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::RelativeLengthControlResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::RelativeLengthControlResponse >(arena);
 }
-template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::WinchRateControlRequest*
-Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::WinchRateControlRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::WinchRateControlRequest >(arena);
+template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::RateControlRequest*
+Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::RateControlRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::RateControlRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::WinchRateControlResponse*
-Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::WinchRateControlResponse >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::WinchRateControlResponse >(arena);
+template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::RateControlResponse*
+Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::RateControlResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::RateControlResponse >(arena);
 }
-template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::WinchLockRequest*
-Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::WinchLockRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::WinchLockRequest >(arena);
+template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::LockRequest*
+Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::LockRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::LockRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::WinchLockResponse*
-Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::WinchLockResponse >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::WinchLockResponse >(arena);
+template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::LockResponse*
+Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::LockResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::LockResponse >(arena);
 }
-template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::WinchDeliverRequest*
-Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::WinchDeliverRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::WinchDeliverRequest >(arena);
+template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::DeliverRequest*
+Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::DeliverRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::DeliverRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::WinchDeliverResponse*
-Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::WinchDeliverResponse >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::WinchDeliverResponse >(arena);
+template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::DeliverResponse*
+Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::DeliverResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::DeliverResponse >(arena);
 }
-template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::WinchHoldRequest*
-Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::WinchHoldRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::WinchHoldRequest >(arena);
+template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::HoldRequest*
+Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::HoldRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::HoldRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::WinchHoldResponse*
-Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::WinchHoldResponse >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::WinchHoldResponse >(arena);
+template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::HoldResponse*
+Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::HoldResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::HoldResponse >(arena);
 }
-template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::WinchRetractRequest*
-Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::WinchRetractRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::WinchRetractRequest >(arena);
+template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::RetractRequest*
+Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::RetractRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::RetractRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::WinchRetractResponse*
-Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::WinchRetractResponse >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::WinchRetractResponse >(arena);
+template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::RetractResponse*
+Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::RetractResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::RetractResponse >(arena);
 }
-template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::WinchLoadLineRequest*
-Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::WinchLoadLineRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::WinchLoadLineRequest >(arena);
+template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::LoadLineRequest*
+Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::LoadLineRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::LoadLineRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::WinchLoadLineResponse*
-Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::WinchLoadLineResponse >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::WinchLoadLineResponse >(arena);
+template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::LoadLineResponse*
+Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::LoadLineResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::LoadLineResponse >(arena);
 }
-template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::WinchAbandonLineRequest*
-Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::WinchAbandonLineRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::WinchAbandonLineRequest >(arena);
+template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::AbandonLineRequest*
+Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::AbandonLineRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::AbandonLineRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::WinchAbandonLineResponse*
-Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::WinchAbandonLineResponse >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::WinchAbandonLineResponse >(arena);
+template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::AbandonLineResponse*
+Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::AbandonLineResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::AbandonLineResponse >(arena);
 }
-template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::WinchLoadPayloadRequest*
-Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::WinchLoadPayloadRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::WinchLoadPayloadRequest >(arena);
+template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::LoadPayloadRequest*
+Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::LoadPayloadRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::LoadPayloadRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::WinchLoadPayloadResponse*
-Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::WinchLoadPayloadResponse >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::WinchLoadPayloadResponse >(arena);
+template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::LoadPayloadResponse*
+Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::LoadPayloadResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::LoadPayloadResponse >(arena);
 }
 template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::WinchResult*
 Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::WinchResult >(Arena* arena) {

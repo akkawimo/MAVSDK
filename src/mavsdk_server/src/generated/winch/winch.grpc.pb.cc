@@ -24,16 +24,16 @@ namespace rpc {
 namespace winch {
 
 static const char* WinchService_method_names[] = {
-  "/mavsdk.rpc.winch.WinchService/WinchRelax",
-  "/mavsdk.rpc.winch.WinchService/WinchRelativeLengthControl",
-  "/mavsdk.rpc.winch.WinchService/WinchRateControl",
-  "/mavsdk.rpc.winch.WinchService/WinchLock",
-  "/mavsdk.rpc.winch.WinchService/WinchDeliver",
-  "/mavsdk.rpc.winch.WinchService/WinchHold",
-  "/mavsdk.rpc.winch.WinchService/WinchRetract",
-  "/mavsdk.rpc.winch.WinchService/WinchLoadLine",
-  "/mavsdk.rpc.winch.WinchService/WinchAbandonLine",
-  "/mavsdk.rpc.winch.WinchService/WinchLoadPayload",
+  "/mavsdk.rpc.winch.WinchService/Relax",
+  "/mavsdk.rpc.winch.WinchService/RelativeLengthControl",
+  "/mavsdk.rpc.winch.WinchService/RateControl",
+  "/mavsdk.rpc.winch.WinchService/Lock",
+  "/mavsdk.rpc.winch.WinchService/Deliver",
+  "/mavsdk.rpc.winch.WinchService/Hold",
+  "/mavsdk.rpc.winch.WinchService/Retract",
+  "/mavsdk.rpc.winch.WinchService/LoadLine",
+  "/mavsdk.rpc.winch.WinchService/AbandonLine",
+  "/mavsdk.rpc.winch.WinchService/LoadPayload",
 };
 
 std::unique_ptr< WinchService::Stub> WinchService::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -43,244 +43,244 @@ std::unique_ptr< WinchService::Stub> WinchService::NewStub(const std::shared_ptr
 }
 
 WinchService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)
-  : channel_(channel), rpcmethod_WinchRelax_(WinchService_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_WinchRelativeLengthControl_(WinchService_method_names[1], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_WinchRateControl_(WinchService_method_names[2], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_WinchLock_(WinchService_method_names[3], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_WinchDeliver_(WinchService_method_names[4], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_WinchHold_(WinchService_method_names[5], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_WinchRetract_(WinchService_method_names[6], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_WinchLoadLine_(WinchService_method_names[7], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_WinchAbandonLine_(WinchService_method_names[8], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_WinchLoadPayload_(WinchService_method_names[9], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  : channel_(channel), rpcmethod_Relax_(WinchService_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_RelativeLengthControl_(WinchService_method_names[1], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_RateControl_(WinchService_method_names[2], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Lock_(WinchService_method_names[3], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Deliver_(WinchService_method_names[4], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Hold_(WinchService_method_names[5], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Retract_(WinchService_method_names[6], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_LoadLine_(WinchService_method_names[7], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_AbandonLine_(WinchService_method_names[8], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_LoadPayload_(WinchService_method_names[9], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
-::grpc::Status WinchService::Stub::WinchRelax(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchRelaxRequest& request, ::mavsdk::rpc::winch::WinchRelaxResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::mavsdk::rpc::winch::WinchRelaxRequest, ::mavsdk::rpc::winch::WinchRelaxResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_WinchRelax_, context, request, response);
+::grpc::Status WinchService::Stub::Relax(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelaxRequest& request, ::mavsdk::rpc::winch::RelaxResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::mavsdk::rpc::winch::RelaxRequest, ::mavsdk::rpc::winch::RelaxResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_Relax_, context, request, response);
 }
 
-void WinchService::Stub::async::WinchRelax(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchRelaxRequest* request, ::mavsdk::rpc::winch::WinchRelaxResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::mavsdk::rpc::winch::WinchRelaxRequest, ::mavsdk::rpc::winch::WinchRelaxResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_WinchRelax_, context, request, response, std::move(f));
+void WinchService::Stub::async::Relax(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelaxRequest* request, ::mavsdk::rpc::winch::RelaxResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::mavsdk::rpc::winch::RelaxRequest, ::mavsdk::rpc::winch::RelaxResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Relax_, context, request, response, std::move(f));
 }
 
-void WinchService::Stub::async::WinchRelax(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchRelaxRequest* request, ::mavsdk::rpc::winch::WinchRelaxResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_WinchRelax_, context, request, response, reactor);
+void WinchService::Stub::async::Relax(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelaxRequest* request, ::mavsdk::rpc::winch::RelaxResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Relax_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::WinchRelaxResponse>* WinchService::Stub::PrepareAsyncWinchRelaxRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchRelaxRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::mavsdk::rpc::winch::WinchRelaxResponse, ::mavsdk::rpc::winch::WinchRelaxRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_WinchRelax_, context, request);
+::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::RelaxResponse>* WinchService::Stub::PrepareAsyncRelaxRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelaxRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::mavsdk::rpc::winch::RelaxResponse, ::mavsdk::rpc::winch::RelaxRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_Relax_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::WinchRelaxResponse>* WinchService::Stub::AsyncWinchRelaxRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchRelaxRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::RelaxResponse>* WinchService::Stub::AsyncRelaxRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelaxRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
-    this->PrepareAsyncWinchRelaxRaw(context, request, cq);
+    this->PrepareAsyncRelaxRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-::grpc::Status WinchService::Stub::WinchRelativeLengthControl(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchRelativeLengthControlRequest& request, ::mavsdk::rpc::winch::WinchRelativeLengthControlResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::mavsdk::rpc::winch::WinchRelativeLengthControlRequest, ::mavsdk::rpc::winch::WinchRelativeLengthControlResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_WinchRelativeLengthControl_, context, request, response);
+::grpc::Status WinchService::Stub::RelativeLengthControl(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelativeLengthControlRequest& request, ::mavsdk::rpc::winch::RelativeLengthControlResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::mavsdk::rpc::winch::RelativeLengthControlRequest, ::mavsdk::rpc::winch::RelativeLengthControlResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_RelativeLengthControl_, context, request, response);
 }
 
-void WinchService::Stub::async::WinchRelativeLengthControl(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchRelativeLengthControlRequest* request, ::mavsdk::rpc::winch::WinchRelativeLengthControlResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::mavsdk::rpc::winch::WinchRelativeLengthControlRequest, ::mavsdk::rpc::winch::WinchRelativeLengthControlResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_WinchRelativeLengthControl_, context, request, response, std::move(f));
+void WinchService::Stub::async::RelativeLengthControl(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelativeLengthControlRequest* request, ::mavsdk::rpc::winch::RelativeLengthControlResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::mavsdk::rpc::winch::RelativeLengthControlRequest, ::mavsdk::rpc::winch::RelativeLengthControlResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_RelativeLengthControl_, context, request, response, std::move(f));
 }
 
-void WinchService::Stub::async::WinchRelativeLengthControl(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchRelativeLengthControlRequest* request, ::mavsdk::rpc::winch::WinchRelativeLengthControlResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_WinchRelativeLengthControl_, context, request, response, reactor);
+void WinchService::Stub::async::RelativeLengthControl(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelativeLengthControlRequest* request, ::mavsdk::rpc::winch::RelativeLengthControlResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_RelativeLengthControl_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::WinchRelativeLengthControlResponse>* WinchService::Stub::PrepareAsyncWinchRelativeLengthControlRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchRelativeLengthControlRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::mavsdk::rpc::winch::WinchRelativeLengthControlResponse, ::mavsdk::rpc::winch::WinchRelativeLengthControlRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_WinchRelativeLengthControl_, context, request);
+::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::RelativeLengthControlResponse>* WinchService::Stub::PrepareAsyncRelativeLengthControlRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelativeLengthControlRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::mavsdk::rpc::winch::RelativeLengthControlResponse, ::mavsdk::rpc::winch::RelativeLengthControlRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_RelativeLengthControl_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::WinchRelativeLengthControlResponse>* WinchService::Stub::AsyncWinchRelativeLengthControlRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchRelativeLengthControlRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::RelativeLengthControlResponse>* WinchService::Stub::AsyncRelativeLengthControlRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelativeLengthControlRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
-    this->PrepareAsyncWinchRelativeLengthControlRaw(context, request, cq);
+    this->PrepareAsyncRelativeLengthControlRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-::grpc::Status WinchService::Stub::WinchRateControl(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchRateControlRequest& request, ::mavsdk::rpc::winch::WinchRateControlResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::mavsdk::rpc::winch::WinchRateControlRequest, ::mavsdk::rpc::winch::WinchRateControlResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_WinchRateControl_, context, request, response);
+::grpc::Status WinchService::Stub::RateControl(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RateControlRequest& request, ::mavsdk::rpc::winch::RateControlResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::mavsdk::rpc::winch::RateControlRequest, ::mavsdk::rpc::winch::RateControlResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_RateControl_, context, request, response);
 }
 
-void WinchService::Stub::async::WinchRateControl(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchRateControlRequest* request, ::mavsdk::rpc::winch::WinchRateControlResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::mavsdk::rpc::winch::WinchRateControlRequest, ::mavsdk::rpc::winch::WinchRateControlResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_WinchRateControl_, context, request, response, std::move(f));
+void WinchService::Stub::async::RateControl(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RateControlRequest* request, ::mavsdk::rpc::winch::RateControlResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::mavsdk::rpc::winch::RateControlRequest, ::mavsdk::rpc::winch::RateControlResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_RateControl_, context, request, response, std::move(f));
 }
 
-void WinchService::Stub::async::WinchRateControl(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchRateControlRequest* request, ::mavsdk::rpc::winch::WinchRateControlResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_WinchRateControl_, context, request, response, reactor);
+void WinchService::Stub::async::RateControl(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RateControlRequest* request, ::mavsdk::rpc::winch::RateControlResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_RateControl_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::WinchRateControlResponse>* WinchService::Stub::PrepareAsyncWinchRateControlRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchRateControlRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::mavsdk::rpc::winch::WinchRateControlResponse, ::mavsdk::rpc::winch::WinchRateControlRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_WinchRateControl_, context, request);
+::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::RateControlResponse>* WinchService::Stub::PrepareAsyncRateControlRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RateControlRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::mavsdk::rpc::winch::RateControlResponse, ::mavsdk::rpc::winch::RateControlRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_RateControl_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::WinchRateControlResponse>* WinchService::Stub::AsyncWinchRateControlRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchRateControlRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::RateControlResponse>* WinchService::Stub::AsyncRateControlRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RateControlRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
-    this->PrepareAsyncWinchRateControlRaw(context, request, cq);
+    this->PrepareAsyncRateControlRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-::grpc::Status WinchService::Stub::WinchLock(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchLockRequest& request, ::mavsdk::rpc::winch::WinchLockResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::mavsdk::rpc::winch::WinchLockRequest, ::mavsdk::rpc::winch::WinchLockResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_WinchLock_, context, request, response);
+::grpc::Status WinchService::Stub::Lock(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::LockRequest& request, ::mavsdk::rpc::winch::LockResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::mavsdk::rpc::winch::LockRequest, ::mavsdk::rpc::winch::LockResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_Lock_, context, request, response);
 }
 
-void WinchService::Stub::async::WinchLock(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchLockRequest* request, ::mavsdk::rpc::winch::WinchLockResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::mavsdk::rpc::winch::WinchLockRequest, ::mavsdk::rpc::winch::WinchLockResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_WinchLock_, context, request, response, std::move(f));
+void WinchService::Stub::async::Lock(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::LockRequest* request, ::mavsdk::rpc::winch::LockResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::mavsdk::rpc::winch::LockRequest, ::mavsdk::rpc::winch::LockResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Lock_, context, request, response, std::move(f));
 }
 
-void WinchService::Stub::async::WinchLock(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchLockRequest* request, ::mavsdk::rpc::winch::WinchLockResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_WinchLock_, context, request, response, reactor);
+void WinchService::Stub::async::Lock(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::LockRequest* request, ::mavsdk::rpc::winch::LockResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Lock_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::WinchLockResponse>* WinchService::Stub::PrepareAsyncWinchLockRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchLockRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::mavsdk::rpc::winch::WinchLockResponse, ::mavsdk::rpc::winch::WinchLockRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_WinchLock_, context, request);
+::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::LockResponse>* WinchService::Stub::PrepareAsyncLockRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::LockRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::mavsdk::rpc::winch::LockResponse, ::mavsdk::rpc::winch::LockRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_Lock_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::WinchLockResponse>* WinchService::Stub::AsyncWinchLockRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchLockRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::LockResponse>* WinchService::Stub::AsyncLockRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::LockRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
-    this->PrepareAsyncWinchLockRaw(context, request, cq);
+    this->PrepareAsyncLockRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-::grpc::Status WinchService::Stub::WinchDeliver(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchDeliverRequest& request, ::mavsdk::rpc::winch::WinchDeliverResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::mavsdk::rpc::winch::WinchDeliverRequest, ::mavsdk::rpc::winch::WinchDeliverResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_WinchDeliver_, context, request, response);
+::grpc::Status WinchService::Stub::Deliver(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::DeliverRequest& request, ::mavsdk::rpc::winch::DeliverResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::mavsdk::rpc::winch::DeliverRequest, ::mavsdk::rpc::winch::DeliverResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_Deliver_, context, request, response);
 }
 
-void WinchService::Stub::async::WinchDeliver(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchDeliverRequest* request, ::mavsdk::rpc::winch::WinchDeliverResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::mavsdk::rpc::winch::WinchDeliverRequest, ::mavsdk::rpc::winch::WinchDeliverResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_WinchDeliver_, context, request, response, std::move(f));
+void WinchService::Stub::async::Deliver(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::DeliverRequest* request, ::mavsdk::rpc::winch::DeliverResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::mavsdk::rpc::winch::DeliverRequest, ::mavsdk::rpc::winch::DeliverResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Deliver_, context, request, response, std::move(f));
 }
 
-void WinchService::Stub::async::WinchDeliver(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchDeliverRequest* request, ::mavsdk::rpc::winch::WinchDeliverResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_WinchDeliver_, context, request, response, reactor);
+void WinchService::Stub::async::Deliver(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::DeliverRequest* request, ::mavsdk::rpc::winch::DeliverResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Deliver_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::WinchDeliverResponse>* WinchService::Stub::PrepareAsyncWinchDeliverRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchDeliverRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::mavsdk::rpc::winch::WinchDeliverResponse, ::mavsdk::rpc::winch::WinchDeliverRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_WinchDeliver_, context, request);
+::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::DeliverResponse>* WinchService::Stub::PrepareAsyncDeliverRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::DeliverRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::mavsdk::rpc::winch::DeliverResponse, ::mavsdk::rpc::winch::DeliverRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_Deliver_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::WinchDeliverResponse>* WinchService::Stub::AsyncWinchDeliverRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchDeliverRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::DeliverResponse>* WinchService::Stub::AsyncDeliverRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::DeliverRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
-    this->PrepareAsyncWinchDeliverRaw(context, request, cq);
+    this->PrepareAsyncDeliverRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-::grpc::Status WinchService::Stub::WinchHold(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchHoldRequest& request, ::mavsdk::rpc::winch::WinchHoldResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::mavsdk::rpc::winch::WinchHoldRequest, ::mavsdk::rpc::winch::WinchHoldResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_WinchHold_, context, request, response);
+::grpc::Status WinchService::Stub::Hold(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::HoldRequest& request, ::mavsdk::rpc::winch::HoldResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::mavsdk::rpc::winch::HoldRequest, ::mavsdk::rpc::winch::HoldResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_Hold_, context, request, response);
 }
 
-void WinchService::Stub::async::WinchHold(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchHoldRequest* request, ::mavsdk::rpc::winch::WinchHoldResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::mavsdk::rpc::winch::WinchHoldRequest, ::mavsdk::rpc::winch::WinchHoldResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_WinchHold_, context, request, response, std::move(f));
+void WinchService::Stub::async::Hold(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::HoldRequest* request, ::mavsdk::rpc::winch::HoldResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::mavsdk::rpc::winch::HoldRequest, ::mavsdk::rpc::winch::HoldResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Hold_, context, request, response, std::move(f));
 }
 
-void WinchService::Stub::async::WinchHold(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchHoldRequest* request, ::mavsdk::rpc::winch::WinchHoldResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_WinchHold_, context, request, response, reactor);
+void WinchService::Stub::async::Hold(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::HoldRequest* request, ::mavsdk::rpc::winch::HoldResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Hold_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::WinchHoldResponse>* WinchService::Stub::PrepareAsyncWinchHoldRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchHoldRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::mavsdk::rpc::winch::WinchHoldResponse, ::mavsdk::rpc::winch::WinchHoldRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_WinchHold_, context, request);
+::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::HoldResponse>* WinchService::Stub::PrepareAsyncHoldRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::HoldRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::mavsdk::rpc::winch::HoldResponse, ::mavsdk::rpc::winch::HoldRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_Hold_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::WinchHoldResponse>* WinchService::Stub::AsyncWinchHoldRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchHoldRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::HoldResponse>* WinchService::Stub::AsyncHoldRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::HoldRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
-    this->PrepareAsyncWinchHoldRaw(context, request, cq);
+    this->PrepareAsyncHoldRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-::grpc::Status WinchService::Stub::WinchRetract(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchRetractRequest& request, ::mavsdk::rpc::winch::WinchRetractResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::mavsdk::rpc::winch::WinchRetractRequest, ::mavsdk::rpc::winch::WinchRetractResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_WinchRetract_, context, request, response);
+::grpc::Status WinchService::Stub::Retract(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RetractRequest& request, ::mavsdk::rpc::winch::RetractResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::mavsdk::rpc::winch::RetractRequest, ::mavsdk::rpc::winch::RetractResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_Retract_, context, request, response);
 }
 
-void WinchService::Stub::async::WinchRetract(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchRetractRequest* request, ::mavsdk::rpc::winch::WinchRetractResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::mavsdk::rpc::winch::WinchRetractRequest, ::mavsdk::rpc::winch::WinchRetractResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_WinchRetract_, context, request, response, std::move(f));
+void WinchService::Stub::async::Retract(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RetractRequest* request, ::mavsdk::rpc::winch::RetractResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::mavsdk::rpc::winch::RetractRequest, ::mavsdk::rpc::winch::RetractResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Retract_, context, request, response, std::move(f));
 }
 
-void WinchService::Stub::async::WinchRetract(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchRetractRequest* request, ::mavsdk::rpc::winch::WinchRetractResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_WinchRetract_, context, request, response, reactor);
+void WinchService::Stub::async::Retract(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RetractRequest* request, ::mavsdk::rpc::winch::RetractResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_Retract_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::WinchRetractResponse>* WinchService::Stub::PrepareAsyncWinchRetractRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchRetractRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::mavsdk::rpc::winch::WinchRetractResponse, ::mavsdk::rpc::winch::WinchRetractRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_WinchRetract_, context, request);
+::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::RetractResponse>* WinchService::Stub::PrepareAsyncRetractRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RetractRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::mavsdk::rpc::winch::RetractResponse, ::mavsdk::rpc::winch::RetractRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_Retract_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::WinchRetractResponse>* WinchService::Stub::AsyncWinchRetractRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchRetractRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::RetractResponse>* WinchService::Stub::AsyncRetractRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RetractRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
-    this->PrepareAsyncWinchRetractRaw(context, request, cq);
+    this->PrepareAsyncRetractRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-::grpc::Status WinchService::Stub::WinchLoadLine(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchLoadLineRequest& request, ::mavsdk::rpc::winch::WinchLoadLineResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::mavsdk::rpc::winch::WinchLoadLineRequest, ::mavsdk::rpc::winch::WinchLoadLineResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_WinchLoadLine_, context, request, response);
+::grpc::Status WinchService::Stub::LoadLine(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::LoadLineRequest& request, ::mavsdk::rpc::winch::LoadLineResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::mavsdk::rpc::winch::LoadLineRequest, ::mavsdk::rpc::winch::LoadLineResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_LoadLine_, context, request, response);
 }
 
-void WinchService::Stub::async::WinchLoadLine(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchLoadLineRequest* request, ::mavsdk::rpc::winch::WinchLoadLineResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::mavsdk::rpc::winch::WinchLoadLineRequest, ::mavsdk::rpc::winch::WinchLoadLineResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_WinchLoadLine_, context, request, response, std::move(f));
+void WinchService::Stub::async::LoadLine(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::LoadLineRequest* request, ::mavsdk::rpc::winch::LoadLineResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::mavsdk::rpc::winch::LoadLineRequest, ::mavsdk::rpc::winch::LoadLineResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_LoadLine_, context, request, response, std::move(f));
 }
 
-void WinchService::Stub::async::WinchLoadLine(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchLoadLineRequest* request, ::mavsdk::rpc::winch::WinchLoadLineResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_WinchLoadLine_, context, request, response, reactor);
+void WinchService::Stub::async::LoadLine(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::LoadLineRequest* request, ::mavsdk::rpc::winch::LoadLineResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_LoadLine_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::WinchLoadLineResponse>* WinchService::Stub::PrepareAsyncWinchLoadLineRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchLoadLineRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::mavsdk::rpc::winch::WinchLoadLineResponse, ::mavsdk::rpc::winch::WinchLoadLineRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_WinchLoadLine_, context, request);
+::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::LoadLineResponse>* WinchService::Stub::PrepareAsyncLoadLineRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::LoadLineRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::mavsdk::rpc::winch::LoadLineResponse, ::mavsdk::rpc::winch::LoadLineRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_LoadLine_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::WinchLoadLineResponse>* WinchService::Stub::AsyncWinchLoadLineRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchLoadLineRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::LoadLineResponse>* WinchService::Stub::AsyncLoadLineRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::LoadLineRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
-    this->PrepareAsyncWinchLoadLineRaw(context, request, cq);
+    this->PrepareAsyncLoadLineRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-::grpc::Status WinchService::Stub::WinchAbandonLine(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchAbandonLineRequest& request, ::mavsdk::rpc::winch::WinchAbandonLineResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::mavsdk::rpc::winch::WinchAbandonLineRequest, ::mavsdk::rpc::winch::WinchAbandonLineResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_WinchAbandonLine_, context, request, response);
+::grpc::Status WinchService::Stub::AbandonLine(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::AbandonLineRequest& request, ::mavsdk::rpc::winch::AbandonLineResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::mavsdk::rpc::winch::AbandonLineRequest, ::mavsdk::rpc::winch::AbandonLineResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_AbandonLine_, context, request, response);
 }
 
-void WinchService::Stub::async::WinchAbandonLine(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchAbandonLineRequest* request, ::mavsdk::rpc::winch::WinchAbandonLineResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::mavsdk::rpc::winch::WinchAbandonLineRequest, ::mavsdk::rpc::winch::WinchAbandonLineResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_WinchAbandonLine_, context, request, response, std::move(f));
+void WinchService::Stub::async::AbandonLine(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::AbandonLineRequest* request, ::mavsdk::rpc::winch::AbandonLineResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::mavsdk::rpc::winch::AbandonLineRequest, ::mavsdk::rpc::winch::AbandonLineResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_AbandonLine_, context, request, response, std::move(f));
 }
 
-void WinchService::Stub::async::WinchAbandonLine(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchAbandonLineRequest* request, ::mavsdk::rpc::winch::WinchAbandonLineResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_WinchAbandonLine_, context, request, response, reactor);
+void WinchService::Stub::async::AbandonLine(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::AbandonLineRequest* request, ::mavsdk::rpc::winch::AbandonLineResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_AbandonLine_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::WinchAbandonLineResponse>* WinchService::Stub::PrepareAsyncWinchAbandonLineRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchAbandonLineRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::mavsdk::rpc::winch::WinchAbandonLineResponse, ::mavsdk::rpc::winch::WinchAbandonLineRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_WinchAbandonLine_, context, request);
+::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::AbandonLineResponse>* WinchService::Stub::PrepareAsyncAbandonLineRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::AbandonLineRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::mavsdk::rpc::winch::AbandonLineResponse, ::mavsdk::rpc::winch::AbandonLineRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_AbandonLine_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::WinchAbandonLineResponse>* WinchService::Stub::AsyncWinchAbandonLineRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchAbandonLineRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::AbandonLineResponse>* WinchService::Stub::AsyncAbandonLineRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::AbandonLineRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
-    this->PrepareAsyncWinchAbandonLineRaw(context, request, cq);
+    this->PrepareAsyncAbandonLineRaw(context, request, cq);
   result->StartCall();
   return result;
 }
 
-::grpc::Status WinchService::Stub::WinchLoadPayload(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchLoadPayloadRequest& request, ::mavsdk::rpc::winch::WinchLoadPayloadResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall< ::mavsdk::rpc::winch::WinchLoadPayloadRequest, ::mavsdk::rpc::winch::WinchLoadPayloadResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_WinchLoadPayload_, context, request, response);
+::grpc::Status WinchService::Stub::LoadPayload(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::LoadPayloadRequest& request, ::mavsdk::rpc::winch::LoadPayloadResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall< ::mavsdk::rpc::winch::LoadPayloadRequest, ::mavsdk::rpc::winch::LoadPayloadResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), rpcmethod_LoadPayload_, context, request, response);
 }
 
-void WinchService::Stub::async::WinchLoadPayload(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchLoadPayloadRequest* request, ::mavsdk::rpc::winch::WinchLoadPayloadResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc::internal::CallbackUnaryCall< ::mavsdk::rpc::winch::WinchLoadPayloadRequest, ::mavsdk::rpc::winch::WinchLoadPayloadResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_WinchLoadPayload_, context, request, response, std::move(f));
+void WinchService::Stub::async::LoadPayload(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::LoadPayloadRequest* request, ::mavsdk::rpc::winch::LoadPayloadResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc::internal::CallbackUnaryCall< ::mavsdk::rpc::winch::LoadPayloadRequest, ::mavsdk::rpc::winch::LoadPayloadResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_LoadPayload_, context, request, response, std::move(f));
 }
 
-void WinchService::Stub::async::WinchLoadPayload(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchLoadPayloadRequest* request, ::mavsdk::rpc::winch::WinchLoadPayloadResponse* response, ::grpc::ClientUnaryReactor* reactor) {
-  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_WinchLoadPayload_, context, request, response, reactor);
+void WinchService::Stub::async::LoadPayload(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::LoadPayloadRequest* request, ::mavsdk::rpc::winch::LoadPayloadResponse* response, ::grpc::ClientUnaryReactor* reactor) {
+  ::grpc::internal::ClientCallbackUnaryFactory::Create< ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(stub_->channel_.get(), stub_->rpcmethod_LoadPayload_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::WinchLoadPayloadResponse>* WinchService::Stub::PrepareAsyncWinchLoadPayloadRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchLoadPayloadRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::mavsdk::rpc::winch::WinchLoadPayloadResponse, ::mavsdk::rpc::winch::WinchLoadPayloadRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_WinchLoadPayload_, context, request);
+::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::LoadPayloadResponse>* WinchService::Stub::PrepareAsyncLoadPayloadRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::LoadPayloadRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderHelper::Create< ::mavsdk::rpc::winch::LoadPayloadResponse, ::mavsdk::rpc::winch::LoadPayloadRequest, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(channel_.get(), cq, rpcmethod_LoadPayload_, context, request);
 }
 
-::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::WinchLoadPayloadResponse>* WinchService::Stub::AsyncWinchLoadPayloadRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::WinchLoadPayloadRequest& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::LoadPayloadResponse>* WinchService::Stub::AsyncLoadPayloadRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::LoadPayloadRequest& request, ::grpc::CompletionQueue* cq) {
   auto* result =
-    this->PrepareAsyncWinchLoadPayloadRaw(context, request, cq);
+    this->PrepareAsyncLoadPayloadRaw(context, request, cq);
   result->StartCall();
   return result;
 }
@@ -289,172 +289,172 @@ WinchService::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       WinchService_method_names[0],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< WinchService::Service, ::mavsdk::rpc::winch::WinchRelaxRequest, ::mavsdk::rpc::winch::WinchRelaxResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< WinchService::Service, ::mavsdk::rpc::winch::RelaxRequest, ::mavsdk::rpc::winch::RelaxResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](WinchService::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::mavsdk::rpc::winch::WinchRelaxRequest* req,
-             ::mavsdk::rpc::winch::WinchRelaxResponse* resp) {
-               return service->WinchRelax(ctx, req, resp);
+             const ::mavsdk::rpc::winch::RelaxRequest* req,
+             ::mavsdk::rpc::winch::RelaxResponse* resp) {
+               return service->Relax(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       WinchService_method_names[1],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< WinchService::Service, ::mavsdk::rpc::winch::WinchRelativeLengthControlRequest, ::mavsdk::rpc::winch::WinchRelativeLengthControlResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< WinchService::Service, ::mavsdk::rpc::winch::RelativeLengthControlRequest, ::mavsdk::rpc::winch::RelativeLengthControlResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](WinchService::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::mavsdk::rpc::winch::WinchRelativeLengthControlRequest* req,
-             ::mavsdk::rpc::winch::WinchRelativeLengthControlResponse* resp) {
-               return service->WinchRelativeLengthControl(ctx, req, resp);
+             const ::mavsdk::rpc::winch::RelativeLengthControlRequest* req,
+             ::mavsdk::rpc::winch::RelativeLengthControlResponse* resp) {
+               return service->RelativeLengthControl(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       WinchService_method_names[2],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< WinchService::Service, ::mavsdk::rpc::winch::WinchRateControlRequest, ::mavsdk::rpc::winch::WinchRateControlResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< WinchService::Service, ::mavsdk::rpc::winch::RateControlRequest, ::mavsdk::rpc::winch::RateControlResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](WinchService::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::mavsdk::rpc::winch::WinchRateControlRequest* req,
-             ::mavsdk::rpc::winch::WinchRateControlResponse* resp) {
-               return service->WinchRateControl(ctx, req, resp);
+             const ::mavsdk::rpc::winch::RateControlRequest* req,
+             ::mavsdk::rpc::winch::RateControlResponse* resp) {
+               return service->RateControl(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       WinchService_method_names[3],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< WinchService::Service, ::mavsdk::rpc::winch::WinchLockRequest, ::mavsdk::rpc::winch::WinchLockResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< WinchService::Service, ::mavsdk::rpc::winch::LockRequest, ::mavsdk::rpc::winch::LockResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](WinchService::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::mavsdk::rpc::winch::WinchLockRequest* req,
-             ::mavsdk::rpc::winch::WinchLockResponse* resp) {
-               return service->WinchLock(ctx, req, resp);
+             const ::mavsdk::rpc::winch::LockRequest* req,
+             ::mavsdk::rpc::winch::LockResponse* resp) {
+               return service->Lock(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       WinchService_method_names[4],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< WinchService::Service, ::mavsdk::rpc::winch::WinchDeliverRequest, ::mavsdk::rpc::winch::WinchDeliverResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< WinchService::Service, ::mavsdk::rpc::winch::DeliverRequest, ::mavsdk::rpc::winch::DeliverResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](WinchService::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::mavsdk::rpc::winch::WinchDeliverRequest* req,
-             ::mavsdk::rpc::winch::WinchDeliverResponse* resp) {
-               return service->WinchDeliver(ctx, req, resp);
+             const ::mavsdk::rpc::winch::DeliverRequest* req,
+             ::mavsdk::rpc::winch::DeliverResponse* resp) {
+               return service->Deliver(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       WinchService_method_names[5],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< WinchService::Service, ::mavsdk::rpc::winch::WinchHoldRequest, ::mavsdk::rpc::winch::WinchHoldResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< WinchService::Service, ::mavsdk::rpc::winch::HoldRequest, ::mavsdk::rpc::winch::HoldResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](WinchService::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::mavsdk::rpc::winch::WinchHoldRequest* req,
-             ::mavsdk::rpc::winch::WinchHoldResponse* resp) {
-               return service->WinchHold(ctx, req, resp);
+             const ::mavsdk::rpc::winch::HoldRequest* req,
+             ::mavsdk::rpc::winch::HoldResponse* resp) {
+               return service->Hold(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       WinchService_method_names[6],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< WinchService::Service, ::mavsdk::rpc::winch::WinchRetractRequest, ::mavsdk::rpc::winch::WinchRetractResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< WinchService::Service, ::mavsdk::rpc::winch::RetractRequest, ::mavsdk::rpc::winch::RetractResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](WinchService::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::mavsdk::rpc::winch::WinchRetractRequest* req,
-             ::mavsdk::rpc::winch::WinchRetractResponse* resp) {
-               return service->WinchRetract(ctx, req, resp);
+             const ::mavsdk::rpc::winch::RetractRequest* req,
+             ::mavsdk::rpc::winch::RetractResponse* resp) {
+               return service->Retract(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       WinchService_method_names[7],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< WinchService::Service, ::mavsdk::rpc::winch::WinchLoadLineRequest, ::mavsdk::rpc::winch::WinchLoadLineResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< WinchService::Service, ::mavsdk::rpc::winch::LoadLineRequest, ::mavsdk::rpc::winch::LoadLineResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](WinchService::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::mavsdk::rpc::winch::WinchLoadLineRequest* req,
-             ::mavsdk::rpc::winch::WinchLoadLineResponse* resp) {
-               return service->WinchLoadLine(ctx, req, resp);
+             const ::mavsdk::rpc::winch::LoadLineRequest* req,
+             ::mavsdk::rpc::winch::LoadLineResponse* resp) {
+               return service->LoadLine(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       WinchService_method_names[8],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< WinchService::Service, ::mavsdk::rpc::winch::WinchAbandonLineRequest, ::mavsdk::rpc::winch::WinchAbandonLineResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< WinchService::Service, ::mavsdk::rpc::winch::AbandonLineRequest, ::mavsdk::rpc::winch::AbandonLineResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](WinchService::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::mavsdk::rpc::winch::WinchAbandonLineRequest* req,
-             ::mavsdk::rpc::winch::WinchAbandonLineResponse* resp) {
-               return service->WinchAbandonLine(ctx, req, resp);
+             const ::mavsdk::rpc::winch::AbandonLineRequest* req,
+             ::mavsdk::rpc::winch::AbandonLineResponse* resp) {
+               return service->AbandonLine(ctx, req, resp);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       WinchService_method_names[9],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
-      new ::grpc::internal::RpcMethodHandler< WinchService::Service, ::mavsdk::rpc::winch::WinchLoadPayloadRequest, ::mavsdk::rpc::winch::WinchLoadPayloadResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
+      new ::grpc::internal::RpcMethodHandler< WinchService::Service, ::mavsdk::rpc::winch::LoadPayloadRequest, ::mavsdk::rpc::winch::LoadPayloadResponse, ::grpc::protobuf::MessageLite, ::grpc::protobuf::MessageLite>(
           [](WinchService::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::mavsdk::rpc::winch::WinchLoadPayloadRequest* req,
-             ::mavsdk::rpc::winch::WinchLoadPayloadResponse* resp) {
-               return service->WinchLoadPayload(ctx, req, resp);
+             const ::mavsdk::rpc::winch::LoadPayloadRequest* req,
+             ::mavsdk::rpc::winch::LoadPayloadResponse* resp) {
+               return service->LoadPayload(ctx, req, resp);
              }, this)));
 }
 
 WinchService::Service::~Service() {
 }
 
-::grpc::Status WinchService::Service::WinchRelax(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::WinchRelaxRequest* request, ::mavsdk::rpc::winch::WinchRelaxResponse* response) {
+::grpc::Status WinchService::Service::Relax(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::RelaxRequest* request, ::mavsdk::rpc::winch::RelaxResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status WinchService::Service::WinchRelativeLengthControl(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::WinchRelativeLengthControlRequest* request, ::mavsdk::rpc::winch::WinchRelativeLengthControlResponse* response) {
+::grpc::Status WinchService::Service::RelativeLengthControl(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::RelativeLengthControlRequest* request, ::mavsdk::rpc::winch::RelativeLengthControlResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status WinchService::Service::WinchRateControl(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::WinchRateControlRequest* request, ::mavsdk::rpc::winch::WinchRateControlResponse* response) {
+::grpc::Status WinchService::Service::RateControl(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::RateControlRequest* request, ::mavsdk::rpc::winch::RateControlResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status WinchService::Service::WinchLock(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::WinchLockRequest* request, ::mavsdk::rpc::winch::WinchLockResponse* response) {
+::grpc::Status WinchService::Service::Lock(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::LockRequest* request, ::mavsdk::rpc::winch::LockResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status WinchService::Service::WinchDeliver(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::WinchDeliverRequest* request, ::mavsdk::rpc::winch::WinchDeliverResponse* response) {
+::grpc::Status WinchService::Service::Deliver(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::DeliverRequest* request, ::mavsdk::rpc::winch::DeliverResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status WinchService::Service::WinchHold(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::WinchHoldRequest* request, ::mavsdk::rpc::winch::WinchHoldResponse* response) {
+::grpc::Status WinchService::Service::Hold(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::HoldRequest* request, ::mavsdk::rpc::winch::HoldResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status WinchService::Service::WinchRetract(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::WinchRetractRequest* request, ::mavsdk::rpc::winch::WinchRetractResponse* response) {
+::grpc::Status WinchService::Service::Retract(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::RetractRequest* request, ::mavsdk::rpc::winch::RetractResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status WinchService::Service::WinchLoadLine(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::WinchLoadLineRequest* request, ::mavsdk::rpc::winch::WinchLoadLineResponse* response) {
+::grpc::Status WinchService::Service::LoadLine(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::LoadLineRequest* request, ::mavsdk::rpc::winch::LoadLineResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status WinchService::Service::WinchAbandonLine(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::WinchAbandonLineRequest* request, ::mavsdk::rpc::winch::WinchAbandonLineResponse* response) {
+::grpc::Status WinchService::Service::AbandonLine(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::AbandonLineRequest* request, ::mavsdk::rpc::winch::AbandonLineResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status WinchService::Service::WinchLoadPayload(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::WinchLoadPayloadRequest* request, ::mavsdk::rpc::winch::WinchLoadPayloadResponse* response) {
+::grpc::Status WinchService::Service::LoadPayload(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::LoadPayloadRequest* request, ::mavsdk::rpc::winch::LoadPayloadResponse* response) {
   (void) context;
   (void) request;
   (void) response;
