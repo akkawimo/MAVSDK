@@ -174,7 +174,6 @@
 #include "winch/winch_service_impl.h"
 #endif
 
-
 namespace mavsdk {
 namespace mavsdk_server {
 
@@ -335,7 +334,7 @@ public:
 
 #ifdef TUNE_ENABLED
         _tune_lazy_plugin(mavsdk),
-        _tune_service(_tune_lazy_plugin)
+        _tune_service(_tune_lazy_plugin),
 #endif
 
 #ifdef WINCH_ENABLED
@@ -578,7 +577,6 @@ private:
 
     WinchServiceImpl<> _winch_service;
 #endif
-
 
     std::unique_ptr<grpc::Server> _server;
 

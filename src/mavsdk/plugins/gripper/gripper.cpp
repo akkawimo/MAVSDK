@@ -9,47 +9,34 @@
 
 namespace mavsdk {
 
-
-
-
-
 Gripper::Gripper(System& system) : PluginBase(), _impl{std::make_unique<GripperImpl>(system)} {}
 
-Gripper::Gripper(std::shared_ptr<System> system) : PluginBase(), _impl{std::make_unique<GripperImpl>(system)} {}
-
+Gripper::Gripper(std::shared_ptr<System> system) :
+    PluginBase(),
+    _impl{std::make_unique<GripperImpl>(system)}
+{}
 
 Gripper::~Gripper() {}
-
-
 
 void Gripper::gripper_grab_async(uint32_t instance, const ResultCallback callback)
 {
     _impl->gripper_grab_async(instance, callback);
 }
 
-
-
 Gripper::Result Gripper::gripper_grab(uint32_t instance) const
 {
     return _impl->gripper_grab(instance);
 }
-
-
 
 void Gripper::gripper_release_async(uint32_t instance, const ResultCallback callback)
 {
     _impl->gripper_release_async(instance, callback);
 }
 
-
-
 Gripper::Result Gripper::gripper_release(uint32_t instance) const
 {
     return _impl->gripper_release(instance);
 }
-
-
-
 
 std::ostream& operator<<(std::ostream& str, Gripper::Result const& result)
 {
@@ -87,8 +74,6 @@ std::ostream& operator<<(std::ostream& str, Gripper::Result const& result)
     }
 }
 
-
-
 std::ostream& operator<<(std::ostream& str, Gripper::GripperAction const& gripper_action)
 {
     switch (gripper_action) {
@@ -100,6 +85,5 @@ std::ostream& operator<<(std::ostream& str, Gripper::GripperAction const& grippe
             return str << "Unknown";
     }
 }
-
 
 } // namespace mavsdk

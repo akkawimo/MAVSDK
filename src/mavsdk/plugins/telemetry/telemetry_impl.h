@@ -185,7 +185,8 @@ public:
     void unsubscribe_landed_state(Telemetry::LandedStateHandle handle);
     Telemetry::RcStatusHandle subscribe_rc_status(const Telemetry::RcStatusCallback& callback);
     void unsubscribe_rc_status(Telemetry::RcStatusHandle handle);
-    Telemetry::WinchStatusHandle subscribe_winch_status(const Telemetry::WinchStatusCallback& callback);
+    Telemetry::WinchStatusHandle
+    subscribe_winch_status(const Telemetry::WinchStatusCallback& callback);
     void unsubscribe_winch_status(Telemetry::WinchStatusHandle handle);
     Telemetry::UnixEpochTimeHandle
     subscribe_unix_epoch_time(const Telemetry::UnixEpochTimeCallback& callback);

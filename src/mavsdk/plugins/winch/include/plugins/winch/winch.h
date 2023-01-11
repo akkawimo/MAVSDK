@@ -13,22 +13,20 @@
 #include <utility>
 #include <vector>
 
-
 #include "plugin_base.h"
 
 #include "handle.h"
 
 namespace mavsdk {
 
-
-class System;class WinchImpl;
+class System;
+class WinchImpl;
 
 /**
- * @brief 
+ * @brief
  */
 class Winch : public PluginBase {
 public:
-
     /**
      * @brief Constructor. Creates the plugin for a specific System.
      *
@@ -55,15 +53,13 @@ public:
      */
     explicit Winch(std::shared_ptr<System> system); // new
 
-
     /**
      * @brief Destructor (internal use only).
      */
     ~Winch() override;
 
-
     /**
-     * @brief 
+     * @brief
      */
     enum class WinchAction {
         Relaxed, /**< @brief. */
@@ -85,10 +81,6 @@ public:
      */
     friend std::ostream& operator<<(std::ostream& str, Winch::WinchAction const& winch_action);
 
-
-
-
-
     /**
      * @brief Possible results returned for action requests.
      */
@@ -99,7 +91,8 @@ public:
         ConnectionError, /**< @brief Connection error. */
         Busy, /**< @brief Vehicle is busy. */
         CommandDenied, /**< @brief Command refused by vehicle. */
-        CommandDeniedLandedStateUnknown, /**< @brief Command refused because landed state is unknown. */
+        CommandDeniedLandedStateUnknown, /**< @brief Command refused because landed state is
+                                            unknown. */
         CommandDeniedNotLanded, /**< @brief Command refused because vehicle not landed. */
         Timeout, /**< @brief Request timed out. */
         VtolTransitionSupportUnknown, /**< @brief Hybrid/VTOL transition support is unknown. */
@@ -116,15 +109,10 @@ public:
      */
     friend std::ostream& operator<<(std::ostream& str, Winch::Result const& result);
 
-
-
     /**
      * @brief Callback type for asynchronous Winch calls.
      */
     using ResultCallback = std::function<void(Result)>;
-
-
-
 
     /**
      * @brief Winch grab cargo.
@@ -132,8 +120,6 @@ public:
      * This function is non-blocking. See 'relax' for the blocking counterpart.
      */
     void relax_async(uint32_t instance, const ResultCallback callback);
-
-
 
     /**
      * @brief Winch grab cargo.
@@ -144,29 +130,23 @@ public:
      */
     Result relax(uint32_t instance) const;
 
-
-
-
     /**
      * @brief Winch release cargo.
      *
      * This function is non-blocking. See 'relative_length_control' for the blocking counterpart.
      */
-    void relative_length_control_async(uint32_t instance, float length, float rate, const ResultCallback callback);
-
-
+    void relative_length_control_async(
+        uint32_t instance, float length, float rate, const ResultCallback callback);
 
     /**
      * @brief Winch release cargo.
      *
-     * This function is blocking. See 'relative_length_control_async' for the non-blocking counterpart.
+     * This function is blocking. See 'relative_length_control_async' for the non-blocking
+     * counterpart.
      *
      * @return Result of request.
      */
     Result relative_length_control(uint32_t instance, float length, float rate) const;
-
-
-
 
     /**
      * @brief Wind or unwind line at specified rate.
@@ -174,8 +154,6 @@ public:
      * This function is non-blocking. See 'rate_control' for the blocking counterpart.
      */
     void rate_control_async(uint32_t instance, float rate, const ResultCallback callback);
-
-
 
     /**
      * @brief Wind or unwind line at specified rate.
@@ -186,20 +164,15 @@ public:
      */
     Result rate_control(uint32_t instance, float rate) const;
 
-
-
-
     /**
-     * @brief 
+     * @brief
      *
      * This function is non-blocking. See 'lock' for the blocking counterpart.
      */
     void lock_async(uint32_t instance, const ResultCallback callback);
 
-
-
     /**
-     * @brief 
+     * @brief
      *
      * This function is blocking. See 'lock_async' for the non-blocking counterpart.
      *
@@ -207,20 +180,15 @@ public:
      */
     Result lock(uint32_t instance) const;
 
-
-
-
     /**
-     * @brief 
+     * @brief
      *
      * This function is non-blocking. See 'deliver' for the blocking counterpart.
      */
     void deliver_async(uint32_t instance, const ResultCallback callback);
 
-
-
     /**
-     * @brief 
+     * @brief
      *
      * This function is blocking. See 'deliver_async' for the non-blocking counterpart.
      *
@@ -228,20 +196,15 @@ public:
      */
     Result deliver(uint32_t instance) const;
 
-
-
-
     /**
-     * @brief 
+     * @brief
      *
      * This function is non-blocking. See 'hold' for the blocking counterpart.
      */
     void hold_async(uint32_t instance, const ResultCallback callback);
 
-
-
     /**
-     * @brief 
+     * @brief
      *
      * This function is blocking. See 'hold_async' for the non-blocking counterpart.
      *
@@ -249,20 +212,15 @@ public:
      */
     Result hold(uint32_t instance) const;
 
-
-
-
     /**
-     * @brief 
+     * @brief
      *
      * This function is non-blocking. See 'retract' for the blocking counterpart.
      */
     void retract_async(uint32_t instance, const ResultCallback callback);
 
-
-
     /**
-     * @brief 
+     * @brief
      *
      * This function is blocking. See 'retract_async' for the non-blocking counterpart.
      *
@@ -270,20 +228,15 @@ public:
      */
     Result retract(uint32_t instance) const;
 
-
-
-
     /**
-     * @brief 
+     * @brief
      *
      * This function is non-blocking. See 'load_line' for the blocking counterpart.
      */
     void load_line_async(uint32_t instance, const ResultCallback callback);
 
-
-
     /**
-     * @brief 
+     * @brief
      *
      * This function is blocking. See 'load_line_async' for the non-blocking counterpart.
      *
@@ -291,20 +244,15 @@ public:
      */
     Result load_line(uint32_t instance) const;
 
-
-
-
     /**
-     * @brief 
+     * @brief
      *
      * This function is non-blocking. See 'abandon_line' for the blocking counterpart.
      */
     void abandon_line_async(uint32_t instance, const ResultCallback callback);
 
-
-
     /**
-     * @brief 
+     * @brief
      *
      * This function is blocking. See 'abandon_line_async' for the non-blocking counterpart.
      *
@@ -312,29 +260,21 @@ public:
      */
     Result abandon_line(uint32_t instance) const;
 
-
-
-
     /**
-     * @brief 
+     * @brief
      *
      * This function is non-blocking. See 'load_payload' for the blocking counterpart.
      */
     void load_payload_async(uint32_t instance, const ResultCallback callback);
 
-
-
     /**
-     * @brief 
+     * @brief
      *
      * This function is blocking. See 'load_payload_async' for the non-blocking counterpart.
      *
      * @return Result of request.
      */
     Result load_payload(uint32_t instance) const;
-
-
-
 
     /**
      * @brief Copy constructor.

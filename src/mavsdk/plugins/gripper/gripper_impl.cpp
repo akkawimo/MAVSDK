@@ -2,7 +2,6 @@
 
 namespace mavsdk {
 
-
 GripperImpl::GripperImpl(System& system) : PluginImplBase(system)
 {
     _parent->register_plugin(this);
@@ -13,25 +12,18 @@ GripperImpl::GripperImpl(std::shared_ptr<System> system) : PluginImplBase(std::m
     _parent->register_plugin(this);
 }
 
-
 GripperImpl::~GripperImpl()
 {
-
     _parent->unregister_plugin(this);
-
 }
 
 void GripperImpl::init() {}
 
 void GripperImpl::deinit() {}
 
-
 void GripperImpl::enable() {}
 
 void GripperImpl::disable() {}
-
-
-
 
 void GripperImpl::gripper_grab_async(uint32_t instance, const Gripper::ResultCallback callback)
 {
@@ -49,8 +41,6 @@ void GripperImpl::gripper_grab_async(uint32_t instance, const Gripper::ResultCal
         });
 }
 
-
-
 Gripper::Result GripperImpl::gripper_grab(uint32_t instance)
 {
     auto prom = std::promise<Gripper::Result>();
@@ -60,8 +50,6 @@ Gripper::Result GripperImpl::gripper_grab(uint32_t instance)
 
     return fut.get();
 }
-
-
 
 void GripperImpl::gripper_release_async(uint32_t instance, const Gripper::ResultCallback callback)
 {
@@ -79,8 +67,6 @@ void GripperImpl::gripper_release_async(uint32_t instance, const Gripper::Result
         });
 }
 
-
-
 Gripper::Result GripperImpl::gripper_release(uint32_t instance)
 {
     auto prom = std::promise<Gripper::Result>();
@@ -90,7 +76,6 @@ Gripper::Result GripperImpl::gripper_release(uint32_t instance)
 
     return fut.get();
 }
-
 
 Gripper::Result GripperImpl::gripper_result_from_command_result(MavlinkCommandSender::Result result)
 {
@@ -129,6 +114,5 @@ void GripperImpl::command_result_callback(
             [temp_callback, action_result]() { temp_callback(action_result); });
     }
 }
-
 
 } // namespace mavsdk

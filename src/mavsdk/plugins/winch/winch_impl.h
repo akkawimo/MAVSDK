@@ -4,9 +4,7 @@
 
 #include "plugin_impl_base.h"
 
-
 namespace mavsdk {
-
 
 class WinchImpl : public PluginImplBase {
 public:
@@ -24,7 +22,8 @@ public:
     void relax_async(uint32_t instance, const Winch::ResultCallback callback);
     Winch::Result relax(uint32_t instance);
 
-    void relative_length_control_async(uint32_t instance, float length, float rate, const Winch::ResultCallback callback);
+    void relative_length_control_async(
+        uint32_t instance, float length, float rate, const Winch::ResultCallback callback);
     Winch::Result relative_length_control(uint32_t instance, float length, float rate);
 
     void rate_control_async(uint32_t instance, float rate, const Winch::ResultCallback callback);
@@ -50,7 +49,6 @@ public:
 
     void load_payload_async(uint32_t instance, const Winch::ResultCallback callback);
     Winch::Result load_payload(uint32_t instance);
-
 
 private:
     static Winch::Result winch_result_from_command_result(MavlinkCommandSender::Result result);

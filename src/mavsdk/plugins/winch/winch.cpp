@@ -9,159 +9,115 @@
 
 namespace mavsdk {
 
-
-
-
-
 Winch::Winch(System& system) : PluginBase(), _impl{std::make_unique<WinchImpl>(system)} {}
 
-Winch::Winch(std::shared_ptr<System> system) : PluginBase(), _impl{std::make_unique<WinchImpl>(system)} {}
-
+Winch::Winch(std::shared_ptr<System> system) :
+    PluginBase(),
+    _impl{std::make_unique<WinchImpl>(system)}
+{}
 
 Winch::~Winch() {}
-
-
 
 void Winch::relax_async(uint32_t instance, const ResultCallback callback)
 {
     _impl->relax_async(instance, callback);
 }
 
-
-
 Winch::Result Winch::relax(uint32_t instance) const
 {
     return _impl->relax(instance);
 }
 
-
-
-void Winch::relative_length_control_async(uint32_t instance, float length, float rate, const ResultCallback callback)
+void Winch::relative_length_control_async(
+    uint32_t instance, float length, float rate, const ResultCallback callback)
 {
     _impl->relative_length_control_async(instance, length, rate, callback);
 }
-
-
 
 Winch::Result Winch::relative_length_control(uint32_t instance, float length, float rate) const
 {
     return _impl->relative_length_control(instance, length, rate);
 }
 
-
-
 void Winch::rate_control_async(uint32_t instance, float rate, const ResultCallback callback)
 {
     _impl->rate_control_async(instance, rate, callback);
 }
-
-
 
 Winch::Result Winch::rate_control(uint32_t instance, float rate) const
 {
     return _impl->rate_control(instance, rate);
 }
 
-
-
 void Winch::lock_async(uint32_t instance, const ResultCallback callback)
 {
     _impl->lock_async(instance, callback);
 }
-
-
 
 Winch::Result Winch::lock(uint32_t instance) const
 {
     return _impl->lock(instance);
 }
 
-
-
 void Winch::deliver_async(uint32_t instance, const ResultCallback callback)
 {
     _impl->deliver_async(instance, callback);
 }
-
-
 
 Winch::Result Winch::deliver(uint32_t instance) const
 {
     return _impl->deliver(instance);
 }
 
-
-
 void Winch::hold_async(uint32_t instance, const ResultCallback callback)
 {
     _impl->hold_async(instance, callback);
 }
-
-
 
 Winch::Result Winch::hold(uint32_t instance) const
 {
     return _impl->hold(instance);
 }
 
-
-
 void Winch::retract_async(uint32_t instance, const ResultCallback callback)
 {
     _impl->retract_async(instance, callback);
 }
-
-
 
 Winch::Result Winch::retract(uint32_t instance) const
 {
     return _impl->retract(instance);
 }
 
-
-
 void Winch::load_line_async(uint32_t instance, const ResultCallback callback)
 {
     _impl->load_line_async(instance, callback);
 }
-
-
 
 Winch::Result Winch::load_line(uint32_t instance) const
 {
     return _impl->load_line(instance);
 }
 
-
-
 void Winch::abandon_line_async(uint32_t instance, const ResultCallback callback)
 {
     _impl->abandon_line_async(instance, callback);
 }
-
-
 
 Winch::Result Winch::abandon_line(uint32_t instance) const
 {
     return _impl->abandon_line(instance);
 }
 
-
-
 void Winch::load_payload_async(uint32_t instance, const ResultCallback callback)
 {
     _impl->load_payload_async(instance, callback);
 }
 
-
-
 Winch::Result Winch::load_payload(uint32_t instance) const
 {
     return _impl->load_payload(instance);
 }
-
-
-
 
 std::ostream& operator<<(std::ostream& str, Winch::Result const& result)
 {
@@ -199,8 +155,6 @@ std::ostream& operator<<(std::ostream& str, Winch::Result const& result)
     }
 }
 
-
-
 std::ostream& operator<<(std::ostream& str, Winch::WinchAction const& winch_action)
 {
     switch (winch_action) {
@@ -228,6 +182,5 @@ std::ostream& operator<<(std::ostream& str, Winch::WinchAction const& winch_acti
             return str << "Unknown";
     }
 }
-
 
 } // namespace mavsdk

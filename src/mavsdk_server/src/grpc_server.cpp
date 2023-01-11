@@ -150,7 +150,6 @@ int GrpcServer::run()
     builder.RegisterService(&_winch_service);
 #endif
 
-
 #ifdef ENABLE_PROTO_REFLECTION
     grpc::reflection::InitProtoReflectionServerBuilderPlugin();
 #endif

@@ -449,6 +449,34 @@ public:
     friend std::ostream& operator<<(std::ostream& str, Telemetry::RcStatus const& rc_status);
 
     /**
+     * @brief
+     */
+    struct WinchStatus {
+        uint64_t time_usec{}; /**< @brief */
+        float line_length{}; /**< @brief */
+        float speed{}; /**< @brief */
+        float tension{}; /**< @brief */
+        float voltage{}; /**< @brief */
+        float current{}; /**< @brief */
+        int32_t temperature{}; /**< @brief */
+        uint32_t status{}; /**< @brief */
+    };
+
+    /**
+     * @brief Equal operator to compare two `Telemetry::WinchStatus` objects.
+     *
+     * @return `true` if items are equal.
+     */
+    friend bool operator==(const Telemetry::WinchStatus& lhs, const Telemetry::WinchStatus& rhs);
+
+    /**
+     * @brief Stream operator to print information about a `Telemetry::WinchStatus`.
+     *
+     * @return A reference to the stream.
+     */
+    friend std::ostream& operator<<(std::ostream& str, Telemetry::WinchStatus const& winch_status);
+
+    /**
      * @brief StatusText information type.
      */
     struct StatusText {
@@ -1423,6 +1451,33 @@ public:
     Battery battery() const;
 
     /**
+     * @brief Callback type for subscribe_winch_status.
+     */
+    using WinchStatusCallback = std::function<void(WinchStatus)>;
+
+    /**
+     * @brief Handle type for subscribe_winch_status.
+     */
+    using WinchStatusHandle = Handle<WinchStatus>;
+
+    /**
+     * @brief Subscribe to 'winch status' updates.
+     */
+    WinchStatusHandle subscribe_winch_status(const WinchStatusCallback& callback);
+
+    /**
+     * @brief Unsubscribe from subscribe_winch_status
+     */
+    void unsubscribe_winch_status(WinchStatusHandle handle);
+
+    /**
+     * @brief Poll for 'WinchStatus' (blocking).
+     *
+     * @return One WinchStatus update.
+     */
+    WinchStatus winch_status() const;
+
+    /**
      * @brief Callback type for subscribe_flight_mode.
      */
     using FlightModeCallback = std::function<void(FlightMode)>;
@@ -2119,6 +2174,23 @@ public:
      * @return Result of request.
      */
     Result set_rate_battery(double rate_hz) const;
+
+    /**
+     * @brief Set rate to 'winch status' updates.
+     *
+     * This function is non-blocking. See 'set_rate_winch_status' for the blocking counterpart.
+     */
+    void set_rate_winch_status_async(double rate_hz, const ResultCallback callback);
+
+    /**
+     * @brief Set rate to 'winch status' updates.
+     *
+     * This function is blocking. See 'set_rate_winch_status_async' for the non-blocking
+     * counterpart.
+     *
+     * @return Result of request.
+     */
+    Result set_rate_winch_status(double rate_hz) const;
 
     /**
      * @brief Set rate to 'RC status' updates.

@@ -21,15 +21,11 @@
 namespace mavsdk {
 namespace mavsdk_server {
 
-
 template<typename Winch = Winch, typename LazyPlugin = LazyPlugin<Winch>>
 
 class WinchServiceImpl final : public rpc::winch::WinchService::Service {
 public:
-
     WinchServiceImpl(LazyPlugin& lazy_plugin) : _lazy_plugin(lazy_plugin) {}
-
-
 
     template<typename ResponseType>
     void fillResponseWithResult(ResponseType* response, mavsdk::Winch::Result& result) const
@@ -45,8 +41,8 @@ public:
         response->set_allocated_winch_result(rpc_winch_result);
     }
 
-
-    static rpc::winch::WinchAction translateToRpcWinchAction(const mavsdk::Winch::WinchAction& winch_action)
+    static rpc::winch::WinchAction
+    translateToRpcWinchAction(const mavsdk::Winch::WinchAction& winch_action)
     {
         switch (winch_action) {
             default:
@@ -75,7 +71,8 @@ public:
         }
     }
 
-    static mavsdk::Winch::WinchAction translateFromRpcWinchAction(const rpc::winch::WinchAction winch_action)
+    static mavsdk::Winch::WinchAction
+    translateFromRpcWinchAction(const rpc::winch::WinchAction winch_action)
     {
         switch (winch_action) {
             default:
@@ -103,7 +100,6 @@ public:
                 return mavsdk::Winch::WinchAction::LoadPayload;
         }
     }
-
 
     static rpc::winch::WinchResult::Result translateToRpcResult(const mavsdk::Winch::Result& result)
     {
@@ -142,7 +138,8 @@ public:
         }
     }
 
-    static mavsdk::Winch::Result translateFromRpcResult(const rpc::winch::WinchResult::Result result)
+    static mavsdk::Winch::Result
+    translateFromRpcResult(const rpc::winch::WinchResult::Result result)
     {
         switch (result) {
             default:
@@ -179,21 +176,17 @@ public:
         }
     }
 
-
-
-
     grpc::Status Relax(
         grpc::ServerContext* /* context */,
         const rpc::winch::RelaxRequest* request,
         rpc::winch::RelaxResponse* response) override
     {
         if (_lazy_plugin.maybe_plugin() == nullptr) {
-            
             if (response != nullptr) {
                 auto result = mavsdk::Winch::Result::NoSystem;
                 fillResponseWithResult(response, result);
             }
-            
+
             return grpc::Status::OK;
         }
 
@@ -201,16 +194,12 @@ public:
             LogWarn() << "Relax sent with a null request! Ignoring...";
             return grpc::Status::OK;
         }
-            
-        
-        auto result = _lazy_plugin.maybe_plugin()->relax(request->instance());
-        
 
-        
+        auto result = _lazy_plugin.maybe_plugin()->relax(request->instance());
+
         if (response != nullptr) {
             fillResponseWithResult(response, result);
         }
-        
 
         return grpc::Status::OK;
     }
@@ -221,12 +210,11 @@ public:
         rpc::winch::RelativeLengthControlResponse* response) override
     {
         if (_lazy_plugin.maybe_plugin() == nullptr) {
-            
             if (response != nullptr) {
                 auto result = mavsdk::Winch::Result::NoSystem;
                 fillResponseWithResult(response, result);
             }
-            
+
             return grpc::Status::OK;
         }
 
@@ -234,20 +222,13 @@ public:
             LogWarn() << "RelativeLengthControl sent with a null request! Ignoring...";
             return grpc::Status::OK;
         }
-            
-        
-            
-        
-            
-        
-        auto result = _lazy_plugin.maybe_plugin()->relative_length_control(request->instance(), request->length(), request->rate());
-        
 
-        
+        auto result = _lazy_plugin.maybe_plugin()->relative_length_control(
+            request->instance(), request->length(), request->rate());
+
         if (response != nullptr) {
             fillResponseWithResult(response, result);
         }
-        
 
         return grpc::Status::OK;
     }
@@ -258,12 +239,11 @@ public:
         rpc::winch::RateControlResponse* response) override
     {
         if (_lazy_plugin.maybe_plugin() == nullptr) {
-            
             if (response != nullptr) {
                 auto result = mavsdk::Winch::Result::NoSystem;
                 fillResponseWithResult(response, result);
             }
-            
+
             return grpc::Status::OK;
         }
 
@@ -271,18 +251,13 @@ public:
             LogWarn() << "RateControl sent with a null request! Ignoring...";
             return grpc::Status::OK;
         }
-            
-        
-            
-        
-        auto result = _lazy_plugin.maybe_plugin()->rate_control(request->instance(), request->rate());
-        
 
-        
+        auto result =
+            _lazy_plugin.maybe_plugin()->rate_control(request->instance(), request->rate());
+
         if (response != nullptr) {
             fillResponseWithResult(response, result);
         }
-        
 
         return grpc::Status::OK;
     }
@@ -293,12 +268,11 @@ public:
         rpc::winch::LockResponse* response) override
     {
         if (_lazy_plugin.maybe_plugin() == nullptr) {
-            
             if (response != nullptr) {
                 auto result = mavsdk::Winch::Result::NoSystem;
                 fillResponseWithResult(response, result);
             }
-            
+
             return grpc::Status::OK;
         }
 
@@ -306,16 +280,12 @@ public:
             LogWarn() << "Lock sent with a null request! Ignoring...";
             return grpc::Status::OK;
         }
-            
-        
-        auto result = _lazy_plugin.maybe_plugin()->lock(request->instance());
-        
 
-        
+        auto result = _lazy_plugin.maybe_plugin()->lock(request->instance());
+
         if (response != nullptr) {
             fillResponseWithResult(response, result);
         }
-        
 
         return grpc::Status::OK;
     }
@@ -326,12 +296,11 @@ public:
         rpc::winch::DeliverResponse* response) override
     {
         if (_lazy_plugin.maybe_plugin() == nullptr) {
-            
             if (response != nullptr) {
                 auto result = mavsdk::Winch::Result::NoSystem;
                 fillResponseWithResult(response, result);
             }
-            
+
             return grpc::Status::OK;
         }
 
@@ -339,16 +308,12 @@ public:
             LogWarn() << "Deliver sent with a null request! Ignoring...";
             return grpc::Status::OK;
         }
-            
-        
-        auto result = _lazy_plugin.maybe_plugin()->deliver(request->instance());
-        
 
-        
+        auto result = _lazy_plugin.maybe_plugin()->deliver(request->instance());
+
         if (response != nullptr) {
             fillResponseWithResult(response, result);
         }
-        
 
         return grpc::Status::OK;
     }
@@ -359,12 +324,11 @@ public:
         rpc::winch::HoldResponse* response) override
     {
         if (_lazy_plugin.maybe_plugin() == nullptr) {
-            
             if (response != nullptr) {
                 auto result = mavsdk::Winch::Result::NoSystem;
                 fillResponseWithResult(response, result);
             }
-            
+
             return grpc::Status::OK;
         }
 
@@ -372,16 +336,12 @@ public:
             LogWarn() << "Hold sent with a null request! Ignoring...";
             return grpc::Status::OK;
         }
-            
-        
-        auto result = _lazy_plugin.maybe_plugin()->hold(request->instance());
-        
 
-        
+        auto result = _lazy_plugin.maybe_plugin()->hold(request->instance());
+
         if (response != nullptr) {
             fillResponseWithResult(response, result);
         }
-        
 
         return grpc::Status::OK;
     }
@@ -392,12 +352,11 @@ public:
         rpc::winch::RetractResponse* response) override
     {
         if (_lazy_plugin.maybe_plugin() == nullptr) {
-            
             if (response != nullptr) {
                 auto result = mavsdk::Winch::Result::NoSystem;
                 fillResponseWithResult(response, result);
             }
-            
+
             return grpc::Status::OK;
         }
 
@@ -405,16 +364,12 @@ public:
             LogWarn() << "Retract sent with a null request! Ignoring...";
             return grpc::Status::OK;
         }
-            
-        
-        auto result = _lazy_plugin.maybe_plugin()->retract(request->instance());
-        
 
-        
+        auto result = _lazy_plugin.maybe_plugin()->retract(request->instance());
+
         if (response != nullptr) {
             fillResponseWithResult(response, result);
         }
-        
 
         return grpc::Status::OK;
     }
@@ -425,12 +380,11 @@ public:
         rpc::winch::LoadLineResponse* response) override
     {
         if (_lazy_plugin.maybe_plugin() == nullptr) {
-            
             if (response != nullptr) {
                 auto result = mavsdk::Winch::Result::NoSystem;
                 fillResponseWithResult(response, result);
             }
-            
+
             return grpc::Status::OK;
         }
 
@@ -438,16 +392,12 @@ public:
             LogWarn() << "LoadLine sent with a null request! Ignoring...";
             return grpc::Status::OK;
         }
-            
-        
-        auto result = _lazy_plugin.maybe_plugin()->load_line(request->instance());
-        
 
-        
+        auto result = _lazy_plugin.maybe_plugin()->load_line(request->instance());
+
         if (response != nullptr) {
             fillResponseWithResult(response, result);
         }
-        
 
         return grpc::Status::OK;
     }
@@ -458,12 +408,11 @@ public:
         rpc::winch::AbandonLineResponse* response) override
     {
         if (_lazy_plugin.maybe_plugin() == nullptr) {
-            
             if (response != nullptr) {
                 auto result = mavsdk::Winch::Result::NoSystem;
                 fillResponseWithResult(response, result);
             }
-            
+
             return grpc::Status::OK;
         }
 
@@ -471,16 +420,12 @@ public:
             LogWarn() << "AbandonLine sent with a null request! Ignoring...";
             return grpc::Status::OK;
         }
-            
-        
-        auto result = _lazy_plugin.maybe_plugin()->abandon_line(request->instance());
-        
 
-        
+        auto result = _lazy_plugin.maybe_plugin()->abandon_line(request->instance());
+
         if (response != nullptr) {
             fillResponseWithResult(response, result);
         }
-        
 
         return grpc::Status::OK;
     }
@@ -491,12 +436,11 @@ public:
         rpc::winch::LoadPayloadResponse* response) override
     {
         if (_lazy_plugin.maybe_plugin() == nullptr) {
-            
             if (response != nullptr) {
                 auto result = mavsdk::Winch::Result::NoSystem;
                 fillResponseWithResult(response, result);
             }
-            
+
             return grpc::Status::OK;
         }
 
@@ -504,22 +448,18 @@ public:
             LogWarn() << "LoadPayload sent with a null request! Ignoring...";
             return grpc::Status::OK;
         }
-            
-        
-        auto result = _lazy_plugin.maybe_plugin()->load_payload(request->instance());
-        
 
-        
+        auto result = _lazy_plugin.maybe_plugin()->load_payload(request->instance());
+
         if (response != nullptr) {
             fillResponseWithResult(response, result);
         }
-        
 
         return grpc::Status::OK;
     }
 
-
-    void stop() {
+    void stop()
+    {
         _stopped.store(true);
         for (auto& prom : _stream_stop_promises) {
             if (auto handle = prom.lock()) {
@@ -529,7 +469,8 @@ public:
     }
 
 private:
-    void register_stream_stop_promise(std::weak_ptr<std::promise<void>> prom) {
+    void register_stream_stop_promise(std::weak_ptr<std::promise<void>> prom)
+    {
         // If we have already stopped, set promise immediately and don't add it to list.
         if (_stopped.load()) {
             if (auto handle = prom.lock()) {
@@ -540,8 +481,10 @@ private:
         }
     }
 
-    void unregister_stream_stop_promise(std::shared_ptr<std::promise<void>> prom) {
-        for (auto it = _stream_stop_promises.begin(); it != _stream_stop_promises.end(); /* ++it */) {
+    void unregister_stream_stop_promise(std::shared_ptr<std::promise<void>> prom)
+    {
+        for (auto it = _stream_stop_promises.begin(); it != _stream_stop_promises.end();
+             /* ++it */) {
             if (it->lock() == prom) {
                 it = _stream_stop_promises.erase(it);
             } else {
@@ -550,11 +493,10 @@ private:
         }
     }
 
-
     LazyPlugin& _lazy_plugin;
 
     std::atomic<bool> _stopped{false};
-    std::vector<std::weak_ptr<std::promise<void>>> _stream_stop_promises {};
+    std::vector<std::weak_ptr<std::promise<void>>> _stream_stop_promises{};
 };
 
 } // namespace mavsdk_server
