@@ -24,7 +24,7 @@ namespace mavsdk {
 class System;class WinchImpl;
 
 /**
- * @brief Enable simple Winch actions.
+ * @brief 
  */
 class Winch : public PluginBase {
 public:
@@ -127,7 +127,7 @@ public:
 
 
     /**
-     * @brief Allow motor to freewheel.
+     * @brief Winch grab cargo.
      *
      * This function is non-blocking. See 'winch_relax' for the blocking counterpart.
      */
@@ -136,7 +136,7 @@ public:
 
 
     /**
-     * @brief Allow motor to freewheel.
+     * @brief Winch grab cargo.
      *
      * This function is blocking. See 'winch_relax_async' for the non-blocking counterpart.
      *
@@ -148,22 +148,22 @@ public:
 
 
     /**
-     * @brief Wind or unwind specified length of line, optionally using specified rate.
+     * @brief Winch release cargo.
      *
-     * This function is non-blocking. See 'winch_relative_length_control' for the blocking counterpart.
+     * This function is non-blocking. See 'relative_length_control' for the blocking counterpart.
      */
-    void winch_relative_length_control_async(uint32_t instance, float length, float rate, const ResultCallback callback);
+    void relative_length_control_async(uint32_t instance, float length, float rate, const ResultCallback callback);
 
 
 
     /**
-     * @brief Wind or unwind specified length of line, optionally using specified rate.
+     * @brief Winch release cargo.
      *
-     * This function is blocking. See 'winch_relative_length_control_async' for the non-blocking counterpart.
+     * This function is blocking. See 'relative_length_control_async' for the non-blocking counterpart.
      *
      * @return Result of request.
      */
-    Result winch_relative_length_control(uint32_t instance, float length, float rate) const;
+    Result relative_length_control(uint32_t instance, float length, float rate) const;
 
 
 
@@ -171,167 +171,167 @@ public:
     /**
      * @brief Wind or unwind line at specified rate.
      *
-     * This function is non-blocking. See 'winch_rate_control' for the blocking counterpart.
+     * This function is non-blocking. See 'rate_control' for the blocking counterpart.
      */
-    void winch_rate_control_async(uint32_t instance, float rate, const ResultCallback callback);
+    void rate_control_async(uint32_t instance, float rate, const ResultCallback callback);
 
 
 
     /**
      * @brief Wind or unwind line at specified rate.
      *
-     * This function is blocking. See 'winch_rate_control_async' for the non-blocking counterpart.
+     * This function is blocking. See 'rate_control_async' for the non-blocking counterpart.
      *
      * @return Result of request.
      */
-    Result winch_rate_control(uint32_t instance, float rate) const;
+    Result rate_control(uint32_t instance, float rate) const;
 
 
 
 
     /**
-     * @brief Perform the locking sequence to relieve motor while in the fully retracted position. Only action and instance command parameters are used, others are ignored.
+     * @brief 
      *
-     * This function is non-blocking. See 'winch_lock' for the blocking counterpart.
+     * This function is non-blocking. See 'lock' for the blocking counterpart.
      */
-    void winch_lock_async(uint32_t instance, const ResultCallback callback);
+    void lock_async(uint32_t instance, const ResultCallback callback);
 
 
 
     /**
-     * @brief Perform the locking sequence to relieve motor while in the fully retracted position. Only action and instance command parameters are used, others are ignored.
+     * @brief 
      *
-     * This function is blocking. See 'winch_lock_async' for the non-blocking counterpart.
+     * This function is blocking. See 'lock_async' for the non-blocking counterpart.
      *
      * @return Result of request.
      */
-    Result winch_lock(uint32_t instance) const;
+    Result lock(uint32_t instance) const;
 
 
 
 
     /**
-     * @brief Sequence of drop, slow down, touch down, reel up, lock. Only action and instance command parameters are used, others are ignored.
+     * @brief 
      *
-     * This function is non-blocking. See 'winch_deliver' for the blocking counterpart.
+     * This function is non-blocking. See 'deliver' for the blocking counterpart.
      */
-    void winch_deliver_async(uint32_t instance, const ResultCallback callback);
+    void deliver_async(uint32_t instance, const ResultCallback callback);
 
 
 
     /**
-     * @brief Sequence of drop, slow down, touch down, reel up, lock. Only action and instance command parameters are used, others are ignored.
+     * @brief 
      *
-     * This function is blocking. See 'winch_deliver_async' for the non-blocking counterpart.
+     * This function is blocking. See 'deliver_async' for the non-blocking counterpart.
      *
      * @return Result of request.
      */
-    Result winch_deliver(uint32_t instance) const;
+    Result deliver(uint32_t instance) const;
 
 
 
 
     /**
-     * @brief Engage motor and hold current position. Only action and instance command parameters are used, others are ignored.
+     * @brief 
      *
-     * This function is non-blocking. See 'winch_hold' for the blocking counterpart.
+     * This function is non-blocking. See 'hold' for the blocking counterpart.
      */
-    void winch_hold_async(uint32_t instance, const ResultCallback callback);
+    void hold_async(uint32_t instance, const ResultCallback callback);
 
 
 
     /**
-     * @brief Engage motor and hold current position. Only action and instance command parameters are used, others are ignored.
+     * @brief 
      *
-     * This function is blocking. See 'winch_hold_async' for the non-blocking counterpart.
+     * This function is blocking. See 'hold_async' for the non-blocking counterpart.
      *
      * @return Result of request.
      */
-    Result winch_hold(uint32_t instance) const;
+    Result hold(uint32_t instance) const;
 
 
 
 
     /**
-     * @brief Return the reel to the fully retracted position. Only action and instance command parameters are used, others are ignored.
+     * @brief 
      *
-     * This function is non-blocking. See 'winch_retract' for the blocking counterpart.
+     * This function is non-blocking. See 'retract' for the blocking counterpart.
      */
-    void winch_retract_async(uint32_t instance, const ResultCallback callback);
+    void retract_async(uint32_t instance, const ResultCallback callback);
 
 
 
     /**
-     * @brief Return the reel to the fully retracted position. Only action and instance command parameters are used, others are ignored.
+     * @brief 
      *
-     * This function is blocking. See 'winch_retract_async' for the non-blocking counterpart.
+     * This function is blocking. See 'retract_async' for the non-blocking counterpart.
      *
      * @return Result of request.
      */
-    Result winch_retract(uint32_t instance) const;
+    Result retract(uint32_t instance) const;
 
 
 
 
     /**
-     * @brief Load the reel with line. The winch will calculate the total loaded length and stop when the tension exceeds a threshold. Only action and instance command parameters are used, others are ignored.
+     * @brief 
      *
-     * This function is non-blocking. See 'winch_load_line' for the blocking counterpart.
+     * This function is non-blocking. See 'load_line' for the blocking counterpart.
      */
-    void winch_load_line_async(uint32_t instance, const ResultCallback callback);
+    void load_line_async(uint32_t instance, const ResultCallback callback);
 
 
 
     /**
-     * @brief Load the reel with line. The winch will calculate the total loaded length and stop when the tension exceeds a threshold. Only action and instance command parameters are used, others are ignored.
+     * @brief 
      *
-     * This function is blocking. See 'winch_load_line_async' for the non-blocking counterpart.
+     * This function is blocking. See 'load_line_async' for the non-blocking counterpart.
      *
      * @return Result of request.
      */
-    Result winch_load_line(uint32_t instance) const;
+    Result load_line(uint32_t instance) const;
 
 
 
 
     /**
-     * @brief Spool out the entire length of the line. Only action and instance command parameters are used, others are ignored.
+     * @brief 
      *
-     * This function is non-blocking. See 'winch_abandon_line' for the blocking counterpart.
+     * This function is non-blocking. See 'abandon_line' for the blocking counterpart.
      */
-    void winch_abandon_line_async(uint32_t instance, const ResultCallback callback);
+    void abandon_line_async(uint32_t instance, const ResultCallback callback);
 
 
 
     /**
-     * @brief Spool out the entire length of the line. Only action and instance command parameters are used, others are ignored.
+     * @brief 
      *
-     * This function is blocking. See 'winch_abandon_line_async' for the non-blocking counterpart.
+     * This function is blocking. See 'abandon_line_async' for the non-blocking counterpart.
      *
      * @return Result of request.
      */
-    Result winch_abandon_line(uint32_t instance) const;
+    Result abandon_line(uint32_t instance) const;
 
 
 
 
     /**
-     * @brief Spools out just enough to present the hook to the user to load the payload. Only action and instance command parameters are used, others are ignored
+     * @brief 
      *
-     * This function is non-blocking. See 'winch_load_payload' for the blocking counterpart.
+     * This function is non-blocking. See 'load_payload' for the blocking counterpart.
      */
-    void winch_load_payload_async(uint32_t instance, const ResultCallback callback);
+    void load_payload_async(uint32_t instance, const ResultCallback callback);
 
 
 
     /**
-     * @brief Spools out just enough to present the hook to the user to load the payload. Only action and instance command parameters are used, others are ignored
+     * @brief 
      *
-     * This function is blocking. See 'winch_load_payload_async' for the non-blocking counterpart.
+     * This function is blocking. See 'load_payload_async' for the non-blocking counterpart.
      *
      * @return Result of request.
      */
-    Result winch_load_payload(uint32_t instance) const;
+    Result load_payload(uint32_t instance) const;
 
 
 

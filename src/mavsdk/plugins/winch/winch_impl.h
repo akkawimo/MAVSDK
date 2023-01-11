@@ -22,83 +22,34 @@ public:
     void disable() override;
 
     void winch_relax_async(uint32_t instance, const Winch::ResultCallback callback);
-
-
-
     Winch::Result winch_relax(uint32_t instance);
 
+    void relative_length_control_async(uint32_t instance, float length, float rate, const Winch::ResultCallback callback);
+    Winch::Result relative_length_control(uint32_t instance, float length, float rate);
 
+    void rate_control_async(uint32_t instance, float rate, const Winch::ResultCallback callback);
+    Winch::Result rate_control(uint32_t instance, float rate);
 
-    void winch_relative_length_control_async(uint32_t instance, float length, float rate, const Winch::ResultCallback callback);
+    void lock_async(uint32_t instance, const Winch::ResultCallback callback);
+    Winch::Result lock(uint32_t instance);
 
+    void deliver_async(uint32_t instance, const Winch::ResultCallback callback);
+    Winch::Result deliver(uint32_t instance);
 
+    void hold_async(uint32_t instance, const Winch::ResultCallback callback);
+    Winch::Result hold(uint32_t instance);
 
-    Winch::Result winch_relative_length_control(uint32_t instance, float length, float rate);
+    void retract_async(uint32_t instance, const Winch::ResultCallback callback);
+    Winch::Result retract(uint32_t instance);
 
+    void load_line_async(uint32_t instance, const Winch::ResultCallback callback);
+    Winch::Result load_line(uint32_t instance);
 
+    void abandon_line_async(uint32_t instance, const Winch::ResultCallback callback);
+    Winch::Result abandon_line(uint32_t instance);
 
-    void winch_rate_control_async(uint32_t instance, float rate, const Winch::ResultCallback callback);
-
-
-
-    Winch::Result winch_rate_control(uint32_t instance, float rate);
-
-
-
-    void winch_lock_async(uint32_t instance, const Winch::ResultCallback callback);
-
-
-
-    Winch::Result winch_lock(uint32_t instance);
-
-
-
-    void winch_deliver_async(uint32_t instance, const Winch::ResultCallback callback);
-
-
-
-    Winch::Result winch_deliver(uint32_t instance);
-
-
-
-    void winch_hold_async(uint32_t instance, const Winch::ResultCallback callback);
-
-
-
-    Winch::Result winch_hold(uint32_t instance);
-
-
-
-    void winch_retract_async(uint32_t instance, const Winch::ResultCallback callback);
-
-
-
-    Winch::Result winch_retract(uint32_t instance);
-
-
-
-    void winch_load_line_async(uint32_t instance, const Winch::ResultCallback callback);
-
-
-
-    Winch::Result winch_load_line(uint32_t instance);
-
-
-
-    void winch_abandon_line_async(uint32_t instance, const Winch::ResultCallback callback);
-
-
-
-    Winch::Result winch_abandon_line(uint32_t instance);
-
-
-
-    void winch_load_payload_async(uint32_t instance, const Winch::ResultCallback callback);
-
-
-
-    Winch::Result winch_load_payload(uint32_t instance);
-
+    void load_payload_async(uint32_t instance, const Winch::ResultCallback callback);
+    Winch::Result load_payload(uint32_t instance);
 
 
 private:
