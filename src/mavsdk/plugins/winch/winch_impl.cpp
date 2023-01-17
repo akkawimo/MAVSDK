@@ -33,7 +33,7 @@ void WinchImpl::relax_async(uint32_t instance, const Winch::ResultCallback callb
     command.params.maybe_param1 = instance;
     command.params.maybe_param2 = static_cast<float>(Winch::WinchAction::Relaxed);
 
-    command.target_component_id = MAV_TYPE::MAV_TYPE_WINCH;
+    command.target_component_id = MAV_COMPONENT::MAV_COMP_ID_WINCH;
 
     _parent->send_command_async(
         command, [this, callback](MavlinkCommandSender::Result result, float) {
@@ -62,7 +62,7 @@ void WinchImpl::relative_length_control_async(
     command.params.maybe_param3 = length;
     command.params.maybe_param4 = rate;
 
-    command.target_component_id = MAV_TYPE::MAV_TYPE_WINCH;
+    command.target_component_id = MAV_COMPONENT::MAV_COMP_ID_WINCH;
 
     _parent->send_command_async(
         command, [this, callback](MavlinkCommandSender::Result result, float) {
@@ -91,7 +91,7 @@ void WinchImpl::rate_control_async(
     command.params.maybe_param2 = static_cast<float>(Winch::WinchAction::RateControl);
     command.params.maybe_param4 = rate;
 
-    command.target_component_id = MAV_TYPE::MAV_TYPE_WINCH;
+    command.target_component_id = MAV_COMPONENT::MAV_COMP_ID_WINCH;
 
     _parent->send_command_async(
         command, [this, callback](MavlinkCommandSender::Result result, float) {
@@ -117,7 +117,7 @@ void WinchImpl::lock_async(uint32_t instance, const Winch::ResultCallback callba
     command.params.maybe_param1 = instance;
     command.params.maybe_param2 = static_cast<float>(Winch::WinchAction::Lock);
 
-    command.target_component_id = MAV_TYPE::MAV_TYPE_WINCH;
+    command.target_component_id = MAV_COMPONENT::MAV_COMP_ID_WINCH;
 
     _parent->send_command_async(
         command, [this, callback](MavlinkCommandSender::Result result, float) {
@@ -143,7 +143,7 @@ void WinchImpl::deliver_async(uint32_t instance, const Winch::ResultCallback cal
     command.params.maybe_param1 = instance;
     command.params.maybe_param2 = static_cast<float>(Winch::WinchAction::Deliver);
 
-    command.target_component_id = MAV_TYPE::MAV_TYPE_WINCH;
+    command.target_component_id = MAV_COMPONENT::MAV_COMP_ID_WINCH;
 
     _parent->send_command_async(
         command, [this, callback](MavlinkCommandSender::Result result, float) {
@@ -169,7 +169,7 @@ void WinchImpl::hold_async(uint32_t instance, const Winch::ResultCallback callba
     command.params.maybe_param1 = instance;
     command.params.maybe_param2 = static_cast<float>(Winch::WinchAction::Hold);
 
-    command.target_component_id = MAV_TYPE::MAV_TYPE_WINCH;
+    command.target_component_id = MAV_COMPONENT::MAV_COMP_ID_WINCH;
 
     _parent->send_command_async(
         command, [this, callback](MavlinkCommandSender::Result result, float) {
@@ -195,7 +195,7 @@ void WinchImpl::retract_async(uint32_t instance, const Winch::ResultCallback cal
     command.params.maybe_param1 = instance;
     command.params.maybe_param2 = static_cast<float>(Winch::WinchAction::Retract);
 
-    command.target_component_id = MAV_TYPE::MAV_TYPE_WINCH;
+    command.target_component_id = MAV_COMPONENT::MAV_COMP_ID_WINCH;
 
     _parent->send_command_async(
         command, [this, callback](MavlinkCommandSender::Result result, float) {
@@ -221,7 +221,7 @@ void WinchImpl::load_line_async(uint32_t instance, const Winch::ResultCallback c
     command.params.maybe_param1 = instance;
     command.params.maybe_param2 = static_cast<float>(Winch::WinchAction::LoadLine);
 
-    command.target_component_id = MAV_TYPE::MAV_TYPE_WINCH;
+    command.target_component_id = MAV_COMPONENT::MAV_COMP_ID_WINCH;
 
     _parent->send_command_async(
         command, [this, callback](MavlinkCommandSender::Result result, float) {
@@ -247,7 +247,7 @@ void WinchImpl::abandon_line_async(uint32_t instance, const Winch::ResultCallbac
     command.params.maybe_param1 = instance;
     command.params.maybe_param2 = static_cast<float>(Winch::WinchAction::AbandonLine);
 
-    command.target_component_id = MAV_TYPE::MAV_TYPE_WINCH;
+    command.target_component_id = MAV_COMPONENT::MAV_COMP_ID_WINCH;
 
     _parent->send_command_async(
         command, [this, callback](MavlinkCommandSender::Result result, float) {
@@ -273,7 +273,7 @@ void WinchImpl::load_payload_async(uint32_t instance, const Winch::ResultCallbac
     command.params.maybe_param1 = instance;
     command.params.maybe_param2 = static_cast<float>(Winch::WinchAction::LoadPayload);
 
-    command.target_component_id = MAV_TYPE::MAV_TYPE_WINCH;
+    command.target_component_id = MAV_COMPONENT::MAV_COMP_ID_WINCH;
 
     _parent->send_command_async(
         command, [this, callback](MavlinkCommandSender::Result result, float) {
