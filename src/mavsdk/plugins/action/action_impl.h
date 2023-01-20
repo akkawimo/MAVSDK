@@ -41,10 +41,6 @@ public:
         const double latitude_deg,
         const double longitude_deg,
         const double absolute_altitude_m);
-
-    Action::Result gripper_grab(const uint32_t instance);
-    Action::Result gripper_release(const uint32_t instance);
-
     Action::Result hold() const;
     Action::Result set_actuator(const int index, const float value);
     Action::Result transition_to_fixedwing() const;
@@ -73,7 +69,6 @@ public:
         const double longitude_deg,
         const double absolute_altitude_m,
         const Action::ResultCallback& callback);
-
     void hold_async(const Action::ResultCallback& callback) const;
     void
     set_actuator_async(const int index, const float value, const Action::ResultCallback& callback);
