@@ -121,9 +121,6 @@ extern StatusResponseDefaultTypeInternal _StatusResponse_default_instance_;
 class SubscribeStatusRequest;
 struct SubscribeStatusRequestDefaultTypeInternal;
 extern SubscribeStatusRequestDefaultTypeInternal _SubscribeStatusRequest_default_instance_;
-class WinchHearbeat;
-struct WinchHearbeatDefaultTypeInternal;
-extern WinchHearbeatDefaultTypeInternal _WinchHearbeat_default_instance_;
 class WinchResult;
 struct WinchResultDefaultTypeInternal;
 extern WinchResultDefaultTypeInternal _WinchResult_default_instance_;
@@ -155,7 +152,6 @@ template<> ::mavsdk::rpc::winch::Status* Arena::CreateMaybeMessage<::mavsdk::rpc
 template<> ::mavsdk::rpc::winch::StatusFlags* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::StatusFlags>(Arena*);
 template<> ::mavsdk::rpc::winch::StatusResponse* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::StatusResponse>(Arena*);
 template<> ::mavsdk::rpc::winch::SubscribeStatusRequest* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::SubscribeStatusRequest>(Arena*);
-template<> ::mavsdk::rpc::winch::WinchHearbeat* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::WinchHearbeat>(Arena*);
 template<> ::mavsdk::rpc::winch::WinchResult* Arena::CreateMaybeMessage<::mavsdk::rpc::winch::WinchResult>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace mavsdk {
@@ -788,149 +784,6 @@ class StatusFlags final :
 };
 // -------------------------------------------------------------------
 
-class WinchHearbeat final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.WinchHearbeat) */ {
- public:
-  inline WinchHearbeat() : WinchHearbeat(nullptr) {}
-  ~WinchHearbeat() override;
-  explicit PROTOBUF_CONSTEXPR WinchHearbeat(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  WinchHearbeat(const WinchHearbeat& from);
-  WinchHearbeat(WinchHearbeat&& from) noexcept
-    : WinchHearbeat() {
-    *this = ::std::move(from);
-  }
-
-  inline WinchHearbeat& operator=(const WinchHearbeat& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline WinchHearbeat& operator=(WinchHearbeat&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetOwningArena() == from.GetOwningArena()
-  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
-        && GetOwningArena() != nullptr
-  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
-    ) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const WinchHearbeat& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const WinchHearbeat* internal_default_instance() {
-    return reinterpret_cast<const WinchHearbeat*>(
-               &_WinchHearbeat_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    3;
-
-  friend void swap(WinchHearbeat& a, WinchHearbeat& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(WinchHearbeat* other) {
-    if (other == this) return;
-  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetOwningArena() != nullptr &&
-        GetOwningArena() == other->GetOwningArena()) {
-   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetOwningArena() == other->GetOwningArena()) {
-  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(WinchHearbeat* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  WinchHearbeat* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<WinchHearbeat>(arena);
-  }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const WinchHearbeat& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const WinchHearbeat& from);
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
-  public:
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(WinchHearbeat* other);
-
-  private:
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "mavsdk.rpc.winch.WinchHearbeat";
-  }
-  protected:
-  explicit WinchHearbeat(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                       bool is_message_owned = false);
-  public:
-
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kConnectedFieldNumber = 1,
-  };
-  // bool connected = 1;
-  void clear_connected();
-  bool connected() const;
-  void set_connected(bool value);
-  private:
-  bool _internal_connected() const;
-  void _internal_set_connected(bool value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:mavsdk.rpc.winch.WinchHearbeat)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  bool connected_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  friend struct ::TableStruct_winch_2fwinch_2eproto;
-};
-// -------------------------------------------------------------------
-
 class Status final :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:mavsdk.rpc.winch.Status) */ {
  public:
@@ -979,7 +832,7 @@ class Status final :
                &_Status_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    4;
+    3;
 
   friend void swap(Status& a, Status& b) {
     a.Swap(&b);
@@ -1208,7 +1061,7 @@ class RelaxRequest final :
                &_RelaxRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    5;
+    4;
 
   friend void swap(RelaxRequest& a, RelaxRequest& b) {
     a.Swap(&b);
@@ -1351,7 +1204,7 @@ class RelaxResponse final :
                &_RelaxResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    6;
+    5;
 
   friend void swap(RelaxResponse& a, RelaxResponse& b) {
     a.Swap(&b);
@@ -1503,7 +1356,7 @@ class RelativeLengthControlRequest final :
                &_RelativeLengthControlRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    7;
+    6;
 
   friend void swap(RelativeLengthControlRequest& a, RelativeLengthControlRequest& b) {
     a.Swap(&b);
@@ -1668,7 +1521,7 @@ class RelativeLengthControlResponse final :
                &_RelativeLengthControlResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    8;
+    7;
 
   friend void swap(RelativeLengthControlResponse& a, RelativeLengthControlResponse& b) {
     a.Swap(&b);
@@ -1820,7 +1673,7 @@ class RateControlRequest final :
                &_RateControlRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    9;
+    8;
 
   friend void swap(RateControlRequest& a, RateControlRequest& b) {
     a.Swap(&b);
@@ -1974,7 +1827,7 @@ class RateControlResponse final :
                &_RateControlResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    10;
+    9;
 
   friend void swap(RateControlResponse& a, RateControlResponse& b) {
     a.Swap(&b);
@@ -2126,7 +1979,7 @@ class LockRequest final :
                &_LockRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    11;
+    10;
 
   friend void swap(LockRequest& a, LockRequest& b) {
     a.Swap(&b);
@@ -2269,7 +2122,7 @@ class LockResponse final :
                &_LockResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    12;
+    11;
 
   friend void swap(LockResponse& a, LockResponse& b) {
     a.Swap(&b);
@@ -2421,7 +2274,7 @@ class DeliverRequest final :
                &_DeliverRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    13;
+    12;
 
   friend void swap(DeliverRequest& a, DeliverRequest& b) {
     a.Swap(&b);
@@ -2564,7 +2417,7 @@ class DeliverResponse final :
                &_DeliverResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    14;
+    13;
 
   friend void swap(DeliverResponse& a, DeliverResponse& b) {
     a.Swap(&b);
@@ -2716,7 +2569,7 @@ class HoldRequest final :
                &_HoldRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    15;
+    14;
 
   friend void swap(HoldRequest& a, HoldRequest& b) {
     a.Swap(&b);
@@ -2859,7 +2712,7 @@ class HoldResponse final :
                &_HoldResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    16;
+    15;
 
   friend void swap(HoldResponse& a, HoldResponse& b) {
     a.Swap(&b);
@@ -3011,7 +2864,7 @@ class RetractRequest final :
                &_RetractRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    17;
+    16;
 
   friend void swap(RetractRequest& a, RetractRequest& b) {
     a.Swap(&b);
@@ -3154,7 +3007,7 @@ class RetractResponse final :
                &_RetractResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    18;
+    17;
 
   friend void swap(RetractResponse& a, RetractResponse& b) {
     a.Swap(&b);
@@ -3306,7 +3159,7 @@ class LoadLineRequest final :
                &_LoadLineRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    19;
+    18;
 
   friend void swap(LoadLineRequest& a, LoadLineRequest& b) {
     a.Swap(&b);
@@ -3449,7 +3302,7 @@ class LoadLineResponse final :
                &_LoadLineResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    20;
+    19;
 
   friend void swap(LoadLineResponse& a, LoadLineResponse& b) {
     a.Swap(&b);
@@ -3601,7 +3454,7 @@ class AbandonLineRequest final :
                &_AbandonLineRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    21;
+    20;
 
   friend void swap(AbandonLineRequest& a, AbandonLineRequest& b) {
     a.Swap(&b);
@@ -3744,7 +3597,7 @@ class AbandonLineResponse final :
                &_AbandonLineResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    22;
+    21;
 
   friend void swap(AbandonLineResponse& a, AbandonLineResponse& b) {
     a.Swap(&b);
@@ -3896,7 +3749,7 @@ class LoadPayloadRequest final :
                &_LoadPayloadRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    23;
+    22;
 
   friend void swap(LoadPayloadRequest& a, LoadPayloadRequest& b) {
     a.Swap(&b);
@@ -4039,7 +3892,7 @@ class LoadPayloadResponse final :
                &_LoadPayloadResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    24;
+    23;
 
   friend void swap(LoadPayloadResponse& a, LoadPayloadResponse& b) {
     a.Swap(&b);
@@ -4191,7 +4044,7 @@ class WinchResult final :
                &_WinchResult_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    25;
+    24;
 
   friend void swap(WinchResult& a, WinchResult& b) {
     a.Swap(&b);
@@ -4741,30 +4594,6 @@ inline void StatusFlags::_internal_set_load_payload(bool value) {
 inline void StatusFlags::set_load_payload(bool value) {
   _internal_set_load_payload(value);
   // @@protoc_insertion_point(field_set:mavsdk.rpc.winch.StatusFlags.load_payload)
-}
-
-// -------------------------------------------------------------------
-
-// WinchHearbeat
-
-// bool connected = 1;
-inline void WinchHearbeat::clear_connected() {
-  connected_ = false;
-}
-inline bool WinchHearbeat::_internal_connected() const {
-  return connected_;
-}
-inline bool WinchHearbeat::connected() const {
-  // @@protoc_insertion_point(field_get:mavsdk.rpc.winch.WinchHearbeat.connected)
-  return _internal_connected();
-}
-inline void WinchHearbeat::_internal_set_connected(bool value) {
-  
-  connected_ = value;
-}
-inline void WinchHearbeat::set_connected(bool value) {
-  _internal_set_connected(value);
-  // @@protoc_insertion_point(field_set:mavsdk.rpc.winch.WinchHearbeat.connected)
 }
 
 // -------------------------------------------------------------------
@@ -6318,8 +6147,6 @@ inline void WinchResult::set_allocated_result_str(std::string* result_str) {
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
-// -------------------------------------------------------------------
-
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

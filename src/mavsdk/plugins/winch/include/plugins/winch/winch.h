@@ -121,27 +121,6 @@ public:
     /**
      * @brief
      */
-    struct WinchHearbeat {
-        bool connected{}; /**< @brief */
-    };
-
-    /**
-     * @brief Equal operator to compare two `Winch::WinchHearbeat` objects.
-     *
-     * @return `true` if items are equal.
-     */
-    friend bool operator==(const Winch::WinchHearbeat& lhs, const Winch::WinchHearbeat& rhs);
-
-    /**
-     * @brief Stream operator to print information about a `Winch::WinchHearbeat`.
-     *
-     * @return A reference to the stream.
-     */
-    friend std::ostream& operator<<(std::ostream& str, Winch::WinchHearbeat const& winch_hearbeat);
-
-    /**
-     * @brief
-     */
     struct Status {
         uint64_t time_usec{}; /**< @brief */
         float line_length_m{}; /**< @brief */

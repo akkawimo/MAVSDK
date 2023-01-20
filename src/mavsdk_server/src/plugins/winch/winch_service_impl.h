@@ -173,26 +173,6 @@ public:
         return obj;
     }
 
-    static std::unique_ptr<rpc::winch::WinchHearbeat>
-    translateToRpcWinchHearbeat(const mavsdk::Winch::WinchHearbeat& winch_hearbeat)
-    {
-        auto rpc_obj = std::make_unique<rpc::winch::WinchHearbeat>();
-
-        rpc_obj->set_connected(winch_hearbeat.connected);
-
-        return rpc_obj;
-    }
-
-    static mavsdk::Winch::WinchHearbeat
-    translateFromRpcWinchHearbeat(const rpc::winch::WinchHearbeat& winch_hearbeat)
-    {
-        mavsdk::Winch::WinchHearbeat obj;
-
-        obj.connected = winch_hearbeat.connected();
-
-        return obj;
-    }
-
     static std::unique_ptr<rpc::winch::Status>
     translateToRpcStatus(const mavsdk::Winch::Status& status)
     {

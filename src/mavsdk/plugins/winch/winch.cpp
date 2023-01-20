@@ -10,7 +10,6 @@
 namespace mavsdk {
 
 using StatusFlags = Winch::StatusFlags;
-using WinchHearbeat = Winch::WinchHearbeat;
 using Status = Winch::Status;
 
 Winch::Winch(System& system) : PluginBase(), _impl{std::make_unique<WinchImpl>(system)} {}
@@ -167,20 +166,6 @@ std::ostream& operator<<(std::ostream& str, Winch::StatusFlags const& status_fla
     str << "    locking: " << status_flags.locking << '\n';
     str << "    load_line: " << status_flags.load_line << '\n';
     str << "    load_payload: " << status_flags.load_payload << '\n';
-    str << '}';
-    return str;
-}
-
-bool operator==(const Winch::WinchHearbeat& lhs, const Winch::WinchHearbeat& rhs)
-{
-    return (rhs.connected == lhs.connected);
-}
-
-std::ostream& operator<<(std::ostream& str, Winch::WinchHearbeat const& winch_hearbeat)
-{
-    str << std::setprecision(15);
-    str << "winch_hearbeat:" << '\n' << "{\n";
-    str << "    connected: " << winch_hearbeat.connected << '\n';
     str << '}';
     return str;
 }

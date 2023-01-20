@@ -71,18 +71,6 @@ struct StatusFlagsDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 StatusFlagsDefaultTypeInternal _StatusFlags_default_instance_;
-PROTOBUF_CONSTEXPR WinchHearbeat::WinchHearbeat(
-    ::_pbi::ConstantInitialized)
-  : connected_(false){}
-struct WinchHearbeatDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR WinchHearbeatDefaultTypeInternal()
-      : _instance(::_pbi::ConstantInitialized{}) {}
-  ~WinchHearbeatDefaultTypeInternal() {}
-  union {
-    WinchHearbeat _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WinchHearbeatDefaultTypeInternal _WinchHearbeat_default_instance_;
 PROTOBUF_CONSTEXPR Status::Status(
     ::_pbi::ConstantInitialized)
   : status_flags_(nullptr)
@@ -362,7 +350,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 }  // namespace winch
 }  // namespace rpc
 }  // namespace mavsdk
-static ::_pb::Metadata file_level_metadata_winch_2fwinch_2eproto[26];
+static ::_pb::Metadata file_level_metadata_winch_2fwinch_2eproto[25];
 static const ::_pb::EnumDescriptor* file_level_enum_descriptors_winch_2fwinch_2eproto[2];
 static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_winch_2fwinch_2eproto = nullptr;
 
@@ -400,13 +388,6 @@ const uint32_t TableStruct_winch_2fwinch_2eproto::offsets[] PROTOBUF_SECTION_VAR
   PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::StatusFlags, locking_),
   PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::StatusFlags, load_line_),
   PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::StatusFlags, load_payload_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchHearbeat, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchHearbeat, connected_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::Status, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -577,36 +558,34 @@ static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protode
   { 0, -1, -1, sizeof(::mavsdk::rpc::winch::SubscribeStatusRequest)},
   { 6, -1, -1, sizeof(::mavsdk::rpc::winch::StatusResponse)},
   { 13, -1, -1, sizeof(::mavsdk::rpc::winch::StatusFlags)},
-  { 33, -1, -1, sizeof(::mavsdk::rpc::winch::WinchHearbeat)},
-  { 40, -1, -1, sizeof(::mavsdk::rpc::winch::Status)},
-  { 54, -1, -1, sizeof(::mavsdk::rpc::winch::RelaxRequest)},
-  { 61, -1, -1, sizeof(::mavsdk::rpc::winch::RelaxResponse)},
-  { 68, -1, -1, sizeof(::mavsdk::rpc::winch::RelativeLengthControlRequest)},
-  { 77, -1, -1, sizeof(::mavsdk::rpc::winch::RelativeLengthControlResponse)},
-  { 84, -1, -1, sizeof(::mavsdk::rpc::winch::RateControlRequest)},
-  { 92, -1, -1, sizeof(::mavsdk::rpc::winch::RateControlResponse)},
-  { 99, -1, -1, sizeof(::mavsdk::rpc::winch::LockRequest)},
-  { 106, -1, -1, sizeof(::mavsdk::rpc::winch::LockResponse)},
-  { 113, -1, -1, sizeof(::mavsdk::rpc::winch::DeliverRequest)},
-  { 120, -1, -1, sizeof(::mavsdk::rpc::winch::DeliverResponse)},
-  { 127, -1, -1, sizeof(::mavsdk::rpc::winch::HoldRequest)},
-  { 134, -1, -1, sizeof(::mavsdk::rpc::winch::HoldResponse)},
-  { 141, -1, -1, sizeof(::mavsdk::rpc::winch::RetractRequest)},
-  { 148, -1, -1, sizeof(::mavsdk::rpc::winch::RetractResponse)},
-  { 155, -1, -1, sizeof(::mavsdk::rpc::winch::LoadLineRequest)},
-  { 162, -1, -1, sizeof(::mavsdk::rpc::winch::LoadLineResponse)},
-  { 169, -1, -1, sizeof(::mavsdk::rpc::winch::AbandonLineRequest)},
-  { 176, -1, -1, sizeof(::mavsdk::rpc::winch::AbandonLineResponse)},
-  { 183, -1, -1, sizeof(::mavsdk::rpc::winch::LoadPayloadRequest)},
-  { 190, -1, -1, sizeof(::mavsdk::rpc::winch::LoadPayloadResponse)},
-  { 197, -1, -1, sizeof(::mavsdk::rpc::winch::WinchResult)},
+  { 33, -1, -1, sizeof(::mavsdk::rpc::winch::Status)},
+  { 47, -1, -1, sizeof(::mavsdk::rpc::winch::RelaxRequest)},
+  { 54, -1, -1, sizeof(::mavsdk::rpc::winch::RelaxResponse)},
+  { 61, -1, -1, sizeof(::mavsdk::rpc::winch::RelativeLengthControlRequest)},
+  { 70, -1, -1, sizeof(::mavsdk::rpc::winch::RelativeLengthControlResponse)},
+  { 77, -1, -1, sizeof(::mavsdk::rpc::winch::RateControlRequest)},
+  { 85, -1, -1, sizeof(::mavsdk::rpc::winch::RateControlResponse)},
+  { 92, -1, -1, sizeof(::mavsdk::rpc::winch::LockRequest)},
+  { 99, -1, -1, sizeof(::mavsdk::rpc::winch::LockResponse)},
+  { 106, -1, -1, sizeof(::mavsdk::rpc::winch::DeliverRequest)},
+  { 113, -1, -1, sizeof(::mavsdk::rpc::winch::DeliverResponse)},
+  { 120, -1, -1, sizeof(::mavsdk::rpc::winch::HoldRequest)},
+  { 127, -1, -1, sizeof(::mavsdk::rpc::winch::HoldResponse)},
+  { 134, -1, -1, sizeof(::mavsdk::rpc::winch::RetractRequest)},
+  { 141, -1, -1, sizeof(::mavsdk::rpc::winch::RetractResponse)},
+  { 148, -1, -1, sizeof(::mavsdk::rpc::winch::LoadLineRequest)},
+  { 155, -1, -1, sizeof(::mavsdk::rpc::winch::LoadLineResponse)},
+  { 162, -1, -1, sizeof(::mavsdk::rpc::winch::AbandonLineRequest)},
+  { 169, -1, -1, sizeof(::mavsdk::rpc::winch::AbandonLineResponse)},
+  { 176, -1, -1, sizeof(::mavsdk::rpc::winch::LoadPayloadRequest)},
+  { 183, -1, -1, sizeof(::mavsdk::rpc::winch::LoadPayloadResponse)},
+  { 190, -1, -1, sizeof(::mavsdk::rpc::winch::WinchResult)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
   &::mavsdk::rpc::winch::_SubscribeStatusRequest_default_instance_._instance,
   &::mavsdk::rpc::winch::_StatusResponse_default_instance_._instance,
   &::mavsdk::rpc::winch::_StatusFlags_default_instance_._instance,
-  &::mavsdk::rpc::winch::_WinchHearbeat_default_instance_._instance,
   &::mavsdk::rpc::winch::_Status_default_instance_._instance,
   &::mavsdk::rpc::winch::_RelaxRequest_default_instance_._instance,
   &::mavsdk::rpc::winch::_RelaxResponse_default_instance_._instance,
@@ -642,94 +621,93 @@ const char descriptor_table_protodef_winch_2fwinch_2eproto[] PROTOBUF_SECTION_VA
   "ound_sense\030\010 \001(\010\022\022\n\nretracting\030\t \001(\010\022\021\n\t"
   "redeliver\030\n \001(\010\022\024\n\014abandon_line\030\013 \001(\010\022\017\n"
   "\007locking\030\014 \001(\010\022\021\n\tload_line\030\r \001(\010\022\024\n\014loa"
-  "d_payload\030\016 \001(\010\"\"\n\rWinchHearbeat\022\021\n\tconn"
-  "ected\030\001 \001(\010\"\313\001\n\006Status\022\021\n\ttime_usec\030\001 \001("
-  "\004\022\025\n\rline_length_m\030\002 \001(\002\022\021\n\tspeed_m_s\030\003 "
-  "\001(\002\022\022\n\ntension_kg\030\004 \001(\002\022\021\n\tvoltage_v\030\005 \001"
-  "(\002\022\021\n\tcurrent_a\030\006 \001(\002\022\025\n\rtemperature_c\030\007"
-  " \001(\005\0223\n\014status_flags\030\010 \001(\0132\035.mavsdk.rpc."
-  "winch.StatusFlags\" \n\014RelaxRequest\022\020\n\010ins"
-  "tance\030\001 \001(\r\"D\n\rRelaxResponse\0223\n\014winch_re"
+  "d_payload\030\016 \001(\010\"\313\001\n\006Status\022\021\n\ttime_usec\030"
+  "\001 \001(\004\022\025\n\rline_length_m\030\002 \001(\002\022\021\n\tspeed_m_"
+  "s\030\003 \001(\002\022\022\n\ntension_kg\030\004 \001(\002\022\021\n\tvoltage_v"
+  "\030\005 \001(\002\022\021\n\tcurrent_a\030\006 \001(\002\022\025\n\rtemperature"
+  "_c\030\007 \001(\005\0223\n\014status_flags\030\010 \001(\0132\035.mavsdk."
+  "rpc.winch.StatusFlags\" \n\014RelaxRequest\022\020\n"
+  "\010instance\030\001 \001(\r\"D\n\rRelaxResponse\0223\n\014winc"
+  "h_result\030\001 \001(\0132\035.mavsdk.rpc.winch.WinchR"
+  "esult\"N\n\034RelativeLengthControlRequest\022\020\n"
+  "\010instance\030\001 \001(\r\022\016\n\006length\030\002 \001(\002\022\014\n\004rate\030"
+  "\003 \001(\002\"T\n\035RelativeLengthControlResponse\0223"
+  "\n\014winch_result\030\001 \001(\0132\035.mavsdk.rpc.winch."
+  "WinchResult\"4\n\022RateControlRequest\022\020\n\010ins"
+  "tance\030\001 \001(\r\022\014\n\004rate\030\002 \001(\002\"J\n\023RateControl"
+  "Response\0223\n\014winch_result\030\001 \001(\0132\035.mavsdk."
+  "rpc.winch.WinchResult\"\037\n\013LockRequest\022\020\n\010"
+  "instance\030\001 \001(\r\"C\n\014LockResponse\0223\n\014winch_"
+  "result\030\001 \001(\0132\035.mavsdk.rpc.winch.WinchRes"
+  "ult\"\"\n\016DeliverRequest\022\020\n\010instance\030\001 \001(\r\""
+  "F\n\017DeliverResponse\0223\n\014winch_result\030\001 \001(\013"
+  "2\035.mavsdk.rpc.winch.WinchResult\"\037\n\013HoldR"
+  "equest\022\020\n\010instance\030\001 \001(\r\"C\n\014HoldResponse"
+  "\0223\n\014winch_result\030\001 \001(\0132\035.mavsdk.rpc.winc"
+  "h.WinchResult\"\"\n\016RetractRequest\022\020\n\010insta"
+  "nce\030\001 \001(\r\"F\n\017RetractResponse\0223\n\014winch_re"
   "sult\030\001 \001(\0132\035.mavsdk.rpc.winch.WinchResul"
-  "t\"N\n\034RelativeLengthControlRequest\022\020\n\010ins"
-  "tance\030\001 \001(\r\022\016\n\006length\030\002 \001(\002\022\014\n\004rate\030\003 \001("
-  "\002\"T\n\035RelativeLengthControlResponse\0223\n\014wi"
-  "nch_result\030\001 \001(\0132\035.mavsdk.rpc.winch.Winc"
-  "hResult\"4\n\022RateControlRequest\022\020\n\010instanc"
-  "e\030\001 \001(\r\022\014\n\004rate\030\002 \001(\002\"J\n\023RateControlResp"
-  "onse\0223\n\014winch_result\030\001 \001(\0132\035.mavsdk.rpc."
-  "winch.WinchResult\"\037\n\013LockRequest\022\020\n\010inst"
-  "ance\030\001 \001(\r\"C\n\014LockResponse\0223\n\014winch_resu"
-  "lt\030\001 \001(\0132\035.mavsdk.rpc.winch.WinchResult\""
-  "\"\n\016DeliverRequest\022\020\n\010instance\030\001 \001(\r\"F\n\017D"
-  "eliverResponse\0223\n\014winch_result\030\001 \001(\0132\035.m"
-  "avsdk.rpc.winch.WinchResult\"\037\n\013HoldReque"
-  "st\022\020\n\010instance\030\001 \001(\r\"C\n\014HoldResponse\0223\n\014"
-  "winch_result\030\001 \001(\0132\035.mavsdk.rpc.winch.Wi"
-  "nchResult\"\"\n\016RetractRequest\022\020\n\010instance\030"
-  "\001 \001(\r\"F\n\017RetractResponse\0223\n\014winch_result"
-  "\030\001 \001(\0132\035.mavsdk.rpc.winch.WinchResult\"#\n"
-  "\017LoadLineRequest\022\020\n\010instance\030\001 \001(\r\"G\n\020Lo"
-  "adLineResponse\0223\n\014winch_result\030\001 \001(\0132\035.m"
-  "avsdk.rpc.winch.WinchResult\"&\n\022AbandonLi"
-  "neRequest\022\020\n\010instance\030\001 \001(\r\"J\n\023AbandonLi"
-  "neResponse\0223\n\014winch_result\030\001 \001(\0132\035.mavsd"
-  "k.rpc.winch.WinchResult\"&\n\022LoadPayloadRe"
-  "quest\022\020\n\010instance\030\001 \001(\r\"J\n\023LoadPayloadRe"
-  "sponse\0223\n\014winch_result\030\001 \001(\0132\035.mavsdk.rp"
-  "c.winch.WinchResult\"\355\003\n\013WinchResult\0224\n\006r"
-  "esult\030\001 \001(\0162$.mavsdk.rpc.winch.WinchResu"
-  "lt.Result\022\022\n\nresult_str\030\002 \001(\t\"\223\003\n\006Result"
-  "\022\022\n\016RESULT_UNKNOWN\020\000\022\022\n\016RESULT_SUCCESS\020\001"
-  "\022\024\n\020RESULT_NO_SYSTEM\020\002\022\033\n\027RESULT_CONNECT"
-  "ION_ERROR\020\003\022\017\n\013RESULT_BUSY\020\004\022\031\n\025RESULT_C"
-  "OMMAND_DENIED\020\005\022.\n*RESULT_COMMAND_DENIED"
-  "_LANDED_STATE_UNKNOWN\020\006\022$\n RESULT_COMMAN"
-  "D_DENIED_NOT_LANDED\020\007\022\022\n\016RESULT_TIMEOUT\020"
-  "\010\022*\n&RESULT_VTOL_TRANSITION_SUPPORT_UNKN"
-  "OWN\020\t\022%\n!RESULT_NO_VTOL_TRANSITION_SUPPO"
-  "RT\020\n\022\032\n\026RESULT_PARAMETER_ERROR\020\013\022\026\n\022RESU"
-  "LT_UNSUPPORTED\020\014\022\021\n\rRESULT_FAILED\020\r*\254\002\n\013"
-  "WinchAction\022\030\n\024WINCH_ACTION_RELAXED\020\000\022(\n"
-  "$WINCH_ACTION_RELATIVE_LENGTH_CONTROL\020\001\022"
-  "\035\n\031WINCH_ACTION_RATE_CONTROL\020\002\022\025\n\021WINCH_"
-  "ACTION_LOCK\020\003\022\030\n\024WINCH_ACTION_DELIVER\020\004\022"
-  "\025\n\021WINCH_ACTION_HOLD\020\005\022\030\n\024WINCH_ACTION_R"
-  "ETRACT\020\006\022\032\n\026WINCH_ACTION_LOAD_LINE\020\007\022\035\n\031"
-  "WINCH_ACTION_ABANDON_LINE\020\010\022\035\n\031WINCH_ACT"
-  "ION_LOAD_PAYLOAD\020\t2\336\007\n\014WinchService\022a\n\017S"
-  "ubscribeStatus\022(.mavsdk.rpc.winch.Subscr"
-  "ibeStatusRequest\032 .mavsdk.rpc.winch.Stat"
-  "usResponse\"\0000\001\022J\n\005Relax\022\036.mavsdk.rpc.win"
-  "ch.RelaxRequest\032\037.mavsdk.rpc.winch.Relax"
-  "Response\"\000\022z\n\025RelativeLengthControl\022..ma"
-  "vsdk.rpc.winch.RelativeLengthControlRequ"
-  "est\032/.mavsdk.rpc.winch.RelativeLengthCon"
-  "trolResponse\"\000\022\\\n\013RateControl\022$.mavsdk.r"
-  "pc.winch.RateControlRequest\032%.mavsdk.rpc"
-  ".winch.RateControlResponse\"\000\022G\n\004Lock\022\035.m"
-  "avsdk.rpc.winch.LockRequest\032\036.mavsdk.rpc"
-  ".winch.LockResponse\"\000\022P\n\007Deliver\022 .mavsd"
-  "k.rpc.winch.DeliverRequest\032!.mavsdk.rpc."
-  "winch.DeliverResponse\"\000\022G\n\004Hold\022\035.mavsdk"
-  ".rpc.winch.HoldRequest\032\036.mavsdk.rpc.winc"
-  "h.HoldResponse\"\000\022P\n\007Retract\022 .mavsdk.rpc"
-  ".winch.RetractRequest\032!.mavsdk.rpc.winch"
-  ".RetractResponse\"\000\022S\n\010LoadLine\022!.mavsdk."
-  "rpc.winch.LoadLineRequest\032\".mavsdk.rpc.w"
-  "inch.LoadLineResponse\"\000\022\\\n\013AbandonLine\022$"
-  ".mavsdk.rpc.winch.AbandonLineRequest\032%.m"
-  "avsdk.rpc.winch.AbandonLineResponse\"\000\022\\\n"
-  "\013LoadPayload\022$.mavsdk.rpc.winch.LoadPayl"
-  "oadRequest\032%.mavsdk.rpc.winch.LoadPayloa"
-  "dResponse\"\000B\035\n\017io.mavsdk.winchB\nWinchPro"
-  "tob\006proto3"
+  "t\"#\n\017LoadLineRequest\022\020\n\010instance\030\001 \001(\r\"G"
+  "\n\020LoadLineResponse\0223\n\014winch_result\030\001 \001(\013"
+  "2\035.mavsdk.rpc.winch.WinchResult\"&\n\022Aband"
+  "onLineRequest\022\020\n\010instance\030\001 \001(\r\"J\n\023Aband"
+  "onLineResponse\0223\n\014winch_result\030\001 \001(\0132\035.m"
+  "avsdk.rpc.winch.WinchResult\"&\n\022LoadPaylo"
+  "adRequest\022\020\n\010instance\030\001 \001(\r\"J\n\023LoadPaylo"
+  "adResponse\0223\n\014winch_result\030\001 \001(\0132\035.mavsd"
+  "k.rpc.winch.WinchResult\"\355\003\n\013WinchResult\022"
+  "4\n\006result\030\001 \001(\0162$.mavsdk.rpc.winch.Winch"
+  "Result.Result\022\022\n\nresult_str\030\002 \001(\t\"\223\003\n\006Re"
+  "sult\022\022\n\016RESULT_UNKNOWN\020\000\022\022\n\016RESULT_SUCCE"
+  "SS\020\001\022\024\n\020RESULT_NO_SYSTEM\020\002\022\033\n\027RESULT_CON"
+  "NECTION_ERROR\020\003\022\017\n\013RESULT_BUSY\020\004\022\031\n\025RESU"
+  "LT_COMMAND_DENIED\020\005\022.\n*RESULT_COMMAND_DE"
+  "NIED_LANDED_STATE_UNKNOWN\020\006\022$\n RESULT_CO"
+  "MMAND_DENIED_NOT_LANDED\020\007\022\022\n\016RESULT_TIME"
+  "OUT\020\010\022*\n&RESULT_VTOL_TRANSITION_SUPPORT_"
+  "UNKNOWN\020\t\022%\n!RESULT_NO_VTOL_TRANSITION_S"
+  "UPPORT\020\n\022\032\n\026RESULT_PARAMETER_ERROR\020\013\022\026\n\022"
+  "RESULT_UNSUPPORTED\020\014\022\021\n\rRESULT_FAILED\020\r*"
+  "\254\002\n\013WinchAction\022\030\n\024WINCH_ACTION_RELAXED\020"
+  "\000\022(\n$WINCH_ACTION_RELATIVE_LENGTH_CONTRO"
+  "L\020\001\022\035\n\031WINCH_ACTION_RATE_CONTROL\020\002\022\025\n\021WI"
+  "NCH_ACTION_LOCK\020\003\022\030\n\024WINCH_ACTION_DELIVE"
+  "R\020\004\022\025\n\021WINCH_ACTION_HOLD\020\005\022\030\n\024WINCH_ACTI"
+  "ON_RETRACT\020\006\022\032\n\026WINCH_ACTION_LOAD_LINE\020\007"
+  "\022\035\n\031WINCH_ACTION_ABANDON_LINE\020\010\022\035\n\031WINCH"
+  "_ACTION_LOAD_PAYLOAD\020\t2\336\007\n\014WinchService\022"
+  "a\n\017SubscribeStatus\022(.mavsdk.rpc.winch.Su"
+  "bscribeStatusRequest\032 .mavsdk.rpc.winch."
+  "StatusResponse\"\0000\001\022J\n\005Relax\022\036.mavsdk.rpc"
+  ".winch.RelaxRequest\032\037.mavsdk.rpc.winch.R"
+  "elaxResponse\"\000\022z\n\025RelativeLengthControl\022"
+  "..mavsdk.rpc.winch.RelativeLengthControl"
+  "Request\032/.mavsdk.rpc.winch.RelativeLengt"
+  "hControlResponse\"\000\022\\\n\013RateControl\022$.mavs"
+  "dk.rpc.winch.RateControlRequest\032%.mavsdk"
+  ".rpc.winch.RateControlResponse\"\000\022G\n\004Lock"
+  "\022\035.mavsdk.rpc.winch.LockRequest\032\036.mavsdk"
+  ".rpc.winch.LockResponse\"\000\022P\n\007Deliver\022 .m"
+  "avsdk.rpc.winch.DeliverRequest\032!.mavsdk."
+  "rpc.winch.DeliverResponse\"\000\022G\n\004Hold\022\035.ma"
+  "vsdk.rpc.winch.HoldRequest\032\036.mavsdk.rpc."
+  "winch.HoldResponse\"\000\022P\n\007Retract\022 .mavsdk"
+  ".rpc.winch.RetractRequest\032!.mavsdk.rpc.w"
+  "inch.RetractResponse\"\000\022S\n\010LoadLine\022!.mav"
+  "sdk.rpc.winch.LoadLineRequest\032\".mavsdk.r"
+  "pc.winch.LoadLineResponse\"\000\022\\\n\013AbandonLi"
+  "ne\022$.mavsdk.rpc.winch.AbandonLineRequest"
+  "\032%.mavsdk.rpc.winch.AbandonLineResponse\""
+  "\000\022\\\n\013LoadPayload\022$.mavsdk.rpc.winch.Load"
+  "PayloadRequest\032%.mavsdk.rpc.winch.LoadPa"
+  "yloadResponse\"\000B\035\n\017io.mavsdk.winchB\nWinc"
+  "hProtob\006proto3"
   ;
 static ::_pbi::once_flag descriptor_table_winch_2fwinch_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_winch_2fwinch_2eproto = {
-    false, false, 3650, descriptor_table_protodef_winch_2fwinch_2eproto,
+    false, false, 3614, descriptor_table_protodef_winch_2fwinch_2eproto,
     "winch/winch.proto",
-    &descriptor_table_winch_2fwinch_2eproto_once, nullptr, 0, 26,
+    &descriptor_table_winch_2fwinch_2eproto_once, nullptr, 0, 25,
     schemas, file_default_instances, TableStruct_winch_2fwinch_2eproto::offsets,
     file_level_metadata_winch_2fwinch_2eproto, file_level_enum_descriptors_winch_2fwinch_2eproto,
     file_level_service_descriptors_winch_2fwinch_2eproto,
@@ -1508,177 +1486,6 @@ void StatusFlags::InternalSwap(StatusFlags* other) {
 
 // ===================================================================
 
-class WinchHearbeat::_Internal {
- public:
-};
-
-WinchHearbeat::WinchHearbeat(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.WinchHearbeat)
-}
-WinchHearbeat::WinchHearbeat(const WinchHearbeat& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  connected_ = from.connected_;
-  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.WinchHearbeat)
-}
-
-inline void WinchHearbeat::SharedCtor() {
-connected_ = false;
-}
-
-WinchHearbeat::~WinchHearbeat() {
-  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.WinchHearbeat)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
-  (void)arena;
-    return;
-  }
-  SharedDtor();
-}
-
-inline void WinchHearbeat::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-}
-
-void WinchHearbeat::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-
-void WinchHearbeat::Clear() {
-// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.WinchHearbeat)
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  connected_ = false;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* WinchHearbeat::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
-    switch (tag >> 3) {
-      // bool connected = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          connected_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
-          CHK_(ptr);
-        } else
-          goto handle_unusual;
-        continue;
-      default:
-        goto handle_unusual;
-    }  // switch
-  handle_unusual:
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
-  }  // while
-message_done:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto message_done;
-#undef CHK_
-}
-
-uint8_t* WinchHearbeat::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.WinchHearbeat)
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // bool connected = 1;
-  if (this->_internal_connected() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_connected(), target);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.WinchHearbeat)
-  return target;
-}
-
-size_t WinchHearbeat::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.WinchHearbeat)
-  size_t total_size = 0;
-
-  uint32_t cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // bool connected = 1;
-  if (this->_internal_connected() != 0) {
-    total_size += 1 + 1;
-  }
-
-  return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
-}
-
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WinchHearbeat::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    WinchHearbeat::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WinchHearbeat::GetClassData() const { return &_class_data_; }
-
-void WinchHearbeat::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
-                      const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<WinchHearbeat *>(to)->MergeFrom(
-      static_cast<const WinchHearbeat &>(from));
-}
-
-
-void WinchHearbeat::MergeFrom(const WinchHearbeat& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.WinchHearbeat)
-  GOOGLE_DCHECK_NE(&from, this);
-  uint32_t cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from._internal_connected() != 0) {
-    _internal_set_connected(from._internal_connected());
-  }
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-}
-
-void WinchHearbeat::CopyFrom(const WinchHearbeat& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.WinchHearbeat)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool WinchHearbeat::IsInitialized() const {
-  return true;
-}
-
-void WinchHearbeat::InternalSwap(WinchHearbeat* other) {
-  using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(connected_, other->connected_);
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata WinchHearbeat::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
-      file_level_metadata_winch_2fwinch_2eproto[3]);
-}
-
-// ===================================================================
-
 class Status::_Internal {
  public:
   static const ::mavsdk::rpc::winch::StatusFlags& status_flags(const Status* msg);
@@ -2089,7 +1896,7 @@ void Status::InternalSwap(Status* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata Status::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
-      file_level_metadata_winch_2fwinch_2eproto[4]);
+      file_level_metadata_winch_2fwinch_2eproto[3]);
 }
 
 // ===================================================================
@@ -2260,7 +2067,7 @@ void RelaxRequest::InternalSwap(RelaxRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata RelaxRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
-      file_level_metadata_winch_2fwinch_2eproto[5]);
+      file_level_metadata_winch_2fwinch_2eproto[4]);
 }
 
 // ===================================================================
@@ -2447,7 +2254,7 @@ void RelaxResponse::InternalSwap(RelaxResponse* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata RelaxResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
-      file_level_metadata_winch_2fwinch_2eproto[6]);
+      file_level_metadata_winch_2fwinch_2eproto[5]);
 }
 
 // ===================================================================
@@ -2698,7 +2505,7 @@ void RelativeLengthControlRequest::InternalSwap(RelativeLengthControlRequest* ot
 ::PROTOBUF_NAMESPACE_ID::Metadata RelativeLengthControlRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
-      file_level_metadata_winch_2fwinch_2eproto[7]);
+      file_level_metadata_winch_2fwinch_2eproto[6]);
 }
 
 // ===================================================================
@@ -2885,7 +2692,7 @@ void RelativeLengthControlResponse::InternalSwap(RelativeLengthControlResponse* 
 ::PROTOBUF_NAMESPACE_ID::Metadata RelativeLengthControlResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
-      file_level_metadata_winch_2fwinch_2eproto[8]);
+      file_level_metadata_winch_2fwinch_2eproto[7]);
 }
 
 // ===================================================================
@@ -3102,7 +2909,7 @@ void RateControlRequest::InternalSwap(RateControlRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata RateControlRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
-      file_level_metadata_winch_2fwinch_2eproto[9]);
+      file_level_metadata_winch_2fwinch_2eproto[8]);
 }
 
 // ===================================================================
@@ -3289,7 +3096,7 @@ void RateControlResponse::InternalSwap(RateControlResponse* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata RateControlResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
-      file_level_metadata_winch_2fwinch_2eproto[10]);
+      file_level_metadata_winch_2fwinch_2eproto[9]);
 }
 
 // ===================================================================
@@ -3460,7 +3267,7 @@ void LockRequest::InternalSwap(LockRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata LockRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
-      file_level_metadata_winch_2fwinch_2eproto[11]);
+      file_level_metadata_winch_2fwinch_2eproto[10]);
 }
 
 // ===================================================================
@@ -3647,7 +3454,7 @@ void LockResponse::InternalSwap(LockResponse* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata LockResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
-      file_level_metadata_winch_2fwinch_2eproto[12]);
+      file_level_metadata_winch_2fwinch_2eproto[11]);
 }
 
 // ===================================================================
@@ -3818,7 +3625,7 @@ void DeliverRequest::InternalSwap(DeliverRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata DeliverRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
-      file_level_metadata_winch_2fwinch_2eproto[13]);
+      file_level_metadata_winch_2fwinch_2eproto[12]);
 }
 
 // ===================================================================
@@ -4005,7 +3812,7 @@ void DeliverResponse::InternalSwap(DeliverResponse* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata DeliverResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
-      file_level_metadata_winch_2fwinch_2eproto[14]);
+      file_level_metadata_winch_2fwinch_2eproto[13]);
 }
 
 // ===================================================================
@@ -4176,7 +3983,7 @@ void HoldRequest::InternalSwap(HoldRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata HoldRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
-      file_level_metadata_winch_2fwinch_2eproto[15]);
+      file_level_metadata_winch_2fwinch_2eproto[14]);
 }
 
 // ===================================================================
@@ -4363,7 +4170,7 @@ void HoldResponse::InternalSwap(HoldResponse* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata HoldResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
-      file_level_metadata_winch_2fwinch_2eproto[16]);
+      file_level_metadata_winch_2fwinch_2eproto[15]);
 }
 
 // ===================================================================
@@ -4534,7 +4341,7 @@ void RetractRequest::InternalSwap(RetractRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata RetractRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
-      file_level_metadata_winch_2fwinch_2eproto[17]);
+      file_level_metadata_winch_2fwinch_2eproto[16]);
 }
 
 // ===================================================================
@@ -4721,7 +4528,7 @@ void RetractResponse::InternalSwap(RetractResponse* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata RetractResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
-      file_level_metadata_winch_2fwinch_2eproto[18]);
+      file_level_metadata_winch_2fwinch_2eproto[17]);
 }
 
 // ===================================================================
@@ -4892,7 +4699,7 @@ void LoadLineRequest::InternalSwap(LoadLineRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata LoadLineRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
-      file_level_metadata_winch_2fwinch_2eproto[19]);
+      file_level_metadata_winch_2fwinch_2eproto[18]);
 }
 
 // ===================================================================
@@ -5079,7 +4886,7 @@ void LoadLineResponse::InternalSwap(LoadLineResponse* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata LoadLineResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
-      file_level_metadata_winch_2fwinch_2eproto[20]);
+      file_level_metadata_winch_2fwinch_2eproto[19]);
 }
 
 // ===================================================================
@@ -5250,7 +5057,7 @@ void AbandonLineRequest::InternalSwap(AbandonLineRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata AbandonLineRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
-      file_level_metadata_winch_2fwinch_2eproto[21]);
+      file_level_metadata_winch_2fwinch_2eproto[20]);
 }
 
 // ===================================================================
@@ -5437,7 +5244,7 @@ void AbandonLineResponse::InternalSwap(AbandonLineResponse* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata AbandonLineResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
-      file_level_metadata_winch_2fwinch_2eproto[22]);
+      file_level_metadata_winch_2fwinch_2eproto[21]);
 }
 
 // ===================================================================
@@ -5608,7 +5415,7 @@ void LoadPayloadRequest::InternalSwap(LoadPayloadRequest* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata LoadPayloadRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
-      file_level_metadata_winch_2fwinch_2eproto[23]);
+      file_level_metadata_winch_2fwinch_2eproto[22]);
 }
 
 // ===================================================================
@@ -5795,7 +5602,7 @@ void LoadPayloadResponse::InternalSwap(LoadPayloadResponse* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata LoadPayloadResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
-      file_level_metadata_winch_2fwinch_2eproto[24]);
+      file_level_metadata_winch_2fwinch_2eproto[23]);
 }
 
 // ===================================================================
@@ -6019,7 +5826,7 @@ void WinchResult::InternalSwap(WinchResult* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata WinchResult::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
-      file_level_metadata_winch_2fwinch_2eproto[25]);
+      file_level_metadata_winch_2fwinch_2eproto[24]);
 }
 
 // @@protoc_insertion_point(namespace_scope)
@@ -6038,10 +5845,6 @@ Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::StatusResponse >(Arena* arena) 
 template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::StatusFlags*
 Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::StatusFlags >(Arena* arena) {
   return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::StatusFlags >(arena);
-}
-template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::WinchHearbeat*
-Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::WinchHearbeat >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::WinchHearbeat >(arena);
 }
 template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::Status*
 Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::Status >(Arena* arena) {
