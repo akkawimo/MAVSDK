@@ -38,14 +38,14 @@ class WinchService final {
    public:
     virtual ~StubInterface() {}
     // Subscribe to 'winch status' updates.
-    std::unique_ptr< ::grpc::ClientReaderInterface< ::mavsdk::rpc::winch::WinchStatusResponse>> SubscribeWinchStatus(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest& request) {
-      return std::unique_ptr< ::grpc::ClientReaderInterface< ::mavsdk::rpc::winch::WinchStatusResponse>>(SubscribeWinchStatusRaw(context, request));
+    std::unique_ptr< ::grpc::ClientReaderInterface< ::mavsdk::rpc::winch::StatusResponse>> SubscribeStatus(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeStatusRequest& request) {
+      return std::unique_ptr< ::grpc::ClientReaderInterface< ::mavsdk::rpc::winch::StatusResponse>>(SubscribeStatusRaw(context, request));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::mavsdk::rpc::winch::WinchStatusResponse>> AsyncSubscribeWinchStatus(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
-      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::mavsdk::rpc::winch::WinchStatusResponse>>(AsyncSubscribeWinchStatusRaw(context, request, cq, tag));
+    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::mavsdk::rpc::winch::StatusResponse>> AsyncSubscribeStatus(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeStatusRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::mavsdk::rpc::winch::StatusResponse>>(AsyncSubscribeStatusRaw(context, request, cq, tag));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::mavsdk::rpc::winch::WinchStatusResponse>> PrepareAsyncSubscribeWinchStatus(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::mavsdk::rpc::winch::WinchStatusResponse>>(PrepareAsyncSubscribeWinchStatusRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::mavsdk::rpc::winch::StatusResponse>> PrepareAsyncSubscribeStatus(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeStatusRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::mavsdk::rpc::winch::StatusResponse>>(PrepareAsyncSubscribeStatusRaw(context, request, cq));
     }
     //
     // Allow motor to freewheel.
@@ -143,7 +143,7 @@ class WinchService final {
      public:
       virtual ~async_interface() {}
       // Subscribe to 'winch status' updates.
-      virtual void SubscribeWinchStatus(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest* request, ::grpc::ClientReadReactor< ::mavsdk::rpc::winch::WinchStatusResponse>* reactor) = 0;
+      virtual void SubscribeStatus(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeStatusRequest* request, ::grpc::ClientReadReactor< ::mavsdk::rpc::winch::StatusResponse>* reactor) = 0;
       //
       // Allow motor to freewheel.
       virtual void Relax(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelaxRequest* request, ::mavsdk::rpc::winch::RelaxResponse* response, std::function<void(::grpc::Status)>) = 0;
@@ -191,9 +191,9 @@ class WinchService final {
     virtual class async_interface* async() { return nullptr; }
     class async_interface* experimental_async() { return async(); }
    private:
-    virtual ::grpc::ClientReaderInterface< ::mavsdk::rpc::winch::WinchStatusResponse>* SubscribeWinchStatusRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest& request) = 0;
-    virtual ::grpc::ClientAsyncReaderInterface< ::mavsdk::rpc::winch::WinchStatusResponse>* AsyncSubscribeWinchStatusRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest& request, ::grpc::CompletionQueue* cq, void* tag) = 0;
-    virtual ::grpc::ClientAsyncReaderInterface< ::mavsdk::rpc::winch::WinchStatusResponse>* PrepareAsyncSubscribeWinchStatusRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientReaderInterface< ::mavsdk::rpc::winch::StatusResponse>* SubscribeStatusRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeStatusRequest& request) = 0;
+    virtual ::grpc::ClientAsyncReaderInterface< ::mavsdk::rpc::winch::StatusResponse>* AsyncSubscribeStatusRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeStatusRequest& request, ::grpc::CompletionQueue* cq, void* tag) = 0;
+    virtual ::grpc::ClientAsyncReaderInterface< ::mavsdk::rpc::winch::StatusResponse>* PrepareAsyncSubscribeStatusRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeStatusRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::RelaxResponse>* AsyncRelaxRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelaxRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::RelaxResponse>* PrepareAsyncRelaxRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelaxRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::RelativeLengthControlResponse>* AsyncRelativeLengthControlRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelativeLengthControlRequest& request, ::grpc::CompletionQueue* cq) = 0;
@@ -218,14 +218,14 @@ class WinchService final {
   class Stub final : public StubInterface {
    public:
     Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
-    std::unique_ptr< ::grpc::ClientReader< ::mavsdk::rpc::winch::WinchStatusResponse>> SubscribeWinchStatus(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest& request) {
-      return std::unique_ptr< ::grpc::ClientReader< ::mavsdk::rpc::winch::WinchStatusResponse>>(SubscribeWinchStatusRaw(context, request));
+    std::unique_ptr< ::grpc::ClientReader< ::mavsdk::rpc::winch::StatusResponse>> SubscribeStatus(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeStatusRequest& request) {
+      return std::unique_ptr< ::grpc::ClientReader< ::mavsdk::rpc::winch::StatusResponse>>(SubscribeStatusRaw(context, request));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReader< ::mavsdk::rpc::winch::WinchStatusResponse>> AsyncSubscribeWinchStatus(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
-      return std::unique_ptr< ::grpc::ClientAsyncReader< ::mavsdk::rpc::winch::WinchStatusResponse>>(AsyncSubscribeWinchStatusRaw(context, request, cq, tag));
+    std::unique_ptr< ::grpc::ClientAsyncReader< ::mavsdk::rpc::winch::StatusResponse>> AsyncSubscribeStatus(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeStatusRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReader< ::mavsdk::rpc::winch::StatusResponse>>(AsyncSubscribeStatusRaw(context, request, cq, tag));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReader< ::mavsdk::rpc::winch::WinchStatusResponse>> PrepareAsyncSubscribeWinchStatus(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncReader< ::mavsdk::rpc::winch::WinchStatusResponse>>(PrepareAsyncSubscribeWinchStatusRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncReader< ::mavsdk::rpc::winch::StatusResponse>> PrepareAsyncSubscribeStatus(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeStatusRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReader< ::mavsdk::rpc::winch::StatusResponse>>(PrepareAsyncSubscribeStatusRaw(context, request, cq));
     }
     ::grpc::Status Relax(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelaxRequest& request, ::mavsdk::rpc::winch::RelaxResponse* response) override;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::RelaxResponse>> AsyncRelax(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelaxRequest& request, ::grpc::CompletionQueue* cq) {
@@ -300,7 +300,7 @@ class WinchService final {
     class async final :
       public StubInterface::async_interface {
      public:
-      void SubscribeWinchStatus(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest* request, ::grpc::ClientReadReactor< ::mavsdk::rpc::winch::WinchStatusResponse>* reactor) override;
+      void SubscribeStatus(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeStatusRequest* request, ::grpc::ClientReadReactor< ::mavsdk::rpc::winch::StatusResponse>* reactor) override;
       void Relax(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelaxRequest* request, ::mavsdk::rpc::winch::RelaxResponse* response, std::function<void(::grpc::Status)>) override;
       void Relax(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelaxRequest* request, ::mavsdk::rpc::winch::RelaxResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void RelativeLengthControl(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelativeLengthControlRequest* request, ::mavsdk::rpc::winch::RelativeLengthControlResponse* response, std::function<void(::grpc::Status)>) override;
@@ -332,9 +332,9 @@ class WinchService final {
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
     class async async_stub_{this};
-    ::grpc::ClientReader< ::mavsdk::rpc::winch::WinchStatusResponse>* SubscribeWinchStatusRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest& request) override;
-    ::grpc::ClientAsyncReader< ::mavsdk::rpc::winch::WinchStatusResponse>* AsyncSubscribeWinchStatusRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest& request, ::grpc::CompletionQueue* cq, void* tag) override;
-    ::grpc::ClientAsyncReader< ::mavsdk::rpc::winch::WinchStatusResponse>* PrepareAsyncSubscribeWinchStatusRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientReader< ::mavsdk::rpc::winch::StatusResponse>* SubscribeStatusRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeStatusRequest& request) override;
+    ::grpc::ClientAsyncReader< ::mavsdk::rpc::winch::StatusResponse>* AsyncSubscribeStatusRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeStatusRequest& request, ::grpc::CompletionQueue* cq, void* tag) override;
+    ::grpc::ClientAsyncReader< ::mavsdk::rpc::winch::StatusResponse>* PrepareAsyncSubscribeStatusRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeStatusRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::RelaxResponse>* AsyncRelaxRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelaxRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::RelaxResponse>* PrepareAsyncRelaxRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelaxRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::RelativeLengthControlResponse>* AsyncRelativeLengthControlRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelativeLengthControlRequest& request, ::grpc::CompletionQueue* cq) override;
@@ -355,7 +355,7 @@ class WinchService final {
     ::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::AbandonLineResponse>* PrepareAsyncAbandonLineRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::AbandonLineRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::LoadPayloadResponse>* AsyncLoadPayloadRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::LoadPayloadRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::LoadPayloadResponse>* PrepareAsyncLoadPayloadRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::LoadPayloadRequest& request, ::grpc::CompletionQueue* cq) override;
-    const ::grpc::internal::RpcMethod rpcmethod_SubscribeWinchStatus_;
+    const ::grpc::internal::RpcMethod rpcmethod_SubscribeStatus_;
     const ::grpc::internal::RpcMethod rpcmethod_Relax_;
     const ::grpc::internal::RpcMethod rpcmethod_RelativeLengthControl_;
     const ::grpc::internal::RpcMethod rpcmethod_RateControl_;
@@ -374,7 +374,7 @@ class WinchService final {
     Service();
     virtual ~Service();
     // Subscribe to 'winch status' updates.
-    virtual ::grpc::Status SubscribeWinchStatus(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest* request, ::grpc::ServerWriter< ::mavsdk::rpc::winch::WinchStatusResponse>* writer);
+    virtual ::grpc::Status SubscribeStatus(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::SubscribeStatusRequest* request, ::grpc::ServerWriter< ::mavsdk::rpc::winch::StatusResponse>* writer);
     //
     // Allow motor to freewheel.
     virtual ::grpc::Status Relax(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::RelaxRequest* request, ::mavsdk::rpc::winch::RelaxResponse* response);
@@ -409,22 +409,22 @@ class WinchService final {
     virtual ::grpc::Status LoadPayload(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::LoadPayloadRequest* request, ::mavsdk::rpc::winch::LoadPayloadResponse* response);
   };
   template <class BaseClass>
-  class WithAsyncMethod_SubscribeWinchStatus : public BaseClass {
+  class WithAsyncMethod_SubscribeStatus : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithAsyncMethod_SubscribeWinchStatus() {
+    WithAsyncMethod_SubscribeStatus() {
       ::grpc::Service::MarkMethodAsync(0);
     }
-    ~WithAsyncMethod_SubscribeWinchStatus() override {
+    ~WithAsyncMethod_SubscribeStatus() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SubscribeWinchStatus(::grpc::ServerContext* /*context*/, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest* /*request*/, ::grpc::ServerWriter< ::mavsdk::rpc::winch::WinchStatusResponse>* /*writer*/) override {
+    ::grpc::Status SubscribeStatus(::grpc::ServerContext* /*context*/, const ::mavsdk::rpc::winch::SubscribeStatusRequest* /*request*/, ::grpc::ServerWriter< ::mavsdk::rpc::winch::StatusResponse>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestSubscribeWinchStatus(::grpc::ServerContext* context, ::mavsdk::rpc::winch::SubscribeWinchStatusRequest* request, ::grpc::ServerAsyncWriter< ::mavsdk::rpc::winch::WinchStatusResponse>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestSubscribeStatus(::grpc::ServerContext* context, ::mavsdk::rpc::winch::SubscribeStatusRequest* request, ::grpc::ServerAsyncWriter< ::mavsdk::rpc::winch::StatusResponse>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncServerStreaming(0, context, request, writer, new_call_cq, notification_cq, tag);
     }
   };
@@ -628,28 +628,28 @@ class WinchService final {
       ::grpc::Service::RequestAsyncUnary(10, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_SubscribeWinchStatus<WithAsyncMethod_Relax<WithAsyncMethod_RelativeLengthControl<WithAsyncMethod_RateControl<WithAsyncMethod_Lock<WithAsyncMethod_Deliver<WithAsyncMethod_Hold<WithAsyncMethod_Retract<WithAsyncMethod_LoadLine<WithAsyncMethod_AbandonLine<WithAsyncMethod_LoadPayload<Service > > > > > > > > > > > AsyncService;
+  typedef WithAsyncMethod_SubscribeStatus<WithAsyncMethod_Relax<WithAsyncMethod_RelativeLengthControl<WithAsyncMethod_RateControl<WithAsyncMethod_Lock<WithAsyncMethod_Deliver<WithAsyncMethod_Hold<WithAsyncMethod_Retract<WithAsyncMethod_LoadLine<WithAsyncMethod_AbandonLine<WithAsyncMethod_LoadPayload<Service > > > > > > > > > > > AsyncService;
   template <class BaseClass>
-  class WithCallbackMethod_SubscribeWinchStatus : public BaseClass {
+  class WithCallbackMethod_SubscribeStatus : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithCallbackMethod_SubscribeWinchStatus() {
+    WithCallbackMethod_SubscribeStatus() {
       ::grpc::Service::MarkMethodCallback(0,
-          new ::grpc::internal::CallbackServerStreamingHandler< ::mavsdk::rpc::winch::SubscribeWinchStatusRequest, ::mavsdk::rpc::winch::WinchStatusResponse>(
+          new ::grpc::internal::CallbackServerStreamingHandler< ::mavsdk::rpc::winch::SubscribeStatusRequest, ::mavsdk::rpc::winch::StatusResponse>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest* request) { return this->SubscribeWinchStatus(context, request); }));
+                   ::grpc::CallbackServerContext* context, const ::mavsdk::rpc::winch::SubscribeStatusRequest* request) { return this->SubscribeStatus(context, request); }));
     }
-    ~WithCallbackMethod_SubscribeWinchStatus() override {
+    ~WithCallbackMethod_SubscribeStatus() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SubscribeWinchStatus(::grpc::ServerContext* /*context*/, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest* /*request*/, ::grpc::ServerWriter< ::mavsdk::rpc::winch::WinchStatusResponse>* /*writer*/) override {
+    ::grpc::Status SubscribeStatus(::grpc::ServerContext* /*context*/, const ::mavsdk::rpc::winch::SubscribeStatusRequest* /*request*/, ::grpc::ServerWriter< ::mavsdk::rpc::winch::StatusResponse>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual ::grpc::ServerWriteReactor< ::mavsdk::rpc::winch::WinchStatusResponse>* SubscribeWinchStatus(
-      ::grpc::CallbackServerContext* /*context*/, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest* /*request*/)  { return nullptr; }
+    virtual ::grpc::ServerWriteReactor< ::mavsdk::rpc::winch::StatusResponse>* SubscribeStatus(
+      ::grpc::CallbackServerContext* /*context*/, const ::mavsdk::rpc::winch::SubscribeStatusRequest* /*request*/)  { return nullptr; }
   };
   template <class BaseClass>
   class WithCallbackMethod_Relax : public BaseClass {
@@ -921,21 +921,21 @@ class WinchService final {
     virtual ::grpc::ServerUnaryReactor* LoadPayload(
       ::grpc::CallbackServerContext* /*context*/, const ::mavsdk::rpc::winch::LoadPayloadRequest* /*request*/, ::mavsdk::rpc::winch::LoadPayloadResponse* /*response*/)  { return nullptr; }
   };
-  typedef WithCallbackMethod_SubscribeWinchStatus<WithCallbackMethod_Relax<WithCallbackMethod_RelativeLengthControl<WithCallbackMethod_RateControl<WithCallbackMethod_Lock<WithCallbackMethod_Deliver<WithCallbackMethod_Hold<WithCallbackMethod_Retract<WithCallbackMethod_LoadLine<WithCallbackMethod_AbandonLine<WithCallbackMethod_LoadPayload<Service > > > > > > > > > > > CallbackService;
+  typedef WithCallbackMethod_SubscribeStatus<WithCallbackMethod_Relax<WithCallbackMethod_RelativeLengthControl<WithCallbackMethod_RateControl<WithCallbackMethod_Lock<WithCallbackMethod_Deliver<WithCallbackMethod_Hold<WithCallbackMethod_Retract<WithCallbackMethod_LoadLine<WithCallbackMethod_AbandonLine<WithCallbackMethod_LoadPayload<Service > > > > > > > > > > > CallbackService;
   typedef CallbackService ExperimentalCallbackService;
   template <class BaseClass>
-  class WithGenericMethod_SubscribeWinchStatus : public BaseClass {
+  class WithGenericMethod_SubscribeStatus : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithGenericMethod_SubscribeWinchStatus() {
+    WithGenericMethod_SubscribeStatus() {
       ::grpc::Service::MarkMethodGeneric(0);
     }
-    ~WithGenericMethod_SubscribeWinchStatus() override {
+    ~WithGenericMethod_SubscribeStatus() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SubscribeWinchStatus(::grpc::ServerContext* /*context*/, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest* /*request*/, ::grpc::ServerWriter< ::mavsdk::rpc::winch::WinchStatusResponse>* /*writer*/) override {
+    ::grpc::Status SubscribeStatus(::grpc::ServerContext* /*context*/, const ::mavsdk::rpc::winch::SubscribeStatusRequest* /*request*/, ::grpc::ServerWriter< ::mavsdk::rpc::winch::StatusResponse>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1111,22 +1111,22 @@ class WinchService final {
     }
   };
   template <class BaseClass>
-  class WithRawMethod_SubscribeWinchStatus : public BaseClass {
+  class WithRawMethod_SubscribeStatus : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawMethod_SubscribeWinchStatus() {
+    WithRawMethod_SubscribeStatus() {
       ::grpc::Service::MarkMethodRaw(0);
     }
-    ~WithRawMethod_SubscribeWinchStatus() override {
+    ~WithRawMethod_SubscribeStatus() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SubscribeWinchStatus(::grpc::ServerContext* /*context*/, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest* /*request*/, ::grpc::ServerWriter< ::mavsdk::rpc::winch::WinchStatusResponse>* /*writer*/) override {
+    ::grpc::Status SubscribeStatus(::grpc::ServerContext* /*context*/, const ::mavsdk::rpc::winch::SubscribeStatusRequest* /*request*/, ::grpc::ServerWriter< ::mavsdk::rpc::winch::StatusResponse>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestSubscribeWinchStatus(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncWriter< ::grpc::ByteBuffer>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestSubscribeStatus(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncWriter< ::grpc::ByteBuffer>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncServerStreaming(0, context, request, writer, new_call_cq, notification_cq, tag);
     }
   };
@@ -1331,25 +1331,25 @@ class WinchService final {
     }
   };
   template <class BaseClass>
-  class WithRawCallbackMethod_SubscribeWinchStatus : public BaseClass {
+  class WithRawCallbackMethod_SubscribeStatus : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawCallbackMethod_SubscribeWinchStatus() {
+    WithRawCallbackMethod_SubscribeStatus() {
       ::grpc::Service::MarkMethodRawCallback(0,
           new ::grpc::internal::CallbackServerStreamingHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
-                   ::grpc::CallbackServerContext* context, const::grpc::ByteBuffer* request) { return this->SubscribeWinchStatus(context, request); }));
+                   ::grpc::CallbackServerContext* context, const::grpc::ByteBuffer* request) { return this->SubscribeStatus(context, request); }));
     }
-    ~WithRawCallbackMethod_SubscribeWinchStatus() override {
+    ~WithRawCallbackMethod_SubscribeStatus() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status SubscribeWinchStatus(::grpc::ServerContext* /*context*/, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest* /*request*/, ::grpc::ServerWriter< ::mavsdk::rpc::winch::WinchStatusResponse>* /*writer*/) override {
+    ::grpc::Status SubscribeStatus(::grpc::ServerContext* /*context*/, const ::mavsdk::rpc::winch::SubscribeStatusRequest* /*request*/, ::grpc::ServerWriter< ::mavsdk::rpc::winch::StatusResponse>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual ::grpc::ServerWriteReactor< ::grpc::ByteBuffer>* SubscribeWinchStatus(
+    virtual ::grpc::ServerWriteReactor< ::grpc::ByteBuffer>* SubscribeStatus(
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/)  { return nullptr; }
   };
   template <class BaseClass>
@@ -1844,34 +1844,34 @@ class WinchService final {
   };
   typedef WithStreamedUnaryMethod_Relax<WithStreamedUnaryMethod_RelativeLengthControl<WithStreamedUnaryMethod_RateControl<WithStreamedUnaryMethod_Lock<WithStreamedUnaryMethod_Deliver<WithStreamedUnaryMethod_Hold<WithStreamedUnaryMethod_Retract<WithStreamedUnaryMethod_LoadLine<WithStreamedUnaryMethod_AbandonLine<WithStreamedUnaryMethod_LoadPayload<Service > > > > > > > > > > StreamedUnaryService;
   template <class BaseClass>
-  class WithSplitStreamingMethod_SubscribeWinchStatus : public BaseClass {
+  class WithSplitStreamingMethod_SubscribeStatus : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithSplitStreamingMethod_SubscribeWinchStatus() {
+    WithSplitStreamingMethod_SubscribeStatus() {
       ::grpc::Service::MarkMethodStreamed(0,
         new ::grpc::internal::SplitServerStreamingHandler<
-          ::mavsdk::rpc::winch::SubscribeWinchStatusRequest, ::mavsdk::rpc::winch::WinchStatusResponse>(
+          ::mavsdk::rpc::winch::SubscribeStatusRequest, ::mavsdk::rpc::winch::StatusResponse>(
             [this](::grpc::ServerContext* context,
                    ::grpc::ServerSplitStreamer<
-                     ::mavsdk::rpc::winch::SubscribeWinchStatusRequest, ::mavsdk::rpc::winch::WinchStatusResponse>* streamer) {
-                       return this->StreamedSubscribeWinchStatus(context,
+                     ::mavsdk::rpc::winch::SubscribeStatusRequest, ::mavsdk::rpc::winch::StatusResponse>* streamer) {
+                       return this->StreamedSubscribeStatus(context,
                          streamer);
                   }));
     }
-    ~WithSplitStreamingMethod_SubscribeWinchStatus() override {
+    ~WithSplitStreamingMethod_SubscribeStatus() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status SubscribeWinchStatus(::grpc::ServerContext* /*context*/, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest* /*request*/, ::grpc::ServerWriter< ::mavsdk::rpc::winch::WinchStatusResponse>* /*writer*/) override {
+    ::grpc::Status SubscribeStatus(::grpc::ServerContext* /*context*/, const ::mavsdk::rpc::winch::SubscribeStatusRequest* /*request*/, ::grpc::ServerWriter< ::mavsdk::rpc::winch::StatusResponse>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with split streamed
-    virtual ::grpc::Status StreamedSubscribeWinchStatus(::grpc::ServerContext* context, ::grpc::ServerSplitStreamer< ::mavsdk::rpc::winch::SubscribeWinchStatusRequest,::mavsdk::rpc::winch::WinchStatusResponse>* server_split_streamer) = 0;
+    virtual ::grpc::Status StreamedSubscribeStatus(::grpc::ServerContext* context, ::grpc::ServerSplitStreamer< ::mavsdk::rpc::winch::SubscribeStatusRequest,::mavsdk::rpc::winch::StatusResponse>* server_split_streamer) = 0;
   };
-  typedef WithSplitStreamingMethod_SubscribeWinchStatus<Service > SplitStreamedService;
-  typedef WithSplitStreamingMethod_SubscribeWinchStatus<WithStreamedUnaryMethod_Relax<WithStreamedUnaryMethod_RelativeLengthControl<WithStreamedUnaryMethod_RateControl<WithStreamedUnaryMethod_Lock<WithStreamedUnaryMethod_Deliver<WithStreamedUnaryMethod_Hold<WithStreamedUnaryMethod_Retract<WithStreamedUnaryMethod_LoadLine<WithStreamedUnaryMethod_AbandonLine<WithStreamedUnaryMethod_LoadPayload<Service > > > > > > > > > > > StreamedService;
+  typedef WithSplitStreamingMethod_SubscribeStatus<Service > SplitStreamedService;
+  typedef WithSplitStreamingMethod_SubscribeStatus<WithStreamedUnaryMethod_Relax<WithStreamedUnaryMethod_RelativeLengthControl<WithStreamedUnaryMethod_RateControl<WithStreamedUnaryMethod_Lock<WithStreamedUnaryMethod_Deliver<WithStreamedUnaryMethod_Hold<WithStreamedUnaryMethod_Retract<WithStreamedUnaryMethod_LoadLine<WithStreamedUnaryMethod_AbandonLine<WithStreamedUnaryMethod_LoadPayload<Service > > > > > > > > > > > StreamedService;
 };
 
 }  // namespace winch

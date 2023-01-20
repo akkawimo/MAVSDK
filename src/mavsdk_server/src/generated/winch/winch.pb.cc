@@ -23,30 +23,30 @@ namespace _pbi = _pb::internal;
 namespace mavsdk {
 namespace rpc {
 namespace winch {
-PROTOBUF_CONSTEXPR SubscribeWinchStatusRequest::SubscribeWinchStatusRequest(
+PROTOBUF_CONSTEXPR SubscribeStatusRequest::SubscribeStatusRequest(
     ::_pbi::ConstantInitialized){}
-struct SubscribeWinchStatusRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR SubscribeWinchStatusRequestDefaultTypeInternal()
+struct SubscribeStatusRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SubscribeStatusRequestDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~SubscribeWinchStatusRequestDefaultTypeInternal() {}
+  ~SubscribeStatusRequestDefaultTypeInternal() {}
   union {
-    SubscribeWinchStatusRequest _instance;
+    SubscribeStatusRequest _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SubscribeWinchStatusRequestDefaultTypeInternal _SubscribeWinchStatusRequest_default_instance_;
-PROTOBUF_CONSTEXPR WinchStatusResponse::WinchStatusResponse(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SubscribeStatusRequestDefaultTypeInternal _SubscribeStatusRequest_default_instance_;
+PROTOBUF_CONSTEXPR StatusResponse::StatusResponse(
     ::_pbi::ConstantInitialized)
-  : winch_status_(nullptr){}
-struct WinchStatusResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR WinchStatusResponseDefaultTypeInternal()
+  : status_(nullptr){}
+struct StatusResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR StatusResponseDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~WinchStatusResponseDefaultTypeInternal() {}
+  ~StatusResponseDefaultTypeInternal() {}
   union {
-    WinchStatusResponse _instance;
+    StatusResponse _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WinchStatusResponseDefaultTypeInternal _WinchStatusResponse_default_instance_;
-PROTOBUF_CONSTEXPR WinchStatusFlags::WinchStatusFlags(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 StatusResponseDefaultTypeInternal _StatusResponse_default_instance_;
+PROTOBUF_CONSTEXPR StatusFlags::StatusFlags(
     ::_pbi::ConstantInitialized)
   : healthy_(false)
   , fully_retracted_(false)
@@ -62,15 +62,15 @@ PROTOBUF_CONSTEXPR WinchStatusFlags::WinchStatusFlags(
   , locking_(false)
   , load_line_(false)
   , load_payload_(false){}
-struct WinchStatusFlagsDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR WinchStatusFlagsDefaultTypeInternal()
+struct StatusFlagsDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR StatusFlagsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~WinchStatusFlagsDefaultTypeInternal() {}
+  ~StatusFlagsDefaultTypeInternal() {}
   union {
-    WinchStatusFlags _instance;
+    StatusFlags _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WinchStatusFlagsDefaultTypeInternal _WinchStatusFlags_default_instance_;
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 StatusFlagsDefaultTypeInternal _StatusFlags_default_instance_;
 PROTOBUF_CONSTEXPR WinchHearbeat::WinchHearbeat(
     ::_pbi::ConstantInitialized)
   : connected_(false){}
@@ -83,9 +83,9 @@ struct WinchHearbeatDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WinchHearbeatDefaultTypeInternal _WinchHearbeat_default_instance_;
-PROTOBUF_CONSTEXPR WinchStatus::WinchStatus(
+PROTOBUF_CONSTEXPR Status::Status(
     ::_pbi::ConstantInitialized)
-  : winch_status_flags_(nullptr)
+  : status_flags_(nullptr)
   , time_usec_(uint64_t{0u})
   , line_length_m_(0)
   , speed_m_s_(0)
@@ -93,15 +93,15 @@ PROTOBUF_CONSTEXPR WinchStatus::WinchStatus(
   , voltage_v_(0)
   , current_a_(0)
   , temperature_c_(0){}
-struct WinchStatusDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR WinchStatusDefaultTypeInternal()
+struct StatusDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR StatusDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~WinchStatusDefaultTypeInternal() {}
+  ~StatusDefaultTypeInternal() {}
   union {
-    WinchStatus _instance;
+    Status _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 WinchStatusDefaultTypeInternal _WinchStatus_default_instance_;
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 StatusDefaultTypeInternal _Status_default_instance_;
 PROTOBUF_CONSTEXPR RelaxRequest::RelaxRequest(
     ::_pbi::ConstantInitialized)
   : instance_(0u){}
@@ -368,38 +368,38 @@ static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors
 
 const uint32_t TableStruct_winch_2fwinch_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::SubscribeWinchStatusRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::SubscribeStatusRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchStatusResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::StatusResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchStatusResponse, winch_status_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::StatusResponse, status_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchStatusFlags, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::StatusFlags, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchStatusFlags, healthy_),
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchStatusFlags, fully_retracted_),
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchStatusFlags, moving_),
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchStatusFlags, clutch_engaged_),
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchStatusFlags, locked_),
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchStatusFlags, dropping_),
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchStatusFlags, arresting_),
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchStatusFlags, ground_sense_),
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchStatusFlags, retracting_),
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchStatusFlags, redeliver_),
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchStatusFlags, abandon_line_),
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchStatusFlags, locking_),
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchStatusFlags, load_line_),
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchStatusFlags, load_payload_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::StatusFlags, healthy_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::StatusFlags, fully_retracted_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::StatusFlags, moving_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::StatusFlags, clutch_engaged_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::StatusFlags, locked_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::StatusFlags, dropping_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::StatusFlags, arresting_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::StatusFlags, ground_sense_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::StatusFlags, retracting_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::StatusFlags, redeliver_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::StatusFlags, abandon_line_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::StatusFlags, locking_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::StatusFlags, load_line_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::StatusFlags, load_payload_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchHearbeat, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -408,19 +408,19 @@ const uint32_t TableStruct_winch_2fwinch_2eproto::offsets[] PROTOBUF_SECTION_VAR
   ~0u,  // no _inlined_string_donated_
   PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchHearbeat, connected_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchStatus, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::Status, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchStatus, time_usec_),
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchStatus, line_length_m_),
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchStatus, speed_m_s_),
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchStatus, tension_kg_),
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchStatus, voltage_v_),
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchStatus, current_a_),
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchStatus, temperature_c_),
-  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchStatus, winch_status_flags_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::Status, time_usec_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::Status, line_length_m_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::Status, speed_m_s_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::Status, tension_kg_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::Status, voltage_v_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::Status, current_a_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::Status, temperature_c_),
+  PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::Status, status_flags_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::RelaxRequest, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -574,11 +574,11 @@ const uint32_t TableStruct_winch_2fwinch_2eproto::offsets[] PROTOBUF_SECTION_VAR
   PROTOBUF_FIELD_OFFSET(::mavsdk::rpc::winch::WinchResult, result_str_),
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::mavsdk::rpc::winch::SubscribeWinchStatusRequest)},
-  { 6, -1, -1, sizeof(::mavsdk::rpc::winch::WinchStatusResponse)},
-  { 13, -1, -1, sizeof(::mavsdk::rpc::winch::WinchStatusFlags)},
+  { 0, -1, -1, sizeof(::mavsdk::rpc::winch::SubscribeStatusRequest)},
+  { 6, -1, -1, sizeof(::mavsdk::rpc::winch::StatusResponse)},
+  { 13, -1, -1, sizeof(::mavsdk::rpc::winch::StatusFlags)},
   { 33, -1, -1, sizeof(::mavsdk::rpc::winch::WinchHearbeat)},
-  { 40, -1, -1, sizeof(::mavsdk::rpc::winch::WinchStatus)},
+  { 40, -1, -1, sizeof(::mavsdk::rpc::winch::Status)},
   { 54, -1, -1, sizeof(::mavsdk::rpc::winch::RelaxRequest)},
   { 61, -1, -1, sizeof(::mavsdk::rpc::winch::RelaxResponse)},
   { 68, -1, -1, sizeof(::mavsdk::rpc::winch::RelativeLengthControlRequest)},
@@ -603,11 +603,11 @@ static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protode
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
-  &::mavsdk::rpc::winch::_SubscribeWinchStatusRequest_default_instance_._instance,
-  &::mavsdk::rpc::winch::_WinchStatusResponse_default_instance_._instance,
-  &::mavsdk::rpc::winch::_WinchStatusFlags_default_instance_._instance,
+  &::mavsdk::rpc::winch::_SubscribeStatusRequest_default_instance_._instance,
+  &::mavsdk::rpc::winch::_StatusResponse_default_instance_._instance,
+  &::mavsdk::rpc::winch::_StatusFlags_default_instance_._instance,
   &::mavsdk::rpc::winch::_WinchHearbeat_default_instance_._instance,
-  &::mavsdk::rpc::winch::_WinchStatus_default_instance_._instance,
+  &::mavsdk::rpc::winch::_Status_default_instance_._instance,
   &::mavsdk::rpc::winch::_RelaxRequest_default_instance_._instance,
   &::mavsdk::rpc::winch::_RelaxResponse_default_instance_._instance,
   &::mavsdk::rpc::winch::_RelativeLengthControlRequest_default_instance_._instance,
@@ -632,103 +632,102 @@ static const ::_pb::Message* const file_default_instances[] = {
 };
 
 const char descriptor_table_protodef_winch_2fwinch_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\021winch/winch.proto\022\020mavsdk.rpc.winch\"\035\n"
-  "\033SubscribeWinchStatusRequest\"J\n\023WinchSta"
-  "tusResponse\0223\n\014winch_status\030\001 \001(\0132\035.mavs"
-  "dk.rpc.winch.WinchStatus\"\246\002\n\020WinchStatus"
-  "Flags\022\017\n\007healthy\030\001 \001(\010\022\027\n\017fully_retracte"
-  "d\030\002 \001(\010\022\016\n\006moving\030\003 \001(\010\022\026\n\016clutch_engage"
-  "d\030\004 \001(\010\022\016\n\006locked\030\005 \001(\010\022\020\n\010dropping\030\006 \001("
-  "\010\022\021\n\tarresting\030\007 \001(\010\022\024\n\014ground_sense\030\010 \001"
-  "(\010\022\022\n\nretracting\030\t \001(\010\022\021\n\tredeliver\030\n \001("
-  "\010\022\024\n\014abandon_line\030\013 \001(\010\022\017\n\007locking\030\014 \001(\010"
-  "\022\021\n\tload_line\030\r \001(\010\022\024\n\014load_payload\030\016 \001("
-  "\010\"\"\n\rWinchHearbeat\022\021\n\tconnected\030\001 \001(\010\"\333\001"
-  "\n\013WinchStatus\022\021\n\ttime_usec\030\001 \001(\004\022\025\n\rline"
-  "_length_m\030\002 \001(\002\022\021\n\tspeed_m_s\030\003 \001(\002\022\022\n\nte"
-  "nsion_kg\030\004 \001(\002\022\021\n\tvoltage_v\030\005 \001(\002\022\021\n\tcur"
-  "rent_a\030\006 \001(\002\022\025\n\rtemperature_c\030\007 \001(\005\022>\n\022w"
-  "inch_status_flags\030\010 \001(\0132\".mavsdk.rpc.win"
-  "ch.WinchStatusFlags\" \n\014RelaxRequest\022\020\n\010i"
-  "nstance\030\001 \001(\r\"D\n\rRelaxResponse\0223\n\014winch_"
-  "result\030\001 \001(\0132\035.mavsdk.rpc.winch.WinchRes"
-  "ult\"N\n\034RelativeLengthControlRequest\022\020\n\010i"
-  "nstance\030\001 \001(\r\022\016\n\006length\030\002 \001(\002\022\014\n\004rate\030\003 "
-  "\001(\002\"T\n\035RelativeLengthControlResponse\0223\n\014"
-  "winch_result\030\001 \001(\0132\035.mavsdk.rpc.winch.Wi"
-  "nchResult\"4\n\022RateControlRequest\022\020\n\010insta"
-  "nce\030\001 \001(\r\022\014\n\004rate\030\002 \001(\002\"J\n\023RateControlRe"
-  "sponse\0223\n\014winch_result\030\001 \001(\0132\035.mavsdk.rp"
-  "c.winch.WinchResult\"\037\n\013LockRequest\022\020\n\010in"
-  "stance\030\001 \001(\r\"C\n\014LockResponse\0223\n\014winch_re"
+  "\n\021winch/winch.proto\022\020mavsdk.rpc.winch\"\030\n"
+  "\026SubscribeStatusRequest\":\n\016StatusRespons"
+  "e\022(\n\006status\030\001 \001(\0132\030.mavsdk.rpc.winch.Sta"
+  "tus\"\241\002\n\013StatusFlags\022\017\n\007healthy\030\001 \001(\010\022\027\n\017"
+  "fully_retracted\030\002 \001(\010\022\016\n\006moving\030\003 \001(\010\022\026\n"
+  "\016clutch_engaged\030\004 \001(\010\022\016\n\006locked\030\005 \001(\010\022\020\n"
+  "\010dropping\030\006 \001(\010\022\021\n\tarresting\030\007 \001(\010\022\024\n\014gr"
+  "ound_sense\030\010 \001(\010\022\022\n\nretracting\030\t \001(\010\022\021\n\t"
+  "redeliver\030\n \001(\010\022\024\n\014abandon_line\030\013 \001(\010\022\017\n"
+  "\007locking\030\014 \001(\010\022\021\n\tload_line\030\r \001(\010\022\024\n\014loa"
+  "d_payload\030\016 \001(\010\"\"\n\rWinchHearbeat\022\021\n\tconn"
+  "ected\030\001 \001(\010\"\313\001\n\006Status\022\021\n\ttime_usec\030\001 \001("
+  "\004\022\025\n\rline_length_m\030\002 \001(\002\022\021\n\tspeed_m_s\030\003 "
+  "\001(\002\022\022\n\ntension_kg\030\004 \001(\002\022\021\n\tvoltage_v\030\005 \001"
+  "(\002\022\021\n\tcurrent_a\030\006 \001(\002\022\025\n\rtemperature_c\030\007"
+  " \001(\005\0223\n\014status_flags\030\010 \001(\0132\035.mavsdk.rpc."
+  "winch.StatusFlags\" \n\014RelaxRequest\022\020\n\010ins"
+  "tance\030\001 \001(\r\"D\n\rRelaxResponse\0223\n\014winch_re"
   "sult\030\001 \001(\0132\035.mavsdk.rpc.winch.WinchResul"
-  "t\"\"\n\016DeliverRequest\022\020\n\010instance\030\001 \001(\r\"F\n"
-  "\017DeliverResponse\0223\n\014winch_result\030\001 \001(\0132\035"
-  ".mavsdk.rpc.winch.WinchResult\"\037\n\013HoldReq"
-  "uest\022\020\n\010instance\030\001 \001(\r\"C\n\014HoldResponse\0223"
-  "\n\014winch_result\030\001 \001(\0132\035.mavsdk.rpc.winch."
-  "WinchResult\"\"\n\016RetractRequest\022\020\n\010instanc"
-  "e\030\001 \001(\r\"F\n\017RetractResponse\0223\n\014winch_resu"
+  "t\"N\n\034RelativeLengthControlRequest\022\020\n\010ins"
+  "tance\030\001 \001(\r\022\016\n\006length\030\002 \001(\002\022\014\n\004rate\030\003 \001("
+  "\002\"T\n\035RelativeLengthControlResponse\0223\n\014wi"
+  "nch_result\030\001 \001(\0132\035.mavsdk.rpc.winch.Winc"
+  "hResult\"4\n\022RateControlRequest\022\020\n\010instanc"
+  "e\030\001 \001(\r\022\014\n\004rate\030\002 \001(\002\"J\n\023RateControlResp"
+  "onse\0223\n\014winch_result\030\001 \001(\0132\035.mavsdk.rpc."
+  "winch.WinchResult\"\037\n\013LockRequest\022\020\n\010inst"
+  "ance\030\001 \001(\r\"C\n\014LockResponse\0223\n\014winch_resu"
   "lt\030\001 \001(\0132\035.mavsdk.rpc.winch.WinchResult\""
-  "#\n\017LoadLineRequest\022\020\n\010instance\030\001 \001(\r\"G\n\020"
-  "LoadLineResponse\0223\n\014winch_result\030\001 \001(\0132\035"
-  ".mavsdk.rpc.winch.WinchResult\"&\n\022Abandon"
-  "LineRequest\022\020\n\010instance\030\001 \001(\r\"J\n\023Abandon"
-  "LineResponse\0223\n\014winch_result\030\001 \001(\0132\035.mav"
-  "sdk.rpc.winch.WinchResult\"&\n\022LoadPayload"
-  "Request\022\020\n\010instance\030\001 \001(\r\"J\n\023LoadPayload"
-  "Response\0223\n\014winch_result\030\001 \001(\0132\035.mavsdk."
-  "rpc.winch.WinchResult\"\355\003\n\013WinchResult\0224\n"
-  "\006result\030\001 \001(\0162$.mavsdk.rpc.winch.WinchRe"
-  "sult.Result\022\022\n\nresult_str\030\002 \001(\t\"\223\003\n\006Resu"
-  "lt\022\022\n\016RESULT_UNKNOWN\020\000\022\022\n\016RESULT_SUCCESS"
-  "\020\001\022\024\n\020RESULT_NO_SYSTEM\020\002\022\033\n\027RESULT_CONNE"
-  "CTION_ERROR\020\003\022\017\n\013RESULT_BUSY\020\004\022\031\n\025RESULT"
-  "_COMMAND_DENIED\020\005\022.\n*RESULT_COMMAND_DENI"
-  "ED_LANDED_STATE_UNKNOWN\020\006\022$\n RESULT_COMM"
-  "AND_DENIED_NOT_LANDED\020\007\022\022\n\016RESULT_TIMEOU"
-  "T\020\010\022*\n&RESULT_VTOL_TRANSITION_SUPPORT_UN"
-  "KNOWN\020\t\022%\n!RESULT_NO_VTOL_TRANSITION_SUP"
-  "PORT\020\n\022\032\n\026RESULT_PARAMETER_ERROR\020\013\022\026\n\022RE"
-  "SULT_UNSUPPORTED\020\014\022\021\n\rRESULT_FAILED\020\r*\254\002"
-  "\n\013WinchAction\022\030\n\024WINCH_ACTION_RELAXED\020\000\022"
-  "(\n$WINCH_ACTION_RELATIVE_LENGTH_CONTROL\020"
-  "\001\022\035\n\031WINCH_ACTION_RATE_CONTROL\020\002\022\025\n\021WINC"
-  "H_ACTION_LOCK\020\003\022\030\n\024WINCH_ACTION_DELIVER\020"
-  "\004\022\025\n\021WINCH_ACTION_HOLD\020\005\022\030\n\024WINCH_ACTION"
-  "_RETRACT\020\006\022\032\n\026WINCH_ACTION_LOAD_LINE\020\007\022\035"
-  "\n\031WINCH_ACTION_ABANDON_LINE\020\010\022\035\n\031WINCH_A"
-  "CTION_LOAD_PAYLOAD\020\t2\355\007\n\014WinchService\022p\n"
-  "\024SubscribeWinchStatus\022-.mavsdk.rpc.winch"
-  ".SubscribeWinchStatusRequest\032%.mavsdk.rp"
-  "c.winch.WinchStatusResponse\"\0000\001\022J\n\005Relax"
-  "\022\036.mavsdk.rpc.winch.RelaxRequest\032\037.mavsd"
-  "k.rpc.winch.RelaxResponse\"\000\022z\n\025RelativeL"
-  "engthControl\022..mavsdk.rpc.winch.Relative"
-  "LengthControlRequest\032/.mavsdk.rpc.winch."
-  "RelativeLengthControlResponse\"\000\022\\\n\013RateC"
-  "ontrol\022$.mavsdk.rpc.winch.RateControlReq"
-  "uest\032%.mavsdk.rpc.winch.RateControlRespo"
-  "nse\"\000\022G\n\004Lock\022\035.mavsdk.rpc.winch.LockReq"
-  "uest\032\036.mavsdk.rpc.winch.LockResponse\"\000\022P"
-  "\n\007Deliver\022 .mavsdk.rpc.winch.DeliverRequ"
-  "est\032!.mavsdk.rpc.winch.DeliverResponse\"\000"
-  "\022G\n\004Hold\022\035.mavsdk.rpc.winch.HoldRequest\032"
-  "\036.mavsdk.rpc.winch.HoldResponse\"\000\022P\n\007Ret"
-  "ract\022 .mavsdk.rpc.winch.RetractRequest\032!"
-  ".mavsdk.rpc.winch.RetractResponse\"\000\022S\n\010L"
-  "oadLine\022!.mavsdk.rpc.winch.LoadLineReque"
-  "st\032\".mavsdk.rpc.winch.LoadLineResponse\"\000"
-  "\022\\\n\013AbandonLine\022$.mavsdk.rpc.winch.Aband"
-  "onLineRequest\032%.mavsdk.rpc.winch.Abandon"
-  "LineResponse\"\000\022\\\n\013LoadPayload\022$.mavsdk.r"
-  "pc.winch.LoadPayloadRequest\032%.mavsdk.rpc"
-  ".winch.LoadPayloadResponse\"\000B\035\n\017io.mavsd"
-  "k.winchB\nWinchProtob\006proto3"
+  "\"\n\016DeliverRequest\022\020\n\010instance\030\001 \001(\r\"F\n\017D"
+  "eliverResponse\0223\n\014winch_result\030\001 \001(\0132\035.m"
+  "avsdk.rpc.winch.WinchResult\"\037\n\013HoldReque"
+  "st\022\020\n\010instance\030\001 \001(\r\"C\n\014HoldResponse\0223\n\014"
+  "winch_result\030\001 \001(\0132\035.mavsdk.rpc.winch.Wi"
+  "nchResult\"\"\n\016RetractRequest\022\020\n\010instance\030"
+  "\001 \001(\r\"F\n\017RetractResponse\0223\n\014winch_result"
+  "\030\001 \001(\0132\035.mavsdk.rpc.winch.WinchResult\"#\n"
+  "\017LoadLineRequest\022\020\n\010instance\030\001 \001(\r\"G\n\020Lo"
+  "adLineResponse\0223\n\014winch_result\030\001 \001(\0132\035.m"
+  "avsdk.rpc.winch.WinchResult\"&\n\022AbandonLi"
+  "neRequest\022\020\n\010instance\030\001 \001(\r\"J\n\023AbandonLi"
+  "neResponse\0223\n\014winch_result\030\001 \001(\0132\035.mavsd"
+  "k.rpc.winch.WinchResult\"&\n\022LoadPayloadRe"
+  "quest\022\020\n\010instance\030\001 \001(\r\"J\n\023LoadPayloadRe"
+  "sponse\0223\n\014winch_result\030\001 \001(\0132\035.mavsdk.rp"
+  "c.winch.WinchResult\"\355\003\n\013WinchResult\0224\n\006r"
+  "esult\030\001 \001(\0162$.mavsdk.rpc.winch.WinchResu"
+  "lt.Result\022\022\n\nresult_str\030\002 \001(\t\"\223\003\n\006Result"
+  "\022\022\n\016RESULT_UNKNOWN\020\000\022\022\n\016RESULT_SUCCESS\020\001"
+  "\022\024\n\020RESULT_NO_SYSTEM\020\002\022\033\n\027RESULT_CONNECT"
+  "ION_ERROR\020\003\022\017\n\013RESULT_BUSY\020\004\022\031\n\025RESULT_C"
+  "OMMAND_DENIED\020\005\022.\n*RESULT_COMMAND_DENIED"
+  "_LANDED_STATE_UNKNOWN\020\006\022$\n RESULT_COMMAN"
+  "D_DENIED_NOT_LANDED\020\007\022\022\n\016RESULT_TIMEOUT\020"
+  "\010\022*\n&RESULT_VTOL_TRANSITION_SUPPORT_UNKN"
+  "OWN\020\t\022%\n!RESULT_NO_VTOL_TRANSITION_SUPPO"
+  "RT\020\n\022\032\n\026RESULT_PARAMETER_ERROR\020\013\022\026\n\022RESU"
+  "LT_UNSUPPORTED\020\014\022\021\n\rRESULT_FAILED\020\r*\254\002\n\013"
+  "WinchAction\022\030\n\024WINCH_ACTION_RELAXED\020\000\022(\n"
+  "$WINCH_ACTION_RELATIVE_LENGTH_CONTROL\020\001\022"
+  "\035\n\031WINCH_ACTION_RATE_CONTROL\020\002\022\025\n\021WINCH_"
+  "ACTION_LOCK\020\003\022\030\n\024WINCH_ACTION_DELIVER\020\004\022"
+  "\025\n\021WINCH_ACTION_HOLD\020\005\022\030\n\024WINCH_ACTION_R"
+  "ETRACT\020\006\022\032\n\026WINCH_ACTION_LOAD_LINE\020\007\022\035\n\031"
+  "WINCH_ACTION_ABANDON_LINE\020\010\022\035\n\031WINCH_ACT"
+  "ION_LOAD_PAYLOAD\020\t2\336\007\n\014WinchService\022a\n\017S"
+  "ubscribeStatus\022(.mavsdk.rpc.winch.Subscr"
+  "ibeStatusRequest\032 .mavsdk.rpc.winch.Stat"
+  "usResponse\"\0000\001\022J\n\005Relax\022\036.mavsdk.rpc.win"
+  "ch.RelaxRequest\032\037.mavsdk.rpc.winch.Relax"
+  "Response\"\000\022z\n\025RelativeLengthControl\022..ma"
+  "vsdk.rpc.winch.RelativeLengthControlRequ"
+  "est\032/.mavsdk.rpc.winch.RelativeLengthCon"
+  "trolResponse\"\000\022\\\n\013RateControl\022$.mavsdk.r"
+  "pc.winch.RateControlRequest\032%.mavsdk.rpc"
+  ".winch.RateControlResponse\"\000\022G\n\004Lock\022\035.m"
+  "avsdk.rpc.winch.LockRequest\032\036.mavsdk.rpc"
+  ".winch.LockResponse\"\000\022P\n\007Deliver\022 .mavsd"
+  "k.rpc.winch.DeliverRequest\032!.mavsdk.rpc."
+  "winch.DeliverResponse\"\000\022G\n\004Hold\022\035.mavsdk"
+  ".rpc.winch.HoldRequest\032\036.mavsdk.rpc.winc"
+  "h.HoldResponse\"\000\022P\n\007Retract\022 .mavsdk.rpc"
+  ".winch.RetractRequest\032!.mavsdk.rpc.winch"
+  ".RetractResponse\"\000\022S\n\010LoadLine\022!.mavsdk."
+  "rpc.winch.LoadLineRequest\032\".mavsdk.rpc.w"
+  "inch.LoadLineResponse\"\000\022\\\n\013AbandonLine\022$"
+  ".mavsdk.rpc.winch.AbandonLineRequest\032%.m"
+  "avsdk.rpc.winch.AbandonLineResponse\"\000\022\\\n"
+  "\013LoadPayload\022$.mavsdk.rpc.winch.LoadPayl"
+  "oadRequest\032%.mavsdk.rpc.winch.LoadPayloa"
+  "dResponse\"\000B\035\n\017io.mavsdk.winchB\nWinchPro"
+  "tob\006proto3"
   ;
 static ::_pbi::once_flag descriptor_table_winch_2fwinch_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_winch_2fwinch_2eproto = {
-    false, false, 3707, descriptor_table_protodef_winch_2fwinch_2eproto,
+    false, false, 3650, descriptor_table_protodef_winch_2fwinch_2eproto,
     "winch/winch.proto",
     &descriptor_table_winch_2fwinch_2eproto_once, nullptr, 0, 26,
     schemas, file_default_instances, TableStruct_winch_2fwinch_2eproto::offsets,
@@ -814,30 +813,30 @@ bool WinchAction_IsValid(int value) {
 
 // ===================================================================
 
-class SubscribeWinchStatusRequest::_Internal {
+class SubscribeStatusRequest::_Internal {
  public:
 };
 
-SubscribeWinchStatusRequest::SubscribeWinchStatusRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+SubscribeStatusRequest::SubscribeStatusRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
-  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.SubscribeWinchStatusRequest)
+  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.SubscribeStatusRequest)
 }
-SubscribeWinchStatusRequest::SubscribeWinchStatusRequest(const SubscribeWinchStatusRequest& from)
+SubscribeStatusRequest::SubscribeStatusRequest(const SubscribeStatusRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.SubscribeWinchStatusRequest)
+  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.SubscribeStatusRequest)
 }
 
 
 
 
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SubscribeWinchStatusRequest::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SubscribeStatusRequest::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
     ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SubscribeWinchStatusRequest::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SubscribeStatusRequest::GetClassData() const { return &_class_data_; }
 
 
 
@@ -845,7 +844,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SubscribeWinchStatusRequest::G
 
 
 
-::PROTOBUF_NAMESPACE_ID::Metadata SubscribeWinchStatusRequest::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata SubscribeStatusRequest::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
       file_level_metadata_winch_2fwinch_2eproto[0]);
@@ -853,38 +852,38 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SubscribeWinchStatusRequest::G
 
 // ===================================================================
 
-class WinchStatusResponse::_Internal {
+class StatusResponse::_Internal {
  public:
-  static const ::mavsdk::rpc::winch::WinchStatus& winch_status(const WinchStatusResponse* msg);
+  static const ::mavsdk::rpc::winch::Status& status(const StatusResponse* msg);
 };
 
-const ::mavsdk::rpc::winch::WinchStatus&
-WinchStatusResponse::_Internal::winch_status(const WinchStatusResponse* msg) {
-  return *msg->winch_status_;
+const ::mavsdk::rpc::winch::Status&
+StatusResponse::_Internal::status(const StatusResponse* msg) {
+  return *msg->status_;
 }
-WinchStatusResponse::WinchStatusResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+StatusResponse::StatusResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.WinchStatusResponse)
+  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.StatusResponse)
 }
-WinchStatusResponse::WinchStatusResponse(const WinchStatusResponse& from)
+StatusResponse::StatusResponse(const StatusResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_winch_status()) {
-    winch_status_ = new ::mavsdk::rpc::winch::WinchStatus(*from.winch_status_);
+  if (from._internal_has_status()) {
+    status_ = new ::mavsdk::rpc::winch::Status(*from.status_);
   } else {
-    winch_status_ = nullptr;
+    status_ = nullptr;
   }
-  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.WinchStatusResponse)
+  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.StatusResponse)
 }
 
-inline void WinchStatusResponse::SharedCtor() {
-winch_status_ = nullptr;
+inline void StatusResponse::SharedCtor() {
+status_ = nullptr;
 }
 
-WinchStatusResponse::~WinchStatusResponse() {
-  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.WinchStatusResponse)
+StatusResponse::~StatusResponse() {
+  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.StatusResponse)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -892,38 +891,38 @@ WinchStatusResponse::~WinchStatusResponse() {
   SharedDtor();
 }
 
-inline void WinchStatusResponse::SharedDtor() {
+inline void StatusResponse::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete winch_status_;
+  if (this != internal_default_instance()) delete status_;
 }
 
-void WinchStatusResponse::SetCachedSize(int size) const {
+void StatusResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void WinchStatusResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.WinchStatusResponse)
+void StatusResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.StatusResponse)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaForAllocation() == nullptr && winch_status_ != nullptr) {
-    delete winch_status_;
+  if (GetArenaForAllocation() == nullptr && status_ != nullptr) {
+    delete status_;
   }
-  winch_status_ = nullptr;
+  status_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* WinchStatusResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* StatusResponse::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // .mavsdk.rpc.winch.WinchStatus winch_status = 1;
+      // .mavsdk.rpc.winch.Status status = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          ptr = ctx->ParseMessage(_internal_mutable_winch_status(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_status(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -951,88 +950,88 @@ failure:
 #undef CHK_
 }
 
-uint8_t* WinchStatusResponse::_InternalSerialize(
+uint8_t* StatusResponse::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.WinchStatusResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.StatusResponse)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .mavsdk.rpc.winch.WinchStatus winch_status = 1;
-  if (this->_internal_has_winch_status()) {
+  // .mavsdk.rpc.winch.Status status = 1;
+  if (this->_internal_has_status()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::winch_status(this),
-        _Internal::winch_status(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(1, _Internal::status(this),
+        _Internal::status(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.WinchStatusResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.StatusResponse)
   return target;
 }
 
-size_t WinchStatusResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.WinchStatusResponse)
+size_t StatusResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.StatusResponse)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .mavsdk.rpc.winch.WinchStatus winch_status = 1;
-  if (this->_internal_has_winch_status()) {
+  // .mavsdk.rpc.winch.Status status = 1;
+  if (this->_internal_has_status()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *winch_status_);
+        *status_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WinchStatusResponse::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData StatusResponse::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    WinchStatusResponse::MergeImpl
+    StatusResponse::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WinchStatusResponse::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*StatusResponse::GetClassData() const { return &_class_data_; }
 
-void WinchStatusResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void StatusResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<WinchStatusResponse *>(to)->MergeFrom(
-      static_cast<const WinchStatusResponse &>(from));
+  static_cast<StatusResponse *>(to)->MergeFrom(
+      static_cast<const StatusResponse &>(from));
 }
 
 
-void WinchStatusResponse::MergeFrom(const WinchStatusResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.WinchStatusResponse)
+void StatusResponse::MergeFrom(const StatusResponse& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.StatusResponse)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_winch_status()) {
-    _internal_mutable_winch_status()->::mavsdk::rpc::winch::WinchStatus::MergeFrom(from._internal_winch_status());
+  if (from._internal_has_status()) {
+    _internal_mutable_status()->::mavsdk::rpc::winch::Status::MergeFrom(from._internal_status());
   }
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void WinchStatusResponse::CopyFrom(const WinchStatusResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.WinchStatusResponse)
+void StatusResponse::CopyFrom(const StatusResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.StatusResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool WinchStatusResponse::IsInitialized() const {
+bool StatusResponse::IsInitialized() const {
   return true;
 }
 
-void WinchStatusResponse::InternalSwap(WinchStatusResponse* other) {
+void StatusResponse::InternalSwap(StatusResponse* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(winch_status_, other->winch_status_);
+  swap(status_, other->status_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WinchStatusResponse::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata StatusResponse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
       file_level_metadata_winch_2fwinch_2eproto[1]);
@@ -1040,34 +1039,34 @@ void WinchStatusResponse::InternalSwap(WinchStatusResponse* other) {
 
 // ===================================================================
 
-class WinchStatusFlags::_Internal {
+class StatusFlags::_Internal {
  public:
 };
 
-WinchStatusFlags::WinchStatusFlags(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+StatusFlags::StatusFlags(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.WinchStatusFlags)
+  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.StatusFlags)
 }
-WinchStatusFlags::WinchStatusFlags(const WinchStatusFlags& from)
+StatusFlags::StatusFlags(const StatusFlags& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::memcpy(&healthy_, &from.healthy_,
     static_cast<size_t>(reinterpret_cast<char*>(&load_payload_) -
     reinterpret_cast<char*>(&healthy_)) + sizeof(load_payload_));
-  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.WinchStatusFlags)
+  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.StatusFlags)
 }
 
-inline void WinchStatusFlags::SharedCtor() {
+inline void StatusFlags::SharedCtor() {
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
     reinterpret_cast<char*>(&healthy_) - reinterpret_cast<char*>(this)),
     0, static_cast<size_t>(reinterpret_cast<char*>(&load_payload_) -
     reinterpret_cast<char*>(&healthy_)) + sizeof(load_payload_));
 }
 
-WinchStatusFlags::~WinchStatusFlags() {
-  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.WinchStatusFlags)
+StatusFlags::~StatusFlags() {
+  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.StatusFlags)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -1075,16 +1074,16 @@ WinchStatusFlags::~WinchStatusFlags() {
   SharedDtor();
 }
 
-inline void WinchStatusFlags::SharedDtor() {
+inline void StatusFlags::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void WinchStatusFlags::SetCachedSize(int size) const {
+void StatusFlags::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void WinchStatusFlags::Clear() {
-// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.WinchStatusFlags)
+void StatusFlags::Clear() {
+// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.StatusFlags)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1095,7 +1094,7 @@ void WinchStatusFlags::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* WinchStatusFlags::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* StatusFlags::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
@@ -1236,9 +1235,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* WinchStatusFlags::_InternalSerialize(
+uint8_t* StatusFlags::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.WinchStatusFlags)
+  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.StatusFlags)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1330,12 +1329,12 @@ uint8_t* WinchStatusFlags::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.WinchStatusFlags)
+  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.StatusFlags)
   return target;
 }
 
-size_t WinchStatusFlags::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.WinchStatusFlags)
+size_t StatusFlags::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.StatusFlags)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -1415,21 +1414,21 @@ size_t WinchStatusFlags::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WinchStatusFlags::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData StatusFlags::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    WinchStatusFlags::MergeImpl
+    StatusFlags::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WinchStatusFlags::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*StatusFlags::GetClassData() const { return &_class_data_; }
 
-void WinchStatusFlags::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void StatusFlags::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<WinchStatusFlags *>(to)->MergeFrom(
-      static_cast<const WinchStatusFlags &>(from));
+  static_cast<StatusFlags *>(to)->MergeFrom(
+      static_cast<const StatusFlags &>(from));
 }
 
 
-void WinchStatusFlags::MergeFrom(const WinchStatusFlags& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.WinchStatusFlags)
+void StatusFlags::MergeFrom(const StatusFlags& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.StatusFlags)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1479,29 +1478,29 @@ void WinchStatusFlags::MergeFrom(const WinchStatusFlags& from) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void WinchStatusFlags::CopyFrom(const WinchStatusFlags& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.WinchStatusFlags)
+void StatusFlags::CopyFrom(const StatusFlags& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.StatusFlags)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool WinchStatusFlags::IsInitialized() const {
+bool StatusFlags::IsInitialized() const {
   return true;
 }
 
-void WinchStatusFlags::InternalSwap(WinchStatusFlags* other) {
+void StatusFlags::InternalSwap(StatusFlags* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(WinchStatusFlags, load_payload_)
-      + sizeof(WinchStatusFlags::load_payload_)
-      - PROTOBUF_FIELD_OFFSET(WinchStatusFlags, healthy_)>(
+      PROTOBUF_FIELD_OFFSET(StatusFlags, load_payload_)
+      + sizeof(StatusFlags::load_payload_)
+      - PROTOBUF_FIELD_OFFSET(StatusFlags, healthy_)>(
           reinterpret_cast<char*>(&healthy_),
           reinterpret_cast<char*>(&other->healthy_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WinchStatusFlags::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata StatusFlags::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
       file_level_metadata_winch_2fwinch_2eproto[2]);
@@ -1680,44 +1679,44 @@ void WinchHearbeat::InternalSwap(WinchHearbeat* other) {
 
 // ===================================================================
 
-class WinchStatus::_Internal {
+class Status::_Internal {
  public:
-  static const ::mavsdk::rpc::winch::WinchStatusFlags& winch_status_flags(const WinchStatus* msg);
+  static const ::mavsdk::rpc::winch::StatusFlags& status_flags(const Status* msg);
 };
 
-const ::mavsdk::rpc::winch::WinchStatusFlags&
-WinchStatus::_Internal::winch_status_flags(const WinchStatus* msg) {
-  return *msg->winch_status_flags_;
+const ::mavsdk::rpc::winch::StatusFlags&
+Status::_Internal::status_flags(const Status* msg) {
+  return *msg->status_flags_;
 }
-WinchStatus::WinchStatus(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+Status::Status(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.WinchStatus)
+  // @@protoc_insertion_point(arena_constructor:mavsdk.rpc.winch.Status)
 }
-WinchStatus::WinchStatus(const WinchStatus& from)
+Status::Status(const Status& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  if (from._internal_has_winch_status_flags()) {
-    winch_status_flags_ = new ::mavsdk::rpc::winch::WinchStatusFlags(*from.winch_status_flags_);
+  if (from._internal_has_status_flags()) {
+    status_flags_ = new ::mavsdk::rpc::winch::StatusFlags(*from.status_flags_);
   } else {
-    winch_status_flags_ = nullptr;
+    status_flags_ = nullptr;
   }
   ::memcpy(&time_usec_, &from.time_usec_,
     static_cast<size_t>(reinterpret_cast<char*>(&temperature_c_) -
     reinterpret_cast<char*>(&time_usec_)) + sizeof(temperature_c_));
-  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.WinchStatus)
+  // @@protoc_insertion_point(copy_constructor:mavsdk.rpc.winch.Status)
 }
 
-inline void WinchStatus::SharedCtor() {
+inline void Status::SharedCtor() {
 ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
-    reinterpret_cast<char*>(&winch_status_flags_) - reinterpret_cast<char*>(this)),
+    reinterpret_cast<char*>(&status_flags_) - reinterpret_cast<char*>(this)),
     0, static_cast<size_t>(reinterpret_cast<char*>(&temperature_c_) -
-    reinterpret_cast<char*>(&winch_status_flags_)) + sizeof(temperature_c_));
+    reinterpret_cast<char*>(&status_flags_)) + sizeof(temperature_c_));
 }
 
-WinchStatus::~WinchStatus() {
-  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.WinchStatus)
+Status::~Status() {
+  // @@protoc_insertion_point(destructor:mavsdk.rpc.winch.Status)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -1725,32 +1724,32 @@ WinchStatus::~WinchStatus() {
   SharedDtor();
 }
 
-inline void WinchStatus::SharedDtor() {
+inline void Status::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete winch_status_flags_;
+  if (this != internal_default_instance()) delete status_flags_;
 }
 
-void WinchStatus::SetCachedSize(int size) const {
+void Status::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void WinchStatus::Clear() {
-// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.WinchStatus)
+void Status::Clear() {
+// @@protoc_insertion_point(message_clear_start:mavsdk.rpc.winch.Status)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaForAllocation() == nullptr && winch_status_flags_ != nullptr) {
-    delete winch_status_flags_;
+  if (GetArenaForAllocation() == nullptr && status_flags_ != nullptr) {
+    delete status_flags_;
   }
-  winch_status_flags_ = nullptr;
+  status_flags_ = nullptr;
   ::memset(&time_usec_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&temperature_c_) -
       reinterpret_cast<char*>(&time_usec_)) + sizeof(temperature_c_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* WinchStatus::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* Status::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
@@ -1812,10 +1811,10 @@ const char* WinchStatus::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // .mavsdk.rpc.winch.WinchStatusFlags winch_status_flags = 8;
+      // .mavsdk.rpc.winch.StatusFlags status_flags = 8;
       case 8:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
-          ptr = ctx->ParseMessage(_internal_mutable_winch_status_flags(), ptr);
+          ptr = ctx->ParseMessage(_internal_mutable_status_flags(), ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -1843,9 +1842,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* WinchStatus::_InternalSerialize(
+uint8_t* Status::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.WinchStatus)
+  // @@protoc_insertion_point(serialize_to_array_start:mavsdk.rpc.winch.Status)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1911,34 +1910,34 @@ uint8_t* WinchStatus::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteInt32ToArray(7, this->_internal_temperature_c(), target);
   }
 
-  // .mavsdk.rpc.winch.WinchStatusFlags winch_status_flags = 8;
-  if (this->_internal_has_winch_status_flags()) {
+  // .mavsdk.rpc.winch.StatusFlags status_flags = 8;
+  if (this->_internal_has_status_flags()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(8, _Internal::winch_status_flags(this),
-        _Internal::winch_status_flags(this).GetCachedSize(), target, stream);
+      InternalWriteMessage(8, _Internal::status_flags(this),
+        _Internal::status_flags(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.WinchStatus)
+  // @@protoc_insertion_point(serialize_to_array_end:mavsdk.rpc.winch.Status)
   return target;
 }
 
-size_t WinchStatus::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.WinchStatus)
+size_t Status::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:mavsdk.rpc.winch.Status)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // .mavsdk.rpc.winch.WinchStatusFlags winch_status_flags = 8;
-  if (this->_internal_has_winch_status_flags()) {
+  // .mavsdk.rpc.winch.StatusFlags status_flags = 8;
+  if (this->_internal_has_status_flags()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *winch_status_flags_);
+        *status_flags_);
   }
 
   // uint64 time_usec = 1;
@@ -1999,27 +1998,27 @@ size_t WinchStatus::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData WinchStatus::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Status::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSizeCheck,
-    WinchStatus::MergeImpl
+    Status::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*WinchStatus::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Status::GetClassData() const { return &_class_data_; }
 
-void WinchStatus::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
+void Status::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
                       const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-  static_cast<WinchStatus *>(to)->MergeFrom(
-      static_cast<const WinchStatus &>(from));
+  static_cast<Status *>(to)->MergeFrom(
+      static_cast<const Status &>(from));
 }
 
 
-void WinchStatus::MergeFrom(const WinchStatus& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.WinchStatus)
+void Status::MergeFrom(const Status& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:mavsdk.rpc.winch.Status)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_winch_status_flags()) {
-    _internal_mutable_winch_status_flags()->::mavsdk::rpc::winch::WinchStatusFlags::MergeFrom(from._internal_winch_status_flags());
+  if (from._internal_has_status_flags()) {
+    _internal_mutable_status_flags()->::mavsdk::rpc::winch::StatusFlags::MergeFrom(from._internal_status_flags());
   }
   if (from._internal_time_usec() != 0) {
     _internal_set_time_usec(from._internal_time_usec());
@@ -2065,29 +2064,29 @@ void WinchStatus::MergeFrom(const WinchStatus& from) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void WinchStatus::CopyFrom(const WinchStatus& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.WinchStatus)
+void Status::CopyFrom(const Status& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:mavsdk.rpc.winch.Status)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool WinchStatus::IsInitialized() const {
+bool Status::IsInitialized() const {
   return true;
 }
 
-void WinchStatus::InternalSwap(WinchStatus* other) {
+void Status::InternalSwap(Status* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(WinchStatus, temperature_c_)
-      + sizeof(WinchStatus::temperature_c_)
-      - PROTOBUF_FIELD_OFFSET(WinchStatus, winch_status_flags_)>(
-          reinterpret_cast<char*>(&winch_status_flags_),
-          reinterpret_cast<char*>(&other->winch_status_flags_));
+      PROTOBUF_FIELD_OFFSET(Status, temperature_c_)
+      + sizeof(Status::temperature_c_)
+      - PROTOBUF_FIELD_OFFSET(Status, status_flags_)>(
+          reinterpret_cast<char*>(&status_flags_),
+          reinterpret_cast<char*>(&other->status_flags_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata WinchStatus::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata Status::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_winch_2fwinch_2eproto_getter, &descriptor_table_winch_2fwinch_2eproto_once,
       file_level_metadata_winch_2fwinch_2eproto[4]);
@@ -6028,25 +6027,25 @@ void WinchResult::InternalSwap(WinchResult* other) {
 }  // namespace rpc
 }  // namespace mavsdk
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::SubscribeWinchStatusRequest*
-Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::SubscribeWinchStatusRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::SubscribeWinchStatusRequest >(arena);
+template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::SubscribeStatusRequest*
+Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::SubscribeStatusRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::SubscribeStatusRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::WinchStatusResponse*
-Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::WinchStatusResponse >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::WinchStatusResponse >(arena);
+template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::StatusResponse*
+Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::StatusResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::StatusResponse >(arena);
 }
-template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::WinchStatusFlags*
-Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::WinchStatusFlags >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::WinchStatusFlags >(arena);
+template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::StatusFlags*
+Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::StatusFlags >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::StatusFlags >(arena);
 }
 template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::WinchHearbeat*
 Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::WinchHearbeat >(Arena* arena) {
   return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::WinchHearbeat >(arena);
 }
-template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::WinchStatus*
-Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::WinchStatus >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::WinchStatus >(arena);
+template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::Status*
+Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::Status >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::mavsdk::rpc::winch::Status >(arena);
 }
 template<> PROTOBUF_NOINLINE ::mavsdk::rpc::winch::RelaxRequest*
 Arena::CreateMaybeMessage< ::mavsdk::rpc::winch::RelaxRequest >(Arena* arena) {

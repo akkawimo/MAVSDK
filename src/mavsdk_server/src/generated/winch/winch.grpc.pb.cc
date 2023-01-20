@@ -24,7 +24,7 @@ namespace rpc {
 namespace winch {
 
 static const char* WinchService_method_names[] = {
-  "/mavsdk.rpc.winch.WinchService/SubscribeWinchStatus",
+  "/mavsdk.rpc.winch.WinchService/SubscribeStatus",
   "/mavsdk.rpc.winch.WinchService/Relax",
   "/mavsdk.rpc.winch.WinchService/RelativeLengthControl",
   "/mavsdk.rpc.winch.WinchService/RateControl",
@@ -44,7 +44,7 @@ std::unique_ptr< WinchService::Stub> WinchService::NewStub(const std::shared_ptr
 }
 
 WinchService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)
-  : channel_(channel), rpcmethod_SubscribeWinchStatus_(WinchService_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
+  : channel_(channel), rpcmethod_SubscribeStatus_(WinchService_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
   , rpcmethod_Relax_(WinchService_method_names[1], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_RelativeLengthControl_(WinchService_method_names[2], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_RateControl_(WinchService_method_names[3], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
@@ -57,20 +57,20 @@ WinchService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
   , rpcmethod_LoadPayload_(WinchService_method_names[10], options.suffix_for_stats(),::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
-::grpc::ClientReader< ::mavsdk::rpc::winch::WinchStatusResponse>* WinchService::Stub::SubscribeWinchStatusRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest& request) {
-  return ::grpc::internal::ClientReaderFactory< ::mavsdk::rpc::winch::WinchStatusResponse>::Create(channel_.get(), rpcmethod_SubscribeWinchStatus_, context, request);
+::grpc::ClientReader< ::mavsdk::rpc::winch::StatusResponse>* WinchService::Stub::SubscribeStatusRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeStatusRequest& request) {
+  return ::grpc::internal::ClientReaderFactory< ::mavsdk::rpc::winch::StatusResponse>::Create(channel_.get(), rpcmethod_SubscribeStatus_, context, request);
 }
 
-void WinchService::Stub::async::SubscribeWinchStatus(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest* request, ::grpc::ClientReadReactor< ::mavsdk::rpc::winch::WinchStatusResponse>* reactor) {
-  ::grpc::internal::ClientCallbackReaderFactory< ::mavsdk::rpc::winch::WinchStatusResponse>::Create(stub_->channel_.get(), stub_->rpcmethod_SubscribeWinchStatus_, context, request, reactor);
+void WinchService::Stub::async::SubscribeStatus(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeStatusRequest* request, ::grpc::ClientReadReactor< ::mavsdk::rpc::winch::StatusResponse>* reactor) {
+  ::grpc::internal::ClientCallbackReaderFactory< ::mavsdk::rpc::winch::StatusResponse>::Create(stub_->channel_.get(), stub_->rpcmethod_SubscribeStatus_, context, request, reactor);
 }
 
-::grpc::ClientAsyncReader< ::mavsdk::rpc::winch::WinchStatusResponse>* WinchService::Stub::AsyncSubscribeWinchStatusRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
-  return ::grpc::internal::ClientAsyncReaderFactory< ::mavsdk::rpc::winch::WinchStatusResponse>::Create(channel_.get(), cq, rpcmethod_SubscribeWinchStatus_, context, request, true, tag);
+::grpc::ClientAsyncReader< ::mavsdk::rpc::winch::StatusResponse>* WinchService::Stub::AsyncSubscribeStatusRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeStatusRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
+  return ::grpc::internal::ClientAsyncReaderFactory< ::mavsdk::rpc::winch::StatusResponse>::Create(channel_.get(), cq, rpcmethod_SubscribeStatus_, context, request, true, tag);
 }
 
-::grpc::ClientAsyncReader< ::mavsdk::rpc::winch::WinchStatusResponse>* WinchService::Stub::PrepareAsyncSubscribeWinchStatusRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncReaderFactory< ::mavsdk::rpc::winch::WinchStatusResponse>::Create(channel_.get(), cq, rpcmethod_SubscribeWinchStatus_, context, request, false, nullptr);
+::grpc::ClientAsyncReader< ::mavsdk::rpc::winch::StatusResponse>* WinchService::Stub::PrepareAsyncSubscribeStatusRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeStatusRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncReaderFactory< ::mavsdk::rpc::winch::StatusResponse>::Create(channel_.get(), cq, rpcmethod_SubscribeStatus_, context, request, false, nullptr);
 }
 
 ::grpc::Status WinchService::Stub::Relax(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelaxRequest& request, ::mavsdk::rpc::winch::RelaxResponse* response) {
@@ -307,12 +307,12 @@ WinchService::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       WinchService_method_names[0],
       ::grpc::internal::RpcMethod::SERVER_STREAMING,
-      new ::grpc::internal::ServerStreamingHandler< WinchService::Service, ::mavsdk::rpc::winch::SubscribeWinchStatusRequest, ::mavsdk::rpc::winch::WinchStatusResponse>(
+      new ::grpc::internal::ServerStreamingHandler< WinchService::Service, ::mavsdk::rpc::winch::SubscribeStatusRequest, ::mavsdk::rpc::winch::StatusResponse>(
           [](WinchService::Service* service,
              ::grpc::ServerContext* ctx,
-             const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest* req,
-             ::grpc::ServerWriter<::mavsdk::rpc::winch::WinchStatusResponse>* writer) {
-               return service->SubscribeWinchStatus(ctx, req, writer);
+             const ::mavsdk::rpc::winch::SubscribeStatusRequest* req,
+             ::grpc::ServerWriter<::mavsdk::rpc::winch::StatusResponse>* writer) {
+               return service->SubscribeStatus(ctx, req, writer);
              }, this)));
   AddMethod(new ::grpc::internal::RpcServiceMethod(
       WinchService_method_names[1],
@@ -419,7 +419,7 @@ WinchService::Service::Service() {
 WinchService::Service::~Service() {
 }
 
-::grpc::Status WinchService::Service::SubscribeWinchStatus(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest* request, ::grpc::ServerWriter< ::mavsdk::rpc::winch::WinchStatusResponse>* writer) {
+::grpc::Status WinchService::Service::SubscribeStatus(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::SubscribeStatusRequest* request, ::grpc::ServerWriter< ::mavsdk::rpc::winch::StatusResponse>* writer) {
   (void) context;
   (void) request;
   (void) writer;

@@ -84,7 +84,7 @@ public:
     /**
      * @brief
      */
-    struct WinchStatusFlags {
+    struct StatusFlags {
         bool healthy{}; /**< @brief Winch is healthy */
         bool fully_retracted{}; /**< @brief Winch line is fully retracted */
         bool moving{}; /**< @briefWinch motor is moving */
@@ -105,19 +105,18 @@ public:
     };
 
     /**
-     * @brief Equal operator to compare two `Winch::WinchStatusFlags` objects.
+     * @brief Equal operator to compare two `Winch::StatusFlags` objects.
      *
      * @return `true` if items are equal.
      */
-    friend bool operator==(const Winch::WinchStatusFlags& lhs, const Winch::WinchStatusFlags& rhs);
+    friend bool operator==(const Winch::StatusFlags& lhs, const Winch::StatusFlags& rhs);
 
     /**
-     * @brief Stream operator to print information about a `Winch::WinchStatusFlags`.
+     * @brief Stream operator to print information about a `Winch::StatusFlags`.
      *
      * @return A reference to the stream.
      */
-    friend std::ostream&
-    operator<<(std::ostream& str, Winch::WinchStatusFlags const& winch_status_flags);
+    friend std::ostream& operator<<(std::ostream& str, Winch::StatusFlags const& status_flags);
 
     /**
      * @brief
@@ -143,7 +142,7 @@ public:
     /**
      * @brief
      */
-    struct WinchStatus {
+    struct Status {
         uint64_t time_usec{}; /**< @brief */
         float line_length_m{}; /**< @brief */
         float speed_m_s{}; /**< @brief */
@@ -151,22 +150,22 @@ public:
         float voltage_v{}; /**< @brief */
         float current_a{}; /**< @brief */
         int32_t temperature_c{}; /**< @brief */
-        WinchStatusFlags winch_status_flags{}; /**< @brief */
+        StatusFlags status_flags{}; /**< @brief */
     };
 
     /**
-     * @brief Equal operator to compare two `Winch::WinchStatus` objects.
+     * @brief Equal operator to compare two `Winch::Status` objects.
      *
      * @return `true` if items are equal.
      */
-    friend bool operator==(const Winch::WinchStatus& lhs, const Winch::WinchStatus& rhs);
+    friend bool operator==(const Winch::Status& lhs, const Winch::Status& rhs);
 
     /**
-     * @brief Stream operator to print information about a `Winch::WinchStatus`.
+     * @brief Stream operator to print information about a `Winch::Status`.
      *
      * @return A reference to the stream.
      */
-    friend std::ostream& operator<<(std::ostream& str, Winch::WinchStatus const& winch_status);
+    friend std::ostream& operator<<(std::ostream& str, Winch::Status const& status);
 
     /**
      * @brief Possible results returned for action requests.
@@ -202,31 +201,31 @@ public:
     using ResultCallback = std::function<void(Result)>;
 
     /**
-     * @brief Callback type for subscribe_winch_status.
+     * @brief Callback type for subscribe_status.
      */
-    using WinchStatusCallback = std::function<void(WinchStatus)>;
+    using StatusCallback = std::function<void(Status)>;
 
     /**
-     * @brief Handle type for subscribe_winch_status.
+     * @brief Handle type for subscribe_status.
      */
-    using WinchStatusHandle = Handle<WinchStatus>;
+    using StatusHandle = Handle<Status>;
 
     /**
      * @brief Subscribe to 'winch status' updates.
      */
-    WinchStatusHandle subscribe_winch_status(const WinchStatusCallback& callback);
+    StatusHandle subscribe_status(const StatusCallback& callback);
 
     /**
-     * @brief Unsubscribe from subscribe_winch_status
+     * @brief Unsubscribe from subscribe_status
      */
-    void unsubscribe_winch_status(WinchStatusHandle handle);
+    void unsubscribe_status(StatusHandle handle);
 
     /**
-     * @brief Poll for 'WinchStatus' (blocking).
+     * @brief Poll for 'Status' (blocking).
      *
-     * @return One WinchStatus update.
+     * @return One Status update.
      */
-    WinchStatus winch_status() const;
+    Status status() const;
 
     /**
      * @brief Allow motor to freewheel.

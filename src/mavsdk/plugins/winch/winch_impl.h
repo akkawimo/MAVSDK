@@ -53,10 +53,10 @@ public:
     void load_payload_async(uint32_t instance, const Winch::ResultCallback callback);
     Winch::Result load_payload(uint32_t instance);
 
-    Winch::WinchStatus winch_status() const;
+    Winch::Status status() const;
 
-    Winch::WinchStatusHandle subscribe_winch_status(const Winch::WinchStatusCallback& callback);
-    void unsubscribe_winch_status(Winch::WinchStatusHandle handle);
+    Winch::StatusHandle subscribe_status(const Winch::StatusCallback& callback);
+    void unsubscribe_status(Winch::StatusHandle handle);
 
 private:
     static Winch::Result winch_result_from_command_result(MavlinkCommandSender::Result result);
@@ -64,16 +64,16 @@ private:
     void command_result_callback(
         MavlinkCommandSender::Result command_result, const Winch::ResultCallback& callback) const;
 
-    void set_winch_status(Winch::WinchStatus winch_status);
+    void set_status(Winch::Status status);
 
-    void process_winch_status(const mavlink_message_t& message);
+    void process_status(const mavlink_message_t& message);
 
-    mutable std::mutex _winch_status_mutex{};
-    Winch::WinchStatus _winch_status{};
+    mutable std::mutex _status_mutex{};
+    Winch::Status _status{};
 
     std::mutex _subscription_mutex{};
 
-    CallbackList<Winch::WinchStatus> _winch_status_subscriptions{};
+    CallbackList<Winch::Status> _status_subscriptions{};
 };
 
 } // namespace mavsdk
