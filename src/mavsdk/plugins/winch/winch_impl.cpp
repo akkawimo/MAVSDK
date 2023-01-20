@@ -1,6 +1,10 @@
 #include "winch_impl.h"
+#include "system.h"
+#include "callback_list.tpp"
 
 namespace mavsdk {
+
+template class CallbackList<Winch::WinchStatus>;
 
 WinchImpl::WinchImpl(System& system) : PluginImplBase(system)
 {
@@ -17,7 +21,87 @@ WinchImpl::~WinchImpl()
     _parent->unregister_plugin(this);
 }
 
-void WinchImpl::init() {}
+void WinchImpl::init()
+{
+    _parent->register_mavlink_message_handler(
+        MAVLINK_MSG_ID_WINCH_STATUS,
+        [this](const mavlink_message_t& message) { process_winch_status(message); },
+        this);
+}
+
+Winch::WinchStatusHandle
+WinchImpl::subscribe_winch_status(const Winch::WinchStatusCallback& callback)
+{
+    std::lock_guard<std::mutex> lock(_subscription_mutex);
+    return _winch_status_subscriptions.subscribe(callback);
+}
+
+void WinchImpl::unsubscribe_winch_status(Winch::WinchStatusHandle handle)
+{
+    std::lock_guard<std::mutex> lock(_subscription_mutex);
+    _winch_status_subscriptions.unsubscribe(handle);
+}
+
+void WinchImpl::set_winch_status(Winch::WinchStatus winch_status)
+{
+    std::lock_guard<std::mutex> lock(_winch_status_mutex);
+    _winch_status = winch_status;
+}
+
+Winch::WinchStatus WinchImpl::winch_status() const
+{
+    std::lock_guard<std::mutex> lock(_winch_status_mutex);
+    return _winch_status;
+}
+
+void WinchImpl::process_winch_status(const mavlink_message_t& message)
+{
+    mavlink_winch_status_t mavlink_winch_status;
+    mavlink_msg_winch_status_decode(&message, &mavlink_winch_status);
+
+    Winch::WinchStatusFlags status_flags;
+    status_flags.healthy = mavlink_winch_status.status & MAV_WINCH_STATUS_FLAG::MAV_WINCH_STATUS_HEALTHY;
+    status_flags.fully_retracted =
+        mavlink_winch_status.status & MAV_WINCH_STATUS_FLAG::MAV_WINCH_STATUS_FULLY_RETRACTED;
+    status_flags.moving = mavlink_winch_status.status & MAV_WINCH_STATUS_FLAG::MAV_WINCH_STATUS_MOVING;
+    status_flags.clutch_engaged =
+        mavlink_winch_status.status & MAV_WINCH_STATUS_FLAG::MAV_WINCH_STATUS_CLUTCH_ENGAGED;
+    status_flags.locked = mavlink_winch_status.status & MAV_WINCH_STATUS_FLAG::MAV_WINCH_STATUS_LOCKED;
+    status_flags.dropping = mavlink_winch_status.status & MAV_WINCH_STATUS_FLAG::MAV_WINCH_STATUS_DROPPING;
+    status_flags.arresting =
+        mavlink_winch_status.status & MAV_WINCH_STATUS_FLAG::MAV_WINCH_STATUS_ARRESTING;
+    status_flags.ground_sense =
+        mavlink_winch_status.status & MAV_WINCH_STATUS_FLAG::MAV_WINCH_STATUS_GROUND_SENSE;
+    status_flags.retracting =
+        mavlink_winch_status.status & MAV_WINCH_STATUS_FLAG::MAV_WINCH_STATUS_RETRACTING;
+    status_flags.redeliver =
+        mavlink_winch_status.status & MAV_WINCH_STATUS_FLAG::MAV_WINCH_STATUS_REDELIVER;
+    status_flags.abandon_line =
+        mavlink_winch_status.status & MAV_WINCH_STATUS_FLAG::MAV_WINCH_STATUS_ABANDON_LINE;
+    status_flags.locking = mavlink_winch_status.status & MAV_WINCH_STATUS_FLAG::MAV_WINCH_STATUS_LOCKING;
+    status_flags.load_line =
+        mavlink_winch_status.status & MAV_WINCH_STATUS_FLAG::MAV_WINCH_STATUS_LOAD_LINE;
+    status_flags.load_payload =
+        mavlink_winch_status.status & MAV_WINCH_STATUS_FLAG::MAV_WINCH_STATUS_LOAD_PAYLOAD;
+
+    Winch::WinchStatus new_winch_status;
+    new_winch_status.time_usec = mavlink_winch_status.time_usec;
+    new_winch_status.line_length_m = mavlink_winch_status.line_length;
+    new_winch_status.speed_m_s = mavlink_winch_status.speed;
+    new_winch_status.tension_kg = mavlink_winch_status.tension;
+    new_winch_status.voltage_v = mavlink_winch_status.voltage;
+    new_winch_status.current_a = mavlink_winch_status.current;
+    new_winch_status.temperature_c = mavlink_winch_status.temperature;
+    new_winch_status.winch_status_flags = status_flags;
+
+    set_winch_status(new_winch_status);
+
+    {
+        std::lock_guard<std::mutex> lock(_subscription_mutex);
+        _winch_status_subscriptions.queue(
+            winch_status(), [this](const auto& func) { _parent->call_user_callback(func); });
+    }
+}
 
 void WinchImpl::deinit() {}
 

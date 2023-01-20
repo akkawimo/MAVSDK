@@ -101,6 +101,148 @@ public:
         }
     }
 
+    static std::unique_ptr<rpc::winch::WinchStatusFlags>
+    translateToRpcWinchStatusFlags(const mavsdk::Winch::WinchStatusFlags& winch_status_flags)
+    {
+        auto rpc_obj = std::make_unique<rpc::winch::WinchStatusFlags>();
+
+        rpc_obj->set_healthy(winch_status_flags.healthy);
+
+        rpc_obj->set_fully_retracted(winch_status_flags.fully_retracted);
+
+        rpc_obj->set_moving(winch_status_flags.moving);
+
+        rpc_obj->set_clutch_engaged(winch_status_flags.clutch_engaged);
+
+        rpc_obj->set_locked(winch_status_flags.locked);
+
+        rpc_obj->set_dropping(winch_status_flags.dropping);
+
+        rpc_obj->set_arresting(winch_status_flags.arresting);
+
+        rpc_obj->set_ground_sense(winch_status_flags.ground_sense);
+
+        rpc_obj->set_retracting(winch_status_flags.retracting);
+
+        rpc_obj->set_redeliver(winch_status_flags.redeliver);
+
+        rpc_obj->set_abandon_line(winch_status_flags.abandon_line);
+
+        rpc_obj->set_locking(winch_status_flags.locking);
+
+        rpc_obj->set_load_line(winch_status_flags.load_line);
+
+        rpc_obj->set_load_payload(winch_status_flags.load_payload);
+
+        return rpc_obj;
+    }
+
+    static mavsdk::Winch::WinchStatusFlags
+    translateFromRpcWinchStatusFlags(const rpc::winch::WinchStatusFlags& winch_status_flags)
+    {
+        mavsdk::Winch::WinchStatusFlags obj;
+
+        obj.healthy = winch_status_flags.healthy();
+
+        obj.fully_retracted = winch_status_flags.fully_retracted();
+
+        obj.moving = winch_status_flags.moving();
+
+        obj.clutch_engaged = winch_status_flags.clutch_engaged();
+
+        obj.locked = winch_status_flags.locked();
+
+        obj.dropping = winch_status_flags.dropping();
+
+        obj.arresting = winch_status_flags.arresting();
+
+        obj.ground_sense = winch_status_flags.ground_sense();
+
+        obj.retracting = winch_status_flags.retracting();
+
+        obj.redeliver = winch_status_flags.redeliver();
+
+        obj.abandon_line = winch_status_flags.abandon_line();
+
+        obj.locking = winch_status_flags.locking();
+
+        obj.load_line = winch_status_flags.load_line();
+
+        obj.load_payload = winch_status_flags.load_payload();
+
+        return obj;
+    }
+
+    static std::unique_ptr<rpc::winch::WinchHearbeat>
+    translateToRpcWinchHearbeat(const mavsdk::Winch::WinchHearbeat& winch_hearbeat)
+    {
+        auto rpc_obj = std::make_unique<rpc::winch::WinchHearbeat>();
+
+        rpc_obj->set_connected(winch_hearbeat.connected);
+
+        return rpc_obj;
+    }
+
+    static mavsdk::Winch::WinchHearbeat
+    translateFromRpcWinchHearbeat(const rpc::winch::WinchHearbeat& winch_hearbeat)
+    {
+        mavsdk::Winch::WinchHearbeat obj;
+
+        obj.connected = winch_hearbeat.connected();
+
+        return obj;
+    }
+
+    static std::unique_ptr<rpc::winch::WinchStatus>
+    translateToRpcWinchStatus(const mavsdk::Winch::WinchStatus& winch_status)
+    {
+        auto rpc_obj = std::make_unique<rpc::winch::WinchStatus>();
+
+        rpc_obj->set_time_usec(winch_status.time_usec);
+
+        rpc_obj->set_line_length_m(winch_status.line_length_m);
+
+        rpc_obj->set_speed_m_s(winch_status.speed_m_s);
+
+        rpc_obj->set_tension_kg(winch_status.tension_kg);
+
+        rpc_obj->set_voltage_v(winch_status.voltage_v);
+
+        rpc_obj->set_current_a(winch_status.current_a);
+
+        rpc_obj->set_temperature_c(winch_status.temperature_c);
+
+        rpc_obj->set_allocated_winch_status_flags(
+            translateToRpcWinchStatusFlags(winch_status.winch_status_flags).release());
+
+        return rpc_obj;
+    }
+
+    static mavsdk::Winch::WinchStatus
+    translateFromRpcWinchStatus(const rpc::winch::WinchStatus& winch_status)
+    {
+        mavsdk::Winch::WinchStatus obj;
+
+        obj.time_usec = winch_status.time_usec();
+
+        obj.line_length_m = winch_status.line_length_m();
+
+        obj.speed_m_s = winch_status.speed_m_s();
+
+        obj.tension_kg = winch_status.tension_kg();
+
+        obj.voltage_v = winch_status.voltage_v();
+
+        obj.current_a = winch_status.current_a();
+
+        obj.temperature_c = winch_status.temperature_c();
+
+        obj.winch_status_flags =
+            translateFromRpcWinchStatusFlags(winch_status.winch_status_flags());
+
+        return obj;
+    }
+
     static rpc::winch::WinchResult::Result translateToRpcResult(const mavsdk::Winch::Result& result)
     {
         switch (result) {
@@ -174,6 +316,48 @@ public:
             case rpc::winch::WinchResult_Result_RESULT_FAILED:
                 return mavsdk::Winch::Result::Failed;
         }
+    }
+
+    grpc::Status SubscribeWinchStatus(
+        grpc::ServerContext* /* context */,
+        const mavsdk::rpc::winch::SubscribeWinchStatusRequest* /* request */,
+        grpc::ServerWriter<rpc::winch::WinchStatusResponse>* writer) override
+    {
+        if (_lazy_plugin.maybe_plugin() == nullptr) {
+            return grpc::Status::OK;
+        }
+
+        auto stream_closed_promise = std::make_shared<std::promise<void>>();
+        auto stream_closed_future = stream_closed_promise->get_future();
+        register_stream_stop_promise(stream_closed_promise);
+
+        auto is_finished = std::make_shared<bool>(false);
+        auto subscribe_mutex = std::make_shared<std::mutex>();
+
+        const mavsdk::Winch::WinchStatusHandle handle =
+            _lazy_plugin.maybe_plugin()->subscribe_winch_status(
+                [this, &writer, &stream_closed_promise, is_finished, subscribe_mutex, &handle](
+                    const mavsdk::Winch::WinchStatus winch_status) {
+                    rpc::winch::WinchStatusResponse rpc_response;
+
+                    rpc_response.set_allocated_winch_status(
+                        translateToRpcWinchStatus(winch_status).release());
+
+                    std::unique_lock<std::mutex> lock(*subscribe_mutex);
+                    if (!*is_finished && !writer->Write(rpc_response)) {
+                        _lazy_plugin.maybe_plugin()->unsubscribe_winch_status(handle);
+
+                        *is_finished = true;
+                        unregister_stream_stop_promise(stream_closed_promise);
+                        stream_closed_promise->set_value();
+                    }
+                });
+
+        stream_closed_future.wait();
+        std::unique_lock<std::mutex> lock(*subscribe_mutex);
+        *is_finished = true;
+
+        return grpc::Status::OK;
     }
 
     grpc::Status Relax(

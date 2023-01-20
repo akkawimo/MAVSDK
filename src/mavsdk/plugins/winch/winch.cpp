@@ -9,6 +9,10 @@
 
 namespace mavsdk {
 
+using WinchStatusFlags = Winch::WinchStatusFlags;
+using WinchHearbeat = Winch::WinchHearbeat;
+using WinchStatus = Winch::WinchStatus;
+
 Winch::Winch(System& system) : PluginBase(), _impl{std::make_unique<WinchImpl>(system)} {}
 
 Winch::Winch(std::shared_ptr<System> system) :
@@ -17,6 +21,21 @@ Winch::Winch(std::shared_ptr<System> system) :
 {}
 
 Winch::~Winch() {}
+
+Winch::WinchStatusHandle Winch::subscribe_winch_status(const WinchStatusCallback& callback)
+{
+    return _impl->subscribe_winch_status(callback);
+}
+
+void Winch::unsubscribe_winch_status(WinchStatusHandle handle)
+{
+    _impl->unsubscribe_winch_status(handle);
+}
+
+Winch::WinchStatus Winch::winch_status() const
+{
+    return _impl->winch_status();
+}
 
 void Winch::relax_async(uint32_t instance, const ResultCallback callback)
 {
@@ -117,6 +136,86 @@ void Winch::load_payload_async(uint32_t instance, const ResultCallback callback)
 Winch::Result Winch::load_payload(uint32_t instance) const
 {
     return _impl->load_payload(instance);
+}
+
+bool operator==(const Winch::WinchStatusFlags& lhs, const Winch::WinchStatusFlags& rhs)
+{
+    return (rhs.healthy == lhs.healthy) && (rhs.fully_retracted == lhs.fully_retracted) &&
+           (rhs.moving == lhs.moving) && (rhs.clutch_engaged == lhs.clutch_engaged) &&
+           (rhs.locked == lhs.locked) && (rhs.dropping == lhs.dropping) &&
+           (rhs.arresting == lhs.arresting) && (rhs.ground_sense == lhs.ground_sense) &&
+           (rhs.retracting == lhs.retracting) && (rhs.redeliver == lhs.redeliver) &&
+           (rhs.abandon_line == lhs.abandon_line) && (rhs.locking == lhs.locking) &&
+           (rhs.load_line == lhs.load_line) && (rhs.load_payload == lhs.load_payload);
+}
+
+std::ostream& operator<<(std::ostream& str, Winch::WinchStatusFlags const& winch_status_flags)
+{
+    str << std::setprecision(15);
+    str << "winch_status_flags:" << '\n' << "{\n";
+    str << "    healthy: " << winch_status_flags.healthy << '\n';
+    str << "    fully_retracted: " << winch_status_flags.fully_retracted << '\n';
+    str << "    moving: " << winch_status_flags.moving << '\n';
+    str << "    clutch_engaged: " << winch_status_flags.clutch_engaged << '\n';
+    str << "    locked: " << winch_status_flags.locked << '\n';
+    str << "    dropping: " << winch_status_flags.dropping << '\n';
+    str << "    arresting: " << winch_status_flags.arresting << '\n';
+    str << "    ground_sense: " << winch_status_flags.ground_sense << '\n';
+    str << "    retracting: " << winch_status_flags.retracting << '\n';
+    str << "    redeliver: " << winch_status_flags.redeliver << '\n';
+    str << "    abandon_line: " << winch_status_flags.abandon_line << '\n';
+    str << "    locking: " << winch_status_flags.locking << '\n';
+    str << "    load_line: " << winch_status_flags.load_line << '\n';
+    str << "    load_payload: " << winch_status_flags.load_payload << '\n';
+    str << '}';
+    return str;
+}
+
+bool operator==(const Winch::WinchHearbeat& lhs, const Winch::WinchHearbeat& rhs)
+{
+    return (rhs.connected == lhs.connected);
+}
+
+std::ostream& operator<<(std::ostream& str, Winch::WinchHearbeat const& winch_hearbeat)
+{
+    str << std::setprecision(15);
+    str << "winch_hearbeat:" << '\n' << "{\n";
+    str << "    connected: " << winch_hearbeat.connected << '\n';
+    str << '}';
+    return str;
+}
+
+bool operator==(const Winch::WinchStatus& lhs, const Winch::WinchStatus& rhs)
+{
+    return (rhs.time_usec == lhs.time_usec) &&
+           ((std::isnan(rhs.line_length_m) && std::isnan(lhs.line_length_m)) ||
+            rhs.line_length_m == lhs.line_length_m) &&
+           ((std::isnan(rhs.speed_m_s) && std::isnan(lhs.speed_m_s)) ||
+            rhs.speed_m_s == lhs.speed_m_s) &&
+           ((std::isnan(rhs.tension_kg) && std::isnan(lhs.tension_kg)) ||
+            rhs.tension_kg == lhs.tension_kg) &&
+           ((std::isnan(rhs.voltage_v) && std::isnan(lhs.voltage_v)) ||
+            rhs.voltage_v == lhs.voltage_v) &&
+           ((std::isnan(rhs.current_a) && std::isnan(lhs.current_a)) ||
+            rhs.current_a == lhs.current_a) &&
+           (rhs.temperature_c == lhs.temperature_c) &&
+           (rhs.winch_status_flags == lhs.winch_status_flags);
+}
+
+std::ostream& operator<<(std::ostream& str, Winch::WinchStatus const& winch_status)
+{
+    str << std::setprecision(15);
+    str << "winch_status:" << '\n' << "{\n";
+    str << "    time_usec: " << winch_status.time_usec << '\n';
+    str << "    line_length_m: " << winch_status.line_length_m << '\n';
+    str << "    speed_m_s: " << winch_status.speed_m_s << '\n';
+    str << "    tension_kg: " << winch_status.tension_kg << '\n';
+    str << "    voltage_v: " << winch_status.voltage_v << '\n';
+    str << "    current_a: " << winch_status.current_a << '\n';
+    str << "    temperature_c: " << winch_status.temperature_c << '\n';
+    str << "    winch_status_flags: " << winch_status.winch_status_flags << '\n';
+    str << '}';
+    return str;
 }
 
 std::ostream& operator<<(std::ostream& str, Winch::Result const& result)

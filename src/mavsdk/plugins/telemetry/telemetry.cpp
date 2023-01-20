@@ -19,7 +19,6 @@ using RawGps = Telemetry::RawGps;
 using Battery = Telemetry::Battery;
 using Health = Telemetry::Health;
 using RcStatus = Telemetry::RcStatus;
-using WinchStatus = Telemetry::WinchStatus;
 using StatusText = Telemetry::StatusText;
 using ActuatorControlTarget = Telemetry::ActuatorControlTarget;
 using ActuatorOutputStatus = Telemetry::ActuatorOutputStatus;
@@ -279,21 +278,6 @@ void Telemetry::unsubscribe_battery(BatteryHandle handle)
 Telemetry::Battery Telemetry::battery() const
 {
     return _impl->battery();
-}
-
-Telemetry::WinchStatusHandle Telemetry::subscribe_winch_status(const WinchStatusCallback& callback)
-{
-    return _impl->subscribe_winch_status(callback);
-}
-
-void Telemetry::unsubscribe_winch_status(WinchStatusHandle handle)
-{
-    _impl->unsubscribe_winch_status(handle);
-}
-
-Telemetry::WinchStatus Telemetry::winch_status() const
-{
-    return _impl->winch_status();
 }
 
 Telemetry::FlightModeHandle Telemetry::subscribe_flight_mode(const FlightModeCallback& callback)
@@ -698,16 +682,6 @@ Telemetry::Result Telemetry::set_rate_battery(double rate_hz) const
     return _impl->set_rate_battery(rate_hz);
 }
 
-void Telemetry::set_rate_winch_status_async(double rate_hz, const ResultCallback callback)
-{
-    _impl->set_rate_winch_status_async(rate_hz, callback);
-}
-
-Telemetry::Result Telemetry::set_rate_winch_status(double rate_hz) const
-{
-    return _impl->set_rate_winch_status(rate_hz);
-}
-
 void Telemetry::set_rate_rc_status_async(double rate_hz, const ResultCallback callback)
 {
     _impl->set_rate_rc_status_async(rate_hz, callback);
@@ -1084,34 +1058,6 @@ std::ostream& operator<<(std::ostream& str, Telemetry::RcStatus const& rc_status
     str << "    was_available_once: " << rc_status.was_available_once << '\n';
     str << "    is_available: " << rc_status.is_available << '\n';
     str << "    signal_strength_percent: " << rc_status.signal_strength_percent << '\n';
-    str << '}';
-    return str;
-}
-
-bool operator==(const Telemetry::WinchStatus& lhs, const Telemetry::WinchStatus& rhs)
-{
-    return (rhs.time_usec == lhs.time_usec) &&
-           ((std::isnan(rhs.line_length) && std::isnan(lhs.line_length)) ||
-            rhs.line_length == lhs.line_length) &&
-           ((std::isnan(rhs.speed) && std::isnan(lhs.speed)) || rhs.speed == lhs.speed) &&
-           ((std::isnan(rhs.tension) && std::isnan(lhs.tension)) || rhs.tension == lhs.tension) &&
-           ((std::isnan(rhs.voltage) && std::isnan(lhs.voltage)) || rhs.voltage == lhs.voltage) &&
-           ((std::isnan(rhs.current) && std::isnan(lhs.current)) || rhs.current == lhs.current) &&
-           (rhs.temperature == lhs.temperature) && (rhs.status == lhs.status);
-}
-
-std::ostream& operator<<(std::ostream& str, Telemetry::WinchStatus const& winch_status)
-{
-    str << std::setprecision(15);
-    str << "winch_status:" << '\n' << "{\n";
-    str << "    time_usec: " << winch_status.time_usec << '\n';
-    str << "    line_length: " << winch_status.line_length << '\n';
-    str << "    speed: " << winch_status.speed << '\n';
-    str << "    tension: " << winch_status.tension << '\n';
-    str << "    voltage: " << winch_status.voltage << '\n';
-    str << "    current: " << winch_status.current << '\n';
-    str << "    temperature: " << winch_status.temperature << '\n';
-    str << "    status: " << winch_status.status << '\n';
     str << '}';
     return str;
 }

@@ -37,6 +37,16 @@ class WinchService final {
   class StubInterface {
    public:
     virtual ~StubInterface() {}
+    // Subscribe to 'winch status' updates.
+    std::unique_ptr< ::grpc::ClientReaderInterface< ::mavsdk::rpc::winch::WinchStatusResponse>> SubscribeWinchStatus(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest& request) {
+      return std::unique_ptr< ::grpc::ClientReaderInterface< ::mavsdk::rpc::winch::WinchStatusResponse>>(SubscribeWinchStatusRaw(context, request));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::mavsdk::rpc::winch::WinchStatusResponse>> AsyncSubscribeWinchStatus(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::mavsdk::rpc::winch::WinchStatusResponse>>(AsyncSubscribeWinchStatusRaw(context, request, cq, tag));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::mavsdk::rpc::winch::WinchStatusResponse>> PrepareAsyncSubscribeWinchStatus(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::mavsdk::rpc::winch::WinchStatusResponse>>(PrepareAsyncSubscribeWinchStatusRaw(context, request, cq));
+    }
     //
     // Allow motor to freewheel.
     virtual ::grpc::Status Relax(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelaxRequest& request, ::mavsdk::rpc::winch::RelaxResponse* response) = 0;
@@ -132,6 +142,8 @@ class WinchService final {
     class async_interface {
      public:
       virtual ~async_interface() {}
+      // Subscribe to 'winch status' updates.
+      virtual void SubscribeWinchStatus(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest* request, ::grpc::ClientReadReactor< ::mavsdk::rpc::winch::WinchStatusResponse>* reactor) = 0;
       //
       // Allow motor to freewheel.
       virtual void Relax(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelaxRequest* request, ::mavsdk::rpc::winch::RelaxResponse* response, std::function<void(::grpc::Status)>) = 0;
@@ -179,6 +191,9 @@ class WinchService final {
     virtual class async_interface* async() { return nullptr; }
     class async_interface* experimental_async() { return async(); }
    private:
+    virtual ::grpc::ClientReaderInterface< ::mavsdk::rpc::winch::WinchStatusResponse>* SubscribeWinchStatusRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest& request) = 0;
+    virtual ::grpc::ClientAsyncReaderInterface< ::mavsdk::rpc::winch::WinchStatusResponse>* AsyncSubscribeWinchStatusRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest& request, ::grpc::CompletionQueue* cq, void* tag) = 0;
+    virtual ::grpc::ClientAsyncReaderInterface< ::mavsdk::rpc::winch::WinchStatusResponse>* PrepareAsyncSubscribeWinchStatusRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::RelaxResponse>* AsyncRelaxRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelaxRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::RelaxResponse>* PrepareAsyncRelaxRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelaxRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::mavsdk::rpc::winch::RelativeLengthControlResponse>* AsyncRelativeLengthControlRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelativeLengthControlRequest& request, ::grpc::CompletionQueue* cq) = 0;
@@ -203,6 +218,15 @@ class WinchService final {
   class Stub final : public StubInterface {
    public:
     Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
+    std::unique_ptr< ::grpc::ClientReader< ::mavsdk::rpc::winch::WinchStatusResponse>> SubscribeWinchStatus(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest& request) {
+      return std::unique_ptr< ::grpc::ClientReader< ::mavsdk::rpc::winch::WinchStatusResponse>>(SubscribeWinchStatusRaw(context, request));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReader< ::mavsdk::rpc::winch::WinchStatusResponse>> AsyncSubscribeWinchStatus(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest& request, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReader< ::mavsdk::rpc::winch::WinchStatusResponse>>(AsyncSubscribeWinchStatusRaw(context, request, cq, tag));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReader< ::mavsdk::rpc::winch::WinchStatusResponse>> PrepareAsyncSubscribeWinchStatus(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReader< ::mavsdk::rpc::winch::WinchStatusResponse>>(PrepareAsyncSubscribeWinchStatusRaw(context, request, cq));
+    }
     ::grpc::Status Relax(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelaxRequest& request, ::mavsdk::rpc::winch::RelaxResponse* response) override;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::RelaxResponse>> AsyncRelax(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelaxRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::RelaxResponse>>(AsyncRelaxRaw(context, request, cq));
@@ -276,6 +300,7 @@ class WinchService final {
     class async final :
       public StubInterface::async_interface {
      public:
+      void SubscribeWinchStatus(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest* request, ::grpc::ClientReadReactor< ::mavsdk::rpc::winch::WinchStatusResponse>* reactor) override;
       void Relax(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelaxRequest* request, ::mavsdk::rpc::winch::RelaxResponse* response, std::function<void(::grpc::Status)>) override;
       void Relax(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelaxRequest* request, ::mavsdk::rpc::winch::RelaxResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       void RelativeLengthControl(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelativeLengthControlRequest* request, ::mavsdk::rpc::winch::RelativeLengthControlResponse* response, std::function<void(::grpc::Status)>) override;
@@ -307,6 +332,9 @@ class WinchService final {
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
     class async async_stub_{this};
+    ::grpc::ClientReader< ::mavsdk::rpc::winch::WinchStatusResponse>* SubscribeWinchStatusRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest& request) override;
+    ::grpc::ClientAsyncReader< ::mavsdk::rpc::winch::WinchStatusResponse>* AsyncSubscribeWinchStatusRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest& request, ::grpc::CompletionQueue* cq, void* tag) override;
+    ::grpc::ClientAsyncReader< ::mavsdk::rpc::winch::WinchStatusResponse>* PrepareAsyncSubscribeWinchStatusRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::RelaxResponse>* AsyncRelaxRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelaxRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::RelaxResponse>* PrepareAsyncRelaxRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelaxRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::RelativeLengthControlResponse>* AsyncRelativeLengthControlRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::RelativeLengthControlRequest& request, ::grpc::CompletionQueue* cq) override;
@@ -327,6 +355,7 @@ class WinchService final {
     ::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::AbandonLineResponse>* PrepareAsyncAbandonLineRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::AbandonLineRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::LoadPayloadResponse>* AsyncLoadPayloadRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::LoadPayloadRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::mavsdk::rpc::winch::LoadPayloadResponse>* PrepareAsyncLoadPayloadRaw(::grpc::ClientContext* context, const ::mavsdk::rpc::winch::LoadPayloadRequest& request, ::grpc::CompletionQueue* cq) override;
+    const ::grpc::internal::RpcMethod rpcmethod_SubscribeWinchStatus_;
     const ::grpc::internal::RpcMethod rpcmethod_Relax_;
     const ::grpc::internal::RpcMethod rpcmethod_RelativeLengthControl_;
     const ::grpc::internal::RpcMethod rpcmethod_RateControl_;
@@ -344,6 +373,8 @@ class WinchService final {
    public:
     Service();
     virtual ~Service();
+    // Subscribe to 'winch status' updates.
+    virtual ::grpc::Status SubscribeWinchStatus(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest* request, ::grpc::ServerWriter< ::mavsdk::rpc::winch::WinchStatusResponse>* writer);
     //
     // Allow motor to freewheel.
     virtual ::grpc::Status Relax(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::RelaxRequest* request, ::mavsdk::rpc::winch::RelaxResponse* response);
@@ -378,12 +409,32 @@ class WinchService final {
     virtual ::grpc::Status LoadPayload(::grpc::ServerContext* context, const ::mavsdk::rpc::winch::LoadPayloadRequest* request, ::mavsdk::rpc::winch::LoadPayloadResponse* response);
   };
   template <class BaseClass>
+  class WithAsyncMethod_SubscribeWinchStatus : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_SubscribeWinchStatus() {
+      ::grpc::Service::MarkMethodAsync(0);
+    }
+    ~WithAsyncMethod_SubscribeWinchStatus() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SubscribeWinchStatus(::grpc::ServerContext* /*context*/, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest* /*request*/, ::grpc::ServerWriter< ::mavsdk::rpc::winch::WinchStatusResponse>* /*writer*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestSubscribeWinchStatus(::grpc::ServerContext* context, ::mavsdk::rpc::winch::SubscribeWinchStatusRequest* request, ::grpc::ServerAsyncWriter< ::mavsdk::rpc::winch::WinchStatusResponse>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncServerStreaming(0, context, request, writer, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
   class WithAsyncMethod_Relax : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_Relax() {
-      ::grpc::Service::MarkMethodAsync(0);
+      ::grpc::Service::MarkMethodAsync(1);
     }
     ~WithAsyncMethod_Relax() override {
       BaseClassMustBeDerivedFromService(this);
@@ -394,7 +445,7 @@ class WinchService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestRelax(::grpc::ServerContext* context, ::mavsdk::rpc::winch::RelaxRequest* request, ::grpc::ServerAsyncResponseWriter< ::mavsdk::rpc::winch::RelaxResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -403,7 +454,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_RelativeLengthControl() {
-      ::grpc::Service::MarkMethodAsync(1);
+      ::grpc::Service::MarkMethodAsync(2);
     }
     ~WithAsyncMethod_RelativeLengthControl() override {
       BaseClassMustBeDerivedFromService(this);
@@ -414,7 +465,7 @@ class WinchService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestRelativeLengthControl(::grpc::ServerContext* context, ::mavsdk::rpc::winch::RelativeLengthControlRequest* request, ::grpc::ServerAsyncResponseWriter< ::mavsdk::rpc::winch::RelativeLengthControlResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -423,7 +474,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_RateControl() {
-      ::grpc::Service::MarkMethodAsync(2);
+      ::grpc::Service::MarkMethodAsync(3);
     }
     ~WithAsyncMethod_RateControl() override {
       BaseClassMustBeDerivedFromService(this);
@@ -434,7 +485,7 @@ class WinchService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestRateControl(::grpc::ServerContext* context, ::mavsdk::rpc::winch::RateControlRequest* request, ::grpc::ServerAsyncResponseWriter< ::mavsdk::rpc::winch::RateControlResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -443,7 +494,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_Lock() {
-      ::grpc::Service::MarkMethodAsync(3);
+      ::grpc::Service::MarkMethodAsync(4);
     }
     ~WithAsyncMethod_Lock() override {
       BaseClassMustBeDerivedFromService(this);
@@ -454,7 +505,7 @@ class WinchService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestLock(::grpc::ServerContext* context, ::mavsdk::rpc::winch::LockRequest* request, ::grpc::ServerAsyncResponseWriter< ::mavsdk::rpc::winch::LockResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -463,7 +514,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_Deliver() {
-      ::grpc::Service::MarkMethodAsync(4);
+      ::grpc::Service::MarkMethodAsync(5);
     }
     ~WithAsyncMethod_Deliver() override {
       BaseClassMustBeDerivedFromService(this);
@@ -474,7 +525,7 @@ class WinchService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestDeliver(::grpc::ServerContext* context, ::mavsdk::rpc::winch::DeliverRequest* request, ::grpc::ServerAsyncResponseWriter< ::mavsdk::rpc::winch::DeliverResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -483,7 +534,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_Hold() {
-      ::grpc::Service::MarkMethodAsync(5);
+      ::grpc::Service::MarkMethodAsync(6);
     }
     ~WithAsyncMethod_Hold() override {
       BaseClassMustBeDerivedFromService(this);
@@ -494,7 +545,7 @@ class WinchService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestHold(::grpc::ServerContext* context, ::mavsdk::rpc::winch::HoldRequest* request, ::grpc::ServerAsyncResponseWriter< ::mavsdk::rpc::winch::HoldResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(6, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -503,7 +554,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_Retract() {
-      ::grpc::Service::MarkMethodAsync(6);
+      ::grpc::Service::MarkMethodAsync(7);
     }
     ~WithAsyncMethod_Retract() override {
       BaseClassMustBeDerivedFromService(this);
@@ -514,7 +565,7 @@ class WinchService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestRetract(::grpc::ServerContext* context, ::mavsdk::rpc::winch::RetractRequest* request, ::grpc::ServerAsyncResponseWriter< ::mavsdk::rpc::winch::RetractResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(6, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(7, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -523,7 +574,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_LoadLine() {
-      ::grpc::Service::MarkMethodAsync(7);
+      ::grpc::Service::MarkMethodAsync(8);
     }
     ~WithAsyncMethod_LoadLine() override {
       BaseClassMustBeDerivedFromService(this);
@@ -534,7 +585,7 @@ class WinchService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestLoadLine(::grpc::ServerContext* context, ::mavsdk::rpc::winch::LoadLineRequest* request, ::grpc::ServerAsyncResponseWriter< ::mavsdk::rpc::winch::LoadLineResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(7, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(8, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -543,7 +594,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_AbandonLine() {
-      ::grpc::Service::MarkMethodAsync(8);
+      ::grpc::Service::MarkMethodAsync(9);
     }
     ~WithAsyncMethod_AbandonLine() override {
       BaseClassMustBeDerivedFromService(this);
@@ -554,7 +605,7 @@ class WinchService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestAbandonLine(::grpc::ServerContext* context, ::mavsdk::rpc::winch::AbandonLineRequest* request, ::grpc::ServerAsyncResponseWriter< ::mavsdk::rpc::winch::AbandonLineResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(8, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(9, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -563,7 +614,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithAsyncMethod_LoadPayload() {
-      ::grpc::Service::MarkMethodAsync(9);
+      ::grpc::Service::MarkMethodAsync(10);
     }
     ~WithAsyncMethod_LoadPayload() override {
       BaseClassMustBeDerivedFromService(this);
@@ -574,23 +625,45 @@ class WinchService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestLoadPayload(::grpc::ServerContext* context, ::mavsdk::rpc::winch::LoadPayloadRequest* request, ::grpc::ServerAsyncResponseWriter< ::mavsdk::rpc::winch::LoadPayloadResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(9, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(10, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_Relax<WithAsyncMethod_RelativeLengthControl<WithAsyncMethod_RateControl<WithAsyncMethod_Lock<WithAsyncMethod_Deliver<WithAsyncMethod_Hold<WithAsyncMethod_Retract<WithAsyncMethod_LoadLine<WithAsyncMethod_AbandonLine<WithAsyncMethod_LoadPayload<Service > > > > > > > > > > AsyncService;
+  typedef WithAsyncMethod_SubscribeWinchStatus<WithAsyncMethod_Relax<WithAsyncMethod_RelativeLengthControl<WithAsyncMethod_RateControl<WithAsyncMethod_Lock<WithAsyncMethod_Deliver<WithAsyncMethod_Hold<WithAsyncMethod_Retract<WithAsyncMethod_LoadLine<WithAsyncMethod_AbandonLine<WithAsyncMethod_LoadPayload<Service > > > > > > > > > > > AsyncService;
+  template <class BaseClass>
+  class WithCallbackMethod_SubscribeWinchStatus : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_SubscribeWinchStatus() {
+      ::grpc::Service::MarkMethodCallback(0,
+          new ::grpc::internal::CallbackServerStreamingHandler< ::mavsdk::rpc::winch::SubscribeWinchStatusRequest, ::mavsdk::rpc::winch::WinchStatusResponse>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest* request) { return this->SubscribeWinchStatus(context, request); }));
+    }
+    ~WithCallbackMethod_SubscribeWinchStatus() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SubscribeWinchStatus(::grpc::ServerContext* /*context*/, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest* /*request*/, ::grpc::ServerWriter< ::mavsdk::rpc::winch::WinchStatusResponse>* /*writer*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerWriteReactor< ::mavsdk::rpc::winch::WinchStatusResponse>* SubscribeWinchStatus(
+      ::grpc::CallbackServerContext* /*context*/, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest* /*request*/)  { return nullptr; }
+  };
   template <class BaseClass>
   class WithCallbackMethod_Relax : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_Relax() {
-      ::grpc::Service::MarkMethodCallback(0,
+      ::grpc::Service::MarkMethodCallback(1,
           new ::grpc::internal::CallbackUnaryHandler< ::mavsdk::rpc::winch::RelaxRequest, ::mavsdk::rpc::winch::RelaxResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::mavsdk::rpc::winch::RelaxRequest* request, ::mavsdk::rpc::winch::RelaxResponse* response) { return this->Relax(context, request, response); }));}
     void SetMessageAllocatorFor_Relax(
         ::grpc::MessageAllocator< ::mavsdk::rpc::winch::RelaxRequest, ::mavsdk::rpc::winch::RelaxResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(0);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(1);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::mavsdk::rpc::winch::RelaxRequest, ::mavsdk::rpc::winch::RelaxResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -611,13 +684,13 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_RelativeLengthControl() {
-      ::grpc::Service::MarkMethodCallback(1,
+      ::grpc::Service::MarkMethodCallback(2,
           new ::grpc::internal::CallbackUnaryHandler< ::mavsdk::rpc::winch::RelativeLengthControlRequest, ::mavsdk::rpc::winch::RelativeLengthControlResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::mavsdk::rpc::winch::RelativeLengthControlRequest* request, ::mavsdk::rpc::winch::RelativeLengthControlResponse* response) { return this->RelativeLengthControl(context, request, response); }));}
     void SetMessageAllocatorFor_RelativeLengthControl(
         ::grpc::MessageAllocator< ::mavsdk::rpc::winch::RelativeLengthControlRequest, ::mavsdk::rpc::winch::RelativeLengthControlResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(1);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(2);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::mavsdk::rpc::winch::RelativeLengthControlRequest, ::mavsdk::rpc::winch::RelativeLengthControlResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -638,13 +711,13 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_RateControl() {
-      ::grpc::Service::MarkMethodCallback(2,
+      ::grpc::Service::MarkMethodCallback(3,
           new ::grpc::internal::CallbackUnaryHandler< ::mavsdk::rpc::winch::RateControlRequest, ::mavsdk::rpc::winch::RateControlResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::mavsdk::rpc::winch::RateControlRequest* request, ::mavsdk::rpc::winch::RateControlResponse* response) { return this->RateControl(context, request, response); }));}
     void SetMessageAllocatorFor_RateControl(
         ::grpc::MessageAllocator< ::mavsdk::rpc::winch::RateControlRequest, ::mavsdk::rpc::winch::RateControlResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(2);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(3);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::mavsdk::rpc::winch::RateControlRequest, ::mavsdk::rpc::winch::RateControlResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -665,13 +738,13 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_Lock() {
-      ::grpc::Service::MarkMethodCallback(3,
+      ::grpc::Service::MarkMethodCallback(4,
           new ::grpc::internal::CallbackUnaryHandler< ::mavsdk::rpc::winch::LockRequest, ::mavsdk::rpc::winch::LockResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::mavsdk::rpc::winch::LockRequest* request, ::mavsdk::rpc::winch::LockResponse* response) { return this->Lock(context, request, response); }));}
     void SetMessageAllocatorFor_Lock(
         ::grpc::MessageAllocator< ::mavsdk::rpc::winch::LockRequest, ::mavsdk::rpc::winch::LockResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(3);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(4);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::mavsdk::rpc::winch::LockRequest, ::mavsdk::rpc::winch::LockResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -692,13 +765,13 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_Deliver() {
-      ::grpc::Service::MarkMethodCallback(4,
+      ::grpc::Service::MarkMethodCallback(5,
           new ::grpc::internal::CallbackUnaryHandler< ::mavsdk::rpc::winch::DeliverRequest, ::mavsdk::rpc::winch::DeliverResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::mavsdk::rpc::winch::DeliverRequest* request, ::mavsdk::rpc::winch::DeliverResponse* response) { return this->Deliver(context, request, response); }));}
     void SetMessageAllocatorFor_Deliver(
         ::grpc::MessageAllocator< ::mavsdk::rpc::winch::DeliverRequest, ::mavsdk::rpc::winch::DeliverResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(4);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(5);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::mavsdk::rpc::winch::DeliverRequest, ::mavsdk::rpc::winch::DeliverResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -719,13 +792,13 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_Hold() {
-      ::grpc::Service::MarkMethodCallback(5,
+      ::grpc::Service::MarkMethodCallback(6,
           new ::grpc::internal::CallbackUnaryHandler< ::mavsdk::rpc::winch::HoldRequest, ::mavsdk::rpc::winch::HoldResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::mavsdk::rpc::winch::HoldRequest* request, ::mavsdk::rpc::winch::HoldResponse* response) { return this->Hold(context, request, response); }));}
     void SetMessageAllocatorFor_Hold(
         ::grpc::MessageAllocator< ::mavsdk::rpc::winch::HoldRequest, ::mavsdk::rpc::winch::HoldResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(5);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(6);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::mavsdk::rpc::winch::HoldRequest, ::mavsdk::rpc::winch::HoldResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -746,13 +819,13 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_Retract() {
-      ::grpc::Service::MarkMethodCallback(6,
+      ::grpc::Service::MarkMethodCallback(7,
           new ::grpc::internal::CallbackUnaryHandler< ::mavsdk::rpc::winch::RetractRequest, ::mavsdk::rpc::winch::RetractResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::mavsdk::rpc::winch::RetractRequest* request, ::mavsdk::rpc::winch::RetractResponse* response) { return this->Retract(context, request, response); }));}
     void SetMessageAllocatorFor_Retract(
         ::grpc::MessageAllocator< ::mavsdk::rpc::winch::RetractRequest, ::mavsdk::rpc::winch::RetractResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(6);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(7);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::mavsdk::rpc::winch::RetractRequest, ::mavsdk::rpc::winch::RetractResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -773,13 +846,13 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_LoadLine() {
-      ::grpc::Service::MarkMethodCallback(7,
+      ::grpc::Service::MarkMethodCallback(8,
           new ::grpc::internal::CallbackUnaryHandler< ::mavsdk::rpc::winch::LoadLineRequest, ::mavsdk::rpc::winch::LoadLineResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::mavsdk::rpc::winch::LoadLineRequest* request, ::mavsdk::rpc::winch::LoadLineResponse* response) { return this->LoadLine(context, request, response); }));}
     void SetMessageAllocatorFor_LoadLine(
         ::grpc::MessageAllocator< ::mavsdk::rpc::winch::LoadLineRequest, ::mavsdk::rpc::winch::LoadLineResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(7);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(8);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::mavsdk::rpc::winch::LoadLineRequest, ::mavsdk::rpc::winch::LoadLineResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -800,13 +873,13 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_AbandonLine() {
-      ::grpc::Service::MarkMethodCallback(8,
+      ::grpc::Service::MarkMethodCallback(9,
           new ::grpc::internal::CallbackUnaryHandler< ::mavsdk::rpc::winch::AbandonLineRequest, ::mavsdk::rpc::winch::AbandonLineResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::mavsdk::rpc::winch::AbandonLineRequest* request, ::mavsdk::rpc::winch::AbandonLineResponse* response) { return this->AbandonLine(context, request, response); }));}
     void SetMessageAllocatorFor_AbandonLine(
         ::grpc::MessageAllocator< ::mavsdk::rpc::winch::AbandonLineRequest, ::mavsdk::rpc::winch::AbandonLineResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(8);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(9);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::mavsdk::rpc::winch::AbandonLineRequest, ::mavsdk::rpc::winch::AbandonLineResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -827,13 +900,13 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithCallbackMethod_LoadPayload() {
-      ::grpc::Service::MarkMethodCallback(9,
+      ::grpc::Service::MarkMethodCallback(10,
           new ::grpc::internal::CallbackUnaryHandler< ::mavsdk::rpc::winch::LoadPayloadRequest, ::mavsdk::rpc::winch::LoadPayloadResponse>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::mavsdk::rpc::winch::LoadPayloadRequest* request, ::mavsdk::rpc::winch::LoadPayloadResponse* response) { return this->LoadPayload(context, request, response); }));}
     void SetMessageAllocatorFor_LoadPayload(
         ::grpc::MessageAllocator< ::mavsdk::rpc::winch::LoadPayloadRequest, ::mavsdk::rpc::winch::LoadPayloadResponse>* allocator) {
-      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(9);
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(10);
       static_cast<::grpc::internal::CallbackUnaryHandler< ::mavsdk::rpc::winch::LoadPayloadRequest, ::mavsdk::rpc::winch::LoadPayloadResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
@@ -848,15 +921,32 @@ class WinchService final {
     virtual ::grpc::ServerUnaryReactor* LoadPayload(
       ::grpc::CallbackServerContext* /*context*/, const ::mavsdk::rpc::winch::LoadPayloadRequest* /*request*/, ::mavsdk::rpc::winch::LoadPayloadResponse* /*response*/)  { return nullptr; }
   };
-  typedef WithCallbackMethod_Relax<WithCallbackMethod_RelativeLengthControl<WithCallbackMethod_RateControl<WithCallbackMethod_Lock<WithCallbackMethod_Deliver<WithCallbackMethod_Hold<WithCallbackMethod_Retract<WithCallbackMethod_LoadLine<WithCallbackMethod_AbandonLine<WithCallbackMethod_LoadPayload<Service > > > > > > > > > > CallbackService;
+  typedef WithCallbackMethod_SubscribeWinchStatus<WithCallbackMethod_Relax<WithCallbackMethod_RelativeLengthControl<WithCallbackMethod_RateControl<WithCallbackMethod_Lock<WithCallbackMethod_Deliver<WithCallbackMethod_Hold<WithCallbackMethod_Retract<WithCallbackMethod_LoadLine<WithCallbackMethod_AbandonLine<WithCallbackMethod_LoadPayload<Service > > > > > > > > > > > CallbackService;
   typedef CallbackService ExperimentalCallbackService;
+  template <class BaseClass>
+  class WithGenericMethod_SubscribeWinchStatus : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_SubscribeWinchStatus() {
+      ::grpc::Service::MarkMethodGeneric(0);
+    }
+    ~WithGenericMethod_SubscribeWinchStatus() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SubscribeWinchStatus(::grpc::ServerContext* /*context*/, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest* /*request*/, ::grpc::ServerWriter< ::mavsdk::rpc::winch::WinchStatusResponse>* /*writer*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
   template <class BaseClass>
   class WithGenericMethod_Relax : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_Relax() {
-      ::grpc::Service::MarkMethodGeneric(0);
+      ::grpc::Service::MarkMethodGeneric(1);
     }
     ~WithGenericMethod_Relax() override {
       BaseClassMustBeDerivedFromService(this);
@@ -873,7 +963,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_RelativeLengthControl() {
-      ::grpc::Service::MarkMethodGeneric(1);
+      ::grpc::Service::MarkMethodGeneric(2);
     }
     ~WithGenericMethod_RelativeLengthControl() override {
       BaseClassMustBeDerivedFromService(this);
@@ -890,7 +980,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_RateControl() {
-      ::grpc::Service::MarkMethodGeneric(2);
+      ::grpc::Service::MarkMethodGeneric(3);
     }
     ~WithGenericMethod_RateControl() override {
       BaseClassMustBeDerivedFromService(this);
@@ -907,7 +997,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_Lock() {
-      ::grpc::Service::MarkMethodGeneric(3);
+      ::grpc::Service::MarkMethodGeneric(4);
     }
     ~WithGenericMethod_Lock() override {
       BaseClassMustBeDerivedFromService(this);
@@ -924,7 +1014,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_Deliver() {
-      ::grpc::Service::MarkMethodGeneric(4);
+      ::grpc::Service::MarkMethodGeneric(5);
     }
     ~WithGenericMethod_Deliver() override {
       BaseClassMustBeDerivedFromService(this);
@@ -941,7 +1031,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_Hold() {
-      ::grpc::Service::MarkMethodGeneric(5);
+      ::grpc::Service::MarkMethodGeneric(6);
     }
     ~WithGenericMethod_Hold() override {
       BaseClassMustBeDerivedFromService(this);
@@ -958,7 +1048,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_Retract() {
-      ::grpc::Service::MarkMethodGeneric(6);
+      ::grpc::Service::MarkMethodGeneric(7);
     }
     ~WithGenericMethod_Retract() override {
       BaseClassMustBeDerivedFromService(this);
@@ -975,7 +1065,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_LoadLine() {
-      ::grpc::Service::MarkMethodGeneric(7);
+      ::grpc::Service::MarkMethodGeneric(8);
     }
     ~WithGenericMethod_LoadLine() override {
       BaseClassMustBeDerivedFromService(this);
@@ -992,7 +1082,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_AbandonLine() {
-      ::grpc::Service::MarkMethodGeneric(8);
+      ::grpc::Service::MarkMethodGeneric(9);
     }
     ~WithGenericMethod_AbandonLine() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1009,7 +1099,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithGenericMethod_LoadPayload() {
-      ::grpc::Service::MarkMethodGeneric(9);
+      ::grpc::Service::MarkMethodGeneric(10);
     }
     ~WithGenericMethod_LoadPayload() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1021,12 +1111,32 @@ class WinchService final {
     }
   };
   template <class BaseClass>
+  class WithRawMethod_SubscribeWinchStatus : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_SubscribeWinchStatus() {
+      ::grpc::Service::MarkMethodRaw(0);
+    }
+    ~WithRawMethod_SubscribeWinchStatus() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SubscribeWinchStatus(::grpc::ServerContext* /*context*/, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest* /*request*/, ::grpc::ServerWriter< ::mavsdk::rpc::winch::WinchStatusResponse>* /*writer*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestSubscribeWinchStatus(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncWriter< ::grpc::ByteBuffer>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncServerStreaming(0, context, request, writer, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
   class WithRawMethod_Relax : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_Relax() {
-      ::grpc::Service::MarkMethodRaw(0);
+      ::grpc::Service::MarkMethodRaw(1);
     }
     ~WithRawMethod_Relax() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1037,7 +1147,7 @@ class WinchService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestRelax(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -1046,7 +1156,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_RelativeLengthControl() {
-      ::grpc::Service::MarkMethodRaw(1);
+      ::grpc::Service::MarkMethodRaw(2);
     }
     ~WithRawMethod_RelativeLengthControl() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1057,7 +1167,7 @@ class WinchService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestRelativeLengthControl(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -1066,7 +1176,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_RateControl() {
-      ::grpc::Service::MarkMethodRaw(2);
+      ::grpc::Service::MarkMethodRaw(3);
     }
     ~WithRawMethod_RateControl() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1077,7 +1187,7 @@ class WinchService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestRateControl(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -1086,7 +1196,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_Lock() {
-      ::grpc::Service::MarkMethodRaw(3);
+      ::grpc::Service::MarkMethodRaw(4);
     }
     ~WithRawMethod_Lock() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1097,7 +1207,7 @@ class WinchService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestLock(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -1106,7 +1216,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_Deliver() {
-      ::grpc::Service::MarkMethodRaw(4);
+      ::grpc::Service::MarkMethodRaw(5);
     }
     ~WithRawMethod_Deliver() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1117,7 +1227,7 @@ class WinchService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestDeliver(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -1126,7 +1236,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_Hold() {
-      ::grpc::Service::MarkMethodRaw(5);
+      ::grpc::Service::MarkMethodRaw(6);
     }
     ~WithRawMethod_Hold() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1137,7 +1247,7 @@ class WinchService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestHold(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(6, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -1146,7 +1256,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_Retract() {
-      ::grpc::Service::MarkMethodRaw(6);
+      ::grpc::Service::MarkMethodRaw(7);
     }
     ~WithRawMethod_Retract() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1157,7 +1267,7 @@ class WinchService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestRetract(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(6, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(7, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -1166,7 +1276,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_LoadLine() {
-      ::grpc::Service::MarkMethodRaw(7);
+      ::grpc::Service::MarkMethodRaw(8);
     }
     ~WithRawMethod_LoadLine() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1177,7 +1287,7 @@ class WinchService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestLoadLine(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(7, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(8, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -1186,7 +1296,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_AbandonLine() {
-      ::grpc::Service::MarkMethodRaw(8);
+      ::grpc::Service::MarkMethodRaw(9);
     }
     ~WithRawMethod_AbandonLine() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1197,7 +1307,7 @@ class WinchService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestAbandonLine(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(8, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(9, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -1206,7 +1316,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawMethod_LoadPayload() {
-      ::grpc::Service::MarkMethodRaw(9);
+      ::grpc::Service::MarkMethodRaw(10);
     }
     ~WithRawMethod_LoadPayload() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1217,8 +1327,30 @@ class WinchService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestLoadPayload(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(9, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(10, context, request, response, new_call_cq, notification_cq, tag);
     }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_SubscribeWinchStatus : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_SubscribeWinchStatus() {
+      ::grpc::Service::MarkMethodRawCallback(0,
+          new ::grpc::internal::CallbackServerStreamingHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const::grpc::ByteBuffer* request) { return this->SubscribeWinchStatus(context, request); }));
+    }
+    ~WithRawCallbackMethod_SubscribeWinchStatus() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status SubscribeWinchStatus(::grpc::ServerContext* /*context*/, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest* /*request*/, ::grpc::ServerWriter< ::mavsdk::rpc::winch::WinchStatusResponse>* /*writer*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerWriteReactor< ::grpc::ByteBuffer>* SubscribeWinchStatus(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/)  { return nullptr; }
   };
   template <class BaseClass>
   class WithRawCallbackMethod_Relax : public BaseClass {
@@ -1226,7 +1358,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_Relax() {
-      ::grpc::Service::MarkMethodRawCallback(0,
+      ::grpc::Service::MarkMethodRawCallback(1,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Relax(context, request, response); }));
@@ -1248,7 +1380,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_RelativeLengthControl() {
-      ::grpc::Service::MarkMethodRawCallback(1,
+      ::grpc::Service::MarkMethodRawCallback(2,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->RelativeLengthControl(context, request, response); }));
@@ -1270,7 +1402,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_RateControl() {
-      ::grpc::Service::MarkMethodRawCallback(2,
+      ::grpc::Service::MarkMethodRawCallback(3,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->RateControl(context, request, response); }));
@@ -1292,7 +1424,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_Lock() {
-      ::grpc::Service::MarkMethodRawCallback(3,
+      ::grpc::Service::MarkMethodRawCallback(4,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Lock(context, request, response); }));
@@ -1314,7 +1446,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_Deliver() {
-      ::grpc::Service::MarkMethodRawCallback(4,
+      ::grpc::Service::MarkMethodRawCallback(5,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Deliver(context, request, response); }));
@@ -1336,7 +1468,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_Hold() {
-      ::grpc::Service::MarkMethodRawCallback(5,
+      ::grpc::Service::MarkMethodRawCallback(6,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Hold(context, request, response); }));
@@ -1358,7 +1490,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_Retract() {
-      ::grpc::Service::MarkMethodRawCallback(6,
+      ::grpc::Service::MarkMethodRawCallback(7,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->Retract(context, request, response); }));
@@ -1380,7 +1512,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_LoadLine() {
-      ::grpc::Service::MarkMethodRawCallback(7,
+      ::grpc::Service::MarkMethodRawCallback(8,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->LoadLine(context, request, response); }));
@@ -1402,7 +1534,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_AbandonLine() {
-      ::grpc::Service::MarkMethodRawCallback(8,
+      ::grpc::Service::MarkMethodRawCallback(9,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->AbandonLine(context, request, response); }));
@@ -1424,7 +1556,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithRawCallbackMethod_LoadPayload() {
-      ::grpc::Service::MarkMethodRawCallback(9,
+      ::grpc::Service::MarkMethodRawCallback(10,
           new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
                    ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->LoadPayload(context, request, response); }));
@@ -1446,7 +1578,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_Relax() {
-      ::grpc::Service::MarkMethodStreamed(0,
+      ::grpc::Service::MarkMethodStreamed(1,
         new ::grpc::internal::StreamedUnaryHandler<
           ::mavsdk::rpc::winch::RelaxRequest, ::mavsdk::rpc::winch::RelaxResponse>(
             [this](::grpc::ServerContext* context,
@@ -1473,7 +1605,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_RelativeLengthControl() {
-      ::grpc::Service::MarkMethodStreamed(1,
+      ::grpc::Service::MarkMethodStreamed(2,
         new ::grpc::internal::StreamedUnaryHandler<
           ::mavsdk::rpc::winch::RelativeLengthControlRequest, ::mavsdk::rpc::winch::RelativeLengthControlResponse>(
             [this](::grpc::ServerContext* context,
@@ -1500,7 +1632,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_RateControl() {
-      ::grpc::Service::MarkMethodStreamed(2,
+      ::grpc::Service::MarkMethodStreamed(3,
         new ::grpc::internal::StreamedUnaryHandler<
           ::mavsdk::rpc::winch::RateControlRequest, ::mavsdk::rpc::winch::RateControlResponse>(
             [this](::grpc::ServerContext* context,
@@ -1527,7 +1659,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_Lock() {
-      ::grpc::Service::MarkMethodStreamed(3,
+      ::grpc::Service::MarkMethodStreamed(4,
         new ::grpc::internal::StreamedUnaryHandler<
           ::mavsdk::rpc::winch::LockRequest, ::mavsdk::rpc::winch::LockResponse>(
             [this](::grpc::ServerContext* context,
@@ -1554,7 +1686,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_Deliver() {
-      ::grpc::Service::MarkMethodStreamed(4,
+      ::grpc::Service::MarkMethodStreamed(5,
         new ::grpc::internal::StreamedUnaryHandler<
           ::mavsdk::rpc::winch::DeliverRequest, ::mavsdk::rpc::winch::DeliverResponse>(
             [this](::grpc::ServerContext* context,
@@ -1581,7 +1713,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_Hold() {
-      ::grpc::Service::MarkMethodStreamed(5,
+      ::grpc::Service::MarkMethodStreamed(6,
         new ::grpc::internal::StreamedUnaryHandler<
           ::mavsdk::rpc::winch::HoldRequest, ::mavsdk::rpc::winch::HoldResponse>(
             [this](::grpc::ServerContext* context,
@@ -1608,7 +1740,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_Retract() {
-      ::grpc::Service::MarkMethodStreamed(6,
+      ::grpc::Service::MarkMethodStreamed(7,
         new ::grpc::internal::StreamedUnaryHandler<
           ::mavsdk::rpc::winch::RetractRequest, ::mavsdk::rpc::winch::RetractResponse>(
             [this](::grpc::ServerContext* context,
@@ -1635,7 +1767,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_LoadLine() {
-      ::grpc::Service::MarkMethodStreamed(7,
+      ::grpc::Service::MarkMethodStreamed(8,
         new ::grpc::internal::StreamedUnaryHandler<
           ::mavsdk::rpc::winch::LoadLineRequest, ::mavsdk::rpc::winch::LoadLineResponse>(
             [this](::grpc::ServerContext* context,
@@ -1662,7 +1794,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_AbandonLine() {
-      ::grpc::Service::MarkMethodStreamed(8,
+      ::grpc::Service::MarkMethodStreamed(9,
         new ::grpc::internal::StreamedUnaryHandler<
           ::mavsdk::rpc::winch::AbandonLineRequest, ::mavsdk::rpc::winch::AbandonLineResponse>(
             [this](::grpc::ServerContext* context,
@@ -1689,7 +1821,7 @@ class WinchService final {
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
     WithStreamedUnaryMethod_LoadPayload() {
-      ::grpc::Service::MarkMethodStreamed(9,
+      ::grpc::Service::MarkMethodStreamed(10,
         new ::grpc::internal::StreamedUnaryHandler<
           ::mavsdk::rpc::winch::LoadPayloadRequest, ::mavsdk::rpc::winch::LoadPayloadResponse>(
             [this](::grpc::ServerContext* context,
@@ -1711,8 +1843,35 @@ class WinchService final {
     virtual ::grpc::Status StreamedLoadPayload(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::mavsdk::rpc::winch::LoadPayloadRequest,::mavsdk::rpc::winch::LoadPayloadResponse>* server_unary_streamer) = 0;
   };
   typedef WithStreamedUnaryMethod_Relax<WithStreamedUnaryMethod_RelativeLengthControl<WithStreamedUnaryMethod_RateControl<WithStreamedUnaryMethod_Lock<WithStreamedUnaryMethod_Deliver<WithStreamedUnaryMethod_Hold<WithStreamedUnaryMethod_Retract<WithStreamedUnaryMethod_LoadLine<WithStreamedUnaryMethod_AbandonLine<WithStreamedUnaryMethod_LoadPayload<Service > > > > > > > > > > StreamedUnaryService;
-  typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_Relax<WithStreamedUnaryMethod_RelativeLengthControl<WithStreamedUnaryMethod_RateControl<WithStreamedUnaryMethod_Lock<WithStreamedUnaryMethod_Deliver<WithStreamedUnaryMethod_Hold<WithStreamedUnaryMethod_Retract<WithStreamedUnaryMethod_LoadLine<WithStreamedUnaryMethod_AbandonLine<WithStreamedUnaryMethod_LoadPayload<Service > > > > > > > > > > StreamedService;
+  template <class BaseClass>
+  class WithSplitStreamingMethod_SubscribeWinchStatus : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithSplitStreamingMethod_SubscribeWinchStatus() {
+      ::grpc::Service::MarkMethodStreamed(0,
+        new ::grpc::internal::SplitServerStreamingHandler<
+          ::mavsdk::rpc::winch::SubscribeWinchStatusRequest, ::mavsdk::rpc::winch::WinchStatusResponse>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerSplitStreamer<
+                     ::mavsdk::rpc::winch::SubscribeWinchStatusRequest, ::mavsdk::rpc::winch::WinchStatusResponse>* streamer) {
+                       return this->StreamedSubscribeWinchStatus(context,
+                         streamer);
+                  }));
+    }
+    ~WithSplitStreamingMethod_SubscribeWinchStatus() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status SubscribeWinchStatus(::grpc::ServerContext* /*context*/, const ::mavsdk::rpc::winch::SubscribeWinchStatusRequest* /*request*/, ::grpc::ServerWriter< ::mavsdk::rpc::winch::WinchStatusResponse>* /*writer*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with split streamed
+    virtual ::grpc::Status StreamedSubscribeWinchStatus(::grpc::ServerContext* context, ::grpc::ServerSplitStreamer< ::mavsdk::rpc::winch::SubscribeWinchStatusRequest,::mavsdk::rpc::winch::WinchStatusResponse>* server_split_streamer) = 0;
+  };
+  typedef WithSplitStreamingMethod_SubscribeWinchStatus<Service > SplitStreamedService;
+  typedef WithSplitStreamingMethod_SubscribeWinchStatus<WithStreamedUnaryMethod_Relax<WithStreamedUnaryMethod_RelativeLengthControl<WithStreamedUnaryMethod_RateControl<WithStreamedUnaryMethod_Lock<WithStreamedUnaryMethod_Deliver<WithStreamedUnaryMethod_Hold<WithStreamedUnaryMethod_Retract<WithStreamedUnaryMethod_LoadLine<WithStreamedUnaryMethod_AbandonLine<WithStreamedUnaryMethod_LoadPayload<Service > > > > > > > > > > > StreamedService;
 };
 
 }  // namespace winch

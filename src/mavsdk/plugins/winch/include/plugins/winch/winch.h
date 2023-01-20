@@ -82,6 +82,93 @@ public:
     friend std::ostream& operator<<(std::ostream& str, Winch::WinchAction const& winch_action);
 
     /**
+     * @brief
+     */
+    struct WinchStatusFlags {
+        bool healthy{}; /**< @brief Winch is healthy */
+        bool fully_retracted{}; /**< @brief Winch line is fully retracted */
+        bool moving{}; /**< @briefWinch motor is moving */
+        bool clutch_engaged{}; /**< @brief Winch clutch is engaged allowing motor to move freely */
+        bool locked{}; /**< @brief Winch is locked by locking mechanism */
+        bool dropping{}; /**< @brief Winch is gravity dropping payload */
+        bool arresting{}; /**< @brief Winch is arresting payload descent */
+        bool ground_sense{}; /**< @brief Winch is using torque measurements to sense the ground */
+        bool retracting{}; /**< @brief Winch is returning to the fully retracted position */
+        bool redeliver{}; /**< @brief Winch is redelivering the payload. This is a failover state if
+                             the line tension goes above a threshold during RETRACTING. */
+        bool abandon_line{}; /**< @brief Winch is abandoning the line and possibly payload. Winch
+                                unspools the entire calculated line length. This is a failover state
+                                from REDELIVER if the number of attempts exceeds a threshold. */
+        bool locking{}; /**< @brief Winch is engaging the locking mechanism */
+        bool load_line{}; /**< @brief Winch is spooling on line */
+        bool load_payload{}; /**< @brief Winch is loading a payload */
+    };
+
+    /**
+     * @brief Equal operator to compare two `Winch::WinchStatusFlags` objects.
+     *
+     * @return `true` if items are equal.
+     */
+    friend bool operator==(const Winch::WinchStatusFlags& lhs, const Winch::WinchStatusFlags& rhs);
+
+    /**
+     * @brief Stream operator to print information about a `Winch::WinchStatusFlags`.
+     *
+     * @return A reference to the stream.
+     */
+    friend std::ostream&
+    operator<<(std::ostream& str, Winch::WinchStatusFlags const& winch_status_flags);
+
+    /**
+     * @brief
+     */
+    struct WinchHearbeat {
+        bool connected{}; /**< @brief */
+    };
+
+    /**
+     * @brief Equal operator to compare two `Winch::WinchHearbeat` objects.
+     *
+     * @return `true` if items are equal.
+     */
+    friend bool operator==(const Winch::WinchHearbeat& lhs, const Winch::WinchHearbeat& rhs);
+
+    /**
+     * @brief Stream operator to print information about a `Winch::WinchHearbeat`.
+     *
+     * @return A reference to the stream.
+     */
+    friend std::ostream& operator<<(std::ostream& str, Winch::WinchHearbeat const& winch_hearbeat);
+
+    /**
+     * @brief
+     */
+    struct WinchStatus {
+        uint64_t time_usec{}; /**< @brief */
+        float line_length_m{}; /**< @brief */
+        float speed_m_s{}; /**< @brief */
+        float tension_kg{}; /**< @brief */
+        float voltage_v{}; /**< @brief */
+        float current_a{}; /**< @brief */
+        int32_t temperature_c{}; /**< @brief */
+        WinchStatusFlags winch_status_flags{}; /**< @brief */
+    };
+
+    /**
+     * @brief Equal operator to compare two `Winch::WinchStatus` objects.
+     *
+     * @return `true` if items are equal.
+     */
+    friend bool operator==(const Winch::WinchStatus& lhs, const Winch::WinchStatus& rhs);
+
+    /**
+     * @brief Stream operator to print information about a `Winch::WinchStatus`.
+     *
+     * @return A reference to the stream.
+     */
+    friend std::ostream& operator<<(std::ostream& str, Winch::WinchStatus const& winch_status);
+
+    /**
      * @brief Possible results returned for action requests.
      */
     enum class Result {
@@ -113,6 +200,33 @@ public:
      * @brief Callback type for asynchronous Winch calls.
      */
     using ResultCallback = std::function<void(Result)>;
+
+    /**
+     * @brief Callback type for subscribe_winch_status.
+     */
+    using WinchStatusCallback = std::function<void(WinchStatus)>;
+
+    /**
+     * @brief Handle type for subscribe_winch_status.
+     */
+    using WinchStatusHandle = Handle<WinchStatus>;
+
+    /**
+     * @brief Subscribe to 'winch status' updates.
+     */
+    WinchStatusHandle subscribe_winch_status(const WinchStatusCallback& callback);
+
+    /**
+     * @brief Unsubscribe from subscribe_winch_status
+     */
+    void unsubscribe_winch_status(WinchStatusHandle handle);
+
+    /**
+     * @brief Poll for 'WinchStatus' (blocking).
+     *
+     * @return One WinchStatus update.
+     */
+    WinchStatus winch_status() const;
 
     /**
      * @brief Allow motor to freewheel.
