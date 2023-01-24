@@ -75,22 +75,15 @@ public:
     operator<<(std::ostream& str, Gripper::GripperAction const& gripper_action);
 
     /**
-     * @brief Possible results returned for action requests.
+     * @brief Possible results returned for gripper action requests.
      */
     enum class Result {
         Unknown, /**< @brief Unknown result. */
         Success, /**< @brief Request was successful. */
         NoSystem, /**< @brief No system is connected. */
-        ConnectionError, /**< @brief Connection error. */
-        Busy, /**< @brief Vehicle is busy. */
-        CommandDenied, /**< @brief Command refused by vehicle. */
-        CommandDeniedLandedStateUnknown, /**< @brief Command refused because landed state is
-                                            unknown. */
-        CommandDeniedNotLanded, /**< @brief Command refused because vehicle not landed. */
+        Busy, /**< @brief Temporarily rejected. */
+        CommandDenied, /**< @brief Command refused. */
         Timeout, /**< @brief Request timed out. */
-        VtolTransitionSupportUnknown, /**< @brief Hybrid/VTOL transition support is unknown. */
-        NoVtolTransitionSupport, /**< @brief Vehicle does not support hybrid/VTOL transitions. */
-        ParameterError, /**< @brief Error getting or setting parameter. */
         Unsupported, /**< @brief Action not supported. */
         Failed, /**< @brief Action failed. */
     };

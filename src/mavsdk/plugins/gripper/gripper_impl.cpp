@@ -85,17 +85,17 @@ Gripper::Result GripperImpl::gripper_result_from_command_result(MavlinkCommandSe
         case MavlinkCommandSender::Result::NoSystem:
             return Gripper::Result::NoSystem;
         case MavlinkCommandSender::Result::ConnectionError:
-            return Gripper::Result::ConnectionError;
+            // Fallthrough
+        case MavlinkCommandSender::Result::Timeout:
+            return Gripper::Result::Timeout;
         case MavlinkCommandSender::Result::Busy:
             return Gripper::Result::Busy;
         case MavlinkCommandSender::Result::Denied:
             // Fallthrough
         case MavlinkCommandSender::Result::TemporarilyRejected:
-            return Gripper::Result::CommandDenied;
+            // Fallthrough
         case MavlinkCommandSender::Result::Failed:
             return Gripper::Result::Failed;
-        case MavlinkCommandSender::Result::Timeout:
-            return Gripper::Result::Timeout;
         case MavlinkCommandSender::Result::Unsupported:
             return Gripper::Result::Unsupported;
         default:

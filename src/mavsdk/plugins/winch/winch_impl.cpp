@@ -387,17 +387,17 @@ Winch::Result WinchImpl::winch_result_from_command_result(MavlinkCommandSender::
         case MavlinkCommandSender::Result::NoSystem:
             return Winch::Result::NoSystem;
         case MavlinkCommandSender::Result::ConnectionError:
-            return Winch::Result::ConnectionError;
+            // Fallthrough
+        case MavlinkCommandSender::Result::Timeout:
+            return Winch::Result::Timeout;
         case MavlinkCommandSender::Result::Busy:
             return Winch::Result::Busy;
         case MavlinkCommandSender::Result::Denied:
             // Fallthrough
         case MavlinkCommandSender::Result::TemporarilyRejected:
-            return Winch::Result::CommandDenied;
+            // Fallthrough
         case MavlinkCommandSender::Result::Failed:
             return Winch::Result::Failed;
-        case MavlinkCommandSender::Result::Timeout:
-            return Winch::Result::Timeout;
         case MavlinkCommandSender::Result::Unsupported:
             return Winch::Result::Unsupported;
         default:

@@ -162,17 +162,10 @@ enum WinchResult_Result : int {
   WinchResult_Result_RESULT_UNKNOWN = 0,
   WinchResult_Result_RESULT_SUCCESS = 1,
   WinchResult_Result_RESULT_NO_SYSTEM = 2,
-  WinchResult_Result_RESULT_CONNECTION_ERROR = 3,
-  WinchResult_Result_RESULT_BUSY = 4,
-  WinchResult_Result_RESULT_COMMAND_DENIED = 5,
-  WinchResult_Result_RESULT_COMMAND_DENIED_LANDED_STATE_UNKNOWN = 6,
-  WinchResult_Result_RESULT_COMMAND_DENIED_NOT_LANDED = 7,
-  WinchResult_Result_RESULT_TIMEOUT = 8,
-  WinchResult_Result_RESULT_VTOL_TRANSITION_SUPPORT_UNKNOWN = 9,
-  WinchResult_Result_RESULT_NO_VTOL_TRANSITION_SUPPORT = 10,
-  WinchResult_Result_RESULT_PARAMETER_ERROR = 11,
-  WinchResult_Result_RESULT_UNSUPPORTED = 12,
-  WinchResult_Result_RESULT_FAILED = 13,
+  WinchResult_Result_RESULT_BUSY = 3,
+  WinchResult_Result_RESULT_TIMEOUT = 4,
+  WinchResult_Result_RESULT_UNSUPPORTED = 5,
+  WinchResult_Result_RESULT_FAILED = 6,
   WinchResult_Result_WinchResult_Result_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<int32_t>::min(),
   WinchResult_Result_WinchResult_Result_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<int32_t>::max()
 };
@@ -4119,24 +4112,10 @@ class WinchResult final :
     WinchResult_Result_RESULT_SUCCESS;
   static constexpr Result RESULT_NO_SYSTEM =
     WinchResult_Result_RESULT_NO_SYSTEM;
-  static constexpr Result RESULT_CONNECTION_ERROR =
-    WinchResult_Result_RESULT_CONNECTION_ERROR;
   static constexpr Result RESULT_BUSY =
     WinchResult_Result_RESULT_BUSY;
-  static constexpr Result RESULT_COMMAND_DENIED =
-    WinchResult_Result_RESULT_COMMAND_DENIED;
-  static constexpr Result RESULT_COMMAND_DENIED_LANDED_STATE_UNKNOWN =
-    WinchResult_Result_RESULT_COMMAND_DENIED_LANDED_STATE_UNKNOWN;
-  static constexpr Result RESULT_COMMAND_DENIED_NOT_LANDED =
-    WinchResult_Result_RESULT_COMMAND_DENIED_NOT_LANDED;
   static constexpr Result RESULT_TIMEOUT =
     WinchResult_Result_RESULT_TIMEOUT;
-  static constexpr Result RESULT_VTOL_TRANSITION_SUPPORT_UNKNOWN =
-    WinchResult_Result_RESULT_VTOL_TRANSITION_SUPPORT_UNKNOWN;
-  static constexpr Result RESULT_NO_VTOL_TRANSITION_SUPPORT =
-    WinchResult_Result_RESULT_NO_VTOL_TRANSITION_SUPPORT;
-  static constexpr Result RESULT_PARAMETER_ERROR =
-    WinchResult_Result_RESULT_PARAMETER_ERROR;
   static constexpr Result RESULT_UNSUPPORTED =
     WinchResult_Result_RESULT_UNSUPPORTED;
   static constexpr Result RESULT_FAILED =

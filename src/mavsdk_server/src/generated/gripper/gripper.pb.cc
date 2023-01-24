@@ -153,31 +153,25 @@ const char descriptor_table_protodef_gripper_2fgripper_2eproto[] PROTOBUF_SECTIO
   "avsdk.rpc.gripper.GripperResult\"\"\n\016Relea"
   "seRequest\022\020\n\010instance\030\001 \001(\r\"L\n\017ReleaseRe"
   "sponse\0229\n\016gripper_result\030\001 \001(\0132!.mavsdk."
-  "rpc.gripper.GripperResult\"\363\003\n\rGripperRes"
+  "rpc.gripper.GripperResult\"\221\002\n\rGripperRes"
   "ult\0228\n\006result\030\001 \001(\0162(.mavsdk.rpc.gripper"
   ".GripperResult.Result\022\022\n\nresult_str\030\002 \001("
-  "\t\"\223\003\n\006Result\022\022\n\016RESULT_UNKNOWN\020\000\022\022\n\016RESU"
-  "LT_SUCCESS\020\001\022\024\n\020RESULT_NO_SYSTEM\020\002\022\033\n\027RE"
-  "SULT_CONNECTION_ERROR\020\003\022\017\n\013RESULT_BUSY\020\004"
-  "\022\031\n\025RESULT_COMMAND_DENIED\020\005\022.\n*RESULT_CO"
-  "MMAND_DENIED_LANDED_STATE_UNKNOWN\020\006\022$\n R"
-  "ESULT_COMMAND_DENIED_NOT_LANDED\020\007\022\022\n\016RES"
-  "ULT_TIMEOUT\020\010\022*\n&RESULT_VTOL_TRANSITION_"
-  "SUPPORT_UNKNOWN\020\t\022%\n!RESULT_NO_VTOL_TRAN"
-  "SITION_SUPPORT\020\n\022\032\n\026RESULT_PARAMETER_ERR"
-  "OR\020\013\022\026\n\022RESULT_UNSUPPORTED\020\014\022\021\n\rRESULT_F"
-  "AILED\020\r*D\n\rGripperAction\022\032\n\026GRIPPER_ACTI"
-  "ON_RELEASE\020\000\022\027\n\023GRIPPER_ACTION_GRAB\020\0012\263\001"
-  "\n\016GripperService\022K\n\004Grab\022\037.mavsdk.rpc.gr"
-  "ipper.GrabRequest\032 .mavsdk.rpc.gripper.G"
-  "rabResponse\"\000\022T\n\007Release\022\".mavsdk.rpc.gr"
-  "ipper.ReleaseRequest\032#.mavsdk.rpc.grippe"
-  "r.ReleaseResponse\"\000B!\n\021io.mavsdk.gripper"
-  "B\014GripperProtob\006proto3"
+  "\t\"\261\001\n\006Result\022\022\n\016RESULT_UNKNOWN\020\000\022\022\n\016RESU"
+  "LT_SUCCESS\020\001\022\024\n\020RESULT_NO_SYSTEM\020\002\022\017\n\013RE"
+  "SULT_BUSY\020\003\022\031\n\025RESULT_COMMAND_DENIED\020\004\022\022"
+  "\n\016RESULT_TIMEOUT\020\005\022\026\n\022RESULT_UNSUPPORTED"
+  "\020\006\022\021\n\rRESULT_FAILED\020\007*D\n\rGripperAction\022\032"
+  "\n\026GRIPPER_ACTION_RELEASE\020\000\022\027\n\023GRIPPER_AC"
+  "TION_GRAB\020\0012\263\001\n\016GripperService\022K\n\004Grab\022\037"
+  ".mavsdk.rpc.gripper.GrabRequest\032 .mavsdk"
+  ".rpc.gripper.GrabResponse\"\000\022T\n\007Release\022\""
+  ".mavsdk.rpc.gripper.ReleaseRequest\032#.mav"
+  "sdk.rpc.gripper.ReleaseResponse\"\000B!\n\021io."
+  "mavsdk.gripperB\014GripperProtob\006proto3"
   ;
 static ::_pbi::once_flag descriptor_table_gripper_2fgripper_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_gripper_2fgripper_2eproto = {
-    false, false, 1062, descriptor_table_protodef_gripper_2fgripper_2eproto,
+    false, false, 836, descriptor_table_protodef_gripper_2fgripper_2eproto,
     "gripper/gripper.proto",
     &descriptor_table_gripper_2fgripper_2eproto_once, nullptr, 0, 5,
     schemas, file_default_instances, TableStruct_gripper_2fgripper_2eproto::offsets,
@@ -207,12 +201,6 @@ bool GripperResult_Result_IsValid(int value) {
     case 5:
     case 6:
     case 7:
-    case 8:
-    case 9:
-    case 10:
-    case 11:
-    case 12:
-    case 13:
       return true;
     default:
       return false;
@@ -223,15 +211,9 @@ bool GripperResult_Result_IsValid(int value) {
 constexpr GripperResult_Result GripperResult::RESULT_UNKNOWN;
 constexpr GripperResult_Result GripperResult::RESULT_SUCCESS;
 constexpr GripperResult_Result GripperResult::RESULT_NO_SYSTEM;
-constexpr GripperResult_Result GripperResult::RESULT_CONNECTION_ERROR;
 constexpr GripperResult_Result GripperResult::RESULT_BUSY;
 constexpr GripperResult_Result GripperResult::RESULT_COMMAND_DENIED;
-constexpr GripperResult_Result GripperResult::RESULT_COMMAND_DENIED_LANDED_STATE_UNKNOWN;
-constexpr GripperResult_Result GripperResult::RESULT_COMMAND_DENIED_NOT_LANDED;
 constexpr GripperResult_Result GripperResult::RESULT_TIMEOUT;
-constexpr GripperResult_Result GripperResult::RESULT_VTOL_TRANSITION_SUPPORT_UNKNOWN;
-constexpr GripperResult_Result GripperResult::RESULT_NO_VTOL_TRANSITION_SUPPORT;
-constexpr GripperResult_Result GripperResult::RESULT_PARAMETER_ERROR;
 constexpr GripperResult_Result GripperResult::RESULT_UNSUPPORTED;
 constexpr GripperResult_Result GripperResult::RESULT_FAILED;
 constexpr GripperResult_Result GripperResult::Result_MIN;

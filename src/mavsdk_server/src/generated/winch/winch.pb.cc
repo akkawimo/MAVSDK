@@ -655,57 +655,51 @@ const char descriptor_table_protodef_winch_2fwinch_2eproto[] PROTOBUF_SECTION_VA
   "avsdk.rpc.winch.WinchResult\"&\n\022LoadPaylo"
   "adRequest\022\020\n\010instance\030\001 \001(\r\"J\n\023LoadPaylo"
   "adResponse\0223\n\014winch_result\030\001 \001(\0132\035.mavsd"
-  "k.rpc.winch.WinchResult\"\355\003\n\013WinchResult\022"
+  "k.rpc.winch.WinchResult\"\360\001\n\013WinchResult\022"
   "4\n\006result\030\001 \001(\0162$.mavsdk.rpc.winch.Winch"
-  "Result.Result\022\022\n\nresult_str\030\002 \001(\t\"\223\003\n\006Re"
+  "Result.Result\022\022\n\nresult_str\030\002 \001(\t\"\226\001\n\006Re"
   "sult\022\022\n\016RESULT_UNKNOWN\020\000\022\022\n\016RESULT_SUCCE"
-  "SS\020\001\022\024\n\020RESULT_NO_SYSTEM\020\002\022\033\n\027RESULT_CON"
-  "NECTION_ERROR\020\003\022\017\n\013RESULT_BUSY\020\004\022\031\n\025RESU"
-  "LT_COMMAND_DENIED\020\005\022.\n*RESULT_COMMAND_DE"
-  "NIED_LANDED_STATE_UNKNOWN\020\006\022$\n RESULT_CO"
-  "MMAND_DENIED_NOT_LANDED\020\007\022\022\n\016RESULT_TIME"
-  "OUT\020\010\022*\n&RESULT_VTOL_TRANSITION_SUPPORT_"
-  "UNKNOWN\020\t\022%\n!RESULT_NO_VTOL_TRANSITION_S"
-  "UPPORT\020\n\022\032\n\026RESULT_PARAMETER_ERROR\020\013\022\026\n\022"
-  "RESULT_UNSUPPORTED\020\014\022\021\n\rRESULT_FAILED\020\r*"
-  "\254\002\n\013WinchAction\022\030\n\024WINCH_ACTION_RELAXED\020"
-  "\000\022(\n$WINCH_ACTION_RELATIVE_LENGTH_CONTRO"
-  "L\020\001\022\035\n\031WINCH_ACTION_RATE_CONTROL\020\002\022\025\n\021WI"
-  "NCH_ACTION_LOCK\020\003\022\030\n\024WINCH_ACTION_DELIVE"
-  "R\020\004\022\025\n\021WINCH_ACTION_HOLD\020\005\022\030\n\024WINCH_ACTI"
-  "ON_RETRACT\020\006\022\032\n\026WINCH_ACTION_LOAD_LINE\020\007"
-  "\022\035\n\031WINCH_ACTION_ABANDON_LINE\020\010\022\035\n\031WINCH"
-  "_ACTION_LOAD_PAYLOAD\020\t2\336\007\n\014WinchService\022"
-  "a\n\017SubscribeStatus\022(.mavsdk.rpc.winch.Su"
-  "bscribeStatusRequest\032 .mavsdk.rpc.winch."
-  "StatusResponse\"\0000\001\022J\n\005Relax\022\036.mavsdk.rpc"
-  ".winch.RelaxRequest\032\037.mavsdk.rpc.winch.R"
-  "elaxResponse\"\000\022z\n\025RelativeLengthControl\022"
-  "..mavsdk.rpc.winch.RelativeLengthControl"
-  "Request\032/.mavsdk.rpc.winch.RelativeLengt"
-  "hControlResponse\"\000\022\\\n\013RateControl\022$.mavs"
-  "dk.rpc.winch.RateControlRequest\032%.mavsdk"
-  ".rpc.winch.RateControlResponse\"\000\022G\n\004Lock"
-  "\022\035.mavsdk.rpc.winch.LockRequest\032\036.mavsdk"
-  ".rpc.winch.LockResponse\"\000\022P\n\007Deliver\022 .m"
-  "avsdk.rpc.winch.DeliverRequest\032!.mavsdk."
-  "rpc.winch.DeliverResponse\"\000\022G\n\004Hold\022\035.ma"
-  "vsdk.rpc.winch.HoldRequest\032\036.mavsdk.rpc."
-  "winch.HoldResponse\"\000\022P\n\007Retract\022 .mavsdk"
-  ".rpc.winch.RetractRequest\032!.mavsdk.rpc.w"
-  "inch.RetractResponse\"\000\022S\n\010LoadLine\022!.mav"
-  "sdk.rpc.winch.LoadLineRequest\032\".mavsdk.r"
-  "pc.winch.LoadLineResponse\"\000\022\\\n\013AbandonLi"
-  "ne\022$.mavsdk.rpc.winch.AbandonLineRequest"
-  "\032%.mavsdk.rpc.winch.AbandonLineResponse\""
-  "\000\022\\\n\013LoadPayload\022$.mavsdk.rpc.winch.Load"
-  "PayloadRequest\032%.mavsdk.rpc.winch.LoadPa"
-  "yloadResponse\"\000B\035\n\017io.mavsdk.winchB\nWinc"
-  "hProtob\006proto3"
+  "SS\020\001\022\024\n\020RESULT_NO_SYSTEM\020\002\022\017\n\013RESULT_BUS"
+  "Y\020\003\022\022\n\016RESULT_TIMEOUT\020\004\022\026\n\022RESULT_UNSUPP"
+  "ORTED\020\005\022\021\n\rRESULT_FAILED\020\006*\254\002\n\013WinchActi"
+  "on\022\030\n\024WINCH_ACTION_RELAXED\020\000\022(\n$WINCH_AC"
+  "TION_RELATIVE_LENGTH_CONTROL\020\001\022\035\n\031WINCH_"
+  "ACTION_RATE_CONTROL\020\002\022\025\n\021WINCH_ACTION_LO"
+  "CK\020\003\022\030\n\024WINCH_ACTION_DELIVER\020\004\022\025\n\021WINCH_"
+  "ACTION_HOLD\020\005\022\030\n\024WINCH_ACTION_RETRACT\020\006\022"
+  "\032\n\026WINCH_ACTION_LOAD_LINE\020\007\022\035\n\031WINCH_ACT"
+  "ION_ABANDON_LINE\020\010\022\035\n\031WINCH_ACTION_LOAD_"
+  "PAYLOAD\020\t2\336\007\n\014WinchService\022a\n\017SubscribeS"
+  "tatus\022(.mavsdk.rpc.winch.SubscribeStatus"
+  "Request\032 .mavsdk.rpc.winch.StatusRespons"
+  "e\"\0000\001\022J\n\005Relax\022\036.mavsdk.rpc.winch.RelaxR"
+  "equest\032\037.mavsdk.rpc.winch.RelaxResponse\""
+  "\000\022z\n\025RelativeLengthControl\022..mavsdk.rpc."
+  "winch.RelativeLengthControlRequest\032/.mav"
+  "sdk.rpc.winch.RelativeLengthControlRespo"
+  "nse\"\000\022\\\n\013RateControl\022$.mavsdk.rpc.winch."
+  "RateControlRequest\032%.mavsdk.rpc.winch.Ra"
+  "teControlResponse\"\000\022G\n\004Lock\022\035.mavsdk.rpc"
+  ".winch.LockRequest\032\036.mavsdk.rpc.winch.Lo"
+  "ckResponse\"\000\022P\n\007Deliver\022 .mavsdk.rpc.win"
+  "ch.DeliverRequest\032!.mavsdk.rpc.winch.Del"
+  "iverResponse\"\000\022G\n\004Hold\022\035.mavsdk.rpc.winc"
+  "h.HoldRequest\032\036.mavsdk.rpc.winch.HoldRes"
+  "ponse\"\000\022P\n\007Retract\022 .mavsdk.rpc.winch.Re"
+  "tractRequest\032!.mavsdk.rpc.winch.RetractR"
+  "esponse\"\000\022S\n\010LoadLine\022!.mavsdk.rpc.winch"
+  ".LoadLineRequest\032\".mavsdk.rpc.winch.Load"
+  "LineResponse\"\000\022\\\n\013AbandonLine\022$.mavsdk.r"
+  "pc.winch.AbandonLineRequest\032%.mavsdk.rpc"
+  ".winch.AbandonLineResponse\"\000\022\\\n\013LoadPayl"
+  "oad\022$.mavsdk.rpc.winch.LoadPayloadReques"
+  "t\032%.mavsdk.rpc.winch.LoadPayloadResponse"
+  "\"\000B\035\n\017io.mavsdk.winchB\nWinchProtob\006proto"
+  "3"
   ;
 static ::_pbi::once_flag descriptor_table_winch_2fwinch_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_winch_2fwinch_2eproto = {
-    false, false, 3614, descriptor_table_protodef_winch_2fwinch_2eproto,
+    false, false, 3361, descriptor_table_protodef_winch_2fwinch_2eproto,
     "winch/winch.proto",
     &descriptor_table_winch_2fwinch_2eproto_once, nullptr, 0, 25,
     schemas, file_default_instances, TableStruct_winch_2fwinch_2eproto::offsets,
@@ -734,13 +728,6 @@ bool WinchResult_Result_IsValid(int value) {
     case 4:
     case 5:
     case 6:
-    case 7:
-    case 8:
-    case 9:
-    case 10:
-    case 11:
-    case 12:
-    case 13:
       return true;
     default:
       return false;
@@ -751,15 +738,8 @@ bool WinchResult_Result_IsValid(int value) {
 constexpr WinchResult_Result WinchResult::RESULT_UNKNOWN;
 constexpr WinchResult_Result WinchResult::RESULT_SUCCESS;
 constexpr WinchResult_Result WinchResult::RESULT_NO_SYSTEM;
-constexpr WinchResult_Result WinchResult::RESULT_CONNECTION_ERROR;
 constexpr WinchResult_Result WinchResult::RESULT_BUSY;
-constexpr WinchResult_Result WinchResult::RESULT_COMMAND_DENIED;
-constexpr WinchResult_Result WinchResult::RESULT_COMMAND_DENIED_LANDED_STATE_UNKNOWN;
-constexpr WinchResult_Result WinchResult::RESULT_COMMAND_DENIED_NOT_LANDED;
 constexpr WinchResult_Result WinchResult::RESULT_TIMEOUT;
-constexpr WinchResult_Result WinchResult::RESULT_VTOL_TRANSITION_SUPPORT_UNKNOWN;
-constexpr WinchResult_Result WinchResult::RESULT_NO_VTOL_TRANSITION_SUPPORT;
-constexpr WinchResult_Result WinchResult::RESULT_PARAMETER_ERROR;
 constexpr WinchResult_Result WinchResult::RESULT_UNSUPPORTED;
 constexpr WinchResult_Result WinchResult::RESULT_FAILED;
 constexpr WinchResult_Result WinchResult::Result_MIN;

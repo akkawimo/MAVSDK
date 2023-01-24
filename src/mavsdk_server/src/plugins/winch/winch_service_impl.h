@@ -233,24 +233,10 @@ public:
                 return rpc::winch::WinchResult_Result_RESULT_SUCCESS;
             case mavsdk::Winch::Result::NoSystem:
                 return rpc::winch::WinchResult_Result_RESULT_NO_SYSTEM;
-            case mavsdk::Winch::Result::ConnectionError:
-                return rpc::winch::WinchResult_Result_RESULT_CONNECTION_ERROR;
             case mavsdk::Winch::Result::Busy:
                 return rpc::winch::WinchResult_Result_RESULT_BUSY;
-            case mavsdk::Winch::Result::CommandDenied:
-                return rpc::winch::WinchResult_Result_RESULT_COMMAND_DENIED;
-            case mavsdk::Winch::Result::CommandDeniedLandedStateUnknown:
-                return rpc::winch::WinchResult_Result_RESULT_COMMAND_DENIED_LANDED_STATE_UNKNOWN;
-            case mavsdk::Winch::Result::CommandDeniedNotLanded:
-                return rpc::winch::WinchResult_Result_RESULT_COMMAND_DENIED_NOT_LANDED;
             case mavsdk::Winch::Result::Timeout:
                 return rpc::winch::WinchResult_Result_RESULT_TIMEOUT;
-            case mavsdk::Winch::Result::VtolTransitionSupportUnknown:
-                return rpc::winch::WinchResult_Result_RESULT_VTOL_TRANSITION_SUPPORT_UNKNOWN;
-            case mavsdk::Winch::Result::NoVtolTransitionSupport:
-                return rpc::winch::WinchResult_Result_RESULT_NO_VTOL_TRANSITION_SUPPORT;
-            case mavsdk::Winch::Result::ParameterError:
-                return rpc::winch::WinchResult_Result_RESULT_PARAMETER_ERROR;
             case mavsdk::Winch::Result::Unsupported:
                 return rpc::winch::WinchResult_Result_RESULT_UNSUPPORTED;
             case mavsdk::Winch::Result::Failed:
@@ -271,24 +257,10 @@ public:
                 return mavsdk::Winch::Result::Success;
             case rpc::winch::WinchResult_Result_RESULT_NO_SYSTEM:
                 return mavsdk::Winch::Result::NoSystem;
-            case rpc::winch::WinchResult_Result_RESULT_CONNECTION_ERROR:
-                return mavsdk::Winch::Result::ConnectionError;
             case rpc::winch::WinchResult_Result_RESULT_BUSY:
                 return mavsdk::Winch::Result::Busy;
-            case rpc::winch::WinchResult_Result_RESULT_COMMAND_DENIED:
-                return mavsdk::Winch::Result::CommandDenied;
-            case rpc::winch::WinchResult_Result_RESULT_COMMAND_DENIED_LANDED_STATE_UNKNOWN:
-                return mavsdk::Winch::Result::CommandDeniedLandedStateUnknown;
-            case rpc::winch::WinchResult_Result_RESULT_COMMAND_DENIED_NOT_LANDED:
-                return mavsdk::Winch::Result::CommandDeniedNotLanded;
             case rpc::winch::WinchResult_Result_RESULT_TIMEOUT:
                 return mavsdk::Winch::Result::Timeout;
-            case rpc::winch::WinchResult_Result_RESULT_VTOL_TRANSITION_SUPPORT_UNKNOWN:
-                return mavsdk::Winch::Result::VtolTransitionSupportUnknown;
-            case rpc::winch::WinchResult_Result_RESULT_NO_VTOL_TRANSITION_SUPPORT:
-                return mavsdk::Winch::Result::NoVtolTransitionSupport;
-            case rpc::winch::WinchResult_Result_RESULT_PARAMETER_ERROR:
-                return mavsdk::Winch::Result::ParameterError;
             case rpc::winch::WinchResult_Result_RESULT_UNSUPPORTED:
                 return mavsdk::Winch::Result::Unsupported;
             case rpc::winch::WinchResult_Result_RESULT_FAILED:

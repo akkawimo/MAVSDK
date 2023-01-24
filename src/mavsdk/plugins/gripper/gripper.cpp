@@ -47,24 +47,12 @@ std::ostream& operator<<(std::ostream& str, Gripper::Result const& result)
             return str << "Success";
         case Gripper::Result::NoSystem:
             return str << "No System";
-        case Gripper::Result::ConnectionError:
-            return str << "Connection Error";
         case Gripper::Result::Busy:
             return str << "Busy";
         case Gripper::Result::CommandDenied:
             return str << "Command Denied";
-        case Gripper::Result::CommandDeniedLandedStateUnknown:
-            return str << "Command Denied Landed State Unknown";
-        case Gripper::Result::CommandDeniedNotLanded:
-            return str << "Command Denied Not Landed";
         case Gripper::Result::Timeout:
             return str << "Timeout";
-        case Gripper::Result::VtolTransitionSupportUnknown:
-            return str << "Vtol Transition Support Unknown";
-        case Gripper::Result::NoVtolTransitionSupport:
-            return str << "No Vtol Transition Support";
-        case Gripper::Result::ParameterError:
-            return str << "Parameter Error";
         case Gripper::Result::Unsupported:
             return str << "Unsupported";
         case Gripper::Result::Failed:

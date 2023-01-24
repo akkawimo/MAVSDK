@@ -84,25 +84,12 @@ public:
                 return rpc::gripper::GripperResult_Result_RESULT_SUCCESS;
             case mavsdk::Gripper::Result::NoSystem:
                 return rpc::gripper::GripperResult_Result_RESULT_NO_SYSTEM;
-            case mavsdk::Gripper::Result::ConnectionError:
-                return rpc::gripper::GripperResult_Result_RESULT_CONNECTION_ERROR;
             case mavsdk::Gripper::Result::Busy:
                 return rpc::gripper::GripperResult_Result_RESULT_BUSY;
             case mavsdk::Gripper::Result::CommandDenied:
                 return rpc::gripper::GripperResult_Result_RESULT_COMMAND_DENIED;
-            case mavsdk::Gripper::Result::CommandDeniedLandedStateUnknown:
-                return rpc::gripper::
-                    GripperResult_Result_RESULT_COMMAND_DENIED_LANDED_STATE_UNKNOWN;
-            case mavsdk::Gripper::Result::CommandDeniedNotLanded:
-                return rpc::gripper::GripperResult_Result_RESULT_COMMAND_DENIED_NOT_LANDED;
             case mavsdk::Gripper::Result::Timeout:
                 return rpc::gripper::GripperResult_Result_RESULT_TIMEOUT;
-            case mavsdk::Gripper::Result::VtolTransitionSupportUnknown:
-                return rpc::gripper::GripperResult_Result_RESULT_VTOL_TRANSITION_SUPPORT_UNKNOWN;
-            case mavsdk::Gripper::Result::NoVtolTransitionSupport:
-                return rpc::gripper::GripperResult_Result_RESULT_NO_VTOL_TRANSITION_SUPPORT;
-            case mavsdk::Gripper::Result::ParameterError:
-                return rpc::gripper::GripperResult_Result_RESULT_PARAMETER_ERROR;
             case mavsdk::Gripper::Result::Unsupported:
                 return rpc::gripper::GripperResult_Result_RESULT_UNSUPPORTED;
             case mavsdk::Gripper::Result::Failed:
@@ -123,24 +110,12 @@ public:
                 return mavsdk::Gripper::Result::Success;
             case rpc::gripper::GripperResult_Result_RESULT_NO_SYSTEM:
                 return mavsdk::Gripper::Result::NoSystem;
-            case rpc::gripper::GripperResult_Result_RESULT_CONNECTION_ERROR:
-                return mavsdk::Gripper::Result::ConnectionError;
             case rpc::gripper::GripperResult_Result_RESULT_BUSY:
                 return mavsdk::Gripper::Result::Busy;
             case rpc::gripper::GripperResult_Result_RESULT_COMMAND_DENIED:
                 return mavsdk::Gripper::Result::CommandDenied;
-            case rpc::gripper::GripperResult_Result_RESULT_COMMAND_DENIED_LANDED_STATE_UNKNOWN:
-                return mavsdk::Gripper::Result::CommandDeniedLandedStateUnknown;
-            case rpc::gripper::GripperResult_Result_RESULT_COMMAND_DENIED_NOT_LANDED:
-                return mavsdk::Gripper::Result::CommandDeniedNotLanded;
             case rpc::gripper::GripperResult_Result_RESULT_TIMEOUT:
                 return mavsdk::Gripper::Result::Timeout;
-            case rpc::gripper::GripperResult_Result_RESULT_VTOL_TRANSITION_SUPPORT_UNKNOWN:
-                return mavsdk::Gripper::Result::VtolTransitionSupportUnknown;
-            case rpc::gripper::GripperResult_Result_RESULT_NO_VTOL_TRANSITION_SUPPORT:
-                return mavsdk::Gripper::Result::NoVtolTransitionSupport;
-            case rpc::gripper::GripperResult_Result_RESULT_PARAMETER_ERROR:
-                return mavsdk::Gripper::Result::ParameterError;
             case rpc::gripper::GripperResult_Result_RESULT_UNSUPPORTED:
                 return mavsdk::Gripper::Result::Unsupported;
             case rpc::gripper::GripperResult_Result_RESULT_FAILED:

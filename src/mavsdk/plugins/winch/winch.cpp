@@ -211,24 +211,10 @@ std::ostream& operator<<(std::ostream& str, Winch::Result const& result)
             return str << "Success";
         case Winch::Result::NoSystem:
             return str << "No System";
-        case Winch::Result::ConnectionError:
-            return str << "Connection Error";
         case Winch::Result::Busy:
             return str << "Busy";
-        case Winch::Result::CommandDenied:
-            return str << "Command Denied";
-        case Winch::Result::CommandDeniedLandedStateUnknown:
-            return str << "Command Denied Landed State Unknown";
-        case Winch::Result::CommandDeniedNotLanded:
-            return str << "Command Denied Not Landed";
         case Winch::Result::Timeout:
             return str << "Timeout";
-        case Winch::Result::VtolTransitionSupportUnknown:
-            return str << "Vtol Transition Support Unknown";
-        case Winch::Result::NoVtolTransitionSupport:
-            return str << "No Vtol Transition Support";
-        case Winch::Result::ParameterError:
-            return str << "Parameter Error";
         case Winch::Result::Unsupported:
             return str << "Unsupported";
         case Winch::Result::Failed:
