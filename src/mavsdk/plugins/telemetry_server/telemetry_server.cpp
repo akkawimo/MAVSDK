@@ -125,6 +125,12 @@ TelemetryServer::Result TelemetryServer::publish_unix_epoch_time(uint64_t time_u
     return _impl->publish_unix_epoch_time(time_us);
 }
 
+TelemetryServer::Result
+TelemetryServer::publish_distance_sensor(DistanceSensor distance_sensor) const
+{
+    return _impl->publish_distance_sensor(distance_sensor);
+}
+
 bool operator==(const TelemetryServer::Position& lhs, const TelemetryServer::Position& rhs)
 {
     return ((std::isnan(rhs.latitude_deg) && std::isnan(lhs.latitude_deg)) ||
@@ -496,6 +502,116 @@ std::ostream& operator<<(std::ostream& str, TelemetryServer::Odometry const& odo
     return str;
 }
 
+std::ostream& operator<<(std::ostream& str, TelemetryServer::DistanceSensor::Type const& type)
+{
+    switch (type) {
+        case TelemetryServer::DistanceSensor::Type::Laser:
+            return str << "Laser";
+        case TelemetryServer::DistanceSensor::Type::Ultrasound:
+            return str << "Ultrasound";
+        case TelemetryServer::DistanceSensor::Type::Infrared:
+            return str << "Infrared";
+        case TelemetryServer::DistanceSensor::Type::Radar:
+            return str << "Radar";
+        case TelemetryServer::DistanceSensor::Type::Unknown:
+            return str << "Unknown";
+        default:
+            return str << "Unknown";
+    }
+}
+
+std::ostream&
+operator<<(std::ostream& str, TelemetryServer::DistanceSensor::Rotation const& rotation)
+{
+    switch (rotation) {
+        case TelemetryServer::DistanceSensor::Rotation::None:
+            return str << "None";
+        case TelemetryServer::DistanceSensor::Rotation::Yaw45:
+            return str << "Yaw 45";
+        case TelemetryServer::DistanceSensor::Rotation::Yaw90:
+            return str << "Yaw 90";
+        case TelemetryServer::DistanceSensor::Rotation::Yaw135:
+            return str << "Yaw 135";
+        case TelemetryServer::DistanceSensor::Rotation::Yaw180:
+            return str << "Yaw 180";
+        case TelemetryServer::DistanceSensor::Rotation::Yaw225:
+            return str << "Yaw 225";
+        case TelemetryServer::DistanceSensor::Rotation::Yaw270:
+            return str << "Yaw 270";
+        case TelemetryServer::DistanceSensor::Rotation::Yaw315:
+            return str << "Yaw 315";
+        case TelemetryServer::DistanceSensor::Rotation::Roll180:
+            return str << "Roll 180";
+        case TelemetryServer::DistanceSensor::Rotation::Roll180Yaw45:
+            return str << "Roll 180 Yaw 45";
+        case TelemetryServer::DistanceSensor::Rotation::Roll180Yaw90:
+            return str << "Roll 180 Yaw 90";
+        case TelemetryServer::DistanceSensor::Rotation::Roll180Yaw135:
+            return str << "Roll 180 Yaw 135";
+        case TelemetryServer::DistanceSensor::Rotation::Pitch180:
+            return str << "Pitch 180";
+        case TelemetryServer::DistanceSensor::Rotation::Roll180Yaw225:
+            return str << "Roll 180 Yaw 225";
+        case TelemetryServer::DistanceSensor::Rotation::Roll180Yaw270:
+            return str << "Roll 180 Yaw 270";
+        case TelemetryServer::DistanceSensor::Rotation::Roll180Yaw315:
+            return str << "Roll 180 Yaw 315";
+        case TelemetryServer::DistanceSensor::Rotation::Roll90:
+            return str << "Roll 90";
+        case TelemetryServer::DistanceSensor::Rotation::Roll90Yaw45:
+            return str << "Roll 90 Yaw 45";
+        case TelemetryServer::DistanceSensor::Rotation::Roll90Yaw90:
+            return str << "Roll 90 Yaw 90";
+        case TelemetryServer::DistanceSensor::Rotation::Roll90Yaw135:
+            return str << "Roll 90 Yaw 135";
+        case TelemetryServer::DistanceSensor::Rotation::Roll270:
+            return str << "Roll 270";
+        case TelemetryServer::DistanceSensor::Rotation::Roll270Yaw45:
+            return str << "Roll 270 Yaw 45";
+        case TelemetryServer::DistanceSensor::Rotation::Roll270Yaw90:
+            return str << "Roll 270 Yaw 90";
+        case TelemetryServer::DistanceSensor::Rotation::Roll270Yaw135:
+            return str << "Roll 270 Yaw 135";
+        case TelemetryServer::DistanceSensor::Rotation::Pitch90:
+            return str << "Pitch 90";
+        case TelemetryServer::DistanceSensor::Rotation::Pitch270:
+            return str << "Pitch 270";
+        case TelemetryServer::DistanceSensor::Rotation::Pitch180Yaw90:
+            return str << "Pitch 180 Yaw 90";
+        case TelemetryServer::DistanceSensor::Rotation::Pitch180Yaw270:
+            return str << "Pitch 180 Yaw 270";
+        case TelemetryServer::DistanceSensor::Rotation::Roll90Pitch90:
+            return str << "Roll 90 Pitch 90";
+        case TelemetryServer::DistanceSensor::Rotation::Roll180Pitch90:
+            return str << "Roll 180 Pitch 90";
+        case TelemetryServer::DistanceSensor::Rotation::Roll270Pitch90:
+            return str << "Roll 270 Pitch 90";
+        case TelemetryServer::DistanceSensor::Rotation::Roll90Pitch180:
+            return str << "Roll 90 Pitch 180";
+        case TelemetryServer::DistanceSensor::Rotation::Roll270Pitch180:
+            return str << "Roll 270 Pitch 180";
+        case TelemetryServer::DistanceSensor::Rotation::Roll90Pitch270:
+            return str << "Roll 90 Pitch 270";
+        case TelemetryServer::DistanceSensor::Rotation::Roll180Pitch270:
+            return str << "Roll 180 Pitch 270";
+        case TelemetryServer::DistanceSensor::Rotation::Roll270Pitch270:
+            return str << "Roll 270 Pitch 270";
+        case TelemetryServer::DistanceSensor::Rotation::Roll90Pitch180Yaw90:
+            return str << "Roll 90 Pitch 180 Yaw 90";
+        case TelemetryServer::DistanceSensor::Rotation::Roll90Yaw270:
+            return str << "Roll 90 Yaw 270";
+        case TelemetryServer::DistanceSensor::Rotation::Roll90Pitch68Yaw293:
+            return str << "Roll 90 Pitch 68 Yaw 293";
+        case TelemetryServer::DistanceSensor::Rotation::Pitch315:
+            return str << "Pitch 315";
+        case TelemetryServer::DistanceSensor::Rotation::Roll90Pitch315:
+            return str << "Roll 90 Pitch 315";
+        case TelemetryServer::DistanceSensor::Rotation::Custom:
+            return str << "Custom";
+        default:
+            return str << "Unknown";
+    }
+}
 bool operator==(
     const TelemetryServer::DistanceSensor& lhs, const TelemetryServer::DistanceSensor& rhs)
 {
@@ -504,7 +620,14 @@ bool operator==(
            ((std::isnan(rhs.maximum_distance_m) && std::isnan(lhs.maximum_distance_m)) ||
             rhs.maximum_distance_m == lhs.maximum_distance_m) &&
            ((std::isnan(rhs.current_distance_m) && std::isnan(lhs.current_distance_m)) ||
-            rhs.current_distance_m == lhs.current_distance_m);
+            rhs.current_distance_m == lhs.current_distance_m) &&
+           (rhs.type == lhs.type) && (rhs.id == lhs.id) && (rhs.rotation == lhs.rotation) &&
+           (rhs.covariance_m2 == lhs.covariance_m2) &&
+           ((std::isnan(rhs.horizontal_fov_rad) && std::isnan(lhs.horizontal_fov_rad)) ||
+            rhs.horizontal_fov_rad == lhs.horizontal_fov_rad) &&
+           ((std::isnan(rhs.vertical_fov_rad) && std::isnan(lhs.vertical_fov_rad)) ||
+            rhs.vertical_fov_rad == lhs.vertical_fov_rad) &&
+           (rhs.q == lhs.q) && (rhs.signal_quality_percent == lhs.signal_quality_percent);
 }
 
 std::ostream& operator<<(std::ostream& str, TelemetryServer::DistanceSensor const& distance_sensor)
@@ -514,6 +637,14 @@ std::ostream& operator<<(std::ostream& str, TelemetryServer::DistanceSensor cons
     str << "    minimum_distance_m: " << distance_sensor.minimum_distance_m << '\n';
     str << "    maximum_distance_m: " << distance_sensor.maximum_distance_m << '\n';
     str << "    current_distance_m: " << distance_sensor.current_distance_m << '\n';
+    str << "    type: " << distance_sensor.type << '\n';
+    str << "    id: " << distance_sensor.id << '\n';
+    str << "    rotation: " << distance_sensor.rotation << '\n';
+    str << "    covariance_m2: " << distance_sensor.covariance_m2 << '\n';
+    str << "    horizontal_fov_rad: " << distance_sensor.horizontal_fov_rad << '\n';
+    str << "    vertical_fov_rad: " << distance_sensor.vertical_fov_rad << '\n';
+    str << "    q: " << distance_sensor.q << '\n';
+    str << "    signal_quality_percent: " << distance_sensor.signal_quality_percent << '\n';
     str << '}';
     return str;
 }

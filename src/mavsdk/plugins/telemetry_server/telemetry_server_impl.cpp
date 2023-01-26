@@ -1,5 +1,6 @@
 #include "telemetry_server_impl.h"
 #include "unused.h"
+#include <array>
 
 namespace mavsdk {
 
@@ -185,6 +186,44 @@ TelemetryServer::Result TelemetryServerImpl::publish_battery(TelemetryServer::Ba
         0);
 
     add_msg_cache(MAVLINK_MSG_ID_BATTERY_STATUS, msg);
+
+    return _server_component_impl->send_message(msg) ? TelemetryServer::Result::Success :
+                                                       TelemetryServer::Result::Unsupported;
+}
+
+TelemetryServer::Result
+TelemetryServerImpl::publish_distance_sensor(TelemetryServer::DistanceSensor distance_sensor)
+{
+    mavlink_message_t msg;
+
+    std::array<float, 4> q{0}; // Initialize invalid quaternion
+
+    if (distance_sensor.rotation == TelemetryServer::DistanceSensor::Rotation::Custom) {
+        q[0] = distance_sensor.q.w;
+        q[1] = distance_sensor.q.x;
+        q[2] = distance_sensor.q.y;
+        q[3] = distance_sensor.q.z;
+    }
+
+    // TODO: Is the covariance transformation safe? uint32 covariance_m2 could be quite large
+    mavlink_msg_distance_sensor_pack(
+        _server_component_impl->get_own_system_id(),
+        _server_component_impl->get_own_component_id(),
+        &msg,
+        0,
+        static_cast<uint16_t>(static_cast<double>(distance_sensor.minimum_distance_m) / 100.0),
+        static_cast<uint16_t>(static_cast<double>(distance_sensor.maximum_distance_m) / 100.0),
+        static_cast<uint16_t>(static_cast<double>(distance_sensor.current_distance_m) / 100.0),
+        static_cast<uint16_t>(distance_sensor.type),
+        static_cast<uint8_t>(distance_sensor.id),
+        static_cast<uint8_t>(distance_sensor.rotation),
+        static_cast<uint8_t>(distance_sensor.covariance_m2 * 1E4),
+        distance_sensor.horizontal_fov_rad,
+        distance_sensor.vertical_fov_rad,
+        q.data(),
+        static_cast<uint8_t>(distance_sensor.signal_quality_percent));
+
+    add_msg_cache(MAVLINK_MSG_ID_DISTANCE_SENSOR, msg);
 
     return _server_component_impl->send_message(msg) ? TelemetryServer::Result::Success :
                                                        TelemetryServer::Result::Unsupported;

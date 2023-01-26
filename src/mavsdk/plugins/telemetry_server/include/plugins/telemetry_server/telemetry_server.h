@@ -596,12 +596,98 @@ public:
      * @brief DistanceSensor message type.
      */
     struct DistanceSensor {
+        /**
+         * @brief
+         */
+        enum class Type {
+            Laser, /**< @brief. */
+            Ultrasound, /**< @brief. */
+            Infrared, /**< @brief. */
+            Radar, /**< @brief. */
+            Unknown, /**< @brief. */
+        };
+
+        /**
+         * @brief Stream operator to print information about a `TelemetryServer::Type`.
+         *
+         * @return A reference to the stream.
+         */
+        friend std::ostream&
+        operator<<(std::ostream& str, TelemetryServer::DistanceSensor::Type const& type);
+
+        /**
+         * @brief
+         */
+        enum class Rotation {
+            None, /**< @brief Roll: 0, Pitch: 0, Yaw: 0. */
+            Yaw45, /**< @brief Roll: 0, Pitch: 0, Yaw: 45. */
+            Yaw90, /**< @brief Roll: 0, Pitch: 0, Yaw: 90. */
+            Yaw135, /**< @brief Roll: 0, Pitch: 0, Yaw: 135. */
+            Yaw180, /**< @brief Roll: 0, Pitch: 0, Yaw: 180. */
+            Yaw225, /**< @brief Roll: 0, Pitch: 0, Yaw: 225. */
+            Yaw270, /**< @brief Roll: 0, Pitch: 0, Yaw: 270. */
+            Yaw315, /**< @brief Roll: 0, Pitch: 0, Yaw: 315. */
+            Roll180, /**< @brief Roll: 180, Pitch: 0, Yaw: 0. */
+            Roll180Yaw45, /**< @brief Roll: 180, Pitch: 0, Yaw: 45. */
+            Roll180Yaw90, /**< @brief Roll: 180, Pitch: 0, Yaw: 90. */
+            Roll180Yaw135, /**< @brief Roll: 180, Pitch: 0, Yaw: 135. */
+            Pitch180, /**< @brief Roll: 0, Pitch: 180, Yaw: 0. */
+            Roll180Yaw225, /**< @brief Roll: 180, Pitch: 0, Yaw: 225. */
+            Roll180Yaw270, /**< @brief Roll: 180, Pitch: 0, Yaw: 270. */
+            Roll180Yaw315, /**< @brief Roll: 180, Pitch: 0, Yaw: 315. */
+            Roll90, /**< @brief Roll: 90, Pitch: 0, Yaw: 0. */
+            Roll90Yaw45, /**< @brief Roll: 90, Pitch: 0, Yaw: 45. */
+            Roll90Yaw90, /**< @brief Roll: 90, Pitch: 0, Yaw: 90. */
+            Roll90Yaw135, /**< @brief Roll: 90, Pitch: 0, Yaw: 135. */
+            Roll270, /**< @brief Roll: 270, Pitch: 0, Yaw: 0. */
+            Roll270Yaw45, /**< @brief Roll: 270, Pitch: 0, Yaw: 45. */
+            Roll270Yaw90, /**< @brief Roll: 270, Pitch: 0, Yaw: 90. */
+            Roll270Yaw135, /**< @brief Roll: 270, Pitch: 0, Yaw: 135. */
+            Pitch90, /**< @brief Roll: 0, Pitch: 90, Yaw: 0. */
+            Pitch270, /**< @brief Roll: 0, Pitch: 270, Yaw: 0. */
+            Pitch180Yaw90, /**< @brief Roll: 0, Pitch: 180, Yaw: 90. */
+            Pitch180Yaw270, /**< @brief Roll: 0, Pitch: 180, Yaw: 270. */
+            Roll90Pitch90, /**< @brief Roll: 90, Pitch: 90, Yaw: 0. */
+            Roll180Pitch90, /**< @brief Roll: 180, Pitch: 90, Yaw: 0. */
+            Roll270Pitch90, /**< @brief Roll: 270, Pitch: 90, Yaw: 0. */
+            Roll90Pitch180, /**< @brief Roll: 90, Pitch: 180, Yaw: 0. */
+            Roll270Pitch180, /**< @brief Roll: 270, Pitch: 180, Yaw: 0. */
+            Roll90Pitch270, /**< @brief Roll: 90, Pitch: 270, Yaw: 0. */
+            Roll180Pitch270, /**< @brief Roll: 180, Pitch: 270, Yaw: 0. */
+            Roll270Pitch270, /**< @brief Roll: 270, Pitch: 270, Yaw: 0. */
+            Roll90Pitch180Yaw90, /**< @brief Roll: 90, Pitch: 180, Yaw: 90. */
+            Roll90Yaw270, /**< @brief Roll: 90, Pitch: 0, Yaw: 270. */
+            Roll90Pitch68Yaw293, /**< @brief Roll: 90, Pitch: 68, Yaw: 293. */
+            Pitch315, /**< @brief Pitch: 315. */
+            Roll90Pitch315, /**< @brief Roll: 90, Pitch: 315. */
+            Custom, /**< @brief Custom orientation using specified quaternion. */
+        };
+
+        /**
+         * @brief Stream operator to print information about a `TelemetryServer::Rotation`.
+         *
+         * @return A reference to the stream.
+         */
+        friend std::ostream&
+        operator<<(std::ostream& str, TelemetryServer::DistanceSensor::Rotation const& rotation);
+
         float minimum_distance_m{
             float(NAN)}; /**< @brief Minimum distance the sensor can measure, NaN if unknown. */
         float maximum_distance_m{
             float(NAN)}; /**< @brief Maximum distance the sensor can measure, NaN if unknown. */
         float current_distance_m{
             float(NAN)}; /**< @brief Current distance reading, NaN if unknown. */
+        Type type{4}; /**< @brief */
+        uint32_t id{0}; /**< @brief */
+        Rotation rotation{0}; /**< @brief */
+        uint32_t covariance_m2{uint32_t(NAN)}; /**< @brief */
+        float horizontal_fov_rad{0}; /**< @brief */
+        float vertical_fov_rad{0}; /**< @brief */
+        Quaternion q{}; /**< @brief Sensor orientation quaternion (w, x, y, z order, zero-rotation
+                           is 1, 0, 0, 0) */
+        uint32_t signal_quality_percent{
+            0}; /**< @brief Signal strength normalised as a percentage. 0 = unknown/unset signal
+                   quality, 1 = invalid signal, 100 = perfect signal. */
     };
 
     /**
@@ -1042,6 +1128,15 @@ public:
      * @return Result of request.
      */
     Result publish_unix_epoch_time(uint64_t time_us) const;
+
+    /**
+     * @brief Publish to "distance sensor" updates.
+     *
+     * This function is blocking.
+     *
+     * @return Result of request.
+     */
+    Result publish_distance_sensor(DistanceSensor distance_sensor) const;
 
     /**
      * @brief Copy constructor.

@@ -702,6 +702,99 @@ inline bool Odometry_MavFrame_Parse(
   return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<Odometry_MavFrame>(
     Odometry_MavFrame_descriptor(), name, value);
 }
+enum DistanceSensor_Type : int {
+  DistanceSensor_Type_TYPE_LASER = 0,
+  DistanceSensor_Type_TYPE_ULTRASOUND = 1,
+  DistanceSensor_Type_TYPE_INFRARED = 2,
+  DistanceSensor_Type_TYPE_RADAR = 3,
+  DistanceSensor_Type_TYPE_UNKNOWN = 4,
+  DistanceSensor_Type_DistanceSensor_Type_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<int32_t>::min(),
+  DistanceSensor_Type_DistanceSensor_Type_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<int32_t>::max()
+};
+bool DistanceSensor_Type_IsValid(int value);
+constexpr DistanceSensor_Type DistanceSensor_Type_Type_MIN = DistanceSensor_Type_TYPE_LASER;
+constexpr DistanceSensor_Type DistanceSensor_Type_Type_MAX = DistanceSensor_Type_TYPE_UNKNOWN;
+constexpr int DistanceSensor_Type_Type_ARRAYSIZE = DistanceSensor_Type_Type_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* DistanceSensor_Type_descriptor();
+template<typename T>
+inline const std::string& DistanceSensor_Type_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, DistanceSensor_Type>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function DistanceSensor_Type_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    DistanceSensor_Type_descriptor(), enum_t_value);
+}
+inline bool DistanceSensor_Type_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, DistanceSensor_Type* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<DistanceSensor_Type>(
+    DistanceSensor_Type_descriptor(), name, value);
+}
+enum DistanceSensor_Rotation : int {
+  DistanceSensor_Rotation_ROTATION_NONE = 0,
+  DistanceSensor_Rotation_ROTATION_YAW_45 = 1,
+  DistanceSensor_Rotation_ROTATION_YAW_90 = 2,
+  DistanceSensor_Rotation_ROTATION_YAW_135 = 3,
+  DistanceSensor_Rotation_ROTATION_YAW_180 = 4,
+  DistanceSensor_Rotation_ROTATION_YAW_225 = 5,
+  DistanceSensor_Rotation_ROTATION_YAW_270 = 6,
+  DistanceSensor_Rotation_ROTATION_YAW_315 = 7,
+  DistanceSensor_Rotation_ROTATION_ROLL_180 = 8,
+  DistanceSensor_Rotation_ROTATION_ROLL_180_YAW_45 = 9,
+  DistanceSensor_Rotation_ROTATION_ROLL_180_YAW_90 = 10,
+  DistanceSensor_Rotation_ROTATION_ROLL_180_YAW_135 = 11,
+  DistanceSensor_Rotation_ROTATION_PITCH_180 = 12,
+  DistanceSensor_Rotation_ROTATION_ROLL_180_YAW_225 = 13,
+  DistanceSensor_Rotation_ROTATION_ROLL_180_YAW_270 = 14,
+  DistanceSensor_Rotation_ROTATION_ROLL_180_YAW_315 = 15,
+  DistanceSensor_Rotation_ROTATION_ROLL_90 = 16,
+  DistanceSensor_Rotation_ROTATION_ROLL_90_YAW_45 = 17,
+  DistanceSensor_Rotation_ROTATION_ROLL_90_YAW_90 = 18,
+  DistanceSensor_Rotation_ROTATION_ROLL_90_YAW_135 = 19,
+  DistanceSensor_Rotation_ROTATION_ROLL_270 = 20,
+  DistanceSensor_Rotation_ROTATION_ROLL_270_YAW_45 = 21,
+  DistanceSensor_Rotation_ROTATION_ROLL_270_YAW_90 = 22,
+  DistanceSensor_Rotation_ROTATION_ROLL_270_YAW_135 = 23,
+  DistanceSensor_Rotation_ROTATION_PITCH_90 = 24,
+  DistanceSensor_Rotation_ROTATION_PITCH_270 = 25,
+  DistanceSensor_Rotation_ROTATION_PITCH_180_YAW_90 = 26,
+  DistanceSensor_Rotation_ROTATION_PITCH_180_YAW_270 = 27,
+  DistanceSensor_Rotation_ROTATION_ROLL_90_PITCH_90 = 28,
+  DistanceSensor_Rotation_ROTATION_ROLL_180_PITCH_90 = 29,
+  DistanceSensor_Rotation_ROTATION_ROLL_270_PITCH_90 = 30,
+  DistanceSensor_Rotation_ROTATION_ROLL_90_PITCH_180 = 31,
+  DistanceSensor_Rotation_ROTATION_ROLL_270_PITCH_180 = 32,
+  DistanceSensor_Rotation_ROTATION_ROLL_90_PITCH_270 = 33,
+  DistanceSensor_Rotation_ROTATION_ROLL_180_PITCH_270 = 34,
+  DistanceSensor_Rotation_ROTATION_ROLL_270_PITCH_270 = 35,
+  DistanceSensor_Rotation_ROTATION_ROLL_90_PITCH_180_YAW_90 = 36,
+  DistanceSensor_Rotation_ROTATION_ROLL_90_YAW_270 = 37,
+  DistanceSensor_Rotation_ROTATION_ROLL_90_PITCH_68_YAW_293 = 38,
+  DistanceSensor_Rotation_ROTATION_PITCH_315 = 39,
+  DistanceSensor_Rotation_ROTATION_ROLL_90_PITCH_315 = 40,
+  DistanceSensor_Rotation_ROTATION_CUSTOM = 100,
+  DistanceSensor_Rotation_DistanceSensor_Rotation_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<int32_t>::min(),
+  DistanceSensor_Rotation_DistanceSensor_Rotation_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<int32_t>::max()
+};
+bool DistanceSensor_Rotation_IsValid(int value);
+constexpr DistanceSensor_Rotation DistanceSensor_Rotation_Rotation_MIN = DistanceSensor_Rotation_ROTATION_NONE;
+constexpr DistanceSensor_Rotation DistanceSensor_Rotation_Rotation_MAX = DistanceSensor_Rotation_ROTATION_CUSTOM;
+constexpr int DistanceSensor_Rotation_Rotation_ARRAYSIZE = DistanceSensor_Rotation_Rotation_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* DistanceSensor_Rotation_descriptor();
+template<typename T>
+inline const std::string& DistanceSensor_Rotation_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, DistanceSensor_Rotation>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function DistanceSensor_Rotation_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    DistanceSensor_Rotation_descriptor(), enum_t_value);
+}
+inline bool DistanceSensor_Rotation_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, DistanceSensor_Rotation* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<DistanceSensor_Rotation>(
+    DistanceSensor_Rotation_descriptor(), name, value);
+}
 enum TelemetryResult_Result : int {
   TelemetryResult_Result_RESULT_UNKNOWN = 0,
   TelemetryResult_Result_RESULT_SUCCESS = 1,
@@ -21313,13 +21406,185 @@ class DistanceSensor final :
 
   // nested types ----------------------------------------------------
 
+  typedef DistanceSensor_Type Type;
+  static constexpr Type TYPE_LASER =
+    DistanceSensor_Type_TYPE_LASER;
+  static constexpr Type TYPE_ULTRASOUND =
+    DistanceSensor_Type_TYPE_ULTRASOUND;
+  static constexpr Type TYPE_INFRARED =
+    DistanceSensor_Type_TYPE_INFRARED;
+  static constexpr Type TYPE_RADAR =
+    DistanceSensor_Type_TYPE_RADAR;
+  static constexpr Type TYPE_UNKNOWN =
+    DistanceSensor_Type_TYPE_UNKNOWN;
+  static inline bool Type_IsValid(int value) {
+    return DistanceSensor_Type_IsValid(value);
+  }
+  static constexpr Type Type_MIN =
+    DistanceSensor_Type_Type_MIN;
+  static constexpr Type Type_MAX =
+    DistanceSensor_Type_Type_MAX;
+  static constexpr int Type_ARRAYSIZE =
+    DistanceSensor_Type_Type_ARRAYSIZE;
+  static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
+  Type_descriptor() {
+    return DistanceSensor_Type_descriptor();
+  }
+  template<typename T>
+  static inline const std::string& Type_Name(T enum_t_value) {
+    static_assert(::std::is_same<T, Type>::value ||
+      ::std::is_integral<T>::value,
+      "Incorrect type passed to function Type_Name.");
+    return DistanceSensor_Type_Name(enum_t_value);
+  }
+  static inline bool Type_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
+      Type* value) {
+    return DistanceSensor_Type_Parse(name, value);
+  }
+
+  typedef DistanceSensor_Rotation Rotation;
+  static constexpr Rotation ROTATION_NONE =
+    DistanceSensor_Rotation_ROTATION_NONE;
+  static constexpr Rotation ROTATION_YAW_45 =
+    DistanceSensor_Rotation_ROTATION_YAW_45;
+  static constexpr Rotation ROTATION_YAW_90 =
+    DistanceSensor_Rotation_ROTATION_YAW_90;
+  static constexpr Rotation ROTATION_YAW_135 =
+    DistanceSensor_Rotation_ROTATION_YAW_135;
+  static constexpr Rotation ROTATION_YAW_180 =
+    DistanceSensor_Rotation_ROTATION_YAW_180;
+  static constexpr Rotation ROTATION_YAW_225 =
+    DistanceSensor_Rotation_ROTATION_YAW_225;
+  static constexpr Rotation ROTATION_YAW_270 =
+    DistanceSensor_Rotation_ROTATION_YAW_270;
+  static constexpr Rotation ROTATION_YAW_315 =
+    DistanceSensor_Rotation_ROTATION_YAW_315;
+  static constexpr Rotation ROTATION_ROLL_180 =
+    DistanceSensor_Rotation_ROTATION_ROLL_180;
+  static constexpr Rotation ROTATION_ROLL_180_YAW_45 =
+    DistanceSensor_Rotation_ROTATION_ROLL_180_YAW_45;
+  static constexpr Rotation ROTATION_ROLL_180_YAW_90 =
+    DistanceSensor_Rotation_ROTATION_ROLL_180_YAW_90;
+  static constexpr Rotation ROTATION_ROLL_180_YAW_135 =
+    DistanceSensor_Rotation_ROTATION_ROLL_180_YAW_135;
+  static constexpr Rotation ROTATION_PITCH_180 =
+    DistanceSensor_Rotation_ROTATION_PITCH_180;
+  static constexpr Rotation ROTATION_ROLL_180_YAW_225 =
+    DistanceSensor_Rotation_ROTATION_ROLL_180_YAW_225;
+  static constexpr Rotation ROTATION_ROLL_180_YAW_270 =
+    DistanceSensor_Rotation_ROTATION_ROLL_180_YAW_270;
+  static constexpr Rotation ROTATION_ROLL_180_YAW_315 =
+    DistanceSensor_Rotation_ROTATION_ROLL_180_YAW_315;
+  static constexpr Rotation ROTATION_ROLL_90 =
+    DistanceSensor_Rotation_ROTATION_ROLL_90;
+  static constexpr Rotation ROTATION_ROLL_90_YAW_45 =
+    DistanceSensor_Rotation_ROTATION_ROLL_90_YAW_45;
+  static constexpr Rotation ROTATION_ROLL_90_YAW_90 =
+    DistanceSensor_Rotation_ROTATION_ROLL_90_YAW_90;
+  static constexpr Rotation ROTATION_ROLL_90_YAW_135 =
+    DistanceSensor_Rotation_ROTATION_ROLL_90_YAW_135;
+  static constexpr Rotation ROTATION_ROLL_270 =
+    DistanceSensor_Rotation_ROTATION_ROLL_270;
+  static constexpr Rotation ROTATION_ROLL_270_YAW_45 =
+    DistanceSensor_Rotation_ROTATION_ROLL_270_YAW_45;
+  static constexpr Rotation ROTATION_ROLL_270_YAW_90 =
+    DistanceSensor_Rotation_ROTATION_ROLL_270_YAW_90;
+  static constexpr Rotation ROTATION_ROLL_270_YAW_135 =
+    DistanceSensor_Rotation_ROTATION_ROLL_270_YAW_135;
+  static constexpr Rotation ROTATION_PITCH_90 =
+    DistanceSensor_Rotation_ROTATION_PITCH_90;
+  static constexpr Rotation ROTATION_PITCH_270 =
+    DistanceSensor_Rotation_ROTATION_PITCH_270;
+  static constexpr Rotation ROTATION_PITCH_180_YAW_90 =
+    DistanceSensor_Rotation_ROTATION_PITCH_180_YAW_90;
+  static constexpr Rotation ROTATION_PITCH_180_YAW_270 =
+    DistanceSensor_Rotation_ROTATION_PITCH_180_YAW_270;
+  static constexpr Rotation ROTATION_ROLL_90_PITCH_90 =
+    DistanceSensor_Rotation_ROTATION_ROLL_90_PITCH_90;
+  static constexpr Rotation ROTATION_ROLL_180_PITCH_90 =
+    DistanceSensor_Rotation_ROTATION_ROLL_180_PITCH_90;
+  static constexpr Rotation ROTATION_ROLL_270_PITCH_90 =
+    DistanceSensor_Rotation_ROTATION_ROLL_270_PITCH_90;
+  static constexpr Rotation ROTATION_ROLL_90_PITCH_180 =
+    DistanceSensor_Rotation_ROTATION_ROLL_90_PITCH_180;
+  static constexpr Rotation ROTATION_ROLL_270_PITCH_180 =
+    DistanceSensor_Rotation_ROTATION_ROLL_270_PITCH_180;
+  static constexpr Rotation ROTATION_ROLL_90_PITCH_270 =
+    DistanceSensor_Rotation_ROTATION_ROLL_90_PITCH_270;
+  static constexpr Rotation ROTATION_ROLL_180_PITCH_270 =
+    DistanceSensor_Rotation_ROTATION_ROLL_180_PITCH_270;
+  static constexpr Rotation ROTATION_ROLL_270_PITCH_270 =
+    DistanceSensor_Rotation_ROTATION_ROLL_270_PITCH_270;
+  static constexpr Rotation ROTATION_ROLL_90_PITCH_180_YAW_90 =
+    DistanceSensor_Rotation_ROTATION_ROLL_90_PITCH_180_YAW_90;
+  static constexpr Rotation ROTATION_ROLL_90_YAW_270 =
+    DistanceSensor_Rotation_ROTATION_ROLL_90_YAW_270;
+  static constexpr Rotation ROTATION_ROLL_90_PITCH_68_YAW_293 =
+    DistanceSensor_Rotation_ROTATION_ROLL_90_PITCH_68_YAW_293;
+  static constexpr Rotation ROTATION_PITCH_315 =
+    DistanceSensor_Rotation_ROTATION_PITCH_315;
+  static constexpr Rotation ROTATION_ROLL_90_PITCH_315 =
+    DistanceSensor_Rotation_ROTATION_ROLL_90_PITCH_315;
+  static constexpr Rotation ROTATION_CUSTOM =
+    DistanceSensor_Rotation_ROTATION_CUSTOM;
+  static inline bool Rotation_IsValid(int value) {
+    return DistanceSensor_Rotation_IsValid(value);
+  }
+  static constexpr Rotation Rotation_MIN =
+    DistanceSensor_Rotation_Rotation_MIN;
+  static constexpr Rotation Rotation_MAX =
+    DistanceSensor_Rotation_Rotation_MAX;
+  static constexpr int Rotation_ARRAYSIZE =
+    DistanceSensor_Rotation_Rotation_ARRAYSIZE;
+  static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
+  Rotation_descriptor() {
+    return DistanceSensor_Rotation_descriptor();
+  }
+  template<typename T>
+  static inline const std::string& Rotation_Name(T enum_t_value) {
+    static_assert(::std::is_same<T, Rotation>::value ||
+      ::std::is_integral<T>::value,
+      "Incorrect type passed to function Rotation_Name.");
+    return DistanceSensor_Rotation_Name(enum_t_value);
+  }
+  static inline bool Rotation_Parse(::PROTOBUF_NAMESPACE_ID::ConstStringParam name,
+      Rotation* value) {
+    return DistanceSensor_Rotation_Parse(name, value);
+  }
+
   // accessors -------------------------------------------------------
 
   enum : int {
+    kQFieldNumber = 10,
     kMinimumDistanceMFieldNumber = 1,
     kMaximumDistanceMFieldNumber = 2,
     kCurrentDistanceMFieldNumber = 3,
+    kTypeFieldNumber = 4,
+    kIdFieldNumber = 5,
+    kRotationFieldNumber = 6,
+    kCovarianceM2FieldNumber = 7,
+    kHorizontalFovRadFieldNumber = 8,
+    kVerticalFovRadFieldNumber = 9,
+    kSignalQualityPercentFieldNumber = 11,
   };
+  // .mavsdk.rpc.telemetry.Quaternion q = 10;
+  bool has_q() const;
+  private:
+  bool _internal_has_q() const;
+  public:
+  void clear_q();
+  const ::mavsdk::rpc::telemetry::Quaternion& q() const;
+  PROTOBUF_NODISCARD ::mavsdk::rpc::telemetry::Quaternion* release_q();
+  ::mavsdk::rpc::telemetry::Quaternion* mutable_q();
+  void set_allocated_q(::mavsdk::rpc::telemetry::Quaternion* q);
+  private:
+  const ::mavsdk::rpc::telemetry::Quaternion& _internal_q() const;
+  ::mavsdk::rpc::telemetry::Quaternion* _internal_mutable_q();
+  public:
+  void unsafe_arena_set_allocated_q(
+      ::mavsdk::rpc::telemetry::Quaternion* q);
+  ::mavsdk::rpc::telemetry::Quaternion* unsafe_arena_release_q();
+
   // float minimum_distance_m = 1 [(.mavsdk.options.default_value) = "NaN"];
   void clear_minimum_distance_m();
   float minimum_distance_m() const;
@@ -21347,6 +21612,69 @@ class DistanceSensor final :
   void _internal_set_current_distance_m(float value);
   public:
 
+  // .mavsdk.rpc.telemetry.DistanceSensor.Type type = 4 [(.mavsdk.options.default_value) = "4"];
+  void clear_type();
+  ::mavsdk::rpc::telemetry::DistanceSensor_Type type() const;
+  void set_type(::mavsdk::rpc::telemetry::DistanceSensor_Type value);
+  private:
+  ::mavsdk::rpc::telemetry::DistanceSensor_Type _internal_type() const;
+  void _internal_set_type(::mavsdk::rpc::telemetry::DistanceSensor_Type value);
+  public:
+
+  // uint32 id = 5 [(.mavsdk.options.default_value) = "0"];
+  void clear_id();
+  uint32_t id() const;
+  void set_id(uint32_t value);
+  private:
+  uint32_t _internal_id() const;
+  void _internal_set_id(uint32_t value);
+  public:
+
+  // .mavsdk.rpc.telemetry.DistanceSensor.Rotation rotation = 6 [(.mavsdk.options.default_value) = "0"];
+  void clear_rotation();
+  ::mavsdk::rpc::telemetry::DistanceSensor_Rotation rotation() const;
+  void set_rotation(::mavsdk::rpc::telemetry::DistanceSensor_Rotation value);
+  private:
+  ::mavsdk::rpc::telemetry::DistanceSensor_Rotation _internal_rotation() const;
+  void _internal_set_rotation(::mavsdk::rpc::telemetry::DistanceSensor_Rotation value);
+  public:
+
+  // float covariance_m2 = 7 [(.mavsdk.options.default_value) = "NaN"];
+  void clear_covariance_m2();
+  float covariance_m2() const;
+  void set_covariance_m2(float value);
+  private:
+  float _internal_covariance_m2() const;
+  void _internal_set_covariance_m2(float value);
+  public:
+
+  // float horizontal_fov_rad = 8 [(.mavsdk.options.default_value) = "0"];
+  void clear_horizontal_fov_rad();
+  float horizontal_fov_rad() const;
+  void set_horizontal_fov_rad(float value);
+  private:
+  float _internal_horizontal_fov_rad() const;
+  void _internal_set_horizontal_fov_rad(float value);
+  public:
+
+  // float vertical_fov_rad = 9 [(.mavsdk.options.default_value) = "0"];
+  void clear_vertical_fov_rad();
+  float vertical_fov_rad() const;
+  void set_vertical_fov_rad(float value);
+  private:
+  float _internal_vertical_fov_rad() const;
+  void _internal_set_vertical_fov_rad(float value);
+  public:
+
+  // uint32 signal_quality_percent = 11 [(.mavsdk.options.default_value) = "0"];
+  void clear_signal_quality_percent();
+  uint32_t signal_quality_percent() const;
+  void set_signal_quality_percent(uint32_t value);
+  private:
+  uint32_t _internal_signal_quality_percent() const;
+  void _internal_set_signal_quality_percent(uint32_t value);
+  public:
+
   // @@protoc_insertion_point(class_scope:mavsdk.rpc.telemetry.DistanceSensor)
  private:
   class _Internal;
@@ -21354,9 +21682,17 @@ class DistanceSensor final :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::mavsdk::rpc::telemetry::Quaternion* q_;
   float minimum_distance_m_;
   float maximum_distance_m_;
   float current_distance_m_;
+  int type_;
+  uint32_t id_;
+  int rotation_;
+  float covariance_m2_;
+  float horizontal_fov_rad_;
+  float vertical_fov_rad_;
+  uint32_t signal_quality_percent_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 };
@@ -31864,6 +32200,236 @@ inline void DistanceSensor::set_current_distance_m(float value) {
   // @@protoc_insertion_point(field_set:mavsdk.rpc.telemetry.DistanceSensor.current_distance_m)
 }
 
+// .mavsdk.rpc.telemetry.DistanceSensor.Type type = 4 [(.mavsdk.options.default_value) = "4"];
+inline void DistanceSensor::clear_type() {
+  type_ = 0;
+}
+inline ::mavsdk::rpc::telemetry::DistanceSensor_Type DistanceSensor::_internal_type() const {
+  return static_cast< ::mavsdk::rpc::telemetry::DistanceSensor_Type >(type_);
+}
+inline ::mavsdk::rpc::telemetry::DistanceSensor_Type DistanceSensor::type() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.telemetry.DistanceSensor.type)
+  return _internal_type();
+}
+inline void DistanceSensor::_internal_set_type(::mavsdk::rpc::telemetry::DistanceSensor_Type value) {
+  
+  type_ = value;
+}
+inline void DistanceSensor::set_type(::mavsdk::rpc::telemetry::DistanceSensor_Type value) {
+  _internal_set_type(value);
+  // @@protoc_insertion_point(field_set:mavsdk.rpc.telemetry.DistanceSensor.type)
+}
+
+// uint32 id = 5 [(.mavsdk.options.default_value) = "0"];
+inline void DistanceSensor::clear_id() {
+  id_ = 0u;
+}
+inline uint32_t DistanceSensor::_internal_id() const {
+  return id_;
+}
+inline uint32_t DistanceSensor::id() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.telemetry.DistanceSensor.id)
+  return _internal_id();
+}
+inline void DistanceSensor::_internal_set_id(uint32_t value) {
+  
+  id_ = value;
+}
+inline void DistanceSensor::set_id(uint32_t value) {
+  _internal_set_id(value);
+  // @@protoc_insertion_point(field_set:mavsdk.rpc.telemetry.DistanceSensor.id)
+}
+
+// .mavsdk.rpc.telemetry.DistanceSensor.Rotation rotation = 6 [(.mavsdk.options.default_value) = "0"];
+inline void DistanceSensor::clear_rotation() {
+  rotation_ = 0;
+}
+inline ::mavsdk::rpc::telemetry::DistanceSensor_Rotation DistanceSensor::_internal_rotation() const {
+  return static_cast< ::mavsdk::rpc::telemetry::DistanceSensor_Rotation >(rotation_);
+}
+inline ::mavsdk::rpc::telemetry::DistanceSensor_Rotation DistanceSensor::rotation() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.telemetry.DistanceSensor.rotation)
+  return _internal_rotation();
+}
+inline void DistanceSensor::_internal_set_rotation(::mavsdk::rpc::telemetry::DistanceSensor_Rotation value) {
+  
+  rotation_ = value;
+}
+inline void DistanceSensor::set_rotation(::mavsdk::rpc::telemetry::DistanceSensor_Rotation value) {
+  _internal_set_rotation(value);
+  // @@protoc_insertion_point(field_set:mavsdk.rpc.telemetry.DistanceSensor.rotation)
+}
+
+// float covariance_m2 = 7 [(.mavsdk.options.default_value) = "NaN"];
+inline void DistanceSensor::clear_covariance_m2() {
+  covariance_m2_ = 0;
+}
+inline float DistanceSensor::_internal_covariance_m2() const {
+  return covariance_m2_;
+}
+inline float DistanceSensor::covariance_m2() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.telemetry.DistanceSensor.covariance_m2)
+  return _internal_covariance_m2();
+}
+inline void DistanceSensor::_internal_set_covariance_m2(float value) {
+  
+  covariance_m2_ = value;
+}
+inline void DistanceSensor::set_covariance_m2(float value) {
+  _internal_set_covariance_m2(value);
+  // @@protoc_insertion_point(field_set:mavsdk.rpc.telemetry.DistanceSensor.covariance_m2)
+}
+
+// float horizontal_fov_rad = 8 [(.mavsdk.options.default_value) = "0"];
+inline void DistanceSensor::clear_horizontal_fov_rad() {
+  horizontal_fov_rad_ = 0;
+}
+inline float DistanceSensor::_internal_horizontal_fov_rad() const {
+  return horizontal_fov_rad_;
+}
+inline float DistanceSensor::horizontal_fov_rad() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.telemetry.DistanceSensor.horizontal_fov_rad)
+  return _internal_horizontal_fov_rad();
+}
+inline void DistanceSensor::_internal_set_horizontal_fov_rad(float value) {
+  
+  horizontal_fov_rad_ = value;
+}
+inline void DistanceSensor::set_horizontal_fov_rad(float value) {
+  _internal_set_horizontal_fov_rad(value);
+  // @@protoc_insertion_point(field_set:mavsdk.rpc.telemetry.DistanceSensor.horizontal_fov_rad)
+}
+
+// float vertical_fov_rad = 9 [(.mavsdk.options.default_value) = "0"];
+inline void DistanceSensor::clear_vertical_fov_rad() {
+  vertical_fov_rad_ = 0;
+}
+inline float DistanceSensor::_internal_vertical_fov_rad() const {
+  return vertical_fov_rad_;
+}
+inline float DistanceSensor::vertical_fov_rad() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.telemetry.DistanceSensor.vertical_fov_rad)
+  return _internal_vertical_fov_rad();
+}
+inline void DistanceSensor::_internal_set_vertical_fov_rad(float value) {
+  
+  vertical_fov_rad_ = value;
+}
+inline void DistanceSensor::set_vertical_fov_rad(float value) {
+  _internal_set_vertical_fov_rad(value);
+  // @@protoc_insertion_point(field_set:mavsdk.rpc.telemetry.DistanceSensor.vertical_fov_rad)
+}
+
+// .mavsdk.rpc.telemetry.Quaternion q = 10;
+inline bool DistanceSensor::_internal_has_q() const {
+  return this != internal_default_instance() && q_ != nullptr;
+}
+inline bool DistanceSensor::has_q() const {
+  return _internal_has_q();
+}
+inline void DistanceSensor::clear_q() {
+  if (GetArenaForAllocation() == nullptr && q_ != nullptr) {
+    delete q_;
+  }
+  q_ = nullptr;
+}
+inline const ::mavsdk::rpc::telemetry::Quaternion& DistanceSensor::_internal_q() const {
+  const ::mavsdk::rpc::telemetry::Quaternion* p = q_;
+  return p != nullptr ? *p : reinterpret_cast<const ::mavsdk::rpc::telemetry::Quaternion&>(
+      ::mavsdk::rpc::telemetry::_Quaternion_default_instance_);
+}
+inline const ::mavsdk::rpc::telemetry::Quaternion& DistanceSensor::q() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.telemetry.DistanceSensor.q)
+  return _internal_q();
+}
+inline void DistanceSensor::unsafe_arena_set_allocated_q(
+    ::mavsdk::rpc::telemetry::Quaternion* q) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(q_);
+  }
+  q_ = q;
+  if (q) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:mavsdk.rpc.telemetry.DistanceSensor.q)
+}
+inline ::mavsdk::rpc::telemetry::Quaternion* DistanceSensor::release_q() {
+  
+  ::mavsdk::rpc::telemetry::Quaternion* temp = q_;
+  q_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::mavsdk::rpc::telemetry::Quaternion* DistanceSensor::unsafe_arena_release_q() {
+  // @@protoc_insertion_point(field_release:mavsdk.rpc.telemetry.DistanceSensor.q)
+  
+  ::mavsdk::rpc::telemetry::Quaternion* temp = q_;
+  q_ = nullptr;
+  return temp;
+}
+inline ::mavsdk::rpc::telemetry::Quaternion* DistanceSensor::_internal_mutable_q() {
+  
+  if (q_ == nullptr) {
+    auto* p = CreateMaybeMessage<::mavsdk::rpc::telemetry::Quaternion>(GetArenaForAllocation());
+    q_ = p;
+  }
+  return q_;
+}
+inline ::mavsdk::rpc::telemetry::Quaternion* DistanceSensor::mutable_q() {
+  ::mavsdk::rpc::telemetry::Quaternion* _msg = _internal_mutable_q();
+  // @@protoc_insertion_point(field_mutable:mavsdk.rpc.telemetry.DistanceSensor.q)
+  return _msg;
+}
+inline void DistanceSensor::set_allocated_q(::mavsdk::rpc::telemetry::Quaternion* q) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete q_;
+  }
+  if (q) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(q);
+    if (message_arena != submessage_arena) {
+      q = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, q, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  q_ = q;
+  // @@protoc_insertion_point(field_set_allocated:mavsdk.rpc.telemetry.DistanceSensor.q)
+}
+
+// uint32 signal_quality_percent = 11 [(.mavsdk.options.default_value) = "0"];
+inline void DistanceSensor::clear_signal_quality_percent() {
+  signal_quality_percent_ = 0u;
+}
+inline uint32_t DistanceSensor::_internal_signal_quality_percent() const {
+  return signal_quality_percent_;
+}
+inline uint32_t DistanceSensor::signal_quality_percent() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.telemetry.DistanceSensor.signal_quality_percent)
+  return _internal_signal_quality_percent();
+}
+inline void DistanceSensor::_internal_set_signal_quality_percent(uint32_t value) {
+  
+  signal_quality_percent_ = value;
+}
+inline void DistanceSensor::set_signal_quality_percent(uint32_t value) {
+  _internal_set_signal_quality_percent(value);
+  // @@protoc_insertion_point(field_set:mavsdk.rpc.telemetry.DistanceSensor.signal_quality_percent)
+}
+
 // -------------------------------------------------------------------
 
 // ScaledPressure
@@ -33498,6 +34064,16 @@ template <> struct is_proto_enum< ::mavsdk::rpc::telemetry::Odometry_MavFrame> :
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::mavsdk::rpc::telemetry::Odometry_MavFrame>() {
   return ::mavsdk::rpc::telemetry::Odometry_MavFrame_descriptor();
+}
+template <> struct is_proto_enum< ::mavsdk::rpc::telemetry::DistanceSensor_Type> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::mavsdk::rpc::telemetry::DistanceSensor_Type>() {
+  return ::mavsdk::rpc::telemetry::DistanceSensor_Type_descriptor();
+}
+template <> struct is_proto_enum< ::mavsdk::rpc::telemetry::DistanceSensor_Rotation> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::mavsdk::rpc::telemetry::DistanceSensor_Rotation>() {
+  return ::mavsdk::rpc::telemetry::DistanceSensor_Rotation_descriptor();
 }
 template <> struct is_proto_enum< ::mavsdk::rpc::telemetry::TelemetryResult_Result> : ::std::true_type {};
 template <>

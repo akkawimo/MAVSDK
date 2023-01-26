@@ -781,6 +781,236 @@ public:
         return obj;
     }
 
+    static rpc::telemetry_server::DistanceSensor::Type
+    translateToRpcType(const mavsdk::TelemetryServer::DistanceSensor::Type& type)
+    {
+        switch (type) {
+            default:
+                LogErr() << "Unknown type enum value: " << static_cast<int>(type);
+            // FALLTHROUGH
+            case mavsdk::TelemetryServer::DistanceSensor::Type::Laser:
+                return rpc::telemetry_server::DistanceSensor_Type_TYPE_LASER;
+            case mavsdk::TelemetryServer::DistanceSensor::Type::Ultrasound:
+                return rpc::telemetry_server::DistanceSensor_Type_TYPE_ULTRASOUND;
+            case mavsdk::TelemetryServer::DistanceSensor::Type::Infrared:
+                return rpc::telemetry_server::DistanceSensor_Type_TYPE_INFRARED;
+            case mavsdk::TelemetryServer::DistanceSensor::Type::Radar:
+                return rpc::telemetry_server::DistanceSensor_Type_TYPE_RADAR;
+            case mavsdk::TelemetryServer::DistanceSensor::Type::Unknown:
+                return rpc::telemetry_server::DistanceSensor_Type_TYPE_UNKNOWN;
+        }
+    }
+
+    static mavsdk::TelemetryServer::DistanceSensor::Type
+    translateFromRpcType(const rpc::telemetry_server::DistanceSensor::Type type)
+    {
+        switch (type) {
+            default:
+                LogErr() << "Unknown type enum value: " << static_cast<int>(type);
+            // FALLTHROUGH
+            case rpc::telemetry_server::DistanceSensor_Type_TYPE_LASER:
+                return mavsdk::TelemetryServer::DistanceSensor::Type::Laser;
+            case rpc::telemetry_server::DistanceSensor_Type_TYPE_ULTRASOUND:
+                return mavsdk::TelemetryServer::DistanceSensor::Type::Ultrasound;
+            case rpc::telemetry_server::DistanceSensor_Type_TYPE_INFRARED:
+                return mavsdk::TelemetryServer::DistanceSensor::Type::Infrared;
+            case rpc::telemetry_server::DistanceSensor_Type_TYPE_RADAR:
+                return mavsdk::TelemetryServer::DistanceSensor::Type::Radar;
+            case rpc::telemetry_server::DistanceSensor_Type_TYPE_UNKNOWN:
+                return mavsdk::TelemetryServer::DistanceSensor::Type::Unknown;
+        }
+    }
+
+    static rpc::telemetry_server::DistanceSensor::Rotation
+    translateToRpcRotation(const mavsdk::TelemetryServer::DistanceSensor::Rotation& rotation)
+    {
+        switch (rotation) {
+            default:
+                LogErr() << "Unknown rotation enum value: " << static_cast<int>(rotation);
+            // FALLTHROUGH
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::None:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_NONE;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Yaw45:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_YAW_45;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Yaw90:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_YAW_90;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Yaw135:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_YAW_135;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Yaw180:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_YAW_180;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Yaw225:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_YAW_225;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Yaw270:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_YAW_270;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Yaw315:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_YAW_315;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll180:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_180;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll180Yaw45:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_180_YAW_45;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll180Yaw90:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_180_YAW_90;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll180Yaw135:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_180_YAW_135;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Pitch180:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_PITCH_180;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll180Yaw225:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_180_YAW_225;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll180Yaw270:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_180_YAW_270;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll180Yaw315:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_180_YAW_315;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll90:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_90;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll90Yaw45:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_90_YAW_45;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll90Yaw90:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_90_YAW_90;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll90Yaw135:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_90_YAW_135;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll270:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_270;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll270Yaw45:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_270_YAW_45;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll270Yaw90:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_270_YAW_90;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll270Yaw135:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_270_YAW_135;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Pitch90:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_PITCH_90;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Pitch270:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_PITCH_270;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Pitch180Yaw90:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_PITCH_180_YAW_90;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Pitch180Yaw270:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_PITCH_180_YAW_270;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll90Pitch90:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_90_PITCH_90;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll180Pitch90:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_180_PITCH_90;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll270Pitch90:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_270_PITCH_90;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll90Pitch180:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_90_PITCH_180;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll270Pitch180:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_270_PITCH_180;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll90Pitch270:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_90_PITCH_270;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll180Pitch270:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_180_PITCH_270;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll270Pitch270:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_270_PITCH_270;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll90Pitch180Yaw90:
+                return rpc::telemetry_server::
+                    DistanceSensor_Rotation_ROTATION_ROLL_90_PITCH_180_YAW_90;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll90Yaw270:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_90_YAW_270;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll90Pitch68Yaw293:
+                return rpc::telemetry_server::
+                    DistanceSensor_Rotation_ROTATION_ROLL_90_PITCH_68_YAW_293;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Pitch315:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_PITCH_315;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll90Pitch315:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_90_PITCH_315;
+            case mavsdk::TelemetryServer::DistanceSensor::Rotation::Custom:
+                return rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_CUSTOM;
+        }
+    }
+
+    static mavsdk::TelemetryServer::DistanceSensor::Rotation
+    translateFromRpcRotation(const rpc::telemetry_server::DistanceSensor::Rotation rotation)
+    {
+        switch (rotation) {
+            default:
+                LogErr() << "Unknown rotation enum value: " << static_cast<int>(rotation);
+            // FALLTHROUGH
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_NONE:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::None;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_YAW_45:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Yaw45;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_YAW_90:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Yaw90;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_YAW_135:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Yaw135;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_YAW_180:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Yaw180;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_YAW_225:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Yaw225;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_YAW_270:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Yaw270;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_YAW_315:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Yaw315;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_180:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll180;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_180_YAW_45:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll180Yaw45;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_180_YAW_90:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll180Yaw90;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_180_YAW_135:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll180Yaw135;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_PITCH_180:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Pitch180;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_180_YAW_225:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll180Yaw225;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_180_YAW_270:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll180Yaw270;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_180_YAW_315:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll180Yaw315;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_90:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll90;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_90_YAW_45:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll90Yaw45;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_90_YAW_90:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll90Yaw90;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_90_YAW_135:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll90Yaw135;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_270:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll270;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_270_YAW_45:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll270Yaw45;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_270_YAW_90:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll270Yaw90;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_270_YAW_135:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll270Yaw135;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_PITCH_90:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Pitch90;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_PITCH_270:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Pitch270;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_PITCH_180_YAW_90:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Pitch180Yaw90;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_PITCH_180_YAW_270:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Pitch180Yaw270;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_90_PITCH_90:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll90Pitch90;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_180_PITCH_90:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll180Pitch90;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_270_PITCH_90:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll270Pitch90;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_90_PITCH_180:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll90Pitch180;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_270_PITCH_180:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll270Pitch180;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_90_PITCH_270:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll90Pitch270;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_180_PITCH_270:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll180Pitch270;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_270_PITCH_270:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll270Pitch270;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_90_PITCH_180_YAW_90:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll90Pitch180Yaw90;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_90_YAW_270:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll90Yaw270;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_90_PITCH_68_YAW_293:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll90Pitch68Yaw293;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_PITCH_315:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Pitch315;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_ROLL_90_PITCH_315:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Roll90Pitch315;
+            case rpc::telemetry_server::DistanceSensor_Rotation_ROTATION_CUSTOM:
+                return mavsdk::TelemetryServer::DistanceSensor::Rotation::Custom;
+        }
+    }
+
     static std::unique_ptr<rpc::telemetry_server::DistanceSensor>
     translateToRpcDistanceSensor(const mavsdk::TelemetryServer::DistanceSensor& distance_sensor)
     {
@@ -791,6 +1021,22 @@ public:
         rpc_obj->set_maximum_distance_m(distance_sensor.maximum_distance_m);
 
         rpc_obj->set_current_distance_m(distance_sensor.current_distance_m);
+
+        rpc_obj->set_type(translateToRpcType(distance_sensor.type));
+
+        rpc_obj->set_id(distance_sensor.id);
+
+        rpc_obj->set_rotation(translateToRpcRotation(distance_sensor.rotation));
+
+        rpc_obj->set_covariance_m2(distance_sensor.covariance_m2);
+
+        rpc_obj->set_horizontal_fov_rad(distance_sensor.horizontal_fov_rad);
+
+        rpc_obj->set_vertical_fov_rad(distance_sensor.vertical_fov_rad);
+
+        rpc_obj->set_allocated_q(translateToRpcQuaternion(distance_sensor.q).release());
+
+        rpc_obj->set_signal_quality_percent(distance_sensor.signal_quality_percent);
 
         return rpc_obj;
     }
@@ -805,6 +1051,22 @@ public:
         obj.maximum_distance_m = distance_sensor.maximum_distance_m();
 
         obj.current_distance_m = distance_sensor.current_distance_m();
+
+        obj.type = translateFromRpcType(distance_sensor.type());
+
+        obj.id = distance_sensor.id();
+
+        obj.rotation = translateFromRpcRotation(distance_sensor.rotation());
+
+        obj.covariance_m2 = distance_sensor.covariance_m2();
+
+        obj.horizontal_fov_rad = distance_sensor.horizontal_fov_rad();
+
+        obj.vertical_fov_rad = distance_sensor.vertical_fov_rad();
+
+        obj.q = translateFromRpcQuaternion(distance_sensor.q());
+
+        obj.signal_quality_percent = distance_sensor.signal_quality_percent();
 
         return obj;
     }
@@ -1594,6 +1856,37 @@ public:
         }
 
         auto result = _lazy_plugin.maybe_plugin()->publish_unix_epoch_time(request->time_us());
+
+        if (response != nullptr) {
+            fillResponseWithResult(response, result);
+        }
+
+        return grpc::Status::OK;
+    }
+
+    grpc::Status PublishDistanceSensor(
+        grpc::ServerContext* /* context */,
+        const rpc::telemetry_server::PublishDistanceSensorRequest* request,
+        rpc::telemetry_server::PublishDistanceSensorResponse* response) override
+    {
+        if (_lazy_plugin.maybe_plugin() == nullptr) {
+            if (response != nullptr) {
+                // For server plugins, this should never happen, they should always be
+                // constructible.
+                auto result = mavsdk::TelemetryServer::Result::Unknown;
+                fillResponseWithResult(response, result);
+            }
+
+            return grpc::Status::OK;
+        }
+
+        if (request == nullptr) {
+            LogWarn() << "PublishDistanceSensor sent with a null request! Ignoring...";
+            return grpc::Status::OK;
+        }
+
+        auto result = _lazy_plugin.maybe_plugin()->publish_distance_sensor(
+            translateFromRpcDistanceSensor(request->distance_sensor()));
 
         if (response != nullptr) {
             fillResponseWithResult(response, result);

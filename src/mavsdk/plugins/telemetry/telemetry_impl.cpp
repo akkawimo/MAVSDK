@@ -1440,6 +1440,17 @@ void TelemetryImpl::process_distance_sensor(const mavlink_message_t& message)
     distance_sensor_struct.minimum_distance_m = distance_sensor_msg.min_distance;
     distance_sensor_struct.maximum_distance_m = distance_sensor_msg.max_distance;
     distance_sensor_struct.current_distance_m = distance_sensor_msg.current_distance;
+    distance_sensor_struct.type =
+        static_cast<Telemetry::DistanceSensor::Type>(distance_sensor_msg.type);
+    distance_sensor_struct.id = distance_sensor_msg.id;
+    distance_sensor_struct.rotation =
+        static_cast<Telemetry::DistanceSensor::Rotation>(distance_sensor_msg.orientation);
+    distance_sensor_struct.covariance_m2 =
+        static_cast<float>(distance_sensor_msg.covariance) * 1e-4f;
+    distance_sensor_struct.horizontal_fov_rad = distance_sensor_msg.horizontal_fov;
+    distance_sensor_struct.vertical_fov_rad = distance_sensor_msg.vertical_fov;
+    // TODO: quaternion
+    distance_sensor_struct.signal_quality_percent = distance_sensor_msg.signal_quality;
 
     set_distance_sensor(distance_sensor_struct);
 
