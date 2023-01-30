@@ -21283,35 +21283,35 @@ class DistanceSensor final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMinimumDistanceMFieldNumber = 1,
-    kMaximumDistanceMFieldNumber = 2,
-    kCurrentDistanceMFieldNumber = 3,
+    kMinimumDistanceCmFieldNumber = 1,
+    kMaximumDistanceCmFieldNumber = 2,
+    kCurrentDistanceCmFieldNumber = 3,
   };
-  // float minimum_distance_m = 1 [(.mavsdk.options.default_value) = "NaN"];
-  void clear_minimum_distance_m();
-  float minimum_distance_m() const;
-  void set_minimum_distance_m(float value);
+  // float minimum_distance_cm = 1 [(.mavsdk.options.default_value) = "NaN"];
+  void clear_minimum_distance_cm();
+  float minimum_distance_cm() const;
+  void set_minimum_distance_cm(float value);
   private:
-  float _internal_minimum_distance_m() const;
-  void _internal_set_minimum_distance_m(float value);
+  float _internal_minimum_distance_cm() const;
+  void _internal_set_minimum_distance_cm(float value);
   public:
 
-  // float maximum_distance_m = 2 [(.mavsdk.options.default_value) = "NaN"];
-  void clear_maximum_distance_m();
-  float maximum_distance_m() const;
-  void set_maximum_distance_m(float value);
+  // float maximum_distance_cm = 2 [(.mavsdk.options.default_value) = "NaN"];
+  void clear_maximum_distance_cm();
+  float maximum_distance_cm() const;
+  void set_maximum_distance_cm(float value);
   private:
-  float _internal_maximum_distance_m() const;
-  void _internal_set_maximum_distance_m(float value);
+  float _internal_maximum_distance_cm() const;
+  void _internal_set_maximum_distance_cm(float value);
   public:
 
-  // float current_distance_m = 3 [(.mavsdk.options.default_value) = "NaN"];
-  void clear_current_distance_m();
-  float current_distance_m() const;
-  void set_current_distance_m(float value);
+  // float current_distance_cm = 3 [(.mavsdk.options.default_value) = "NaN"];
+  void clear_current_distance_cm();
+  float current_distance_cm() const;
+  void set_current_distance_cm(float value);
   private:
-  float _internal_current_distance_m() const;
-  void _internal_set_current_distance_m(float value);
+  float _internal_current_distance_cm() const;
+  void _internal_set_current_distance_cm(float value);
   public:
 
   // @@protoc_insertion_point(class_scope:mavsdk.rpc.telemetry.DistanceSensor)
@@ -21321,9 +21321,9 @@ class DistanceSensor final :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  float minimum_distance_m_;
-  float maximum_distance_m_;
-  float current_distance_m_;
+  float minimum_distance_cm_;
+  float maximum_distance_cm_;
+  float current_distance_cm_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_telemetry_2ftelemetry_2eproto;
 };
@@ -31711,64 +31711,64 @@ inline void Odometry::set_allocated_velocity_covariance(::mavsdk::rpc::telemetry
 
 // DistanceSensor
 
-// float minimum_distance_m = 1 [(.mavsdk.options.default_value) = "NaN"];
-inline void DistanceSensor::clear_minimum_distance_m() {
-  minimum_distance_m_ = 0;
+// float minimum_distance_cm = 1 [(.mavsdk.options.default_value) = "NaN"];
+inline void DistanceSensor::clear_minimum_distance_cm() {
+  minimum_distance_cm_ = 0;
 }
-inline float DistanceSensor::_internal_minimum_distance_m() const {
-  return minimum_distance_m_;
+inline float DistanceSensor::_internal_minimum_distance_cm() const {
+  return minimum_distance_cm_;
 }
-inline float DistanceSensor::minimum_distance_m() const {
-  // @@protoc_insertion_point(field_get:mavsdk.rpc.telemetry.DistanceSensor.minimum_distance_m)
-  return _internal_minimum_distance_m();
+inline float DistanceSensor::minimum_distance_cm() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.telemetry.DistanceSensor.minimum_distance_cm)
+  return _internal_minimum_distance_cm();
 }
-inline void DistanceSensor::_internal_set_minimum_distance_m(float value) {
+inline void DistanceSensor::_internal_set_minimum_distance_cm(float value) {
   
-  minimum_distance_m_ = value;
+  minimum_distance_cm_ = value;
 }
-inline void DistanceSensor::set_minimum_distance_m(float value) {
-  _internal_set_minimum_distance_m(value);
-  // @@protoc_insertion_point(field_set:mavsdk.rpc.telemetry.DistanceSensor.minimum_distance_m)
+inline void DistanceSensor::set_minimum_distance_cm(float value) {
+  _internal_set_minimum_distance_cm(value);
+  // @@protoc_insertion_point(field_set:mavsdk.rpc.telemetry.DistanceSensor.minimum_distance_cm)
 }
 
-// float maximum_distance_m = 2 [(.mavsdk.options.default_value) = "NaN"];
-inline void DistanceSensor::clear_maximum_distance_m() {
-  maximum_distance_m_ = 0;
+// float maximum_distance_cm = 2 [(.mavsdk.options.default_value) = "NaN"];
+inline void DistanceSensor::clear_maximum_distance_cm() {
+  maximum_distance_cm_ = 0;
 }
-inline float DistanceSensor::_internal_maximum_distance_m() const {
-  return maximum_distance_m_;
+inline float DistanceSensor::_internal_maximum_distance_cm() const {
+  return maximum_distance_cm_;
 }
-inline float DistanceSensor::maximum_distance_m() const {
-  // @@protoc_insertion_point(field_get:mavsdk.rpc.telemetry.DistanceSensor.maximum_distance_m)
-  return _internal_maximum_distance_m();
+inline float DistanceSensor::maximum_distance_cm() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.telemetry.DistanceSensor.maximum_distance_cm)
+  return _internal_maximum_distance_cm();
 }
-inline void DistanceSensor::_internal_set_maximum_distance_m(float value) {
+inline void DistanceSensor::_internal_set_maximum_distance_cm(float value) {
   
-  maximum_distance_m_ = value;
+  maximum_distance_cm_ = value;
 }
-inline void DistanceSensor::set_maximum_distance_m(float value) {
-  _internal_set_maximum_distance_m(value);
-  // @@protoc_insertion_point(field_set:mavsdk.rpc.telemetry.DistanceSensor.maximum_distance_m)
+inline void DistanceSensor::set_maximum_distance_cm(float value) {
+  _internal_set_maximum_distance_cm(value);
+  // @@protoc_insertion_point(field_set:mavsdk.rpc.telemetry.DistanceSensor.maximum_distance_cm)
 }
 
-// float current_distance_m = 3 [(.mavsdk.options.default_value) = "NaN"];
-inline void DistanceSensor::clear_current_distance_m() {
-  current_distance_m_ = 0;
+// float current_distance_cm = 3 [(.mavsdk.options.default_value) = "NaN"];
+inline void DistanceSensor::clear_current_distance_cm() {
+  current_distance_cm_ = 0;
 }
-inline float DistanceSensor::_internal_current_distance_m() const {
-  return current_distance_m_;
+inline float DistanceSensor::_internal_current_distance_cm() const {
+  return current_distance_cm_;
 }
-inline float DistanceSensor::current_distance_m() const {
-  // @@protoc_insertion_point(field_get:mavsdk.rpc.telemetry.DistanceSensor.current_distance_m)
-  return _internal_current_distance_m();
+inline float DistanceSensor::current_distance_cm() const {
+  // @@protoc_insertion_point(field_get:mavsdk.rpc.telemetry.DistanceSensor.current_distance_cm)
+  return _internal_current_distance_cm();
 }
-inline void DistanceSensor::_internal_set_current_distance_m(float value) {
+inline void DistanceSensor::_internal_set_current_distance_cm(float value) {
   
-  current_distance_m_ = value;
+  current_distance_cm_ = value;
 }
-inline void DistanceSensor::set_current_distance_m(float value) {
-  _internal_set_current_distance_m(value);
-  // @@protoc_insertion_point(field_set:mavsdk.rpc.telemetry.DistanceSensor.current_distance_m)
+inline void DistanceSensor::set_current_distance_cm(float value) {
+  _internal_set_current_distance_cm(value);
+  // @@protoc_insertion_point(field_set:mavsdk.rpc.telemetry.DistanceSensor.current_distance_cm)
 }
 
 // -------------------------------------------------------------------

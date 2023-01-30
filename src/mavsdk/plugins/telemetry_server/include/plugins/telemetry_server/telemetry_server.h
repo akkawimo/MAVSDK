@@ -596,11 +596,11 @@ public:
      * @brief DistanceSensor message type.
      */
     struct DistanceSensor {
-        float minimum_distance_m{
+        float minimum_distance_cm{
             float(NAN)}; /**< @brief Minimum distance the sensor can measure, NaN if unknown. */
-        float maximum_distance_m{
+        float maximum_distance_cm{
             float(NAN)}; /**< @brief Maximum distance the sensor can measure, NaN if unknown. */
-        float current_distance_m{
+        float current_distance_cm{
             float(NAN)}; /**< @brief Current distance reading, NaN if unknown. */
     };
 
