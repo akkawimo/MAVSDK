@@ -1430,9 +1430,9 @@ void TelemetryImpl::process_distance_sensor(const mavlink_message_t& message)
 
     Telemetry::DistanceSensor distance_sensor_struct{};
 
-    distance_sensor_struct.minimum_distance_m = distance_sensor_msg.min_distance * 1e-2;
-    distance_sensor_struct.maximum_distance_m = distance_sensor_msg.max_distance * 1e-2;
-    distance_sensor_struct.current_distance_m = distance_sensor_msg.current_distance * 1e-2;
+    distance_sensor_struct.minimum_distance_cm = distance_sensor_msg.min_distance;
+    distance_sensor_struct.maximum_distance_cm = distance_sensor_msg.max_distance;
+    distance_sensor_struct.current_distance_cm = distance_sensor_msg.current_distance;
 
     set_distance_sensor(distance_sensor_struct);
 
